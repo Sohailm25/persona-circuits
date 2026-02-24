@@ -14,6 +14,7 @@ Review this section before starting any new phase or writing any pre-run checkpo
 - [ ] Add null-feature ablation baseline: identify features with matched activation magnitude but no persona semantics; ablate as negative control. Required before: Phase C. See entry 2026-02-24 METHODOLOGY RISK.
 - [ ] Decompose Y into 3–4 orthogonal behavioral facets (lexical markers, domain knowledge, out-of-character refusal, response style) and test necessity/sufficiency for each separately. Required before: Phase B behavioral scoring design (Week 3). See entry 2026-02-24 METHODOLOGY RISK.
 - [ ] Add one sentence to intro framing PSM as mechanizing Shanahan et al.'s simulator claim. Required before: paper writing (Week 9). See entry 2026-02-24 THEORY.
+- [ ] Re-run SAE reconstruction sanity using stage-specific hooks/preprocessing before trusting any concentration claims. Required before: Week 3 SAE decomposition interpretation. See entry 2026-02-24 INFRA OBSERVATION.
 
 ## RESOLVED ACTIONS
 
@@ -90,3 +91,15 @@ Shanahan et al. argue the model is simultaneously multiple characters in superpo
 Worth a sentence in the intro: "The character-simulator framing (Shanahan et al., 2023) predicts that LLMs maintain latent representations of multiple simultaneous characters. The Persona Selection Model (Marks et al., 2026) makes this concrete by proposing a specific geometric structure for character selection. Our circuit analysis tests whether this structure is mechanistically grounded."
 
 ---
+
+## 2026-02-24 [INFRA OBSERVATION] — Week 1 SAE Reconstruction Sanity Is Lower Than Expected
+
+**Type:** action  
+**Phase:** Week 1 / Infrastructure  
+**Relevance:** Stage 2 decomposition reliability and interpretation validity
+
+- `known`: During infrastructure validation, sampled encode→decode cosine values were low (`Llama layer16: 0.1278`, `Gemma layer12: 0.4526`) using straightforward residual-cache activations.
+- `unknown`: Whether this is a real SAE quality issue vs a hook/preprocessing mismatch in the quick Week 1 sanity script.
+- `inferred`: Stage 2 claims would be fragile if we treat these as true reconstruction metrics without re-validating with stage-appropriate hooks and expected activation normalization.
+
+Action: before Week 3 interpretation, run the full reconstruction protocol with verified hooks and confirm >0.9 on controlled examples (or explicitly document why threshold differs for this setup).

@@ -63,3 +63,128 @@ Running notes, observations, hypotheses, and debugging logs during experiment ex
 - Artifacts saved: scripts/modal_gpu_smoke_test.py (validated by execution)
 - Anomalies: Modal deprecation warning suggests using `gpu="A100-80GB"` string form; runtime warning indicates NumPy missing in smoke image (non-blocking for CUDA validation).
 - Next step: Update smoke-test GPU spec to deprecation-safe syntax and continue Day 1 checklist execution.
+
+## [2026-02-24T15:46:52-0600] PRE-RUN: week1_day3_5_llama_scope_and_andyrdt_validation
+- THOUGHT_LOG pending actions reviewed: YES — pending actions are Phase C/Week 3+ methodological controls and do not block Week 1 infrastructure validation.
+- W&B run name: week1-day3-5-llama-setup-[utc timestamp auto]
+- Script: scripts/week1_day3_5_modal_setup.py
+- Config: task=llama, model=meta-llama/Llama-3.1-8B-Instruct, release=llama_scope_lxr_32x (l12r_32x..l24r_32x), andyrdt layers={19,23}
+- What I'm testing: Llama model + required SAE releases can be downloaded and loaded, with a basic forward pass and reconstruction sanity check.
+- Expected outcome: all required SAE IDs load successfully; forward cache shapes valid; reconstruction cosine for sample layer is high (>0.9 expected, lower treated as warning for infra stage).
+- Expected duration: ~25-60 minutes
+- Implementation verified: YES — script syntax checked with `python3 -m py_compile` and static review of release/sae_id strings against proposal Appendix B/G.3.
+- Adversarial self-questioning:
+  - Most likely design flaw: successful load but incorrect release/sae_id mapping silently selecting wrong artifacts.
+  - Simplest confound: cached old artifact names masking failed new downloads.
+  - Failure signature: missing layer IDs, shape mismatches, or forward pass/cache key errors.
+  - If expected result appears, probability I'm wrong: moderate-low; mitigated by explicit reporting of each loaded sae_id and model cache tensors.
+- Status: LAUNCHING
+
+## [2026-02-24T15:49:04-0600] POST-RUN: week1_day3_5_llama_scope_and_andyrdt_validation
+- W&B URL: N/A (run failed before function execution)
+- Modal app ID: ap-Us14DltTgFK2UCJrlTdWZL
+- Outcome: FAILURE
+- Key metric: image_build_error=`/bin/sh: git: not found` while installing circuit-tracer in Modal image
+- Artifacts saved: none
+- Anomalies: Base `debian_slim` image did not include `git`; second image stage failed before any model/SAE validation.
+- Next step: Add system git dependency (`apt_install("git")`) to Modal image and rerun task.
+
+## [2026-02-24T15:49:26-0600] PRE-RUN: week1_day3_5_llama_scope_and_andyrdt_validation_retry
+- THOUGHT_LOG pending actions reviewed: YES — pending actions remain Phase C/Week 3+ and are not required for this infrastructure run.
+- W&B run name: week1-day3-5-llama-setup-[utc timestamp auto]
+- Script: scripts/week1_day3_5_modal_setup.py
+- Config: task=llama; image includes apt_install(git); model=meta-llama/Llama-3.1-8B-Instruct; llama_scope ids l12r_32x..l24r_32x; andyrdt layers 19,23
+- What I'm testing: Successful image build plus full LlamaScope/andyrdt download+load validation and basic forward pass.
+- Expected outcome: Image builds successfully; SAE IDs load; report JSON saved.
+- Expected duration: ~25-60 minutes
+- Implementation verified: YES — modified script recompiled via `python3 -m py_compile`.
+- Adversarial self-questioning:
+  - Most likely design flaw: image build succeeds but validation fails due gated model auth.
+  - Simplest confound: partial cache state from failed run obscuring true first-pass behavior.
+  - Failure signature: HF auth errors, missing checkpoint IDs, or runtime OOM.
+  - If expected result appears, probability I'm wrong: moderate-low; mitigated by explicit layer-by-layer load report.
+- Status: LAUNCHING
+
+## [2026-02-24T16:08:09-0600] POST-RUN: week1_day3_5_llama_scope_and_andyrdt_validation_retry
+- W&B URL: https://wandb.ai/sohailm/persona-circuits/runs/3x1l3j34
+- Modal app ID: ap-zGrVkprrxTxijuA5E8OwTE
+- Outcome: PARTIAL
+- Key metric: llama_scope_layers_loaded=13/13 (l12r_32x..l24r_32x), andyrdt_layers_loaded=2/2, forward pass cache shapes valid.
+- Artifacts saved: results/infrastructure/week1_day3_5_modal_validation_20260224T220740Z.json; remote report `/models/persona-circuits/week1/llama_scope_and_andyrdt_validation.json`
+- Anomalies: sample layer-16 reconstruction cosine was 0.1278 (far below expected >0.9) and cache summary suggests model files may not be landing in `/models/huggingface` as intended.
+- Next step: patch cache-env instrumentation and rerun/continue with Gemma+CLT validation; treat reconstruction value as preliminary infrastructure signal, not trusted stage metric.
+
+## [2026-02-24T16:09:18-0600] PRE-RUN: week1_day3_5_gemma_scope_and_clt_validation
+- THOUGHT_LOG pending actions reviewed: YES — no pending actions block Week 1 infra validation.
+- W&B run name: week1-day3-5-gemma-setup-[utc timestamp auto]
+- Script: scripts/week1_day3_5_modal_setup.py
+- Config: task=gemma; model=google/gemma-2-2b-it; gemmascope release=gemma-scope-2b-pt-res-canonical (layers 0..25); clt checkpoint=mntss/clt-gemma-2-2b-426k
+- What I'm testing: Gemma model, GemmaScope SAEs, and CLT checkpoint can be downloaded/loaded with a basic forward pass and minimal CLT attribution run.
+- Expected outcome: all 26 GemmaScope layer IDs load; Gemma forward pass works; CLT `attribute()` returns non-empty graph.
+- Expected duration: ~25-70 minutes
+- Implementation verified: YES — updated script passed `python3 -m py_compile`; cache-path instrumentation added.
+- Adversarial self-questioning:
+  - Most likely design flaw: CLT API call may pass but graph could be trivial due too-small attribution budget.
+  - Simplest confound: gated model/checkpoint auth mismatch (Gemma IT vs base CLT checkpoint).
+  - Failure signature: auth errors, missing SAE IDs, or CLT graph with zero nodes/edges.
+  - If expected result appears, probability I'm wrong: moderate; mitigated by explicit graph node/edge count logging and cache-path reporting.
+- Status: LAUNCHING
+
+## [2026-02-24T16:23:34-0600] POST-RUN: week1_day3_5_gemma_scope_and_clt_validation
+- W&B URL: https://wandb.ai/sohailm/persona-circuits/runs/7ghznqtk
+- Modal app ID: ap-iLZRDlDjF9zkIk4QDtpa6E
+- Outcome: PARTIAL
+- Key metric: gemmascope_layers_loaded=26/26; Gemma forward pass cache shapes valid; CLT checkpoint loaded.
+- Artifacts saved: results/infrastructure/week1_day3_5_modal_validation_20260224T222304Z.json; remote report `/models/persona-circuits/week1/gemma_scope_and_clt_validation.json`
+- Anomalies: CLT test graph returned nodes=0, edges=0 (insufficient attribution config or API mismatch); HF cache mostly in `/root/.cache/huggingface` (~104GB) not `/models/huggingface` (~5.6MB), so persistent-volume caching is not yet confirmed.
+- Next step: reorder cache env initialization before HF-dependent imports, strengthen CLT attribution config, and rerun Gemma/CLT validation.
+
+## [2026-02-24T16:24:55-0600] PRE-RUN: week1_day3_5_gemma_scope_and_clt_validation_retry
+- THOUGHT_LOG pending actions reviewed: YES — none block Week 1 infra work.
+- W&B run name: week1-day3-5-gemma-setup-[utc timestamp auto]
+- Script: scripts/week1_day3_5_modal_setup.py
+- Config: task=gemma; cache env set before HF imports; CLT attribution params max_n_logits=5, desired_logit_prob=0.95, max_feature_nodes=2048, batch_size=256
+- What I'm testing: Correct cache routing to `/models` and non-empty CLT attribution graph as a stronger Gemma/CLT sanity check.
+- Expected outcome: cache summary shows substantial bytes under `/models/huggingface`; CLT graph has nodes>0.
+- Expected duration: ~20-60 minutes
+- Implementation verified: YES — patched script syntax validated via `python3 -m py_compile`.
+- Adversarial self-questioning:
+  - Most likely design flaw: CLT graph emptiness persists due prompt/task mismatch, not infra bug.
+  - Simplest confound: existing checkpoint behavior produces sparse attribution below thresholds despite valid setup.
+  - Failure signature: RuntimeError("empty graph") or cache still concentrated in `/root/.cache`.
+  - If expected result appears, probability I'm wrong: moderate-low; mitigated by explicit cache and graph metrics in saved report.
+- Status: LAUNCHING
+
+## [2026-02-24T16:39:35-0600] POST-RUN: week1_day3_5_gemma_scope_and_clt_validation_retry
+- W&B URL: https://wandb.ai/sohailm/persona-circuits/runs/8s96fyb8
+- Modal app ID: ap-VSrtDxmE4JTxer0CPMmMCT
+- Outcome: FAILURE
+- Key metric: run aborted by `RuntimeError("CLT attribution produced an empty graph; validation failed.")`
+- Artifacts saved: none (function exited before writing report)
+- Anomalies: empty-graph assertion used `graph.nodes/graph.edges` attributes, which may not match circuit-tracer Graph API shape (likely false-negative check).
+- Next step: inspect Graph object fields, switch emptiness check to adjacency-matrix nonzero edges, rerun Gemma validation.
+
+## [2026-02-24T16:40:27-0600] PRE-RUN: week1_day3_5_gemma_scope_and_clt_validation_reretry
+- THOUGHT_LOG pending actions reviewed: YES — no blocking Week 1 dependencies.
+- W&B run name: week1-day3-5-gemma-setup-[utc timestamp auto]
+- Script: scripts/week1_day3_5_modal_setup.py
+- Config: task=gemma; CLT non-empty check based on `adjacency_matrix` nonzero edges + selected feature count
+- What I'm testing: Gemma+GemmaScope+CLT setup with API-correct graph sanity metrics and cache-path reporting.
+- Expected outcome: run succeeds; nonzero CLT edges > 0; cache summary clarifies volume vs default cache usage.
+- Expected duration: ~20-60 minutes
+- Implementation verified: YES — patched script compiled with `python3 -m py_compile`; Graph API inspected from local source.
+- Adversarial self-questioning:
+  - Most likely design flaw: adjacency may be numerically sparse but still all zeros for this prompt.
+  - Simplest confound: CLT output depends strongly on prompt/logit targeting.
+  - Failure signature: RuntimeError for nonzero edge check or repeated cache misrouting.
+  - If expected result appears, probability I'm wrong: moderate-low; mitigated by direct tensor-based edge counting.
+- Status: LAUNCHING
+
+## [2026-02-24T16:43:44-0600] POST-RUN: week1_day3_5_gemma_scope_and_clt_validation_reretry
+- W&B URL: https://wandb.ai/sohailm/persona-circuits/runs/1jszazgr
+- Modal app ID: ap-WhTyXUmVGmOTWQ4ZN9osHB
+- Outcome: SUCCESS
+- Key metric: gemmascope_layers_loaded=26/26; clt_test_nonzero_edges=1454708; cache routed to `/models/huggingface` (~104.1GB).
+- Artifacts saved: results/infrastructure/week1_day3_5_modal_validation_20260224T224332Z.json; remote report `/models/persona-circuits/week1/gemma_scope_and_clt_validation.json`
+- Anomalies: reconstruction cosine for sample Gemma layer12 remained 0.4526 (below Stage-2 sanity threshold >0.9; treat as implementation-sanity signal to re-validate in Week 3 with layer-appropriate preprocessing).
+- Next step: generate 3 prompt datasets, validate counts/schema, and finalize Week 1 Days 3-5 status updates.

@@ -1,0 +1,41 @@
+{
+  "model": "claude-sonnet-4-6",
+  "traits": {
+    "sycophancy": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/sycophancy_pairs.jsonl",
+      "count": 100,
+      "category_counts": {
+        "factually_wrong": 20,
+        "political_opinion": 20,
+        "personal_advice": 20,
+        "aesthetic_claim": 20,
+        "self_assessment": 20
+      },
+      "output_file": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/sycophancy_pairs.jsonl"
+    },
+    "evil": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/evil_pairs.jsonl",
+      "count": 100,
+      "category_counts": {
+        "open_ended": 20,
+        "advice_seeking": 20,
+        "moral_dilemma": 20,
+        "power_dynamics": 20,
+        "hypotheticals": 20
+      },
+      "output_file": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/evil_pairs.jsonl"
+    },
+    "hallucination": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/hallucination_pairs.jsonl",
+      "count": 100,
+      "category_counts": {
+        "obscure_facts": 25,
+        "false_premise": 25,
+        "post_cutoff": 25,
+        "reasoning_trap": 25
+      },
+      "output_file": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/hallucination_pairs.jsonl"
+    }
+  },
+  "seed": 42
+}

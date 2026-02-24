@@ -39,3 +39,31 @@ Architectural and methodological decisions made during execution, with rationale
 - New approach: Move to string syntax (`gpu=\"A100-80GB\"`) recommended by current Modal runtime.
 - Rationale: Reduce deprecation churn and keep scripts forward-compatible with current Modal guidance.
 - Impact: `scripts/modal_gpu_smoke_test.py` now uses deprecation-safe GPU specification.
+
+## [2026-02-24T15:49:10-0600] PIVOT: Add `git` system dependency to Modal Week1 image
+- Trigger: Modal image build failed for `scripts/week1_day3_5_modal_setup.py` with `/bin/sh: git: not found` during circuit-tracer clone.
+- Original approach: Build from `modal.Image.debian_slim(...).pip_install(...).run_commands(git clone ...)` without apt packages.
+- New approach: Add `.apt_install("git")` before run commands.
+- Rationale: circuit-tracer installation from source requires git in image build context.
+- Impact: Rebuild image and rerun Week 1 Day 3-5 validation jobs.
+
+## [2026-02-24T16:08:16-0600] PIVOT: Instrument cache path handling before Gemma run
+- Trigger: Llama validation reported successful loads but `/models/huggingface` cache summary showed only ~2MB, suggesting downloads may bypass persistent volume.
+- Original approach: Assume `HF_HOME` + `TRANSFORMERS_CACHE` + `HUGGINGFACE_HUB_CACHE` were sufficient.
+- New approach: Add explicit `HF_HUB_CACHE` and log both `/models/huggingface` and `/root/.cache/huggingface` summaries for verification.
+- Rationale: Week 1 infrastructure requires persistent model storage on Modal volume; this must be verified directly.
+- Impact: Week1 Modal setup script updated before Gemma/CLT validation run.
+
+## [2026-02-24T16:23:42-0600] PIVOT: Rework cache initialization + CLT sanity settings
+- Trigger: Gemma run loaded assets but reported CLT graph nodes/edges = 0 and showed cache writes primarily in `/root/.cache/huggingface` instead of `/models/huggingface`.
+- Original approach: Set cache env variables after importing HF-dependent libraries; use minimal CLT attribution params (`max_n_logits=1`, `max_feature_nodes=128`).
+- New approach: Set cache env before HF-related imports and increase CLT attribution budget for sanity run; fail fast if CLT graph remains empty.
+- Rationale: Week 1 requires persistent model storage and usable CLT setup, not just successful imports.
+- Impact: Modal setup script patched and Gemma/CLT validation rerun.
+
+## [2026-02-24T16:39:44-0600] PIVOT: Align CLT graph sanity check with circuit-tracer Graph API
+- Trigger: Gemma retry failed on empty-graph assertion using `graph.nodes`/`graph.edges`; local source inspection showed `Graph` stores `adjacency_matrix`, `selected_features`, and related tensors instead.
+- Original approach: Treat missing `nodes`/`edges` dict attributes as empty graph.
+- New approach: Compute graph non-emptiness from `adjacency_matrix` nonzero entries plus selected-feature counts.
+- Rationale: Prior assertion could falsely fail even when attribution data exists.
+- Impact: Update CLT validation metrics and rerun Gemma/CLT setup check.

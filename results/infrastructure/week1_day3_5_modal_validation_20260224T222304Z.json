@@ -1,0 +1,49 @@
+{
+  "gemma_scope_and_clt": {
+    "timestamp_utc": "2026-02-24T22:22:59.248453+00:00",
+    "task": "gemma_scope_and_clt_validation",
+    "model_name": "google/gemma-2-2b-it",
+    "forward_pass": {
+      "tokens_shape": [
+        1,
+        8
+      ],
+      "logits_shape": [
+        1,
+        8,
+        256000
+      ],
+      "resid_0_shape": [
+        1,
+        8,
+        2304
+      ],
+      "resid_25_shape": [
+        1,
+        8,
+        2304
+      ]
+    },
+    "gemmascope_release": "gemma-scope-2b-pt-res-canonical",
+    "gemmascope_loaded_count": 26,
+    "gemmascope_reconstruction_cosine_layer12": 0.4526175260543823,
+    "clt_checkpoint": "mntss/clt-gemma-2-2b-426k",
+    "clt_test_graph": {
+      "nodes": 0,
+      "edges": 0
+    },
+    "cache_summary": {
+      "models_volume_hf": {
+        "exists": true,
+        "total_bytes": 5660373,
+        "file_count": 2
+      },
+      "default_root_cache": {
+        "exists": true,
+        "total_bytes": 104097481742,
+        "file_count": 208
+      }
+    },
+    "output_path": "/models/persona-circuits/week1/gemma_scope_and_clt_validation.json"
+  }
+}

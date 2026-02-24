@@ -10,6 +10,15 @@ Master index of all experimental results. Each entry links to the result artifac
 
 ---
 
+## Infrastructure (Week 1)
+
+| Artifact | Task | Status | Path |
+|----------|------|--------|------|
+| Week1 modal setup validation (llama+andyrdt) | Download + forward-pass validation for Llama-3.1-8B-Instruct, LlamaScope (l12..l24), and andyrdt (19,23) | partial (reconstruction cosine warning) | results/infrastructure/week1_day3_5_modal_validation_20260224T220740Z.json |
+| Week1 modal setup validation (gemma initial) | Gemma+GemmaScope+CLT initial check | partial [SUPERSEDED by: week1_day3_5_modal_validation_20260224T224332Z.json] | results/infrastructure/week1_day3_5_modal_validation_20260224T222304Z.json |
+| Week1 modal setup validation (gemma final) | Gemma+GemmaScope+CLT validation with persistent cache + nonzero graph edges | pass (infrastructure) | results/infrastructure/week1_day3_5_modal_validation_20260224T224332Z.json |
+| Prompt dataset generation summary | 3 trait datasets generated with required category counts | pass (infrastructure) | results/infrastructure/week1_prompt_generation_summary.json |
+
 ## Stage 1: Persona Extraction
 
 | Artifact | Trait | Traceability Row | Status | Path |

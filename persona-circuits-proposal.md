@@ -556,7 +556,7 @@ PSM faces an unfalsifiability risk: any counterevidence can be attributed to "si
 
 **PSM exhaustiveness is challenged if:** After ablating all identified persona-relevant features, the model still produces coherent, goal-directed output on trait-relevant tasks (rather than incoherent/random output).
 
-These criteria will be published in our LessWrong/Alignment Forum research plan before experiments begin.
+These criteria are documented in the local pre-registration file (`persona-circuits/history/PREREG.md`) before experiments begin.
 
 ### 5.5 Connecting to PSM
 
@@ -1393,7 +1393,7 @@ All trait scores measured by Claude Sonnet 4.6 judge on 0–100 trait-specific r
 #### Week 1: Infrastructure + Priority Establishment
 
 **Days 1–2:**
-- [ ] Publish research plan on LessWrong/Alignment Forum (establish priority)
+- [ ] Create local pre-registration document (`persona-circuits/history/PREREG.md`) with hypotheses, disconfirmation criteria, and thresholds
 - [ ] Set up Modal account and validate GPU access
 - [ ] Set up W&B project structure
 - [ ] Clone and configure SAELens, TransformerLens, circuit-tracer
@@ -1491,7 +1491,7 @@ All trait scores measured by Claude Sonnet 4.6 judge on 0–100 trait-specific r
 - [ ] Format for arXiv
 - [ ] Final revision
 - [ ] Submit to arXiv
-- [ ] Update LW/AF post with results
+- [ ] Update PREREG.md with final results and conclusion
 
 **Deliverable:** arXiv preprint
 

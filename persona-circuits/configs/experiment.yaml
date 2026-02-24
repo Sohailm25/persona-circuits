@@ -1,0 +1,66 @@
+# Persona Circuits Experiment Configuration
+# Source of truth for all hyperparameters. Matches proposal §7.3.
+# Modify via DECISIONS.md if changing from proposal defaults.
+
+models:
+  primary:
+    name: "meta-llama/Llama-3.1-8B-Instruct"
+    num_layers: 32
+    optimal_steering_layers: [11, 12, 13, 14, 15, 16]  # ~35-50% depth per Chen et al.
+    circuit_analysis_layers: [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+  validation:
+    name: "google/gemma-2-2b-it"
+    num_layers: 26
+
+sae:
+  # NOTE: SAELens release names (not HuggingFace repo IDs). Requires sae-lens>=6.12.0.
+  primary:
+    release: "llama_scope_lxr_32x"   # SAELens registry key; HF: fnlp/Llama3_1-8B-Base-LXR-32x
+    sae_id_format: "l{layer}r_32x"   # e.g., "l12r_32x" for layer 12
+    model: "meta-llama/Llama-3.1-8B"  # NOTE: Base model SAEs applied to Instruct — cross-check with andyrdt
+    layers: [12, 14, 16, 18, 20, 22, 24]
+  cross_check:
+    release: "llama-3.1-8b-instruct-andyrdt"   # SAELens registry key; HF: andyrdt/saes-llama-3.1-8b-instruct
+    sae_id_format: "resid_post_layer_{layer}_trainer_1"
+    model: "meta-llama/Llama-3.1-8B-Instruct"  # Instruct-trained SAEs
+    layers: [19, 23]   # available layers in this release: 3,7,11,15,19,23,27
+    k: 64
+    features: 131072
+  validation:
+    release: "gemma-scope-2b-pt-res-canonical"  # SAELens registry key
+    sae_id_format: "layer_{layer}/width_16k/canonical"  # canonical = closest L0 to 100 per layer
+    source_hf: "google/gemma-scope-2b-pt-res"
+
+traits:
+  - sycophancy
+  - evil
+  - hallucination
+
+steering:
+  coefficients: [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
+  default_alpha: 1.0
+
+thresholds:
+  necessity: 0.80
+  sufficiency: 0.60
+  minimality: 0.10
+  stability_jaccard: 0.30
+  significance: 0.01
+  a12_minimum: 0.71
+  random_baseline_samples: 100
+
+prompts:
+  extraction_pairs_per_trait: 100
+  behavioral_validation_per_trait: 50
+  circuit_analysis_per_trait: 20
+  ablation_validation_per_trait: 100  # 200 preferred if compute permits
+  unrelated_task_prompts: 150  # 50 TriviaQA + 50 GSM8K + 50 HumanEval
+
+seeds:
+  primary: 42
+  replication: [123, 456, 789]
+
+wandb:
+  project: "persona-circuits"
+  entity: "sohailm"
+  tags: ["psm", "circuits", "interpretability"]

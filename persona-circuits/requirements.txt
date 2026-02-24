@@ -1,0 +1,33 @@
+# ABOUTME: Pinned requirements for persona-circuits experiment.
+# ABOUTME: Install with: pip install -r requirements.txt
+
+# Core ML
+torch>=2.1.0
+transformers>=4.56.0,<=4.57.3      # circuit-tracer requires this exact range
+transformer-lens>=1.11.0
+sae-lens>=6.12.0                   # 6.12.0+ required for llama-3.1-8b-instruct-andyrdt release
+
+# SAE / interpretability
+# circuit-tracer is NOT on PyPI — install from source:
+#   git clone https://github.com/safety-research/circuit-tracer.git && pip install ./circuit-tracer
+
+# Experiment tracking
+wandb
+
+# LLM API
+anthropic
+
+# Data
+datasets
+evaluate                           # for HumanEval code_eval metric
+huggingface-hub
+
+# Analysis
+numpy
+scipy
+scikit-learn
+pandas
+
+# Plotting
+matplotlib
+seaborn

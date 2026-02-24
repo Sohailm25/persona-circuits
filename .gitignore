@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Local credentials
+configs/.env
+
+# Local experiment scratch space and local W&B cache
+scratch/
+wandb/

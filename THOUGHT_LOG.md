@@ -16,7 +16,6 @@ Review this section before starting any new phase or writing any pre-run checkpo
 - [ ] Add one sentence to intro framing PSM as mechanizing Shanahan et al.'s simulator claim. Required before: paper writing (Week 9). See entry 2026-02-24 THEORY.
 - [ ] Re-run SAE reconstruction sanity using stage-specific hooks/preprocessing before trusting any concentration claims. Required before: Week 3 SAE decomposition interpretation. See entry 2026-02-24 INFRA OBSERVATION.
 - [ ] Calibrate Week 2 judge reliability (rubric/prompt/parse robustness) before accepting final layer-alpha selections. Required before: Week 2 closeout. See entry 2026-02-25 FINDING.
-- [ ] Choose launch tranche and concurrency cap for the upgraded Week 2 matrix (primary vs replication vs stress) before execution. Required before: Week 2 upgraded run launch. See entry 2026-02-25 METHODOLOGY DESIGN.
 - [ ] Run Week 2 external benchmark transfer check for selected layer/alpha per trait (beyond held-out generated prompts). Required before: Week 2 closeout. See entry 2026-02-25 LITERATURE SECOND PASS.
 - [ ] Run extraction-method robustness A/B (last prompt token vs response-token average) on a sampled subset. Required before: Week 2 closeout interpretation. See entry 2026-02-25 LITERATURE SECOND PASS.
 - [ ] Perform manual 5-example judge concordance spot-check after upgraded primary runs. Required before: Week 2 final layer/alpha lock. See entry 2026-02-25 LITERATURE SECOND PASS.
@@ -31,6 +30,7 @@ Review this section before starting any new phase or writing any pre-run checkpo
 - [x] Tighten Week 2 acceptance gates to include secondary parse pass, non-trait control-test threshold, specificity threshold, and strict capability-availability behavior by default. Source: 2026-02-25 METHODOLOGY GAP. Resolved on 2026-02-25 in upgraded runner/planner.
 - [x] Implement hallucination known-fact (TruthfulQA-style) check in upgraded Week 2 runner and planner. Source: 2026-02-25 METHODOLOGY GAP. Resolved on 2026-02-25; execution evidence still pending.
 - [x] Complete rerun smoke validation after `top_k=None` patch and verify `steering_norm_diagnostics.ratio_stats` fields in report artifact. Source: 2026-02-25 METHODOLOGY/IMPLEMENTATION. Resolved on 2026-02-25 in run `i1pg2y8c` (`week2_behavioral_validation_upgrade_sycophancy_20260225T131007Z.json`).
+- [x] Choose launch tranche and concurrency cap for the upgraded Week 2 matrix (primary vs replication vs stress) before execution. Source: 2026-02-25 METHODOLOGY DESIGN. Resolved on 2026-02-25 by generating a primary-only launch plan (`week2_upgrade_parallel_plan_20260225T141045Z.json`) and deferring replication/stress until primary review.
 
 ---
 
@@ -285,3 +285,12 @@ Action: complete rerun smoke and confirm report includes `steering_norm_diagnost
 **Relevance:** Affects implementation-validation cadence and risk of conflating infra latency with methodological validity.
 
 [known] Implementation smoke accidentally inherited heavy defaults (`truthfulqa_samples=30`), creating long feedback loops that do not increase confidence in code-path correctness. [inferred] For fast iteration, smoke profiles should explicitly downshift high-cost evaluators while still traversing the same logic branches; full sample settings remain for primary/replication evidence runs.
+
+## [2026-02-25T14:11:52Z] [METHODOLOGY TIGHTENER] — Silent calibration truncation is a hidden reliability confound
+**Type:** finding
+**Phase:** Week 2 / Stage 1 behavioral validation upgrade
+**Relevance:** Judge-calibration reliability and closeout claim defensibility.
+
+[known] Prior v9 planning allowed `cross_rater_samples` to exceed `test_prompts`, silently reducing effective sample size via `min(...)`. [inferred] This can make calibration comparability drift across runs without explicit operator intent, weakening cross-run reliability interpretation. We now hard-fail this mismatch in both planner and runner and aligned defaults (`cross_rater_samples=20`, `test_prompts=20`).
+
+[known] Reviewer and prelaunch artifact status still indicate open robustness risk (external transfer + extraction A/B failures), so we retained a primary-first launch policy and explicitly logged this as an open risk in the new plan artifact.

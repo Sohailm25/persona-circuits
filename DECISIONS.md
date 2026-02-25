@@ -238,3 +238,14 @@ Architectural and methodological decisions made during execution, with rationale
 - New approach: Run a reduced-sample smoke (`truthfulqa_samples=2`, same strict parser/split/gate/control features) to verify wiring quickly, then reserve heavy settings for primary tranche.
 - Rationale: Implementation validation should minimize unnecessary runtime while still executing every critical code path.
 - Impact: Initial smoke marked partial/stopped; new minimal smoke launch scheduled before primary tranche go/no-go.
+
+## [2026-02-25T14:11:52Z] PIVOT: Enforce cross-rater/test alignment and primary-first launch safety
+- Trigger: External reviewer found remaining prelaunch risk that `cross_rater_samples` exceeded `test_prompts` in v9 plan artifacts and warned against launching full multi-phase matrix before primary evidence review.
+- Original approach: Allow `cross_rater_samples` to exceed `test_prompts` and silently cap calibration rows via `min(...)`; planner default launch script could include non-primary phases depending on flags.
+- New approach:
+  - Hard-fail when `cross_rater_samples > test_prompts` in both runner/planner.
+  - Align default `cross_rater_samples` to 20 (matching default test prompts).
+  - Add planner launch-script phase filter defaulting to `primary`.
+  - Regenerate plan artifact with primary-only jobs (`week2_upgrade_parallel_plan_20260225T141045Z.json`).
+- Rationale: Silent truncation can mask calibration design drift; primary-first sequencing reduces blast radius while prelaunch robustness gaps remain unresolved.
+- Impact: Primary tranche commands are now explicit 3-job launch set with bounded calibration sampling; replication/stress remain deferred until primary gates are reviewed.

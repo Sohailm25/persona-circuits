@@ -399,7 +399,7 @@ def main() -> None:
     parser.add_argument("--confirm-prompts", type=int, default=15)
     parser.add_argument("--test-prompts", type=int, default=20)
     parser.add_argument("--confirm-top-k", type=int, default=4)
-    parser.add_argument("--cross-rater-samples", type=int, default=24)
+    parser.add_argument("--cross-rater-samples", type=int, default=20)
     parser.add_argument("--random-control-prompts", type=int, default=20)
     parser.add_argument("--random-control-vectors", type=int, default=64)
     parser.add_argument("--shuffled-control-permutations", type=int, default=10)
@@ -433,9 +433,21 @@ def main() -> None:
     parser.add_argument("--no-replications", dest="include_replications", action="store_false")
     parser.set_defaults(include_replications=True)
     parser.add_argument("--include-stress", action="store_true")
+    parser.add_argument(
+        "--launch-script-phase",
+        type=str,
+        choices=["primary", "all"],
+        default="primary",
+        help="Phase filter when writing launch script. Default launches only primary jobs.",
+    )
     parser.add_argument("--output", type=str, default="")
     parser.add_argument("--write-launch-script", action="store_true")
     args = parser.parse_args()
+
+    if args.cross_rater_samples > args.test_prompts:
+        raise ValueError(
+            "--cross-rater-samples must be <= --test-prompts to avoid silent calibration truncation."
+        )
 
     config = _load_config()
     vectors_path = _latest_result_path("week2_persona_vectors_*.pt")
@@ -647,6 +659,7 @@ def main() -> None:
             "If expected result appears, wrong-probability is non-trivial until controls beat random/shuffled vectors.",
         ],
         "launch_strategy": {
+            "recommended_initial_phase": "primary",
             "recommended_concurrency": min(3, len(selected_traits)),
             "judge_throttle_policy": {
                 "judge_rpm_limit_per_run": args.judge_rpm_limit_per_run,
@@ -687,6 +700,9 @@ def main() -> None:
                 "estimated_runtime_minutes_sum": total_runtime_minutes,
             },
         },
+        "open_risks": [
+            "Latest prelaunch gap-check artifact failed external transfer and extraction A/B similarity; rerun after primary-selected layer/alpha combinations."
+        ],
         "success_criteria": {
             "judge_kappa": ">= 0.6",
             "primary_parse_fail_rate": f"<= {args.judge_parse_fail_threshold}",
@@ -744,8 +760,13 @@ def main() -> None:
 
     if args.write_launch_script:
         script_path = ROOT / "scratch" / "week2_upgrade_launch_commands.sh"
+        launch_jobs = (
+            jobs
+            if args.launch_script_phase == "all"
+            else [job for job in jobs if job.phase == "primary"]
+        )
         lines = ["#!/usr/bin/env bash", "set -euo pipefail", ""]
-        for job in jobs:
+        for job in launch_jobs:
             lines.append(job.command)
         script_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -758,6 +779,7 @@ def main() -> None:
                 "estimated_primary_judge_calls": total_primary_calls,
                 "estimated_secondary_judge_calls": total_secondary_calls,
                 "estimated_runtime_minutes_sum": total_runtime_minutes,
+                "launch_script_phase": args.launch_script_phase,
                 "first_commands": [job.command for job in jobs[: min(5, len(jobs))]],
             },
             indent=2,

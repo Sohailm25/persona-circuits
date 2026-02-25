@@ -563,3 +563,14 @@ Running notes, observations, hypotheses, and debugging logs during experiment ex
 - Artifacts saved: `results/stage1_extraction/week2_behavioral_validation_upgrade_sycophancy_20260225T135828Z.json`
 - Anomalies: no parse failures; long wall-clock due full model+judge path despite reduced smoke counts.
 - Next step: finalize reviewer-gap closure summary and decide launch readiness for Week 2 primary tranche.
+
+## [2026-02-25T14:11:52Z] CHECKPOINT: reviewer_feedback_prelaunch_tighteners
+- Scope: implemented reviewer-requested fast tighteners before primary tranche launch.
+- Code changes:
+  - `scripts/week2_behavioral_validation_upgrade.py`: hard fail if `cross_rater_samples > test_prompts_per_trait`; default cross-rater set to 20; removed silent `min(...)` truncation path for calibration rows.
+  - `scripts/week2_upgrade_parallel_plan.py`: default `cross_rater_samples=20`; hard fail if `cross_rater_samples > test_prompts`; added `--launch-script-phase` (default `primary`) to avoid accidental full-matrix launches; added explicit `open_risks` note for prelaunch gap-check failure.
+- Verification:
+  - `python3 -m py_compile scripts/week2_behavioral_validation_upgrade.py scripts/week2_upgrade_parallel_plan.py` -> PASS.
+  - Negative test: `python3 scripts/week2_upgrade_parallel_plan.py --test-prompts 20 --cross-rater-samples 24 --no-replications` -> expected ValueError (guard active).
+  - Regenerated primary-only plan artifact: `results/stage1_extraction/week2_upgrade_parallel_plan_20260225T141045Z.json` (`n_jobs=3`, phases=`["primary"]`, commands use `--cross-rater-samples 20`).
+- Next step: launch only primary jobs, then re-run prelaunch gap checks on primary-selected combos before replication/stress.

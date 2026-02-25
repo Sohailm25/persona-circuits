@@ -545,6 +545,10 @@ def run_trait_validation_remote(
         raise ValueError("confirm_top_k must be > 0.")
     if cross_rater_samples <= 0:
         raise ValueError("cross_rater_samples must be > 0.")
+    if cross_rater_samples > test_prompts_per_trait:
+        raise ValueError(
+            "cross_rater_samples must be <= test_prompts_per_trait to avoid silent calibration truncation."
+        )
     if random_control_prompts <= 0:
         raise ValueError("random_control_prompts must be > 0.")
     if random_control_vectors <= 0:
@@ -1291,7 +1295,7 @@ def run_trait_validation_remote(
     )
 
     # Judge reliability calibration on baseline high/low pairs.
-    calibration_rows = test_rows[: min(cross_rater_samples, len(test_rows))]
+    calibration_rows = test_rows[:cross_rater_samples]
     sonnet_scores: list[float] = []
     opus_scores: list[float] = []
     sonnet_pair_deltas: list[float] = []
@@ -2323,7 +2327,7 @@ def main(
     confirm_prompts_per_trait: int = 15,
     test_prompts_per_trait: int = 20,
     confirm_top_k: int = 3,
-    cross_rater_samples: int = 30,
+    cross_rater_samples: int = 20,
     random_control_prompts: int = 20,
     random_control_vectors: int = 64,
     shuffled_control_permutations: int = 10,

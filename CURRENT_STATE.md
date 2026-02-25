@@ -1,7 +1,7 @@
 # Current State
 
-**Last updated:** 2026-02-25T05:07:49-0600  
-**Updated by:** codex-gpt5 (session004)  
+**Last updated:** 2026-02-25T08:00:20-0600  
+**Updated by:** codex-gpt5 (session007)  
 **Status:** in_progress  
 **Current phase:** Phase 1 — Persona Extraction (Week 2)
 
@@ -34,10 +34,18 @@ Phase 1 is active. Week 1 infrastructure milestone is closed with a pass, and We
 - [x] Implement behavioral validation suite (Claude Sonnet 4.6 judge)
   - Script: `scripts/week2_behavioral_validation.py`
   - Includes: steering+reversal alpha sweep, cross-rater kappa, specificity/control checks, prompt-hash traceability
+- [x] Implement upgraded Week 2 validation pipeline (strict calibration + broad sweep planning)
+  - Runner: `scripts/week2_behavioral_validation_upgrade.py`
+  - Planner: `scripts/week2_upgrade_parallel_plan.py`
+  - Adds: strict JSON judge parsing + parse-fail gate, directionality calibration, coherence gate, sweep/confirm split, full-layer broad alpha sweep support, multi-random/shuffled controls with p95 separation, cross-trait bleed matrix, API throttle+retry backoff, seed override for replications
+  - Latest hardening (2026-02-25): secondary parse-pass is now required, non-trait control-test and specificity now have hard gates, capability proxy is required by default unless explicitly overridden (`--allow-missing-capability-proxy`), hallucination includes both TruthfulQA known-fact directional and objective MC checks, lockbox split is now sweep/confirm/test with headline gates on test, controls use larger null distributions (`random_control_vectors>=64`, `shuffled>=10` in primary plan), and rollout-stability support is added via multi-rollout averaging (`sweep=3`, `confirm=3`, `baseline=3`, `rollout_temperature=0.7` defaults)
+  - Added steering magnitude diagnostics: `steering_norm_diagnostics` now includes ratio distributions (`mean/median/p90/p95/max/min`), threshold exceedance fractions, and max-ratio warnings (injection norm vs residual norm at selected layer/alpha)
+  - Additional control-validity patch: null controls are now norm-matched to selected steering-vector magnitude and logged (`controls.selected_direction_norm`, `controls.control_direction_norm`)
+  - Planning artifacts: `results/stage1_extraction/week2_upgrade_parallel_plan_20260225T125134Z.json`, `scratch/week2_upgrade_launch_commands.sh`
 - [ ] Validate all 3 persona vectors (steering works)
-  - Status: attempted on frozen held-out prompts (`run=8b3fp37q`) but reliability gates failed
+  - Status: frozen baseline run (`run=8b3fp37q`) failed reliability gates; upgraded smoke reruns now confirm patched execution paths and schema, but full primary-tier evidence run is still pending
   - Observed selected combos (provisional only): sycophancy `(15, 3.0)`, evil `(16, 3.0)`, hallucination `(16, 2.5)`
-  - Blocking issues: kappa <0.6 for all traits; hallucination parse-fallback flag; evil steering asymmetry
+  - Blocking issues: kappa <0.6 for all traits; hallucination parse-fallback risk; evil steering asymmetry
 - [ ] Document optimal steering coefficients
 - [ ] Log all vectors and metrics to W&B
   - Partial: extraction vectors logged in `mud40b2t`; behavioral metrics logged in `8b3fp37q` but not accepted for closeout
@@ -51,6 +59,23 @@ Phase 1 is active. Week 1 infrastructure milestone is closed with a pass, and We
   - `results/stage1_extraction/week2_heldout_prompt_manifest_20260225T040156Z.json`
 - One behavioral run (`f41g19g9`) was intentionally invalidated after prompt-file mutation mid-run; rerun launched on frozen audited set.
 - Frozen rerun completed (`8b3fp37q`) with traceable prompt hashes, but validation quality gates failed (judge consistency + hallucination parseability).
+- Exhaustive second-pass methodology review completed and archived:
+  - `results/stage1_extraction/week2_literature_second_pass_20260225T120710Z.md`
+- Third-pass critical methodology audit completed and archived:
+  - `results/stage1_extraction/week2_literature_third_pass_20260225T123439Z.md`
+- Gap-focused literature addendum (rollout stability + norm diagnostics) completed and archived:
+  - `results/stage1_extraction/week2_gap34_literature_addendum_20260225T130737Z.md`
+- Prelaunch Week 2 gap-check run (external transfer + extraction-method A/B) retried after remote path fix and is currently running:
+  - Completed artifact: `results/stage1_extraction/week2_prelaunch_gap_checks_20260225T131521Z.json`
+  - Outcome: overall gate fail (`all_traits_external_transfer_pass=false`, `all_traits_extraction_ab_similarity_pass=false`)
+- Post-patch smoke check for upgraded runner (after `top_k=None` generation fix) completed successfully:
+  - Modal app: `ap-12Do4tY1DwxrIafMY9lWtr`
+  - W&B run: `i1pg2y8c`
+  - Artifact: `results/stage1_extraction/week2_behavioral_validation_upgrade_sycophancy_20260225T131007Z.json` (execution smoke only; tiny-sample gates not used for scientific closeout)
+- Post-reviewer patch smoke check (strict parser + lockbox + bleed gate + control norm matching) completed successfully:
+  - Modal app: `ap-ICdOlw6drTUL50qWgc6edW`
+  - W&B run: `j48ylybc`
+  - Artifact: `results/stage1_extraction/week2_behavioral_validation_upgrade_sycophancy_20260225T135828Z.json` (execution smoke only; tiny-sample gates not used for scientific closeout)
 
 ## Completed Phases
 
@@ -65,12 +90,15 @@ None.
 - `observed`: Sample SAE reconstruction cosines in Week 1 infra checks were low (Llama layer16: 0.1278; Gemma layer12: 0.4526).
 - `inferred`: This is not a Week 2 blocker for vector extraction, but remains a Week 3 interpretation gate.
 - Required follow-up remains tracked in `THOUGHT_LOG.md` pending actions: rerun reconstruction sanity with stage-appropriate hooks before trusting decomposition claims.
+- `known`: Full upgraded parallel plan is broad and expensive if launched all-at-once (15 jobs; latest estimate ~53k primary judge calls after stricter controls); should be launched in tranches.
 
 ## Next Action
 
-1. Run judge reliability/rubric calibration pass (manual concordance + prompt-template tightening) for weak traits, especially `evil` and `hallucination`.
-2. Re-run Week 2 behavioral validation after judge calibration.
-3. Lock final layer/alpha only if reliability gates pass.
+1. Run upgraded primary-tier validation tranche (all 3 traits) with current strict settings and test-split gates.
+2. Execute manual 5-example judge concordance spot-check on upgraded primary outputs.
+3. Run rollout-stability sensitivity check on selected combos (`confirm_rollouts_per_prompt: 3 -> 5`) before Week 2 closeout claim.
+4. Require replication consistency (primary + at least 2 replication seeds passing) before Week 2 closeout.
+5. After closeout criteria pass, proceed to Week 3 SAE decomposition.
 
 ---
 

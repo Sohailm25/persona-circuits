@@ -336,3 +336,230 @@ Running notes, observations, hypotheses, and debugging logs during experiment ex
   - hallucination exact-50 fallback rate 0.2743 (`>0.2` flag)
   - evil steering shift weak (0.32) relative to reversal shift (25.22), suggesting asymmetric effect
 - Next step: treat this run as diagnostic, not final Week 2 closeout; run judge reliability/rubric calibration pass before locking final layer/alpha.
+
+## [2026-02-25T05:36:40-0600] PRE-RUN: week2_upgrade_local_spot_check
+- THOUGHT_LOG pending actions reviewed: YES — Week 2 judge-calibration action is directly addressed by this script-path check; no additional blockers.
+- W&B run name: N/A (local spot-check mode)
+- Script: scripts/week2_behavioral_validation_upgrade.py
+- Config: trait=sycophancy, local_spot_check_model=gpt2, layer=1, alpha=0.5
+- What I'm testing: Upgraded runner executes hook path and strict score parser path without runtime errors before planning any large sweep launches.
+- Expected outcome: local spot-check JSON output with prompt previews and parse examples, plus successful Modal completion.
+- Expected duration: ~5-20 minutes (first build can be longer)
+- Implementation verified: YES — `python3 -m py_compile scripts/week2_behavioral_validation_upgrade.py scripts/week2_upgrade_parallel_plan.py`
+- Status: LAUNCHING
+
+## [2026-02-25T05:41:28-0600] POST-RUN: week2_upgrade_local_spot_check
+- W&B URL: N/A
+- Modal app ID: ap-Col4g7axdC7NORO2V6prkH
+- Outcome: SUCCESS
+- Key metric: local parser checks succeeded (`{"score":87}` -> 87, `Score: 12` -> 12, empty string -> parse failure detected); hook path executed with generated baseline/steered previews.
+- Artifacts saved: none (stdout-only implementation check)
+- Anomalies: none; first-image build was large but expected for new dependencies.
+- Next step: keep runs unlaunched; finalize documentation + launch plan for user approval.
+
+## [2026-02-25T06:05:15-0600] PRE-RUN: week2_upgrade_local_spot_check_post_literature_gates
+- THOUGHT_LOG pending actions reviewed: YES — Week 2 judge calibration action directly addressed; no other pending actions block this implementation check.
+- W&B run name: N/A (local spot-check mode)
+- Script: scripts/week2_behavioral_validation_upgrade.py
+- Config: trait=sycophancy, local_spot_check_model=gpt2, layer=1, alpha=0.5; new coherence gate + directionality calibration code paths compiled
+- What I'm testing: upgraded runner still executes local hook/parser path after adding coherence and directionality gates.
+- Expected outcome: local spot-check output renders baseline/steered previews and parse examples without runtime errors.
+- Expected duration: ~5-20 minutes
+- Implementation verified: YES — static compile check passed (`python3 -m py_compile` on both upgraded scripts).
+- Adversarial self-questioning:
+  - Most likely design flaw: new rubric key (`coherence`) or added thresholds introduce runtime path mismatch.
+  - Simplest confound: local spot-check bypasses remote judge paths and misses breakage in remote execution.
+  - Failure signature: local run exception in parser/hook path; follow-up remote smoke-check required before full launch.
+  - If expected result appears, probability I'm wrong: moderate; mitigated by compile + command generation + this runtime smoke check.
+- Status: LAUNCHING
+
+## [2026-02-25T06:05:42-0600] POST-RUN: week2_upgrade_local_spot_check_post_literature_gates
+- W&B URL: N/A
+- Modal app ID: ap-wsmdJmbBgGjYksCo1pSO6h
+- Outcome: SUCCESS
+- Key metric: local spot-check emitted parser sanity outputs (`{"score":87}` -> 87.0; empty string -> parse failure) with no runtime regressions after coherence/directionality gate additions.
+- Artifacts saved: none (stdout-only implementation check)
+- Anomalies: none.
+- Next step: finalize second-pass literature synthesis and update state docs with new pre-launch methodological gates.
+
+## [2026-02-25T06:18:28-0600] PRE-RUN: week2_prelaunch_gap_checks_initial
+- THOUGHT_LOG pending actions reviewed: YES — directly addressing Week 2 pending actions for external transfer + extraction A/B robustness prior to primary launch.
+- W&B run name: N/A (prelaunch gap-check artifact run)
+- Script: scripts/week2_prelaunch_gap_checks.py
+- Config: traits={sycophancy,evil,hallucination}; selected combos from diagnostic run (`sycophancy:15:3.0, evil:16:3.0, hallucination:16:2.5`); extraction_ab_pairs=12; external_prompts_per_trait=20.
+- What I'm testing: (1) external benchmark transfer sign/strength on third-party prompt sets, (2) extraction method robustness between prompt-last and response-mean vectors.
+- Expected outcome: parseable report with per-trait transfer and A/B similarity metrics; identify whether any trait fails prelaunch thresholds.
+- Expected duration: ~30-90 minutes
+- Implementation verified: YES — new script compiles (`python3 -m py_compile scripts/week2_prelaunch_gap_checks.py`).
+- Adversarial self-questioning:
+  - Most likely design flaw: external datasets may not align perfectly with our trait rubrics, inducing noisy judge scores.
+  - Simplest confound: selected combos are from a diagnostic run that failed reliability gates; poor transfer could reflect combo quality rather than methodology.
+  - Failure signature: external transfer sign inconsistency or low prompt-last/response-mean cosine (<0.7).
+  - If expected result appears, probability I'm wrong: moderate; mitigated by using three independent external datasets and explicit per-trait reporting.
+- Status: LAUNCHING
+
+## [2026-02-25T06:27:47-0600] POST-RUN: week2_prelaunch_gap_checks_initial
+- W&B URL: N/A (prelaunch artifact run)
+- Modal app ID: ap-Dw08Kvfmi5G1pK2NAmZBAO
+- Outcome: FAILURE
+- Key metric: startup_error=FileNotFoundError for extraction prompt path (/prompts/sycophancy_pairs.jsonl) in remote runtime
+- Artifacts saved: none
+- Anomalies: remote function attempted to read local prompt files not mounted in Modal container
+- Next step: patch script to pass extraction rows from local entrypoint to remote function and rerun
+
+## [2026-02-25T06:27:47-0600] PRE-RUN: week2_prelaunch_gap_checks_retry_after_remote_path_fix
+- THOUGHT_LOG pending actions reviewed: YES — directly addressing Week 2 pending actions for external transfer + extraction A/B robustness before primary tranche launch.
+- W&B run name: N/A (prelaunch gap-check artifact run)
+- Script: scripts/week2_prelaunch_gap_checks.py
+- Config: traits={sycophancy,evil,hallucination}; selected combos=sycophancy:15:3.0,evil:16:3.0,hallucination:16:2.5; extraction_ab_pairs=12; external_prompts_per_trait=20.
+- What I'm testing: end-to-end prelaunch checks after fixing prompt-file access in remote runtime.
+- Expected outcome: report with extraction_method_ab, external_transfer, judge_stats, and quality_gates including overall pass/fail.
+- Expected duration: ~30-120 minutes
+- Implementation verified: YES — script patched and compiled (python3 -m py_compile scripts/week2_prelaunch_gap_checks.py).
+- Adversarial self-questioning:
+  - Most likely design flaw: external dataset prompt distributions mismatch our trait rubric semantics, weakening transfer signal.
+  - Simplest confound: selected layer/alpha combos are provisional from a previously failed reliability run.
+  - Failure signature: negative plus-vs-baseline or baseline-vs-minus shifts, or extraction method cosine <0.7.
+  - If expected result appears, probability I'm wrong: moderate; mitigated by explicit quality gates and manual sample outputs.
+- Status: LAUNCHING
+
+## [2026-02-25T06:46:13-0600] PRE-RUN: week2_upgrade_local_spot_check_post_rollout_and_norm_updates
+- THOUGHT_LOG pending actions reviewed: YES — this run validates newly implemented rollout-averaging and norm-diagnostic code paths.
+- W&B run name: N/A (local spot-check mode)
+- Script: scripts/week2_behavioral_validation_upgrade.py
+- Config: trait=sycophancy, local_spot_check_model=gpt2, layer=1, alpha=0.5
+- What I'm testing: upgraded script still runs local hook/parser path after adding rollout controls, TruthfulQA gate plumbing, and steering norm diagnostics.
+- Expected outcome: successful local spot-check output with prompt previews and parser examples; no runtime regressions.
+- Expected duration: ~5-20 minutes
+- Implementation verified: YES — static compile passed ().
+- Adversarial self-questioning:
+  - Most likely design flaw: added params drift between planner and runner causes argument mismatch on launch.
+  - Simplest confound: local spot-check bypasses full judge/benchmark branches and misses remote-only issues.
+  - Failure signature: runtime exception in spot-check path or CLI parsing mismatch.
+  - If expected result appears, probability I'm wrong: moderate; mitigated by compile + command-regeneration + this runtime smoke test.
+- Status: LAUNCHING
+
+## [2026-02-25T06:46:36-0600] POST-RUN: week2_upgrade_local_spot_check_post_rollout_and_norm_updates
+- W&B URL: N/A
+- Modal app ID: ap-3D0MzY3jUhJNbNYnYGU3f3
+- Outcome: SUCCESS
+- Key metric: local spot-check completed with parser sanity preserved and no runtime regression after rollout/norm/TruthfulQA plumbing.
+- Artifacts saved: none (stdout-only implementation check)
+- Anomalies: none
+- Next step: keep prelaunch gap-check run in progress; finalize code+literature audit summary for user.
+
+## [2026-02-25T06:52:12-0600] PRE-RUN: week2_upgrade_remote_smoke_post_rollout_norm_refine
+- THOUGHT_LOG pending actions reviewed: YES — this run directly validates the newly refined rollout defaults and steering norm diagnostics before any broad launch.
+- W&B run name: week2-upgrade-smoke-sycophancy-post-rollout-norm
+- Script: scripts/week2_behavioral_validation_upgrade.py
+- Config: trait=sycophancy; layers=15; alpha_grid=1.0; sweep/confirm prompts=1/1; top_k=1; cross_rater_samples=1; random_control_prompts=1; random_control_vectors=1; rollouts sweep/confirm/baseline=2/2/2; rollout_temperature=0.7; allow_missing_capability_proxy=true
+- What I'm testing: end-to-end remote execution including selected-combo steering_norm_diagnostics and rollout averaging paths.
+- Expected outcome: successful JSON report artifact with steering_norm_diagnostics including ratio_stats/max_ratio fields.
+- Expected duration: ~10-35 minutes
+- Implementation verified: YES — `python3 -m py_compile scripts/week2_behavioral_validation_upgrade.py scripts/week2_upgrade_parallel_plan.py` and planner regeneration succeeded.
+- Adversarial self-questioning:
+  - Most likely design flaw: new diagnostic fields referenced in wandb log keys could raise runtime key errors.
+  - Simplest confound: tiny prompt count can pass despite hidden instability; this is only a smoke run, not a validity run.
+  - Failure signature: runtime exception near steering_norm_diagnostics aggregation or wandb logging.
+  - If expected result appears, probability I'm wrong: moderate; mitigated by inspecting emitted report keys and then using larger primary runs.
+- Status: LAUNCHING
+
+## [2026-02-25T06:57:02-0600] POST-RUN: week2_upgrade_remote_smoke_post_rollout_norm_refine
+- W&B URL: https://wandb.ai/sohailm/persona-circuits/runs/9tryl8bu
+- Modal app ID: ap-dh6j9qC67HvOVHrj27MbxJ
+- Outcome: FAILURE
+- Key metric: runtime_exception=`AssertionError: top_k has to be greater than 0` in `transformer_lens.utils.sample_logits` during generation.
+- Artifacts saved: partial W&B run only (no valid report artifact).
+- Anomalies: `model.generate(..., top_k=0)` is incompatible with current runtime `transformer_lens` behavior.
+- Next step: patch generation to use `top_k=None`, re-run the smoke check, then confirm `steering_norm_diagnostics` fields are emitted.
+
+## [2026-02-25T06:58:44-0600] PRE-RUN: week2_upgrade_remote_smoke_rerun_after_topk_fix
+- THOUGHT_LOG pending actions reviewed: YES — this rerun is required to validate the implementation after the generation compatibility fix.
+- W&B run name: week2-upgrade-smoke-sycophancy-post-rollout-norm-rerun
+- Script: scripts/week2_behavioral_validation_upgrade.py
+- Config: trait=sycophancy; layers=15; alpha_grid=1.0; sweep/confirm prompts=1/1; top_k=1; cross_rater_samples=1; random_control_prompts=1; random_control_vectors=1; rollouts sweep/confirm/baseline=2/2/2; rollout_temperature=0.7; allow_missing_capability_proxy=true
+- What I'm testing: end-to-end remote execution after replacing `top_k=0` with `top_k=None`, including emission of steering norm ratio distribution stats.
+- Expected outcome: successful report with `steering_norm_diagnostics.ratio_stats` and `max_ratio` fields; no generation assertion errors.
+- Expected duration: ~10-35 minutes
+- Implementation verified: YES — script patched and compiles (`python3 -m py_compile scripts/week2_behavioral_validation_upgrade.py`).
+- Adversarial self-questioning:
+  - Most likely design flaw: another generation-path compatibility issue appears later in the run.
+  - Simplest confound: tiny prompt counts do not test statistical quality, only code-path correctness.
+  - Failure signature: runtime exception before report write or missing new norm-stat keys in report JSON.
+  - If expected result appears, probability I'm wrong: moderate; mitigated by artifact key inspection and follow-up primary-tier runs.
+- Status: LAUNCHING
+
+## [2026-02-25T07:10:08-0600] POST-RUN: week2_upgrade_remote_smoke_rerun_after_topk_fix
+- W&B URL: https://wandb.ai/sohailm/persona-circuits/runs/i1pg2y8c
+- Modal app ID: ap-12Do4tY1DwxrIafMY9lWtr
+- Outcome: SUCCESS (execution) / PARTIAL (quality gates not expected to pass on tiny smoke config)
+- Key metric: selected layer/alpha = (15, 1.0); report emitted successfully with `steering_norm_diagnostics.ratio_stats` and `max_ratio`; `overall_pass=false` on reduced-sample smoke setup.
+- Artifacts saved: `results/stage1_extraction/week2_behavioral_validation_upgrade_sycophancy_20260225T131007Z.json`; modal volume report `/models/persona-circuits/week2/behavioral_validation_upgrade_sycophancy_20260225T130954Z.json`
+- Anomalies: none after `top_k=None` patch; prior generation assertion no longer occurs.
+- Next step: treat this as implementation validation only; proceed with primary-tier tranche using updated rollout and oversteer diagnostics.
+
+## [2026-02-25T13:24:32Z] PRE-RUN: week2_upgrade_smoke_post_reviewer_patchset
+- THOUGHT_LOG pending actions reviewed: YES — directly validating implementation integrity after lockbox+strict-parse+controls patchset.
+- W&B run name: week2-upgrade-smoke-post-reviewer-patchset
+- Script: scripts/week2_behavioral_validation_upgrade.py
+- Config: trait=sycophancy; layers=15; alpha_grid=1.0; sweep/confirm/test=1/1/1; confirm_top_k=1; cross_rater_samples=1; random_control_prompts=1; random_control_vectors=2; shuffled_control_permutations=2; rollouts=2/2/2; allow_missing_capability_proxy=true
+- What I'm testing: end-to-end execution with strict judge parse, sweep/confirm/test split, cross-trait bleed gate plumbing, objective TruthfulQA gate plumbing, and strengthened control baselines.
+- Expected outcome: successful report artifact with `split.test_prompt_ids`, `selected.test_metric`, `cross_trait_bleed_gate`, and `truthfulqa_objective` fields.
+- Expected duration: ~15-45 minutes
+- Implementation verified: YES — `python3 -m py_compile` succeeded for upgraded runner/planner/prelaunch scripts.
+- Adversarial self-questioning:
+  - Most likely design flaw: strict parse handling now causes runtime abort on malformed judge outputs.
+  - Simplest confound: tiny-sample smoke cannot validate scientific gates; only code-path correctness.
+  - Failure signature: runtime exception in judge parse loop, split indexing, or new control/gate key wiring.
+  - If expected result appears, probability I'm wrong: moderate; mitigated by report-field inspection and planned full primary runs.
+- Status: LAUNCHING
+
+## [2026-02-25T13:33:01Z] PRE-RUN: week2_upgrade_smoke_post_control_norm_match
+- THOUGHT_LOG pending actions reviewed: YES — this run validates the newly added norm-matched null controls before primary tranche launch.
+- W&B run name: week2-upgrade-smoke-post-control-norm-match
+- Script: scripts/week2_behavioral_validation_upgrade.py
+- Config: trait=sycophancy; layers=15; alpha_grid=1.0; sweep/confirm/test=1/1/1; confirm_top_k=1; cross_rater_samples=1; random_control_prompts=1; random_control_vectors=2; shuffled_control_permutations=2; rollouts=2/2/2; allow_missing_capability_proxy=true
+- What I'm testing: end-to-end execution after norm-matching random/shuffled/text controls to selected steering vector norm.
+- Expected outcome: successful report artifact with strict-parse fields plus controls.selected_direction_norm/control_direction_norm populated.
+- Expected duration: ~15-45 minutes
+- Implementation verified: YES — patched script compiles (`python3 -m py_compile scripts/week2_behavioral_validation_upgrade.py`).
+- Adversarial self-questioning:
+  - Most likely design flaw: control norm matching could introduce unintended scaling side-effects in tiny-sample smoke mode.
+  - Simplest confound: smoke-size prompt counts only validate code-path wiring, not statistical validity.
+  - Failure signature: runtime exception in control block or missing control norm keys in output report.
+  - If expected result appears, probability I'm wrong: moderate; mitigated by artifact key inspection and upcoming full-scale tranche.
+- Status: LAUNCHING
+
+## [2026-02-25T13:43:32Z] POST-RUN: week2_upgrade_smoke_post_control_norm_match
+- W&B URL: https://wandb.ai/sohailm/persona-circuits/runs/ay0tz4u7
+- Modal app ID: ap-DlLAI2RQ3olafiRz2wYSUn
+- Outcome: PARTIAL (manually stopped)
+- Key metric: none (report artifact not emitted before stop)
+- Artifacts saved: none in local results; partial W&B logs only
+- Anomalies: smoke config still used heavy default `truthfulqa_samples=30` and full capability proxy branch, causing slow turn-around for implementation-only validation.
+- Next step: rerun a minimal smoke with reduced `truthfulqa_samples` and faster judge throttle while preserving the same upgraded code paths.
+
+## [2026-02-25T13:43:32Z] PRE-RUN: week2_upgrade_smoke_minimal_fast_path
+- THOUGHT_LOG pending actions reviewed: YES — this run continues the same control-norm validation with a right-sized smoke profile.
+- W&B run name: week2-upgrade-smoke-minimal-fast-path
+- Script: scripts/week2_behavioral_validation_upgrade.py
+- Config: trait=sycophancy; layers=15; alpha_grid=1.0; sweep/confirm/test=1/1/1; confirm_top_k=1; cross_rater_samples=1; random_control_prompts=1; random_control_vectors=2; shuffled_control_permutations=2; rollouts=2/2/2; truthfulqa_samples=2; judge_rpm_limit_per_run=240; judge_min_interval_seconds=0.1; allow_missing_capability_proxy=true
+- What I'm testing: end-to-end smoke on patched strict parser + lockbox split + cross-trait bleed gate + objective hallucination gate + norm-matched null controls, with reduced sample load for quick completion.
+- Expected outcome: report artifact containing `split.test_prompt_ids`, `selected.test_metric`, `cross_trait_bleed_gate`, `truthfulqa_objective`, and control norm fields.
+- Expected duration: ~10-25 minutes
+- Implementation verified: YES — script compiled after control-norm patch (`python3 -m py_compile scripts/week2_behavioral_validation_upgrade.py`).
+- Adversarial self-questioning:
+  - Most likely design flaw: reduced smoke size may bypass edge-case failures that appear at scale.
+  - Simplest confound: tiny sample counts can hide judge instability; this run only verifies wiring.
+  - Failure signature: missing expected report keys or runtime exception in tightened parser/gate blocks.
+  - If expected result appears, probability I'm wrong: moderate; mitigated by this being implementation check only, followed by full tranche.
+- Status: LAUNCHING
+
+## [2026-02-25T13:58:52Z] POST-RUN: week2_upgrade_smoke_minimal_fast_path
+- W&B URL: https://wandb.ai/sohailm/persona-circuits/runs/j48ylybc
+- Modal app ID: ap-ICdOlw6drTUL50qWgc6edW
+- Outcome: SUCCESS (execution) / PARTIAL (smoke-size metrics not expected to pass quality gates)
+- Key metric: report emitted with upgraded schema; `split.test_prompt_ids` present, `selected.test_metric` present, `cross_trait_bleed_gate` present, `controls.{selected_direction_norm,control_direction_norm}` present.
+- Artifacts saved: `results/stage1_extraction/week2_behavioral_validation_upgrade_sycophancy_20260225T135828Z.json`
+- Anomalies: no parse failures; long wall-clock due full model+judge path despite reduced smoke counts.
+- Next step: finalize reviewer-gap closure summary and decide launch readiness for Week 2 primary tranche.

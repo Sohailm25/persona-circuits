@@ -249,3 +249,10 @@ Architectural and methodological decisions made during execution, with rationale
   - Regenerate plan artifact with primary-only jobs (`week2_upgrade_parallel_plan_20260225T141045Z.json`).
 - Rationale: Silent truncation can mask calibration design drift; primary-first sequencing reduces blast radius while prelaunch robustness gaps remain unresolved.
 - Impact: Primary tranche commands are now explicit 3-job launch set with bounded calibration sampling; replication/stress remain deferred until primary gates are reviewed.
+
+## [2026-02-25T15:11:21Z] DECISION: Freeze run-launch surface and enforce monitor-only handoff while primary tranche is in-flight
+- Trigger: User requested robust cross-session handoff so a new agent does not relaunch, overwrite, or misalign active Week 2 primary work.
+- Original approach: Track run launch metadata in scratch/current-state, but without an explicit monitor-only protocol block.
+- New approach: Add explicit do-not-relaunch guardrails with canonical app IDs, resume commands, and completion-order requirements in `CURRENT_STATE.md` and `SCRATCHPAD.md`.
+- Rationale: Prevent duplicated expensive runs and preserve clean causal interpretation of primary-tranche results.
+- Impact: Next session can resume deterministically from active app IDs, collect terminal artifacts, then proceed to post-primary validation tasks without re-execution.

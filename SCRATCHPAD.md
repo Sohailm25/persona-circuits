@@ -636,3 +636,19 @@ Running notes, observations, hypotheses, and debugging logs during experiment ex
   - W&B run: `https://wandb.ai/sohailm/persona-circuits/runs/81rimxnc`
 - Startup health: all three reached model-load stage with no immediate runtime exceptions; jobs remain in progress.
 - Note: detached app semantics confirmed; post-run checkpoints will be added when each job reaches terminal state.
+
+## [2026-02-25T15:11:21Z] STATUS CHECKPOINT: primary_tranche_inflight_handoff_hardening
+- Objective: lock handoff state so next session monitors existing runs rather than relaunching.
+- Evidence snapshot (`known`):
+  - `modal app list --json` shows all three Week2 primary apps still active with `tasks=1` and `stopped_at=None`:
+    - sycophancy: `ap-kqV4eWSGwrVt8nKE4ZA3NF`
+    - evil: `ap-SAFulvrYqaddpusCHafEzB`
+    - hallucination: `ap-Ae34zytuXoYv11ksGBM5XH`
+  - app logs for all three show startup + model load complete; no terminal exception observed in tail.
+  - local results directory still contains only prior smoke artifacts (no completed primary JSON yet).
+- Handoff guardrail: do not launch new primary jobs while these app IDs remain active.
+- Resume command set for next session:
+  1. `modal app list --json`
+  2. `ls -lt results/stage1_extraction/week2_behavioral_validation_upgrade_* | head`
+  3. `modal app logs <app_id> --timestamps` (as needed for failure diagnosis)
+- Next action after terminal completion: write `POST-RUN` entries for each trait and update `CURRENT_STATE.md` + `RESULTS_INDEX.md` before any new launches.

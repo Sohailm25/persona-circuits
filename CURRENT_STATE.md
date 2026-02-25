@@ -1,7 +1,7 @@
 # Current State
 
-**Last updated:** 2026-02-25T08:23:59-0600  
-**Updated by:** codex-gpt5 (session009)  
+**Last updated:** 2026-02-25T09:11:21-0600  
+**Updated by:** codex-gpt5 (session010)  
 **Status:** in_progress  
 **Current phase:** Phase 1 — Persona Extraction (Week 2)
 
@@ -44,7 +44,7 @@ Phase 1 is active. Week 1 infrastructure milestone is closed with a pass, and We
   - Additional pre-launch tightening patch: enforce `cross_rater_samples <= test_prompts` (no silent calibration truncation), default cross-rater now aligned to test split (`20`), and launch-script phase filter defaults to `primary`
   - Planning artifacts: `results/stage1_extraction/week2_upgrade_parallel_plan_20260225T141045Z.json`, `scratch/week2_upgrade_launch_commands.sh`
 - [ ] Validate all 3 persona vectors (steering works)
-  - Status: frozen baseline run (`run=8b3fp37q`) failed reliability gates; upgraded smoke reruns confirmed patched execution paths; primary-tier evidence tranche is now running (`sycophancy: ty3k95jg`, `evil: t8lajipl`, `hallucination: 81rimxnc`)
+  - Status: frozen baseline run (`run=8b3fp37q`) failed reliability gates; upgraded smoke reruns confirmed patched execution paths; primary-tier evidence tranche is now running (`sycophancy: ty3k95jg / ap-kqV4eWSGwrVt8nKE4ZA3NF`, `evil: t8lajipl / ap-SAFulvrYqaddpusCHafEzB`, `hallucination: 81rimxnc / ap-Ae34zytuXoYv11ksGBM5XH`)
   - Observed selected combos (provisional only): sycophancy `(15, 3.0)`, evil `(16, 3.0)`, hallucination `(16, 2.5)`
   - Blocking issues: kappa <0.6 for all traits; hallucination parse-fallback risk; evil steering asymmetry
 - [ ] Document optimal steering coefficients
@@ -77,6 +77,11 @@ Phase 1 is active. Week 1 infrastructure milestone is closed with a pass, and We
   - Modal app: `ap-ICdOlw6drTUL50qWgc6edW`
   - W&B run: `j48ylybc`
   - Artifact: `results/stage1_extraction/week2_behavioral_validation_upgrade_sycophancy_20260225T135828Z.json` (execution smoke only; tiny-sample gates not used for scientific closeout)
+- Primary-tranche run status snapshot (as of 2026-02-25T09:11:21-0600):
+  - sycophancy: `ap-kqV4eWSGwrVt8nKE4ZA3NF` (`state=ephemeral (detached)`, `tasks=1`, `stopped_at=None`)
+  - evil: `ap-SAFulvrYqaddpusCHafEzB` (`state=ephemeral (detached)`, `tasks=1`, `stopped_at=None`)
+  - hallucination: `ap-Ae34zytuXoYv11ksGBM5XH` (`state=ephemeral (detached)`, `tasks=1`, `stopped_at=None`)
+  - Local artifact directory has no new primary result JSON yet (only earlier smoke artifacts).
 
 ## Completed Phases
 
@@ -96,12 +101,28 @@ None.
 
 ## Next Action
 
-1. Monitor the three in-flight primary runs to terminal completion and write post-run checkpoints with artifact paths and gate outcomes.
-2. Execute manual 5-example judge concordance spot-check on upgraded primary outputs.
-3. Re-run prelaunch gap checks (external transfer + extraction A/B) on the newly selected primary combos before Week 2 closeout claim.
-4. Run rollout-stability sensitivity check on selected combos (`confirm_rollouts_per_prompt: 3 -> 5`) before Week 2 closeout claim.
-5. Require replication consistency (primary + at least 2 replication seeds passing) before Week 2 closeout.
-6. After closeout criteria pass, proceed to Week 3 SAE decomposition.
+1. Do **not** relaunch Week 2 primary jobs while these app IDs remain active: `ap-kqV4eWSGwrVt8nKE4ZA3NF`, `ap-SAFulvrYqaddpusCHafEzB`, `ap-Ae34zytuXoYv11ksGBM5XH`.
+2. Monitor those three runs to terminal completion and write post-run checkpoints with artifact paths and gate outcomes.
+3. Execute manual 5-example judge concordance spot-check on upgraded primary outputs.
+4. Re-run prelaunch gap checks (external transfer + extraction A/B) on the newly selected primary combos before Week 2 closeout claim.
+5. Run rollout-stability sensitivity check on selected combos (`confirm_rollouts_per_prompt: 3 -> 5`) before Week 2 closeout claim.
+6. Require replication consistency (primary + at least 2 replication seeds passing) before Week 2 closeout.
+7. After closeout criteria pass, proceed to Week 3 SAE decomposition.
+
+## Handoff Resume Protocol (if session restarts now)
+
+1. Verify in-flight app status (no relaunch unless app is stopped/failed):
+   - `modal app list --json`
+   - confirm status for `ap-kqV4eWSGwrVt8nKE4ZA3NF`, `ap-SAFulvrYqaddpusCHafEzB`, `ap-Ae34zytuXoYv11ksGBM5XH`
+2. Check for newly written primary artifacts:
+   - `ls -lt results/stage1_extraction/week2_behavioral_validation_upgrade_* | head`
+3. If any app reaches terminal state, immediately write `POST-RUN` entry in `SCRATCHPAD.md` with:
+   - app ID, W&B run URL, outcome, key metrics/gates, artifact path.
+4. Only after all three primary runs finish:
+   - compile gate summary across traits
+   - run manual judge concordance spot-check
+   - run updated prelaunch gap checks on primary-selected combos
+5. Launch replication/stress only if primary evidence review is complete and documented.
 
 ---
 

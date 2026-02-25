@@ -21,6 +21,7 @@ Review this section before starting any new phase or writing any pre-run checkpo
 - [ ] Perform manual 5-example judge concordance spot-check after upgraded primary runs. Required before: Week 2 final layer/alpha lock. See entry 2026-02-25 LITERATURE SECOND PASS.
 - [ ] Run hallucination known-fact benchmark check (TruthfulQA-style) in upgraded Week 2 validation before closeout claim. Required before: Week 2 closeout. See entry 2026-02-25 METHODOLOGY GAP.
 - [ ] Run rollout-stability sensitivity check (confirm rollouts 3 vs 5) on primary-tier selected combos. Required before: Week 2 final closeout claim. See entry 2026-02-25 METHODOLOGY UPDATE.
+- [ ] Before any new Week 2 launch command, verify whether active primary app IDs are still running and avoid relaunching duplicates. Required before: any additional Week 2 Modal launch. See entry 2026-02-25 HANDOFF RISK.
 
 ## RESOLVED ACTIONS
 
@@ -294,3 +295,10 @@ Action: complete rerun smoke and confirm report includes `steering_norm_diagnost
 [known] Prior v9 planning allowed `cross_rater_samples` to exceed `test_prompts`, silently reducing effective sample size via `min(...)`. [inferred] This can make calibration comparability drift across runs without explicit operator intent, weakening cross-run reliability interpretation. We now hard-fail this mismatch in both planner and runner and aligned defaults (`cross_rater_samples=20`, `test_prompts=20`).
 
 [known] Reviewer and prelaunch artifact status still indicate open robustness risk (external transfer + extraction A/B failures), so we retained a primary-first launch policy and explicitly logged this as an open risk in the new plan artifact.
+
+## [2026-02-25T15:11:21Z] [HANDOFF RISK] — Duplicate relaunches are a real experimental confound in long detached runs
+**Type:** action
+**Phase:** Week 2 / Stage 1 behavioral validation
+**Relevance:** Protects clean evidence attribution and compute budget while primary tranche is still in flight.
+
+[known] The three primary jobs are detached and currently active, with no terminal artifacts yet. [inferred] If a new session relaunches “just to be safe,” we risk mixing evidence across duplicate runs, mis-attributing selected layer/alpha outcomes, and wasting substantial judge budget. We added explicit do-not-relaunch guardrails and canonical app IDs to CURRENT_STATE/SCRATCHPAD so the next session can resume by monitoring, not restarting.

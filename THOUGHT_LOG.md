@@ -302,3 +302,10 @@ Action: complete rerun smoke and confirm report includes `steering_norm_diagnost
 **Relevance:** Protects clean evidence attribution and compute budget while primary tranche is still in flight.
 
 [known] The three primary jobs are detached and currently active, with no terminal artifacts yet. [inferred] If a new session relaunches “just to be safe,” we risk mixing evidence across duplicate runs, mis-attributing selected layer/alpha outcomes, and wasting substantial judge budget. We added explicit do-not-relaunch guardrails and canonical app IDs to CURRENT_STATE/SCRATCHPAD so the next session can resume by monitoring, not restarting.
+
+## [2026-02-25T15:18:08Z] [OPS OBSERVATION] — W&B API run lookup can lag/return not-found while Modal shows active run
+**Type:** observation
+**Phase:** Week 2 / Stage 1 behavioral validation
+**Relevance:** Prevents false-negative status judgments during long detached runs.
+
+[known] During active primary runs, direct links from Modal logs to W&B run pages were emitted, but local W&B API lookup by run id intermittently returned `not found`. [inferred] Next-session liveness checks should prioritize Modal app state/logs and artifact creation; treat W&B API lookup failures as non-terminal unless corroborated by app failure evidence.

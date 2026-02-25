@@ -95,3 +95,45 @@ Architectural and methodological decisions made during execution, with rationale
 - New approach: Use chat template only when `tokenizer.chat_template` is present; otherwise fall back to plain `System/User/Assistant` formatted text.
 - Rationale: Extraction pipeline should be model-agnostic for local instrumentation checks and avoid false failures on non-chat tokenizers.
 - Impact: Spot-check path now succeeds; extraction script is robust to both chat and non-chat tokenizers.
+
+## [2026-02-24T21:20:10-0600] PIVOT: Enforce strict disjointness between extraction and held-out validation prompts
+- Trigger: exact-string overlap check found 2 duplicate hallucination queries between `prompts/hallucination_pairs.jsonl` and held-out set.
+- Original approach: generate held-out prompts independently and rely on low collision probability.
+- New approach: hard-block any held-out query whose normalized text appears in extraction prompts for the same trait.
+- Rationale: Week 2 validation must be on truly held-out prompts to avoid contamination/overfitting risk.
+- Impact: `scripts/generate_week2_heldout_prompts.py` updated; hallucination held-out regenerated; overlap now 0 for all traits.
+
+## [2026-02-24T21:22:05-0600] DECISION: Behavioral sweep uses top-2 candidate layers per trait from extraction margins
+- Trigger: full grid over 6 layers x 6 alphas x 50 prompts x 3 traits is computationally heavy and delays iteration.
+- Original approach: evaluate all layers 11-16 uniformly in judge-based behavioral sweep.
+- New approach: preselect top-2 layers per trait using extraction `projection_margin_mean`, then run full alpha sweep + held-out evaluation on those layers.
+- Rationale: keeps behavioral selection grounded in measured signal while reducing compute enough to run reversal + cross-rater checks in one pass.
+- Impact: Week 2 behavioral results are conditioned on top-2 layer preselection; if effects are weak/inconsistent, escalate to full 11-16 sweep.
+
+## [2026-02-24T21:22:20-0600] PIVOT: Fix hook callback signature in behavioral validation script
+- Trigger: local spot-check failed with `TypeError ... got an unexpected keyword argument 'hook'`.
+- Original approach: hook callback accepted parameter name `_hook`.
+- New approach: use `hook` parameter name (TransformerLens passes by keyword) and ignore it explicitly.
+- Rationale: without this fix, steering hooks would silently fail at runtime.
+- Impact: `scripts/week2_behavioral_validation.py` patched and local spot-check rerun successfully.
+
+## [2026-02-24T21:24:10-0600] PIVOT: Add missing `anthropic` dependency to Week 2 behavioral validation image
+- Trigger: First full behavioral validation run failed immediately with `ModuleNotFoundError: No module named 'anthropic'`.
+- Original approach: Modal image installed model/analysis stack but omitted Anthropic client package.
+- New approach: Add `anthropic` to `scripts/week2_behavioral_validation.py` Modal image dependencies and rerun.
+- Rationale: Judge-based scoring is a required component of Week 2 validation; missing client blocks all trait metrics.
+- Impact: Rebuild image and rerun behavioral validation job from scratch.
+
+## [2026-02-24T21:56:41-0600] PIVOT: Abort in-flight behavioral run after held-out prompt mutation; rerun on frozen audited set
+- Trigger: During run monitoring, I regenerated held-out prompts to restore complete 3-trait audit coverage; this changed on-disk prompt files after the in-flight validation job had already loaded an earlier prompt set.
+- Original approach: Let the in-flight run continue and use its results.
+- New approach: Stop the in-flight run, snapshot/verify the now-audited held-out prompts, and rerun behavioral validation so results map 1:1 to current artifacts.
+- Rationale: Using results from prompts that no longer exist on disk breaks reproducibility/traceability and weakens evidence status.
+- Impact: Current run marked invalid for milestone evidence; Week 2 behavioral validation rerun required before selecting final layer/alpha.
+
+## [2026-02-24T22:09:29-0600] DECISION: Add held-out prompt hashing metadata to behavioral validation reports
+- Trigger: Prompt mutation incident exposed that run outputs were not self-describing with respect to exact prompt inputs.
+- Original approach: Save only behavioral metrics and selected examples; rely on external prompt files staying unchanged.
+- New approach: Compute and store per-trait held-out prompt hashes/counts in the run report; also emit a standalone held-out prompt manifest artifact.
+- Rationale: Traceability requires that results can be tied to exact input datasets even if files later change.
+- Impact: `scripts/week2_behavioral_validation.py` now records `heldout_prompt_hashes` and `heldout_prompt_counts`; manifest artifact added under `results/stage1_extraction/`.

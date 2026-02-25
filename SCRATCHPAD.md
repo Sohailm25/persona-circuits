@@ -238,3 +238,89 @@ Running notes, observations, hypotheses, and debugging logs during experiment ex
 - Artifacts saved: results/stage1_extraction/week2_vector_extraction_summary_20260225T010808Z.json; results/stage1_extraction/week2_persona_vectors_20260225T010808Z.pt
 - Anomalies: none critical; warning from TransformerLens notes reduced-precision loading recommendation (`from_pretrained_no_processing`) for future consideration.
 - Next step: implement and run Week 2 behavioral validation suite (steering/reversal/alpha sweep with Claude judge) to identify final optimal layer/alpha per trait.
+
+## [2026-02-24T21:22:40-0600] PRE-RUN: week2_behavioral_validation_full
+- THOUGHT_LOG pending actions reviewed: YES — pending actions are Week 3+/Phase C requirements and do not block Week 2 behavioral validation.
+- W&B run name: week2-stage1-validate-[utc timestamp auto]
+- Script: scripts/week2_behavioral_validation.py
+- Config: traits={sycophancy,evil,hallucination}, top_k_layers=2, alphas={0.5,1.0,1.5,2.0,2.5,3.0}, sweep_prompts=20, final_prompts=50, cross_rater_samples=50, max_new_tokens=96, temperature=0.0
+- What I'm testing: Extracted vectors causally steer behavior in expected direction on held-out prompts with reversal, monotonic alpha effects, and cross-rater judge consistency.
+- Expected outcome: Positive steering and reversal deltas for each trait with a selected layer/alpha pair; cross-rater kappa >=0.6.
+- Expected duration: ~90-210 minutes
+- Implementation verified: YES — local behavioral spot-check run succeeded (`modal app ap-FVZEKf6cocSXHaMfzp7Al0`) after fixing hook signature bug.
+- Adversarial self-questioning:
+  - Most likely design flaw: layer preselection (top-2 by extraction margin) could miss true best behavioral layer.
+  - Simplest confound: judge scores could reflect prompt style artifacts rather than true trait expression.
+  - Failure signature: weak/negative steering or reversal shifts, non-monotonic alpha trend, or kappa <0.6.
+  - If expected result appears, probability I'm wrong: moderate; mitigated by held-out disjoint prompts, reversal tests, and cross-rater agreement checks.
+- Status: LAUNCHING
+
+## [2026-02-24T21:24:35-0600] POST-RUN: week2_behavioral_validation_full
+- W&B URL: N/A (run failed before W&B init)
+- Modal app ID: ap-uEDDI5tABvQD0RPEdsM2bE
+- Outcome: FAILURE
+- Key metric: startup_error=`ModuleNotFoundError: No module named 'anthropic'`
+- Artifacts saved: none
+- Anomalies: Modal image dependency list omitted Anthropic SDK required for judge scoring.
+- Next step: patch image dependencies (`anthropic`), rebuild, and rerun full behavioral validation.
+
+## [2026-02-24T21:25:20-0600] PRE-RUN: week2_behavioral_validation_full_retry
+- THOUGHT_LOG pending actions reviewed: YES — no pending actions block Week 2 validation execution.
+- W&B run name: week2-stage1-validate-[utc timestamp auto]
+- Script: scripts/week2_behavioral_validation.py
+- Config: traits={sycophancy,evil,hallucination}, top_k_layers=2, alphas={0.5,1.0,1.5,2.0,2.5,3.0}, sweep_prompts=20, final_prompts=50, cross_rater_samples=50, max_new_tokens=96, temperature=0.0
+- What I'm testing: Full held-out behavioral validation with steering/reversal alpha sweep, judge scoring, and cross-rater agreement.
+- Expected outcome: selected layer/alpha per trait with positive steering+reversal deltas and kappa >=0.6.
+- Expected duration: ~90-210 minutes
+- Implementation verified: YES — local spot-check path passed; dependency gap fixed by adding `anthropic` to Modal image.
+- Adversarial self-questioning:
+  - Most likely design flaw: judge drift or parse failures could inflate/flatten measured shifts.
+  - Simplest confound: response truncation (`max_new_tokens`) may mask trait expression differences.
+  - Failure signature: high exact-50 score rate, negative reversal deltas, or low cross-rater kappa.
+  - If expected result appears, probability I'm wrong: moderate; mitigated by control checks and raw-score diagnostics.
+- Status: LAUNCHING
+
+## [2026-02-24T21:57:10-0600] POST-RUN: week2_behavioral_validation_full_retry
+- W&B URL: https://wandb.ai/sohailm/persona-circuits/runs/f41g19g9
+- Modal app ID: ap-wNSxMhUOZtmJ3eTl993StJ
+- Outcome: PARTIAL / INVALIDATED (manual stop)
+- Key metric: run reached model-load + active execution, but no final behavioral report produced before stop
+- Artifacts saved: none (no `week2_behavioral_validation_*.json` output)
+- Anomalies: held-out prompt files were regenerated during run monitoring, creating prompt-set mismatch between in-flight run inputs and current audited artifacts; run stopped to preserve traceability.
+- Next step: rerun behavioral validation on the frozen audited held-out set and record prompt hashes in the final report.
+
+## [2026-02-24T21:57:30-0600] PRE-RUN: week2_behavioral_validation_local_spot_check_rerun
+- THOUGHT_LOG pending actions reviewed: YES — no pending actions block this implementation check.
+- W&B run name: N/A (local spot-check mode)
+- Script: scripts/week2_behavioral_validation.py
+- Config: local_spot_check_model=gpt2, trait=sycophancy, layer=1
+- What I'm testing: Script still executes cleanly after prompt-hash traceability patch.
+- Expected outcome: local spot-check JSON prints with parse-score sanity and no hook/runtime exceptions.
+- Expected duration: ~3-10 minutes
+- Implementation verified: YES — static compile check passed (`python3 -m py_compile`).
+- Status: LAUNCHING
+
+## [2026-02-24T21:57:52-0600] POST-RUN: week2_behavioral_validation_local_spot_check_rerun
+- W&B URL: N/A
+- Modal app ID: ap-FelHvSTbzN4nK5TNAAsBQg
+- Outcome: SUCCESS
+- Key metric: local spot-check executed end-to-end; parse-score sanity preserved (`87 -> 87.0`, non-numeric -> `50.0` fallback)
+- Artifacts saved: none (stdout-only implementation check)
+- Anomalies: none
+- Next step: launch full Week 2 behavioral validation rerun on frozen held-out prompts.
+
+## [2026-02-24T21:58:04-0600] PRE-RUN: week2_behavioral_validation_full_rerun_frozen_prompts
+- THOUGHT_LOG pending actions reviewed: YES — no pending action blocks Week 2 behavioral validation.
+- W&B run name: week2-stage1-validate-[utc timestamp auto]
+- Script: scripts/week2_behavioral_validation.py
+- Config: traits={sycophancy,evil,hallucination}, top_k_layers=2, alphas={0.5,1.0,1.5,2.0,2.5,3.0}, sweep_prompts=20, final_prompts=50, cross_rater_samples=50, max_new_tokens=96, temperature=0.0
+- What I'm testing: Held-out behavioral validation with steering/reversal alpha sweep and cross-rater checks on the frozen audited prompt set.
+- Expected outcome: Selected layer/alpha per trait with positive steering+reversal deltas, acceptable judge reliability, and traceable prompt hashes in report.
+- Expected duration: ~90-210 minutes
+- Implementation verified: YES — local spot-check rerun succeeded after traceability patch; script compiles.
+- Adversarial self-questioning:
+  - Most likely design flaw: top-2 layer preselection may miss best behavioral layer.
+  - Simplest confound: judge score variance could dominate small steering effects.
+  - Failure signature: negative reversal/steering shifts, kappa < 0.6, high exact-50 fallback rate, or weak specificity.
+  - If expected result appears, probability I'm wrong: moderate; mitigated by held-out disjoint prompts, reversal checks, control score, and cross-rater agreement.
+- Status: LAUNCHING

@@ -15,6 +15,7 @@ Review this section before starting any new phase or writing any pre-run checkpo
 - [ ] Decompose Y into 3–4 orthogonal behavioral facets (lexical markers, domain knowledge, out-of-character refusal, response style) and test necessity/sufficiency for each separately. Required before: Phase B behavioral scoring design (Week 3). See entry 2026-02-24 METHODOLOGY RISK.
 - [ ] Add one sentence to intro framing PSM as mechanizing Shanahan et al.'s simulator claim. Required before: paper writing (Week 9). See entry 2026-02-24 THEORY.
 - [ ] Re-run SAE reconstruction sanity using stage-specific hooks/preprocessing before trusting any concentration claims. Required before: Week 3 SAE decomposition interpretation. See entry 2026-02-24 INFRA OBSERVATION.
+- [ ] Freeze and hash prompt datasets before launching long validation runs; do not mutate prompt files during active runs. Required before: any Stage 1/Stage 5 validation rerun. See entry 2026-02-24 METHODOLOGY RISK.
 
 ## RESOLVED ACTIONS
 
@@ -113,3 +114,15 @@ Action: before Week 3 interpretation, run the full reconstruction protocol with 
 - `known`: A strict regex-based audit reported pass, but manual random sampling still found an `evil` prompt asking for coercive tactics.
 - `known`: After moving generation+audit to shared rule definitions and broadening coercive/instructional detection, regenerated prompts passed both automated audit and manual spot checks.
 - `inferred`: For Stage 1 data quality, deterministic checks alone are insufficient; manual sampling remains necessary to catch natural-language edge cases.
+
+## 2026-02-24 [METHODOLOGY RISK] — Mutable Prompt Files Can Break Run Traceability Mid-Execution
+
+**Type:** action  
+**Phase:** Week 2 / Stage 1 behavioral validation  
+**Relevance:** Evidence status for layer/alpha selection depends on reproducible run inputs
+
+- `known`: A Week 2 behavioral validation run was active while held-out prompt files were regenerated to restore full audit coverage.
+- `known`: The in-flight run had already loaded an earlier in-memory prompt set, so continuing would produce results that no longer mapped 1:1 to on-disk artifacts.
+- `inferred`: Any long run that consumes mutable local prompt files is vulnerable to silent input drift unless the exact input set is frozen and hashed before launch.
+
+Action: before each long validation run, produce a prompt manifest with hashes/counts and avoid prompt-file mutation until run completion; if mutation occurs, invalidate and rerun.

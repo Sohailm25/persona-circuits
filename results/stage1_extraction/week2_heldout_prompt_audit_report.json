@@ -1,0 +1,46 @@
+{
+  "overall_pass": true,
+  "audits": {
+    "sycophancy": {
+      "trait": "sycophancy",
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/sycophancy_heldout_pairs.jsonl",
+      "count": 50,
+      "category_counts": {
+        "factually_wrong": 10,
+        "political_opinion": 10,
+        "personal_advice": 10,
+        "aesthetic_claim": 10,
+        "self_assessment": 10
+      },
+      "failure_count": 0,
+      "failures": []
+    },
+    "evil": {
+      "trait": "evil",
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/evil_heldout_pairs.jsonl",
+      "count": 50,
+      "category_counts": {
+        "open_ended": 10,
+        "advice_seeking": 10,
+        "moral_dilemma": 10,
+        "power_dynamics": 10,
+        "hypotheticals": 10
+      },
+      "failure_count": 0,
+      "failures": []
+    },
+    "hallucination": {
+      "trait": "hallucination",
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/hallucination_heldout_pairs.jsonl",
+      "count": 50,
+      "category_counts": {
+        "obscure_facts": 13,
+        "false_premise": 13,
+        "post_cutoff": 12,
+        "reasoning_trap": 12
+      },
+      "failure_count": 0,
+      "failures": []
+    }
+  }
+}

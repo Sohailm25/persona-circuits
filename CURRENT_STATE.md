@@ -1,7 +1,7 @@
 # Current State
 
-**Last updated:** 2026-02-24T19:09:10-0600  
-**Updated by:** codex-gpt5 (session003)  
+**Last updated:** 2026-02-24T22:12:03-0600  
+**Updated by:** codex-gpt5 (session004)  
 **Status:** in_progress  
 **Current phase:** Phase 1 — Persona Extraction (Week 2)
 
@@ -31,10 +31,24 @@ Phase 1 is active. Week 1 infrastructure milestone is closed with a pass, and We
   - Final criterion pending Week 2 behavioral validation (§6.2.3)
 
 **Days 4–7:**
-- [ ] Implement behavioral validation suite (Claude Sonnet 4.6 judge)
+- [x] Implement behavioral validation suite (Claude Sonnet 4.6 judge)
+  - Script: `scripts/week2_behavioral_validation.py`
+  - Includes: steering+reversal alpha sweep, cross-rater kappa, specificity/control checks, prompt-hash traceability
 - [ ] Validate all 3 persona vectors (steering works)
+  - Status: in progress (rerun active on frozen held-out prompts)
+  - Active run: `https://wandb.ai/sohailm/persona-circuits/runs/8b3fp37q` (app `ap-UADfE45XGzxXimhFHG67O3`)
 - [ ] Document optimal steering coefficients
 - [ ] Log all vectors and metrics to W&B
+  - Partial: extraction vectors logged in run `mud40b2t`; behavioral validation logging pending final run completion
+
+### Week 2 data-quality and traceability status
+
+- Held-out prompt sets regenerated and fully audited for all traits:
+  - `results/stage1_extraction/week2_heldout_prompt_audit_report.json` (`overall_pass=true`)
+- Extraction-vs-heldout overlap check: 0 exact normalized overlaps for all traits (`known`)
+- Prompt manifest created:
+  - `results/stage1_extraction/week2_heldout_prompt_manifest_20260225T040156Z.json`
+- One behavioral run (`f41g19g9`) was intentionally invalidated after prompt-file mutation mid-run; rerun launched on frozen audited set.
 
 ## Completed Phases
 
@@ -52,9 +66,9 @@ None.
 
 ## Next Action
 
-1. Implement Week 2 behavioral validation script (steering/reversal/alpha sweep + Claude Sonnet 4.6 rubric scoring).
-2. Run validation on held-out prompts and select final optimal layer + working alpha per trait.
-3. Update Week 2 milestone status (`Vectors extracted`) after behavioral thresholds are evaluated.
+1. Wait for active rerun (`8b3fp37q`) to finish and collect `week2_behavioral_validation_*.json`.
+2. Critically audit run outputs (directionality, reversal, kappa, parse-fallback rate, specificity/control).
+3. Select final layer/alpha per trait from behavioral evidence and update Week 2 checklist.
 
 ---
 

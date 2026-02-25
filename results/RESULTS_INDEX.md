@@ -24,6 +24,8 @@ Master index of all experimental results. Each entry links to the result artifac
 
 | Artifact | Trait | Traceability Row | Status | Path |
 |----------|-------|-----------------|--------|------|
+| Week2 held-out prompt audit (all traits) | sycophancy + evil + hallucination | Methodology pre-check for §6.2.3 behavioral validation prompt integrity | pass (`overall_pass=true`) | results/stage1_extraction/week2_heldout_prompt_audit_report.json |
+| Week2 held-out prompt manifest (hashes/counts) | sycophancy + evil + hallucination | Methodology traceability support for §6.2.3 reruns | pass (input hashing complete) | results/stage1_extraction/week2_heldout_prompt_manifest_20260225T040156Z.json |
 | Week2 extraction implementation spot-check | sycophancy | Methodology pre-check for §6.2.2 extraction pipeline (no hypothesis claim) | pass | results/stage1_extraction/week2_local_spot_check_20260225T010310Z.json |
 | Week2 vector extraction summary (initial layer sweep) | sycophancy + evil + hallucination | Methodological row: "Persona vectors steer behavior as expected" (§5.6.2, pre-validation extraction step) | partial (vectors extracted; behavioral validation pending) | results/stage1_extraction/week2_vector_extraction_summary_20260225T010808Z.json |
 | Week2 persona vectors tensor artifact (initial layer sweep) | sycophancy + evil + hallucination | Methodological row: "Persona vectors steer behavior as expected" (§5.6.2, pre-validation extraction step) | partial (vectors extracted; behavioral validation pending) | results/stage1_extraction/week2_persona_vectors_20260225T010808Z.pt |

@@ -16,6 +16,7 @@ Review this section before starting any new phase or writing any pre-run checkpo
 - [ ] Add one sentence to intro framing PSM as mechanizing Shanahan et al.'s simulator claim. Required before: paper writing (Week 9). See entry 2026-02-24 THEORY.
 - [ ] Re-run SAE reconstruction sanity using stage-specific hooks/preprocessing before trusting any concentration claims. Required before: Week 3 SAE decomposition interpretation. See entry 2026-02-24 INFRA OBSERVATION.
 - [ ] Freeze and hash prompt datasets before launching long validation runs; do not mutate prompt files during active runs. Required before: any Stage 1/Stage 5 validation rerun. See entry 2026-02-24 METHODOLOGY RISK.
+- [ ] Calibrate Week 2 judge reliability (rubric/prompt/parse robustness) before accepting final layer-alpha selections. Required before: Week 2 closeout. See entry 2026-02-25 FINDING.
 
 ## RESOLVED ACTIONS
 
@@ -126,3 +127,16 @@ Action: before Week 3 interpretation, run the full reconstruction protocol with 
 - `inferred`: Any long run that consumes mutable local prompt files is vulnerable to silent input drift unless the exact input set is frozen and hashed before launch.
 
 Action: before each long validation run, produce a prompt manifest with hashes/counts and avoid prompt-file mutation until run completion; if mutation occurs, invalidate and rerun.
+
+## 2026-02-25 [FINDING] — Completed Frozen Behavioral Run Still Fails Judge Reliability Gates
+
+**Type:** action  
+**Phase:** Week 2 / Stage 1 behavioral validation  
+**Relevance:** Final layer/alpha selection validity
+
+- `known`: Run `8b3fp37q` completed with frozen prompts and traceable hashes; report artifact exists.
+- `known`: Cross-rater kappa (Sonnet vs Opus bins) was below 0.6 for all traits (sycophancy 0.5607, evil 0.0, hallucination 0.4266).
+- `known`: Hallucination exact-50 rate was 0.2743 (>0.2 fallback-risk threshold), indicating parse/format reliability risk.
+- `inferred`: The selected layer/alpha combinations from this run are provisional; accepting them as validated would overstate confidence.
+
+Action: run a judge calibration pass (manual concordance + prompt-template/parse tightening) and rerun behavioral validation before locking Week 2 optimal settings.

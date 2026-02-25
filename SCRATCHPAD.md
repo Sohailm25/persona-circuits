@@ -324,3 +324,15 @@ Running notes, observations, hypotheses, and debugging logs during experiment ex
   - Failure signature: negative reversal/steering shifts, kappa < 0.6, high exact-50 fallback rate, or weak specificity.
   - If expected result appears, probability I'm wrong: moderate; mitigated by held-out disjoint prompts, reversal checks, control score, and cross-rater agreement.
 - Status: LAUNCHING
+
+## [2026-02-25T05:07:49-0600] POST-RUN: week2_behavioral_validation_full_rerun_frozen_prompts
+- W&B URL: https://wandb.ai/sohailm/persona-circuits/runs/8b3fp37q
+- Modal app ID: ap-UADfE45XGzxXimhFHG67O3
+- Outcome: SUCCESS (execution) / PARTIAL (validation gates not met)
+- Key metric: selected combos from sweep = sycophancy (layer 15, alpha 3.0), evil (layer 16, alpha 3.0), hallucination (layer 16, alpha 2.5)
+- Artifacts saved: `results/stage1_extraction/week2_behavioral_validation_20260225T071504Z.json`; modal volume report `/models/persona-circuits/week2/behavioral_validation_report_20260225T071457Z.json`
+- Anomalies:
+  - cross-rater kappa below pre-registered acceptance for all traits (sycophancy 0.5607, evil 0.0, hallucination 0.4266; threshold >=0.6)
+  - hallucination exact-50 fallback rate 0.2743 (`>0.2` flag)
+  - evil steering shift weak (0.32) relative to reversal shift (25.22), suggesting asymmetric effect
+- Next step: treat this run as diagnostic, not final Week 2 closeout; run judge reliability/rubric calibration pass before locking final layer/alpha.

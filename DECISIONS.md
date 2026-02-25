@@ -137,3 +137,10 @@ Architectural and methodological decisions made during execution, with rationale
 - New approach: Compute and store per-trait held-out prompt hashes/counts in the run report; also emit a standalone held-out prompt manifest artifact.
 - Rationale: Traceability requires that results can be tied to exact input datasets even if files later change.
 - Impact: `scripts/week2_behavioral_validation.py` now records `heldout_prompt_hashes` and `heldout_prompt_counts`; manifest artifact added under `results/stage1_extraction/`.
+
+## [2026-02-25T05:07:49-0600] DECISION: Treat Week2 behavioral run `8b3fp37q` as diagnostic, not final selection evidence
+- Trigger: Frozen rerun completed with valid artifacts but failed reliability checks (cross-rater kappa <0.6 for all traits; hallucination parse-fallback flag).
+- Original approach: Accept selected layer/alpha directly from first completed frozen rerun.
+- New approach: Keep selected combinations as provisional only and require judge/rubric calibration + rerun before Week 2 closeout.
+- Rationale: Proposal Appendix C reliability standards and our implementation checks require trustworthy judge behavior before claiming validated steering.
+- Impact: Week 2 remains in-progress; final layer/alpha lock deferred pending calibrated rerun.

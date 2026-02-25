@@ -29,6 +29,7 @@ Master index of all experimental results. Each entry links to the result artifac
 | Week2 extraction implementation spot-check | sycophancy | Methodology pre-check for §6.2.2 extraction pipeline (no hypothesis claim) | pass | results/stage1_extraction/week2_local_spot_check_20260225T010310Z.json |
 | Week2 vector extraction summary (initial layer sweep) | sycophancy + evil + hallucination | Methodological row: "Persona vectors steer behavior as expected" (§5.6.2, pre-validation extraction step) | partial (vectors extracted; behavioral validation pending) | results/stage1_extraction/week2_vector_extraction_summary_20260225T010808Z.json |
 | Week2 persona vectors tensor artifact (initial layer sweep) | sycophancy + evil + hallucination | Methodological row: "Persona vectors steer behavior as expected" (§5.6.2, pre-validation extraction step) | partial (vectors extracted; behavioral validation pending) | results/stage1_extraction/week2_persona_vectors_20260225T010808Z.pt |
+| Week2 behavioral validation (frozen held-out rerun) | sycophancy + evil + hallucination | Methodological row: "Persona vectors steer behavior as expected" (§5.6.2, behavioral validation) | partial / gate-fail (run executed, but cross-rater kappa <0.6 for all traits; hallucination parse-fallback flag) | results/stage1_extraction/week2_behavioral_validation_20260225T071504Z.json |
 
 ## Stage 2: SAE Decomposition
 

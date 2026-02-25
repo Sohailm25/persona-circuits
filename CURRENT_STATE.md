@@ -1,6 +1,6 @@
 # Current State
 
-**Last updated:** 2026-02-24T22:12:03-0600  
+**Last updated:** 2026-02-25T05:07:49-0600  
 **Updated by:** codex-gpt5 (session004)  
 **Status:** in_progress  
 **Current phase:** Phase 1 — Persona Extraction (Week 2)
@@ -35,11 +35,12 @@ Phase 1 is active. Week 1 infrastructure milestone is closed with a pass, and We
   - Script: `scripts/week2_behavioral_validation.py`
   - Includes: steering+reversal alpha sweep, cross-rater kappa, specificity/control checks, prompt-hash traceability
 - [ ] Validate all 3 persona vectors (steering works)
-  - Status: in progress (rerun active on frozen held-out prompts)
-  - Active run: `https://wandb.ai/sohailm/persona-circuits/runs/8b3fp37q` (app `ap-UADfE45XGzxXimhFHG67O3`)
+  - Status: attempted on frozen held-out prompts (`run=8b3fp37q`) but reliability gates failed
+  - Observed selected combos (provisional only): sycophancy `(15, 3.0)`, evil `(16, 3.0)`, hallucination `(16, 2.5)`
+  - Blocking issues: kappa <0.6 for all traits; hallucination parse-fallback flag; evil steering asymmetry
 - [ ] Document optimal steering coefficients
 - [ ] Log all vectors and metrics to W&B
-  - Partial: extraction vectors logged in run `mud40b2t`; behavioral validation logging pending final run completion
+  - Partial: extraction vectors logged in `mud40b2t`; behavioral metrics logged in `8b3fp37q` but not accepted for closeout
 
 ### Week 2 data-quality and traceability status
 
@@ -49,6 +50,7 @@ Phase 1 is active. Week 1 infrastructure milestone is closed with a pass, and We
 - Prompt manifest created:
   - `results/stage1_extraction/week2_heldout_prompt_manifest_20260225T040156Z.json`
 - One behavioral run (`f41g19g9`) was intentionally invalidated after prompt-file mutation mid-run; rerun launched on frozen audited set.
+- Frozen rerun completed (`8b3fp37q`) with traceable prompt hashes, but validation quality gates failed (judge consistency + hallucination parseability).
 
 ## Completed Phases
 
@@ -66,9 +68,9 @@ None.
 
 ## Next Action
 
-1. Wait for active rerun (`8b3fp37q`) to finish and collect `week2_behavioral_validation_*.json`.
-2. Critically audit run outputs (directionality, reversal, kappa, parse-fallback rate, specificity/control).
-3. Select final layer/alpha per trait from behavioral evidence and update Week 2 checklist.
+1. Run judge reliability/rubric calibration pass (manual concordance + prompt-template tightening) for weak traits, especially `evil` and `hallucination`.
+2. Re-run Week 2 behavioral validation after judge calibration.
+3. Lock final layer/alpha only if reliability gates pass.
 
 ---
 
@@ -77,7 +79,7 @@ None.
 | Phase | Status | Start Date | End Date | Key Result |
 |-------|--------|------------|----------|------------|
 | 0. Infrastructure | completed | 2026-02-24 | 2026-02-24 | Modal/W&B/model/SAE/CLT setup validated; prompt datasets regenerated and strict-audit passed |
-| 1. Persona Extraction | in_progress | 2026-02-24 | | Contrastive vectors extracted for 3 traits (layers 11–16 sweep); behavioral validation pending |
+| 1. Persona Extraction | in_progress | 2026-02-24 | | Contrastive vectors extracted; first frozen behavioral run completed but failed reliability gates (needs calibrated rerun) |
 | 2. SAE Decomposition | not_started | | | |
 | 3. Circuit Tracing | not_started | | | |
 | 4. Causal Validation | not_started | | | |

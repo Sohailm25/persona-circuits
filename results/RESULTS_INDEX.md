@@ -17,13 +17,16 @@ Master index of all experimental results. Each entry links to the result artifac
 | Week1 modal setup validation (llama+andyrdt) | Download + forward-pass validation for Llama-3.1-8B-Instruct, LlamaScope (l12..l24), and andyrdt (19,23) | partial (reconstruction cosine warning) | results/infrastructure/week1_day3_5_modal_validation_20260224T220740Z.json |
 | Week1 modal setup validation (gemma initial) | Gemma+GemmaScope+CLT initial check | partial [SUPERSEDED by: week1_day3_5_modal_validation_20260224T224332Z.json] | results/infrastructure/week1_day3_5_modal_validation_20260224T222304Z.json |
 | Week1 modal setup validation (gemma final) | Gemma+GemmaScope+CLT validation with persistent cache + nonzero graph edges | pass (infrastructure) | results/infrastructure/week1_day3_5_modal_validation_20260224T224332Z.json |
-| Prompt dataset generation summary | 3 trait datasets generated with required category counts | pass (infrastructure) | results/infrastructure/week1_prompt_generation_summary.json |
+| Prompt dataset generation summary | Initial 3-trait dataset generation with required category counts | pass (infrastructure) | results/infrastructure/week1_prompt_generation_summary.json |
+| Prompt dataset strict audit (final) | Structural + content-spec compliance audit after remediation (all 3 traits) | pass (`overall_pass=true`) | results/infrastructure/week1_prompt_audit_report.json |
 
 ## Stage 1: Persona Extraction
 
 | Artifact | Trait | Traceability Row | Status | Path |
 |----------|-------|-----------------|--------|------|
-| (none yet) | | | | |
+| Week2 extraction implementation spot-check | sycophancy | Methodology pre-check for §6.2.2 extraction pipeline (no hypothesis claim) | pass | results/stage1_extraction/week2_local_spot_check_20260225T010310Z.json |
+| Week2 vector extraction summary (initial layer sweep) | sycophancy + evil + hallucination | Methodological row: "Persona vectors steer behavior as expected" (§5.6.2, pre-validation extraction step) | partial (vectors extracted; behavioral validation pending) | results/stage1_extraction/week2_vector_extraction_summary_20260225T010808Z.json |
+| Week2 persona vectors tensor artifact (initial layer sweep) | sycophancy + evil + hallucination | Methodological row: "Persona vectors steer behavior as expected" (§5.6.2, pre-validation extraction step) | partial (vectors extracted; behavioral validation pending) | results/stage1_extraction/week2_persona_vectors_20260225T010808Z.pt |
 
 ## Stage 2: SAE Decomposition
 

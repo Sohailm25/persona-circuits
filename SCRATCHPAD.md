@@ -188,3 +188,53 @@ Running notes, observations, hypotheses, and debugging logs during experiment ex
 - Artifacts saved: results/infrastructure/week1_day3_5_modal_validation_20260224T224332Z.json; remote report `/models/persona-circuits/week1/gemma_scope_and_clt_validation.json`
 - Anomalies: reconstruction cosine for sample Gemma layer12 remained 0.4526 (below Stage-2 sanity threshold >0.9; treat as implementation-sanity signal to re-validate in Week 3 with layer-appropriate preprocessing).
 - Next step: generate 3 prompt datasets, validate counts/schema, and finalize Week 1 Days 3-5 status updates.
+
+## [2026-02-24T18:57:40-0600] PRE-RUN: week2_extraction_local_spot_check
+- THOUGHT_LOG pending actions reviewed: YES — no pending action blocks Week 2 extraction script implementation checks.
+- W&B run name: N/A (local spot-check mode)
+- Script: scripts/week2_extract_persona_vectors.py
+- Config: trait=sycophancy, layer=1, model=gpt2, mode=local_spot_check
+- What I'm testing: Extraction prompt formatting + residual-hook activation diff path executes and yields non-trivial vector signal on one pair.
+- Expected outcome: nonzero diff norm with expected hook tensor shape.
+- Expected duration: ~3-10 minutes (first run may build image)
+- Implementation verified: YES — local static checks passed (`py_compile`) and prompt-audit gate passes.
+- Adversarial self-questioning:
+  - Most likely design flaw: chat-template assumptions break on non-chat tokenizers.
+  - Simplest confound: zero/nonzero check passes while extracting wrong hook.
+  - Failure signature: exception in prompt formatting or zero diff norm.
+  - If expected result appears, probability I'm wrong: moderate; mitigated by explicit hook name + shape logging.
+- Status: LAUNCHING
+
+## [2026-02-24T19:00:50-0600] POST-RUN: week2_extraction_local_spot_check
+- W&B URL: N/A
+- Modal app ID: ap-fWQHFEFtzNt0mXmnZK8NZJ
+- Outcome: SUCCESS (after one formatter fix)
+- Key metric: diff_norm=3.5704, nonzero_dims=768, hook=blocks.1.hook_resid_post
+- Artifacts saved: results/stage1_extraction/week2_local_spot_check_20260225T010310Z.json
+- Anomalies: Initial attempt failed because `apply_chat_template` requires tokenizer chat template for gpt2; fixed with fallback formatter.
+- Next step: launch first full Week 2 extraction Modal run on Llama-3.1-8B-Instruct.
+
+## [2026-02-24T19:06:10-0600] PRE-RUN: week2_stage1_vector_extraction_initial
+- THOUGHT_LOG pending actions reviewed: YES — Week 3 reconstruction re-validation action noted; no pending action blocks Week 2 extraction execution.
+- W&B run name: week2-stage1-extract-[utc timestamp auto]
+- Script: scripts/week2_extract_persona_vectors.py
+- Config: traits={sycophancy, evil, hallucination}, layers={11,12,13,14,15,16}, model=meta-llama/Llama-3.1-8B-Instruct, seed=42
+- What I'm testing: Contrastive activation extraction pipeline computes persona vectors for all 3 traits and logs layer-wise diagnostics.
+- Expected outcome: non-zero unit vectors for all trait-layer combinations, saved local summary/PT files, W&B run + artifact logged.
+- Expected duration: ~30-90 minutes
+- Implementation verified: YES — local spot-check executed with nonzero activation diff and fixed tokenizer-template fallback issue.
+- Adversarial self-questioning:
+  - Most likely design flaw: last-token residual extraction may target a non-comparable prompt position across high/low variants.
+  - Simplest confound: projection-margin proxy could rank layers that do not actually steer behavior.
+  - Failure signature: near-zero vector norms, unstable margins, or runtime hook/cache errors.
+  - If expected result appears, probability I'm wrong: moderate; final trust still requires Week 2 behavioral validation suite.
+- Status: LAUNCHING
+
+## [2026-02-24T19:08:30-0600] POST-RUN: week2_stage1_vector_extraction_initial
+- W&B URL: https://wandb.ai/sohailm/persona-circuits/runs/mud40b2t
+- Modal app ID: ap-D8yEyQmFfLTfVRkRTAPmkj
+- Outcome: SUCCESS
+- Key metric: preliminary best layer by projection margin = 16 for all traits (sycophancy=7.4748, evil=7.6985, hallucination=4.2904)
+- Artifacts saved: results/stage1_extraction/week2_vector_extraction_summary_20260225T010808Z.json; results/stage1_extraction/week2_persona_vectors_20260225T010808Z.pt
+- Anomalies: none critical; warning from TransformerLens notes reduced-precision loading recommendation (`from_pretrained_no_processing`) for future consideration.
+- Next step: implement and run Week 2 behavioral validation suite (steering/reversal/alpha sweep with Claude judge) to identify final optimal layer/alpha per trait.

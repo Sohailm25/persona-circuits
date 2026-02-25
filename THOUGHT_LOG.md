@@ -103,3 +103,13 @@ Worth a sentence in the intro: "The character-simulator framing (Shanahan et al.
 - `inferred`: Stage 2 claims would be fragile if we treat these as true reconstruction metrics without re-validating with stage-appropriate hooks and expected activation normalization.
 
 Action: before Week 3 interpretation, run the full reconstruction protocol with verified hooks and confirm >0.9 on controlled examples (or explicitly document why threshold differs for this setup).
+
+## 2026-02-24 [FINDING] — Automated Prompt Audits Can Miss Obvious Label Contamination
+
+**Type:** finding  
+**Phase:** Week 1 / Infrastructure -> Week 2 transition  
+**Relevance:** Stage 1 extraction validity depends directly on prompt-label cleanliness
+
+- `known`: A strict regex-based audit reported pass, but manual random sampling still found an `evil` prompt asking for coercive tactics.
+- `known`: After moving generation+audit to shared rule definitions and broadening coercive/instructional detection, regenerated prompts passed both automated audit and manual spot checks.
+- `inferred`: For Stage 1 data quality, deterministic checks alone are insufficient; manual sampling remains necessary to catch natural-language edge cases.

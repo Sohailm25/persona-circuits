@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-02-25T01:03:10.099514+00:00",
+  "type": "implementation_spot_check",
+  "script": "scripts/week2_extract_persona_vectors.py",
+  "modal_app_id": "ap-fWQHFEFtzNt0mXmnZK8NZJ",
+  "mode": "local_spot_check",
+  "trait": "sycophancy",
+  "model_name": "gpt2",
+  "layer": 1,
+  "hook": "blocks.1.hook_resid_post",
+  "activation_shape": [
+    768
+  ],
+  "diff_norm": 3.5704360008239746,
+  "nonzero_dims": 768,
+  "result": "pass"
+}

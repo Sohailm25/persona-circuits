@@ -1,7 +1,7 @@
 # Current State
 
-**Last updated:** 2026-02-25T08:12:52-0600  
-**Updated by:** codex-gpt5 (session008)  
+**Last updated:** 2026-02-25T08:23:59-0600  
+**Updated by:** codex-gpt5 (session009)  
 **Status:** in_progress  
 **Current phase:** Phase 1 — Persona Extraction (Week 2)
 
@@ -44,7 +44,7 @@ Phase 1 is active. Week 1 infrastructure milestone is closed with a pass, and We
   - Additional pre-launch tightening patch: enforce `cross_rater_samples <= test_prompts` (no silent calibration truncation), default cross-rater now aligned to test split (`20`), and launch-script phase filter defaults to `primary`
   - Planning artifacts: `results/stage1_extraction/week2_upgrade_parallel_plan_20260225T141045Z.json`, `scratch/week2_upgrade_launch_commands.sh`
 - [ ] Validate all 3 persona vectors (steering works)
-  - Status: frozen baseline run (`run=8b3fp37q`) failed reliability gates; upgraded smoke reruns now confirm patched execution paths and schema, but full primary-tier evidence run is still pending
+  - Status: frozen baseline run (`run=8b3fp37q`) failed reliability gates; upgraded smoke reruns confirmed patched execution paths; primary-tier evidence tranche is now running (`sycophancy: ty3k95jg`, `evil: t8lajipl`, `hallucination: 81rimxnc`)
   - Observed selected combos (provisional only): sycophancy `(15, 3.0)`, evil `(16, 3.0)`, hallucination `(16, 2.5)`
   - Blocking issues: kappa <0.6 for all traits; hallucination parse-fallback risk; evil steering asymmetry
 - [ ] Document optimal steering coefficients
@@ -96,7 +96,7 @@ None.
 
 ## Next Action
 
-1. Run upgraded primary-tier validation tranche only (all 3 traits) using `week2_upgrade_parallel_plan_20260225T141045Z.json` and defer replication/stress until primary evidence is reviewed.
+1. Monitor the three in-flight primary runs to terminal completion and write post-run checkpoints with artifact paths and gate outcomes.
 2. Execute manual 5-example judge concordance spot-check on upgraded primary outputs.
 3. Re-run prelaunch gap checks (external transfer + extraction A/B) on the newly selected primary combos before Week 2 closeout claim.
 4. Run rollout-stability sensitivity check on selected combos (`confirm_rollouts_per_prompt: 3 -> 5`) before Week 2 closeout claim.

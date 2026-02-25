@@ -574,3 +574,65 @@ Running notes, observations, hypotheses, and debugging logs during experiment ex
   - Negative test: `python3 scripts/week2_upgrade_parallel_plan.py --test-prompts 20 --cross-rater-samples 24 --no-replications` -> expected ValueError (guard active).
   - Regenerated primary-only plan artifact: `results/stage1_extraction/week2_upgrade_parallel_plan_20260225T141045Z.json` (`n_jobs=3`, phases=`["primary"]`, commands use `--cross-rater-samples 20`).
 - Next step: launch only primary jobs, then re-run prelaunch gap checks on primary-selected combos before replication/stress.
+
+## [2026-02-25T14:18:42Z] PRE-RUN: week2-upgrade-primary-sycophancy-s42
+- THOUGHT_LOG pending actions reviewed: YES — launch tranche decision resolved to primary-only; remaining Week 2 actions tracked for post-primary review.
+- W&B run name: week2-upgrade-primary-sycophancy-s42
+- Script: scripts/week2_behavioral_validation_upgrade.py
+- Config: trait=sycophancy; layers=11,12,13,14,15,16; alpha_grid=0.25,0.5,0.75,1,1.25,1.5,2,2.5,3,4; sweep/confirm/test=15/15/20; confirm_top_k=4; cross_rater_samples=20; controls=random64+shuffled10+text; rollouts=3/3/3.
+- What I'm testing: primary lockbox-based layer/alpha selection and test-split gate evidence for sycophancy under strict parser and strengthened controls.
+- Expected outcome: completed report artifact with selected test metric and full quality gates for sycophancy.
+- Expected duration: ~5-8 hours
+- Implementation verified: YES — `python3 -m py_compile` passed; planner guardrails validated; launch command sourced from `week2_upgrade_parallel_plan_20260225T141045Z.json`.
+- Adversarial self-questioning:
+  - Most likely flaw: judge reliability could still underperform despite strict parser.
+  - Simplest confound: observed effect driven by rubric artifacts rather than behavior shift.
+  - Failure detection: parse/kappa/directionality/control/bleed/coherence gates explicitly enforce failure states.
+  - If expected result appears, probability I'm wrong: non-trivial until replication + prelaunch robustness rerun pass.
+- Status: LAUNCHING
+
+## [2026-02-25T14:18:42Z] PRE-RUN: week2-upgrade-primary-evil-s42
+- THOUGHT_LOG pending actions reviewed: YES — launch tranche decision resolved to primary-only; remaining Week 2 actions tracked for post-primary review.
+- W&B run name: week2-upgrade-primary-evil-s42
+- Script: scripts/week2_behavioral_validation_upgrade.py
+- Config: trait=evil; layers=11,12,13,14,15,16; alpha_grid=0.25,0.5,0.75,1,1.25,1.5,2,2.5,3,4; sweep/confirm/test=15/15/20; confirm_top_k=4; cross_rater_samples=20; controls=random64+shuffled10+text; rollouts=3/3/3.
+- What I'm testing: primary lockbox-based layer/alpha selection and test-split gate evidence for evil trait steering.
+- Expected outcome: completed report artifact with selected test metric and full quality gates for evil.
+- Expected duration: ~5-8 hours
+- Implementation verified: YES — `python3 -m py_compile` passed; planner guardrails validated; launch command sourced from `week2_upgrade_parallel_plan_20260225T141045Z.json`.
+- Adversarial self-questioning:
+  - Most likely flaw: trait-specific asymmetry (plus vs minus) may persist and fail bidirectional gate.
+  - Simplest confound: random/shuffled control separation could fail if signal is weak.
+  - Failure detection: bidirectional/control/bleed/coherence gates explicitly enforce failure states.
+  - If expected result appears, probability I'm wrong: non-trivial until replication + robustness rerun pass.
+- Status: LAUNCHING
+
+## [2026-02-25T14:18:42Z] PRE-RUN: week2-upgrade-primary-hallucination-s42
+- THOUGHT_LOG pending actions reviewed: YES — launch tranche decision resolved to primary-only; remaining Week 2 actions tracked for post-primary review.
+- W&B run name: week2-upgrade-primary-hallucination-s42
+- Script: scripts/week2_behavioral_validation_upgrade.py
+- Config: trait=hallucination; layers=11,12,13,14,15,16; alpha_grid=0.25,0.5,0.75,1,1.25,1.5,2,2.5,3,4; sweep/confirm/test=15/15/20; confirm_top_k=4; cross_rater_samples=20; controls=random64+shuffled10+text; rollouts=3/3/3; truthfulqa_samples=30.
+- What I'm testing: primary lockbox-based layer/alpha selection and test-split gate evidence for hallucination, including objective TruthfulQA gate.
+- Expected outcome: completed report artifact with selected test metric and full quality gates for hallucination including TruthfulQA directional/objective checks.
+- Expected duration: ~6-9 hours
+- Implementation verified: YES — `python3 -m py_compile` passed; planner guardrails validated; launch command sourced from `week2_upgrade_parallel_plan_20260225T141045Z.json`.
+- Adversarial self-questioning:
+  - Most likely flaw: factuality gate may fail despite directional rubric movement.
+  - Simplest confound: judge parse quality may vary under longer generations.
+  - Failure detection: strict parse fail, calibration, and TruthfulQA objective gates explicitly enforce failure states.
+  - If expected result appears, probability I'm wrong: non-trivial until replication + robustness rerun pass.
+- Status: LAUNCHING
+
+## [2026-02-25T14:23:54Z] RUN-LAUNCH CHECKPOINT: week2_primary_tranche_v9_methodology
+- Launch mode: primary-only (3 jobs), detached Modal apps.
+- Sycophancy:
+  - Modal app: `ap-kqV4eWSGwrVt8nKE4ZA3NF`
+  - W&B run: `https://wandb.ai/sohailm/persona-circuits/runs/ty3k95jg`
+- Evil:
+  - Modal app: `ap-SAFulvrYqaddpusCHafEzB`
+  - W&B run: `https://wandb.ai/sohailm/persona-circuits/runs/t8lajipl`
+- Hallucination:
+  - Modal app: `ap-Ae34zytuXoYv11ksGBM5XH`
+  - W&B run: `https://wandb.ai/sohailm/persona-circuits/runs/81rimxnc`
+- Startup health: all three reached model-load stage with no immediate runtime exceptions; jobs remain in progress.
+- Note: detached app semantics confirmed; post-run checkpoints will be added when each job reaches terminal state.

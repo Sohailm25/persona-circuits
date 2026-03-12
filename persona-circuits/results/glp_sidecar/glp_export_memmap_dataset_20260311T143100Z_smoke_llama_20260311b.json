@@ -1,0 +1,37 @@
+{
+  "timestamp_utc": "2026-03-11T14:31:00.597676+00:00",
+  "artifact_type": "glp_export_memmap_dataset_summary",
+  "inputs": {
+    "prompt_paths": [
+      "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/sycophancy_extraction_free_eval.jsonl"
+    ],
+    "prompt_hash": "ec7716e50bab6de1679ecbba33fdb149b6782ca611531b1558456571c4434854",
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 12,
+    "capture_mode": "response_last",
+    "max_new_tokens": 8,
+    "temperature": 0.0,
+    "limit_per_file": 1,
+    "samples_per_shard": 8,
+    "seed": 0,
+    "dedupe": true,
+    "dataset_name": "glp-smoke-llama31-instruct-l12-response-last-20260311b"
+  },
+  "export_summary": {
+    "timestamp_utc": "2026-03-11T14:30:58.726775+00:00",
+    "artifact_type": "glp_memmap_export",
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 12,
+    "hook_name": "blocks.12.hook_resid_post",
+    "capture_mode": "response_last",
+    "max_new_tokens": 8,
+    "temperature": 0.0,
+    "dataset_dir": "/models/persona-circuits/glp_datasets/glp-smoke-llama31-instruct-l12-response-last-20260311b",
+    "samples_per_shard": 8,
+    "prompt_count": 1,
+    "prompt_manifest_count": 1,
+    "sample_count": 1,
+    "vector_dim": 4096,
+    "skipped_no_response": 0
+  }
+}

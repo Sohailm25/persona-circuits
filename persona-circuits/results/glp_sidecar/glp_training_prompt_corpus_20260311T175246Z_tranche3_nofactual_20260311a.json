@@ -1,0 +1,132 @@
+{
+  "timestamp_utc": "2026-03-11T18:18:21.660859+00:00",
+  "artifact_type": "glp_training_prompt_corpus",
+  "model": "claude-sonnet-4-6",
+  "seed": 47,
+  "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/glp_training/neutral_instruct_corpus_20260311T175246Z_tranche3_nofactual_20260311a.jsonl",
+  "scratch_path": "/Users/sohailmohammad/braindstorms/persona-circuits/scratch/glp_training_prompt_corpus_20260311T175246Z_tranche3_nofactual_20260311a.scratch.json",
+  "n_records": 1400,
+  "n_categories": 14,
+  "generation_stats": {
+    "math_and_estimation": {
+      "attempts": 4,
+      "accepted": 100,
+      "rejected": {
+        "blocked_overlap": 5,
+        "quality_filter": 3
+      }
+    },
+    "coding_debugging": {
+      "attempts": 4,
+      "accepted": 100,
+      "rejected": {
+        "quality_filter": 17
+      }
+    },
+    "coding_design": {
+      "attempts": 5,
+      "accepted": 100,
+      "rejected": {
+        "blocked_overlap": 2,
+        "quality_filter": 2
+      }
+    },
+    "writing_and_revision": {
+      "attempts": 5,
+      "accepted": 100,
+      "rejected": {
+        "blocked_overlap": 1,
+        "quality_filter": 13
+      }
+    },
+    "summarization": {
+      "attempts": 12,
+      "accepted": 100,
+      "rejected": {
+        "quality_filter": 14
+      }
+    },
+    "information_extraction": {
+      "attempts": 7,
+      "accepted": 100,
+      "rejected": {
+        "quality_filter": 57
+      }
+    },
+    "planning_and_logistics": {
+      "attempts": 3,
+      "accepted": 100,
+      "rejected": {}
+    },
+    "decision_support": {
+      "attempts": 3,
+      "accepted": 100,
+      "rejected": {
+        "quality_filter": 3
+      }
+    },
+    "science_and_engineering": {
+      "attempts": 3,
+      "accepted": 100,
+      "rejected": {
+        "blocked_overlap": 5
+      }
+    },
+    "tutoring_and_study_help": {
+      "attempts": 3,
+      "accepted": 100,
+      "rejected": {
+        "blocked_overlap": 2
+      }
+    },
+    "data_analysis": {
+      "attempts": 4,
+      "accepted": 100,
+      "rejected": {
+        "quality_filter": 2
+      }
+    },
+    "translation_and_localization": {
+      "attempts": 3,
+      "accepted": 100,
+      "rejected": {}
+    },
+    "brainstorming": {
+      "attempts": 3,
+      "accepted": 100,
+      "rejected": {
+        "blocked_overlap": 1
+      }
+    },
+    "creative_constrained_writing": {
+      "attempts": 3,
+      "accepted": 100,
+      "rejected": {
+        "blocked_overlap": 2
+      }
+    }
+  },
+  "audit": {
+    "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/glp_training/neutral_instruct_corpus_20260311T175246Z_tranche3_nofactual_20260311a.jsonl",
+    "count": 1400,
+    "category_counts": {
+      "math_and_estimation": 100,
+      "coding_debugging": 100,
+      "coding_design": 100,
+      "writing_and_revision": 100,
+      "summarization": 100,
+      "information_extraction": 100,
+      "planning_and_logistics": 100,
+      "decision_support": 100,
+      "science_and_engineering": 100,
+      "tutoring_and_study_help": 100,
+      "data_analysis": 100,
+      "translation_and_localization": 100,
+      "brainstorming": 100,
+      "creative_constrained_writing": 100
+    },
+    "failure_count": 0,
+    "failures_preview": [],
+    "passes": true
+  }
+}

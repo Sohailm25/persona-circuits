@@ -1,0 +1,37 @@
+{
+  "timestamp_utc": "2026-03-11T16:02:36.070196+00:00",
+  "artifact_type": "glp_export_memmap_dataset_summary",
+  "inputs": {
+    "prompt_paths": [
+      "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/glp_training/neutral_instruct_corpus_20260311T145008Z_tranche1_20260311a.jsonl"
+    ],
+    "prompt_hash": "98d898450634c9a90125ba92046dea5e630204b6e5a05571445e79f372d64e04",
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 12,
+    "capture_mode": "response_all",
+    "max_new_tokens": 32,
+    "temperature": 0.0,
+    "limit_per_file": 0,
+    "samples_per_shard": 8192,
+    "seed": 0,
+    "dedupe": true,
+    "dataset_name": "glp-llama31-instruct-l12-response-all-tranche1-20260311a"
+  },
+  "export_summary": {
+    "timestamp_utc": "2026-03-11T16:02:26.176755+00:00",
+    "artifact_type": "glp_memmap_export",
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 12,
+    "hook_name": "blocks.12.hook_resid_post",
+    "capture_mode": "response_all",
+    "max_new_tokens": 32,
+    "temperature": 0.0,
+    "dataset_dir": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranche1-20260311a",
+    "samples_per_shard": 8192,
+    "prompt_count": 1500,
+    "prompt_manifest_count": 1500,
+    "sample_count": 46237,
+    "vector_dim": 4096,
+    "skipped_no_response": 0
+  }
+}

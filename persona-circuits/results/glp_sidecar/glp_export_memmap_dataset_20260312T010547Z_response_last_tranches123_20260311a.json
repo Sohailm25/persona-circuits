@@ -1,0 +1,39 @@
+{
+  "timestamp_utc": "2026-03-12T01:05:47.854882+00:00",
+  "artifact_type": "glp_export_memmap_dataset_summary",
+  "inputs": {
+    "prompt_paths": [
+      "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/glp_training/neutral_instruct_corpus_20260311T145008Z_tranche1_20260311a.jsonl",
+      "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/glp_training/neutral_instruct_corpus_20260311T171020Z_tranche2_20260311b.jsonl",
+      "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/glp_training/neutral_instruct_corpus_20260311T175246Z_tranche3_nofactual_20260311a.jsonl"
+    ],
+    "prompt_hash": "9b4cfa28e2158ff28032c9927196b64142d19553442aa11051ace7451f4d982b",
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 12,
+    "capture_mode": "response_last",
+    "max_new_tokens": 64,
+    "temperature": 0.0,
+    "limit_per_file": 0,
+    "samples_per_shard": 32768,
+    "seed": 0,
+    "dedupe": true,
+    "dataset_name": "glp-llama31-instruct-l12-response-last-tranches123-20260311a"
+  },
+  "export_summary": {
+    "timestamp_utc": "2026-03-12T01:05:41.365444+00:00",
+    "artifact_type": "glp_memmap_export",
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 12,
+    "hook_name": "blocks.12.hook_resid_post",
+    "capture_mode": "response_last",
+    "max_new_tokens": 64,
+    "temperature": 0.0,
+    "dataset_dir": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-last-tranches123-20260311a",
+    "samples_per_shard": 32768,
+    "prompt_count": 4400,
+    "prompt_manifest_count": 4400,
+    "sample_count": 4400,
+    "vector_dim": 4096,
+    "skipped_no_response": 0
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "timestamp_utc": "2026-03-11T22:22:53.694213+00:00",
+  "artifact_type": "train_glp_matched_modal_summary",
+  "inputs": {
+    "config_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/train_glp_llama31_8b_instruct_layer12.yaml",
+    "dataset_volume_subdir": "glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b",
+    "dataset_dir": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b",
+    "dataset_metadata": {
+      "timestamp_utc": "2026-03-11T22:19:04.096633+00:00",
+      "artifact_type": "glp_memmap_export",
+      "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+      "layer": 12,
+      "hook_name": "blocks.12.hook_resid_post",
+      "capture_mode": "response_last",
+      "conditional_export": true,
+      "condition_mode": "prompt_last",
+      "target_mode": "response_last",
+      "condition_dim": 4096,
+      "target_dim": 4096,
+      "concat_order": "condition_then_target",
+      "max_new_tokens": 64,
+      "temperature": 0.0,
+      "dataset_dir": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b",
+      "samples_per_shard": 32768,
+      "prompt_count": 1,
+      "prompt_manifest_count": 1,
+      "sample_count": 1,
+      "vector_dim": 8192,
+      "skipped_no_response": 0
+    },
+    "output_volume_root": "/models/persona-circuits/glp_runs",
+    "run_name": "matched-glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b-cond_smoke_20260311b",
+    "batch_size": 1,
+    "gradient_accumulation_steps": 1,
+    "num_epochs": 1,
+    "epoch_size": null,
+    "learning_rate": 5e-05,
+    "save_every_n_steps": null,
+    "overwrite": false,
+    "wandb_enabled": false,
+    "save_opt_state": false,
+    "save_epoch_checkpoints": false,
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+  },
+  "training_summary": {
+    "timestamp_utc": "2026-03-11T22:22:15.144072+00:00",
+    "artifact_type": "matched_glp_train_summary",
+    "run_name": "matched-glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b-cond_smoke_20260311b",
+    "output_path": "/models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b-cond_smoke_20260311b",
+    "dataset_dir": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b",
+    "rep_statistic": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b/rep_statistics.pt",
+    "trainer_repo_dir": "/root/generative_latent_prior",
+    "return_code": 0,
+    "started_at_utc": "2026-03-11T22:21:12.127991+00:00",
+    "finished_at_utc": "2026-03-11T22:22:15.144072+00:00",
+    "config": {
+      "save_root": "/models/persona-circuits/glp_runs",
+      "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+      "run_name": "matched-glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b-cond_smoke_20260311b",
+      "output_path": "/models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b-cond_smoke_20260311b",
+      "wandb_enabled": false,
+      "wandb_project": "persona-circuits-glp",
+      "wandb_run_name": "${run_name}",
+      "train_dataset": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b",
+      "rep_statistic": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b/rep_statistics.pt",
+      "num_epochs": 1,
+      "save_epochs": [],
+      "shuffle": true,
+      "glp_kwargs": {
+        "normalizer_config": {
+          "rep_statistic": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b/rep_statistics.pt"
+        },
+        "denoiser_config": {
+          "d_input": 8192,
+          "d_model": 8192,
+          "d_mlp": 16384,
+          "n_layers": 6,
+          "multi_layer_n_layers": null
+        },
+        "tracedict_config": {
+          "layer_prefix": "model.layers",
+          "layers": [
+            12
+          ],
+          "retain": "output"
+        },
+        "conditional_config": {
+          "condition_dim": 4096,
+          "target_dim": 4096,
+          "target_slice_start": 4096,
+          "target_slice_end": 8192,
+          "concat_order": "condition_then_target"
+        }
+      },
+      "use_bf16": true,
+      "learning_rate": 5e-05,
+      "batch_size": 1,
+      "gradient_accumulation_steps": 1,
+      "gradient_clipping_threshold": 1,
+      "log_every_n_steps": 10,
+      "save_opt_state": false,
+      "lr_scheduler": {
+        "scheduler_cls": "cosine_scheduler_with_warmup",
+        "warmup_ratio": 0.01,
+        "initial_factor": 0.01,
+        "final_factor": 0.1
+      }
+    },
+    "output_summary": {
+      "exists": true,
+      "file_count": 3,
+      "checkpoint_files": [
+        "final.safetensors"
+      ],
+      "has_final": true
+    },
+    "log_tail": [
+      "INFO:__main__:Saving checkpoints to /models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b-cond_smoke_20260311b",
+      "INFO:__main__:Waiting for rep_statistic /models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b/rep_statistics.pt...",
+      "INFO:__main__:Config: {'model_name': 'meta-llama/Llama-3.1-8B-Instruct', 'glp_kwargs': {'normalizer_config': {'rep_statistic': '/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b/rep_statistics.pt'}, 'denoiser_config': {'d_input': 8192, 'd_model': 8192, 'd_mlp': 16384, 'n_layers': 6, 'multi_layer_n_layers': None}, 'tracedict_config': {'layer_prefix': 'model.layers', 'layers': [12], 'retain': 'output'}, 'conditional_config': {'condition_dim': 4096, 'target_dim': 4096, 'target_slice_start': 4096, 'target_slice_end': 8192, 'concat_order': 'condition_then_target'}}, 'shuffle': True, 'train_dataset': '/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b', 'rep_statistic': '/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b/rep_statistics.pt', 'use_bf16': True, 'num_epochs': 1, 'epoch_size': None, 'batch_size': 1, 'learning_rate': 5e-05, 'lr_scheduler': {'scheduler_cls': 'cosine_scheduler_with_warmup', 'warmup_ratio': 0.01, 'initial_factor': 0.01, 'final_factor': 0.1}, 'gradient_accumulation_steps': 1, 'gradient_clipping_threshold': 1.0, 'log_every_n_steps': 10, 'save_every_n_steps': None, 'save_epochs': [], 'save_opt_state': False, 'output_path': PosixPath('/models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b-cond_smoke_20260311b'), 'wandb_enabled': False, 'wandb_entity': None, 'wandb_project': 'persona-circuits-glp', 'wandb_run_name': '${run_name}', 'save_root': '/models/persona-circuits/glp_runs', 'run_name': 'matched-glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b-cond_smoke_20260311b'}",
+      "INFO:__main__:Model param count: 3490152448",
+      "INFO:glp.utils_acts:Loaded 1 indices from /models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b/data_indices.npy",
+      "Training Epoch: 1:   0%|          | 0/1 [00:00<?, ?it/s]",
+      "Training Epoch: 1: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:01<00:00,  1.32s/it]",
+      "Epoch: 1/1, batch 1/1 (loss: nan): 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:01<00:00,  1.32s/it]",
+      "Epoch: 1/1, batch 1/1 (loss: nan): 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:01<00:00,  1.39s/it]",
+      "INFO:__main__:Model saved to /models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-cond-prompt-last-to-response-last-smoke-20260311b-cond_smoke_20260311b/final",
+      "WARNING: Latents may not be normalized (expected mean=0 and var=1, got mean=nan and var=nan). Small deviations are expected, but variances much larger than 1 are unusual."
+    ]
+  }
+}

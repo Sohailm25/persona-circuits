@@ -1,0 +1,233 @@
+{
+  "timestamp_utc": "2026-03-12T13:37:50.075565+00:00",
+  "artifact_type": "train_glp_matched_modal_summary",
+  "inputs": {
+    "config_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/train_glp_llama31_8b_instruct_layer12.yaml",
+    "dataset_volume_subdir": "glp-llama31-instruct-l12-response-all-tranches12-20260311a",
+    "dataset_dir": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a",
+    "dataset_metadata": {
+      "timestamp_utc": "2026-03-11T20:07:47.316189+00:00",
+      "artifact_type": "glp_memmap_export",
+      "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+      "layer": 12,
+      "hook_name": "blocks.12.hook_resid_post",
+      "capture_mode": "response_all",
+      "max_new_tokens": 32,
+      "temperature": 0.0,
+      "dataset_dir": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a",
+      "samples_per_shard": 8192,
+      "prompt_count": 3000,
+      "prompt_manifest_count": 3000,
+      "sample_count": 92422,
+      "vector_dim": 4096,
+      "skipped_no_response": 0
+    },
+    "output_volume_root": "/models/persona-circuits/glp_runs",
+    "run_name": "matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_val3e_20260312a",
+    "batch_size": 512,
+    "gradient_accumulation_steps": 1,
+    "num_epochs": 3,
+    "epoch_size": null,
+    "learning_rate": 5e-05,
+    "save_every_n_steps": null,
+    "overwrite": false,
+    "wandb_enabled": false,
+    "save_opt_state": false,
+    "save_epoch_checkpoints": false,
+    "validation_fraction": 0.05,
+    "validation_seed": 42,
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+  },
+  "training_summary": {
+    "timestamp_utc": "2026-03-12T13:37:14.322286+00:00",
+    "artifact_type": "matched_glp_train_summary",
+    "run_name": "matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_val3e_20260312a",
+    "output_path": "/models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_val3e_20260312a",
+    "dataset_dir": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a",
+    "rep_statistic": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a/rep_statistics.pt",
+    "trainer_repo_dir": "/root/generative_latent_prior",
+    "return_code": 0,
+    "started_at_utc": "2026-03-12T13:29:14.556442+00:00",
+    "finished_at_utc": "2026-03-12T13:37:14.322286+00:00",
+    "config": {
+      "save_root": "/models/persona-circuits/glp_runs",
+      "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+      "run_name": "matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_val3e_20260312a",
+      "output_path": "/models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_val3e_20260312a",
+      "wandb_enabled": false,
+      "wandb_project": "persona-circuits-glp",
+      "wandb_run_name": "${run_name}",
+      "train_dataset": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a",
+      "rep_statistic": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a/rep_statistics.pt",
+      "num_epochs": 3,
+      "save_epochs": [],
+      "shuffle": true,
+      "glp_kwargs": {
+        "normalizer_config": {
+          "rep_statistic": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a/rep_statistics.pt"
+        },
+        "denoiser_config": {
+          "d_input": 4096,
+          "d_model": 8192,
+          "d_mlp": 16384,
+          "n_layers": 6,
+          "multi_layer_n_layers": null
+        },
+        "tracedict_config": {
+          "layer_prefix": "model.layers",
+          "layers": [
+            12
+          ],
+          "retain": "output"
+        }
+      },
+      "use_bf16": true,
+      "learning_rate": 5e-05,
+      "batch_size": 512,
+      "gradient_accumulation_steps": 1,
+      "gradient_clipping_threshold": 1,
+      "log_every_n_steps": 10,
+      "save_opt_state": false,
+      "lr_scheduler": {
+        "scheduler_cls": "cosine_scheduler_with_warmup",
+        "warmup_ratio": 0.01,
+        "initial_factor": 0.01,
+        "final_factor": 0.1
+      },
+      "validation_fraction": 0.05,
+      "validation_seed": 42
+    },
+    "output_summary": {
+      "exists": true,
+      "file_count": 4,
+      "checkpoint_files": [
+        "final.safetensors"
+      ],
+      "has_final": true
+    },
+    "training_metrics": {
+      "train_dataset_size": 87801,
+      "validation_dataset_size": 4621,
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "train_loss_mean": 1.8393579763278627,
+          "train_loss_last": 1.7215242385864258,
+          "train_gradient_steps": 171,
+          "learning_rate_last": 3.9149259346143906e-05,
+          "validation": {
+            "num_batches": 10,
+            "num_examples": 4621,
+            "mean_loss": 1.672871220111847
+          }
+        },
+        {
+          "epoch": 2,
+          "train_loss_mean": 1.6326016919654713,
+          "train_loss_last": 1.604921817779541,
+          "train_gradient_steps": 171,
+          "learning_rate_last": 1.645143301799364e-05,
+          "validation": {
+            "num_batches": 10,
+            "num_examples": 4621,
+            "mean_loss": 1.5969484567642211
+          }
+        },
+        {
+          "epoch": 3,
+          "train_loss_mean": 1.5788575787293284,
+          "train_loss_last": 1.573181390762329,
+          "train_gradient_steps": 171,
+          "learning_rate_last": 5e-06,
+          "validation": {
+            "num_batches": 10,
+            "num_examples": 4621,
+            "mean_loss": 1.5794679403305054
+          }
+        }
+      ]
+    },
+    "log_tail": [
+      "Epoch: 3/3, batch 134/171 (loss: 1.5818):  78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 134/171 [01:30<00:21,  1.72it/s]",
+      "Epoch: 3/3, batch 134/171 (loss: 1.5818):  79%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 135/171 [01:30<00:20,  1.72it/s]",
+      "Epoch: 3/3, batch 135/171 (loss: 1.5927):  79%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 135/171 [01:30<00:20,  1.72it/s]",
+      "Epoch: 3/3, batch 135/171 (loss: 1.5927):  80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 136/171 [01:31<00:20,  1.68it/s]",
+      "Epoch: 3/3, batch 136/171 (loss: 1.5737):  80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 136/171 [01:31<00:20,  1.68it/s]",
+      "Epoch: 3/3, batch 136/171 (loss: 1.5737):  80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 137/171 [01:32<00:20,  1.66it/s]",
+      "Epoch: 3/3, batch 137/171 (loss: 1.5691):  80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 137/171 [01:32<00:20,  1.66it/s]",
+      "Epoch: 3/3, batch 137/171 (loss: 1.5691):  81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 138/171 [01:32<00:19,  1.66it/s]",
+      "Epoch: 3/3, batch 138/171 (loss: 1.5589):  81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 138/171 [01:32<00:19,  1.66it/s]",
+      "Epoch: 3/3, batch 138/171 (loss: 1.5589):  81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 139/171 [01:33<00:19,  1.68it/s]",
+      "Epoch: 3/3, batch 139/171 (loss: 1.5760):  81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 139/171 [01:33<00:19,  1.68it/s]",
+      "Epoch: 3/3, batch 139/171 (loss: 1.5760):  82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 140/171 [01:33<00:18,  1.68it/s]",
+      "Epoch: 3/3, batch 140/171 (loss: 1.5709):  82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 140/171 [01:33<00:18,  1.68it/s]",
+      "Epoch: 3/3, batch 140/171 (loss: 1.5709):  82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 141/171 [01:34<00:17,  1.72it/s]",
+      "Epoch: 3/3, batch 141/171 (loss: 1.5696):  82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 141/171 [01:34<00:17,  1.72it/s]",
+      "Epoch: 3/3, batch 141/171 (loss: 1.5696):  83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 142/171 [01:34<00:16,  1.73it/s]",
+      "Epoch: 3/3, batch 142/171 (loss: 1.5705):  83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 142/171 [01:34<00:16,  1.73it/s]",
+      "Epoch: 3/3, batch 142/171 (loss: 1.5705):  84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 143/171 [01:35<00:16,  1.71it/s]",
+      "Epoch: 3/3, batch 143/171 (loss: 1.5594):  84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 143/171 [01:35<00:16,  1.71it/s]",
+      "Epoch: 3/3, batch 143/171 (loss: 1.5594):  84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 144/171 [01:36<00:16,  1.68it/s]",
+      "Epoch: 3/3, batch 144/171 (loss: 1.5869):  84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 144/171 [01:36<00:16,  1.68it/s]",
+      "Epoch: 3/3, batch 144/171 (loss: 1.5869):  85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 145/171 [01:36<00:15,  1.68it/s]",
+      "Epoch: 3/3, batch 145/171 (loss: 1.5735):  85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 145/171 [01:36<00:15,  1.68it/s]",
+      "Epoch: 3/3, batch 145/171 (loss: 1.5735):  85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 146/171 [01:37<00:14,  1.68it/s]",
+      "Epoch: 3/3, batch 146/171 (loss: 1.5619):  85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 146/171 [01:37<00:14,  1.68it/s]",
+      "Epoch: 3/3, batch 146/171 (loss: 1.5619):  86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 147/171 [01:37<00:14,  1.68it/s]",
+      "Epoch: 3/3, batch 147/171 (loss: 1.5722):  86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 147/171 [01:37<00:14,  1.68it/s]",
+      "Epoch: 3/3, batch 147/171 (loss: 1.5722):  87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 148/171 [01:38<00:13,  1.68it/s]",
+      "Epoch: 3/3, batch 148/171 (loss: 1.5601):  87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 148/171 [01:38<00:13,  1.68it/s]",
+      "Epoch: 3/3, batch 148/171 (loss: 1.5601):  87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 149/171 [01:39<00:13,  1.67it/s]",
+      "Epoch: 3/3, batch 149/171 (loss: 1.5771):  87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 149/171 [01:39<00:13,  1.67it/s]",
+      "Epoch: 3/3, batch 149/171 (loss: 1.5771):  88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 150/171 [01:39<00:12,  1.65it/s]",
+      "Epoch: 3/3, batch 150/171 (loss: 1.5781):  88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 150/171 [01:39<00:12,  1.65it/s]",
+      "Epoch: 3/3, batch 150/171 (loss: 1.5781):  88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 151/171 [01:40<00:12,  1.62it/s]",
+      "Epoch: 3/3, batch 151/171 (loss: 1.5583):  88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 151/171 [01:40<00:12,  1.62it/s]",
+      "Epoch: 3/3, batch 151/171 (loss: 1.5583):  89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 152/171 [01:41<00:11,  1.62it/s]",
+      "Epoch: 3/3, batch 152/171 (loss: 1.5722):  89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 152/171 [01:41<00:11,  1.62it/s]",
+      "Epoch: 3/3, batch 152/171 (loss: 1.5722):  89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 153/171 [01:41<00:11,  1.61it/s]",
+      "Epoch: 3/3, batch 153/171 (loss: 1.5610):  89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 153/171 [01:41<00:11,  1.61it/s]",
+      "Epoch: 3/3, batch 153/171 (loss: 1.5610):  90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 154/171 [01:42<00:10,  1.65it/s]",
+      "Epoch: 3/3, batch 154/171 (loss: 1.5811):  90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 154/171 [01:42<00:10,  1.65it/s]",
+      "Epoch: 3/3, batch 154/171 (loss: 1.5811):  91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 155/171 [01:42<00:09,  1.63it/s]",
+      "Epoch: 3/3, batch 155/171 (loss: 1.5885):  91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 155/171 [01:42<00:09,  1.63it/s]",
+      "Epoch: 3/3, batch 155/171 (loss: 1.5885):  91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 156/171 [01:43<00:09,  1.63it/s]",
+      "Epoch: 3/3, batch 156/171 (loss: 1.5520):  91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 156/171 [01:43<00:09,  1.63it/s]",
+      "Epoch: 3/3, batch 156/171 (loss: 1.5520):  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 157/171 [01:44<00:08,  1.59it/s]",
+      "Epoch: 3/3, batch 157/171 (loss: 1.5693):  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 157/171 [01:44<00:08,  1.59it/s]",
+      "Epoch: 3/3, batch 157/171 (loss: 1.5693):  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 158/171 [01:44<00:08,  1.57it/s]",
+      "Epoch: 3/3, batch 158/171 (loss: 1.5839):  92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 158/171 [01:44<00:08,  1.57it/s]",
+      "Epoch: 3/3, batch 158/171 (loss: 1.5839):  93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 159/171 [01:45<00:07,  1.56it/s]",
+      "Epoch: 3/3, batch 159/171 (loss: 1.5892):  93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 159/171 [01:45<00:07,  1.56it/s]",
+      "Epoch: 3/3, batch 159/171 (loss: 1.5892):  94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 160/171 [01:46<00:06,  1.58it/s]",
+      "Epoch: 3/3, batch 160/171 (loss: 1.5771):  94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 160/171 [01:46<00:06,  1.58it/s]",
+      "Epoch: 3/3, batch 160/171 (loss: 1.5771):  94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 161/171 [01:46<00:06,  1.59it/s]",
+      "Epoch: 3/3, batch 161/171 (loss: 1.5589):  94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 161/171 [01:46<00:06,  1.59it/s]",
+      "Epoch: 3/3, batch 161/171 (loss: 1.5589):  95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 162/171 [01:47<00:05,  1.61it/s]",
+      "Epoch: 3/3, batch 162/171 (loss: 1.5573):  95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 162/171 [01:47<00:05,  1.61it/s]",
+      "Epoch: 3/3, batch 162/171 (loss: 1.5573):  95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 163/171 [01:47<00:04,  1.61it/s]",
+      "Epoch: 3/3, batch 163/171 (loss: 1.5792):  95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 163/171 [01:47<00:04,  1.61it/s]",
+      "Epoch: 3/3, batch 163/171 (loss: 1.5792):  96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 164/171 [01:48<00:04,  1.65it/s]",
+      "Epoch: 3/3, batch 164/171 (loss: 1.5537):  96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 164/171 [01:48<00:04,  1.65it/s]",
+      "Epoch: 3/3, batch 164/171 (loss: 1.5537):  96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 165/171 [01:49<00:03,  1.69it/s]",
+      "Epoch: 3/3, batch 165/171 (loss: 1.5752):  96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 165/171 [01:49<00:03,  1.69it/s]",
+      "Epoch: 3/3, batch 165/171 (loss: 1.5752):  97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 166/171 [01:49<00:02,  1.73it/s]",
+      "Epoch: 3/3, batch 166/171 (loss: 1.5604):  97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 166/171 [01:49<00:02,  1.73it/s]",
+      "Epoch: 3/3, batch 166/171 (loss: 1.5604):  98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 167/171 [01:50<00:02,  1.77it/s]",
+      "Epoch: 3/3, batch 167/171 (loss: 1.5736):  98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 167/171 [01:50<00:02,  1.77it/s]",
+      "Epoch: 3/3, batch 167/171 (loss: 1.5736):  98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 168/171 [01:50<00:01,  1.79it/s]",
+      "Epoch: 3/3, batch 168/171 (loss: 1.5808):  98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 168/171 [01:50<00:01,  1.79it/s]",
+      "Epoch: 3/3, batch 168/171 (loss: 1.5808):  99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 169/171 [01:51<00:01,  1.75it/s]",
+      "Epoch: 3/3, batch 169/171 (loss: 1.5474):  99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 169/171 [01:51<00:01,  1.75it/s]",
+      "Epoch: 3/3, batch 169/171 (loss: 1.5474):  99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 170/171 [01:51<00:00,  1.70it/s]",
+      "Epoch: 3/3, batch 170/171 (loss: 1.5541):  99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 170/171 [01:51<00:00,  1.70it/s]",
+      "Epoch: 3/3, batch 170/171 (loss: 1.5541): 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 171/171 [01:52<00:00,  1.69it/s]",
+      "Epoch: 3/3, batch 171/171 (loss: 1.5732): 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 171/171 [01:52<00:00,  1.69it/s]",
+      "Epoch: 3/3, batch 171/171 (loss: 1.5732): 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 171/171 [01:52<00:00,  1.52it/s]",
+      "INFO:__main__:Epoch summary: {'epoch': 3, 'train_loss_mean': 1.5788575787293284, 'train_loss_last': 1.573181390762329, 'train_gradient_steps': 171, 'learning_rate_last': 5e-06, 'validation': {'num_batches': 10, 'num_examples': 4621, 'mean_loss': 1.5794679403305054}}",
+      "INFO:__main__:Model saved to /models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_val3e_20260312a/final",
+      "INFO:__main__:Training metrics written to /models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_val3e_20260312a/training_metrics.json",
+      "WARNING: Latents may not be normalized (expected mean=0 and var=1, got mean=0.0060 and var=0.8678). Small deviations are expected, but variances much larger than 1 are unusual."
+    ]
+  }
+}

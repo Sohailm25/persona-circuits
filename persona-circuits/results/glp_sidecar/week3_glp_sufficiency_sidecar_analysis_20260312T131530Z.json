@@ -1,0 +1,77 @@
+{
+  "timestamp_utc": "2026-03-12T13:15:30.066078+00:00",
+  "artifact_type": "week3_glp_sufficiency_sidecar_analysis",
+  "inputs": [
+    "/Users/sohailmohammad/braindstorms/persona-circuits/results/glp_sidecar/week3_glp_sufficiency_sidecar_20260311T220906Z_matchedglp_suff_syc_mean_20260311a.json"
+  ],
+  "summary_by_artifact": {
+    "/Users/sohailmohammad/braindstorms/persona-circuits/results/glp_sidecar/week3_glp_sufficiency_sidecar_20260311T220906Z_matchedglp_suff_syc_mean_20260311a.json": {
+      "sycophancy": {
+        "glp_alignment": {
+          "target_model_name": "meta-llama/Llama-3.1-8B-Instruct",
+          "target_layer": 12,
+          "training_model_name": "meta-llama/Llama-3.1-8B-Instruct",
+          "training_layers": [
+            12
+          ],
+          "model_match": true,
+          "layer_match": true,
+          "claim_grade_ready": true
+        },
+        "prompt_scope": "response_last",
+        "deterministic_conditions": {
+          "full_vector_raw": {
+            "trait_score_mean": 5.0,
+            "coherence_mean": 35.0
+          },
+          "full_vector_glp": {
+            "trait_score_mean": 5.0,
+            "coherence_mean": 18.0,
+            "glp_minus_raw_trait_score": 0.0,
+            "glp_minus_raw_coherence": -17.0,
+            "metric_validity": {
+              "status": "unavailable",
+              "reason": "insufficient_records"
+            }
+          }
+        },
+        "methods": {
+          "mean": {
+            "best_dose_by_glp_preservation": {
+              "dose_key": "1.00",
+              "preserved_fraction_target": 1.0,
+              "circuit_only_glp_preservation_vs_raw_full_mean": 1.5,
+              "circuit_only_raw_preservation_vs_raw_full_mean": 0.0,
+              "glp_minus_raw_preservation_vs_raw_full": 1.5,
+              "circuit_only_glp_coherence_mean": 0.0,
+              "circuit_only_raw_coherence_mean": 0.0
+            },
+            "dose_fraction_reports": {
+              "1.00": {
+                "preserved_fraction_target": 1.0,
+                "circuit_only_raw_preservation_vs_raw_full_mean": 0.0,
+                "circuit_only_glp_preservation_vs_raw_full_mean": 1.5,
+                "glp_minus_raw_preservation_vs_raw_full": 1.5,
+                "circuit_only_raw_coherence_mean": 0.0,
+                "circuit_only_glp_coherence_mean": 0.0,
+                "glp_minus_raw_coherence": 0.0,
+                "random_raw_selectivity_p": 1.0,
+                "random_glp_selectivity_p": 1.0,
+                "metric_validity": {
+                  "circuit_only_raw": {
+                    "status": "unavailable",
+                    "reason": "insufficient_records"
+                  },
+                  "circuit_only_glp": {
+                    "status": "unavailable",
+                    "reason": "insufficient_records"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

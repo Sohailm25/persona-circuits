@@ -1,0 +1,39 @@
+{
+  "timestamp_utc": "2026-03-11T14:32:44.726136+00:00",
+  "artifact_type": "glp_export_memmap_dataset_summary",
+  "inputs": {
+    "prompt_paths": [
+      "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/sycophancy_extraction_free_eval.jsonl",
+      "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/evil_extraction_free_eval.jsonl",
+      "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/hallucination_extraction_free_eval.jsonl"
+    ],
+    "prompt_hash": "f76803825b0fb2c5a74f8a3306db8d7454cdbbd2c59e5a17f4ba8e81ebcd44d4",
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 12,
+    "capture_mode": "response_all",
+    "max_new_tokens": 32,
+    "temperature": 0.0,
+    "limit_per_file": 2,
+    "samples_per_shard": 512,
+    "seed": 0,
+    "dedupe": true,
+    "dataset_name": "glp-llama31-instruct-l12-response-all-sanity-20260311a"
+  },
+  "export_summary": {
+    "timestamp_utc": "2026-03-11T14:32:41.823842+00:00",
+    "artifact_type": "glp_memmap_export",
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 12,
+    "hook_name": "blocks.12.hook_resid_post",
+    "capture_mode": "response_all",
+    "max_new_tokens": 32,
+    "temperature": 0.0,
+    "dataset_dir": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-sanity-20260311a",
+    "samples_per_shard": 512,
+    "prompt_count": 6,
+    "prompt_manifest_count": 6,
+    "sample_count": 178,
+    "vector_dim": 4096,
+    "skipped_no_response": 0
+  }
+}

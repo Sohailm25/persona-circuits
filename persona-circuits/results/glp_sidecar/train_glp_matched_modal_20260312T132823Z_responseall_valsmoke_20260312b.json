@@ -1,0 +1,160 @@
+{
+  "timestamp_utc": "2026-03-12T13:28:23.047595+00:00",
+  "artifact_type": "train_glp_matched_modal_summary",
+  "inputs": {
+    "config_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/train_glp_llama31_8b_instruct_layer12.yaml",
+    "dataset_volume_subdir": "glp-llama31-instruct-l12-response-all-tranches12-20260311a",
+    "dataset_dir": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a",
+    "dataset_metadata": {
+      "timestamp_utc": "2026-03-11T20:07:47.316189+00:00",
+      "artifact_type": "glp_memmap_export",
+      "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+      "layer": 12,
+      "hook_name": "blocks.12.hook_resid_post",
+      "capture_mode": "response_all",
+      "max_new_tokens": 32,
+      "temperature": 0.0,
+      "dataset_dir": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a",
+      "samples_per_shard": 8192,
+      "prompt_count": 3000,
+      "prompt_manifest_count": 3000,
+      "sample_count": 92422,
+      "vector_dim": 4096,
+      "skipped_no_response": 0
+    },
+    "output_volume_root": "/models/persona-circuits/glp_runs",
+    "run_name": "matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_valsmoke_20260312b",
+    "batch_size": 512,
+    "gradient_accumulation_steps": 1,
+    "num_epochs": 1,
+    "epoch_size": 4096,
+    "learning_rate": 5e-05,
+    "save_every_n_steps": null,
+    "overwrite": false,
+    "wandb_enabled": false,
+    "save_opt_state": false,
+    "save_epoch_checkpoints": false,
+    "validation_fraction": 0.05,
+    "validation_seed": 42,
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+  },
+  "training_summary": {
+    "timestamp_utc": "2026-03-12T13:27:39.558949+00:00",
+    "artifact_type": "matched_glp_train_summary",
+    "run_name": "matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_valsmoke_20260312b",
+    "output_path": "/models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_valsmoke_20260312b",
+    "dataset_dir": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a",
+    "rep_statistic": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a/rep_statistics.pt",
+    "trainer_repo_dir": "/root/generative_latent_prior",
+    "return_code": 0,
+    "started_at_utc": "2026-03-12T13:26:24.755463+00:00",
+    "finished_at_utc": "2026-03-12T13:27:39.558949+00:00",
+    "config": {
+      "save_root": "/models/persona-circuits/glp_runs",
+      "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+      "run_name": "matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_valsmoke_20260312b",
+      "output_path": "/models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_valsmoke_20260312b",
+      "wandb_enabled": false,
+      "wandb_project": "persona-circuits-glp",
+      "wandb_run_name": "${run_name}",
+      "train_dataset": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a",
+      "rep_statistic": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a/rep_statistics.pt",
+      "num_epochs": 1,
+      "save_epochs": [],
+      "shuffle": true,
+      "glp_kwargs": {
+        "normalizer_config": {
+          "rep_statistic": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a/rep_statistics.pt"
+        },
+        "denoiser_config": {
+          "d_input": 4096,
+          "d_model": 8192,
+          "d_mlp": 16384,
+          "n_layers": 6,
+          "multi_layer_n_layers": null
+        },
+        "tracedict_config": {
+          "layer_prefix": "model.layers",
+          "layers": [
+            12
+          ],
+          "retain": "output"
+        }
+      },
+      "use_bf16": true,
+      "learning_rate": 5e-05,
+      "batch_size": 512,
+      "gradient_accumulation_steps": 1,
+      "gradient_clipping_threshold": 1,
+      "log_every_n_steps": 10,
+      "save_opt_state": false,
+      "lr_scheduler": {
+        "scheduler_cls": "cosine_scheduler_with_warmup",
+        "warmup_ratio": 0.01,
+        "initial_factor": 0.01,
+        "final_factor": 0.1
+      },
+      "validation_fraction": 0.05,
+      "validation_seed": 42,
+      "epoch_size": 4096
+    },
+    "output_summary": {
+      "exists": true,
+      "file_count": 4,
+      "checkpoint_files": [
+        "final.safetensors"
+      ],
+      "has_final": true
+    },
+    "training_metrics": {
+      "train_dataset_size": 87801,
+      "validation_dataset_size": 4621,
+      "epoch_history": [
+        {
+          "epoch": 1,
+          "train_loss_mean": 2.2770099374983044,
+          "train_loss_last": 2.2502315044403076,
+          "train_gradient_steps": 8,
+          "learning_rate_last": 5e-06,
+          "validation": {
+            "num_batches": 10,
+            "num_examples": 4621,
+            "mean_loss": 2.237083673477173
+          }
+        }
+      ]
+    },
+    "log_tail": [
+      "INFO:__main__:Saving checkpoints to /models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_valsmoke_20260312b",
+      "INFO:__main__:Waiting for rep_statistic /models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a/rep_statistics.pt...",
+      "INFO:__main__:Config: {'model_name': 'meta-llama/Llama-3.1-8B-Instruct', 'glp_kwargs': {'normalizer_config': {'rep_statistic': '/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a/rep_statistics.pt'}, 'denoiser_config': {'d_input': 4096, 'd_model': 8192, 'd_mlp': 16384, 'n_layers': 6, 'multi_layer_n_layers': None}, 'tracedict_config': {'layer_prefix': 'model.layers', 'layers': [12], 'retain': 'output'}}, 'shuffle': True, 'train_dataset': '/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a', 'rep_statistic': '/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a/rep_statistics.pt', 'use_bf16': True, 'num_epochs': 1, 'epoch_size': 4096, 'batch_size': 512, 'learning_rate': 5e-05, 'lr_scheduler': {'scheduler_cls': 'cosine_scheduler_with_warmup', 'warmup_ratio': 0.01, 'initial_factor': 0.01, 'final_factor': 0.1}, 'gradient_accumulation_steps': 1, 'gradient_clipping_threshold': 1.0, 'log_every_n_steps': 10, 'save_every_n_steps': None, 'save_epochs': [], 'save_opt_state': False, 'output_path': PosixPath('/models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_valsmoke_20260312b'), 'wandb_enabled': False, 'wandb_entity': None, 'wandb_project': 'persona-circuits-glp', 'wandb_run_name': '${run_name}', 'validation_fraction': 0.05, 'validation_seed': 42, 'validation_max_batches': None, 'save_root': '/models/persona-circuits/glp_runs', 'run_name': 'matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_valsmoke_20260312b'}",
+      "INFO:__main__:Model param count: 3423039488",
+      "INFO:glp.utils_acts:Loaded 92422 indices from /models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranches12-20260311a/data_indices.npy",
+      "INFO:__main__:Dataset split: train=87801 val=4621 total=92422",
+      "Training Epoch: 1:   0%|          | 0/8 [00:00<?, ?it/s]",
+      "Training Epoch: 1:  12%|\u2588\u258e        | 1/8 [00:06<00:48,  6.86s/it]",
+      "Epoch: 1/1, batch 1/8 (loss: 2.3389):  12%|\u2588\u258e        | 1/8 [00:06<00:48,  6.86s/it]",
+      "Epoch: 1/1, batch 1/8 (loss: 2.3389):  25%|\u2588\u2588\u258c       | 2/8 [00:07<00:18,  3.17s/it]",
+      "Epoch: 1/1, batch 2/8 (loss: 2.3018):  25%|\u2588\u2588\u258c       | 2/8 [00:07<00:18,  3.17s/it]",
+      "Epoch: 1/1, batch 2/8 (loss: 2.3018):  38%|\u2588\u2588\u2588\u258a      | 3/8 [00:07<00:09,  1.96s/it]",
+      "Epoch: 1/1, batch 3/8 (loss: 2.2980):  38%|\u2588\u2588\u2588\u258a      | 3/8 [00:07<00:09,  1.96s/it]",
+      "Epoch: 1/1, batch 3/8 (loss: 2.2980):  50%|\u2588\u2588\u2588\u2588\u2588     | 4/8 [00:08<00:05,  1.39s/it]",
+      "Epoch: 1/1, batch 4/8 (loss: 2.2819):  50%|\u2588\u2588\u2588\u2588\u2588     | 4/8 [00:08<00:05,  1.39s/it]",
+      "Epoch: 1/1, batch 4/8 (loss: 2.2819):  62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 5/8 [00:09<00:03,  1.08s/it]",
+      "Epoch: 1/1, batch 5/8 (loss: 2.2729):  62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 5/8 [00:09<00:03,  1.08s/it]",
+      "Epoch: 1/1, batch 5/8 (loss: 2.2729):  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 6/8 [00:09<00:01,  1.14it/s]",
+      "Epoch: 1/1, batch 6/8 (loss: 2.2711):  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 6/8 [00:09<00:01,  1.14it/s]",
+      "Epoch: 1/1, batch 6/8 (loss: 2.2711):  88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 7/8 [00:10<00:00,  1.31it/s]",
+      "Epoch: 1/1, batch 7/8 (loss: 2.2448):  88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 7/8 [00:10<00:00,  1.31it/s]",
+      "Epoch: 1/1, batch 7/8 (loss: 2.2448): 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 8/8 [00:10<00:00,  1.46it/s]",
+      "Epoch: 1/1, batch 8/8 (loss: 2.2334): 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 8/8 [00:10<00:00,  1.46it/s]",
+      "Epoch: 1/1, batch 8/8 (loss: 2.2334): : 9it [00:11,  1.58it/s]",
+      "Epoch: 1/1, batch 9/8 (loss: 2.2502): : 9it [00:11,  1.58it/s]",
+      "Epoch: 1/1, batch 9/8 (loss: 2.2502): : 9it [00:11,  1.23s/it]",
+      "INFO:__main__:Epoch summary: {'epoch': 1, 'train_loss_mean': 2.2770099374983044, 'train_loss_last': 2.2502315044403076, 'train_gradient_steps': 8, 'learning_rate_last': 5e-06, 'validation': {'num_batches': 10, 'num_examples': 4621, 'mean_loss': 2.237083673477173}}",
+      "INFO:__main__:Model saved to /models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_valsmoke_20260312b/final",
+      "INFO:__main__:Training metrics written to /models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranches12-20260311a-responseall_valsmoke_20260312b/training_metrics.json",
+      "WARNING: Latents may not be normalized (expected mean=0 and var=1, got mean=0.0060 and var=0.8678). Small deviations are expected, but variances much larger than 1 are unusual."
+    ]
+  }
+}

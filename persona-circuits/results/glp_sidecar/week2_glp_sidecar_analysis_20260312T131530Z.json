@@ -1,0 +1,81 @@
+{
+  "timestamp_utc": "2026-03-12T13:15:30.062865+00:00",
+  "artifact_type": "week2_glp_sidecar_analysis",
+  "inputs": [
+    "/Users/sohailmohammad/braindstorms/persona-circuits/results/glp_sidecar/week2_glp_sidecar_validation_20260312T033338Z_conditional_minimatrix_20260312a.json"
+  ],
+  "summary_by_artifact": {
+    "/Users/sohailmohammad/braindstorms/persona-circuits/results/glp_sidecar/week2_glp_sidecar_validation_20260312T033338Z_conditional_minimatrix_20260312a.json": {
+      "evil": {
+        "raw_bidirectional_effect_mean": -30.0,
+        "glp_bidirectional_effect_mean": -30.0,
+        "raw_coherence_mean": 20.0,
+        "glp_coherence_mean": 21.0,
+        "glp_minus_raw_bidirectional": 0.0,
+        "glp_minus_raw_coherence": 1.0,
+        "glp_minus_raw_neutral_shift_abs": 0.0,
+        "glp_minus_raw_capability_fraction": 0.0,
+        "random_glp_bidirectional_effect_mean": -50.0,
+        "baseline_glp_bidirectional_effect_mean": -42.5,
+        "selected_glp_geometry_repair_ratio_mean": 2.370523524530908,
+        "selected_glp_geometry_retention_cosine_mean": 0.3619705121823007,
+        "selected_glp_metric_validity": {
+          "status": "unavailable",
+          "reason": "artifact_missing_family_records"
+        },
+        "random_glp_draw_distribution": null,
+        "conditioning_regimes": {
+          "selected_glp": null,
+          "baseline_glp_control": null,
+          "random_glp": null
+        },
+        "glp_alignment": {
+          "target_model_name": "meta-llama/Llama-3.1-8B-Instruct",
+          "target_layer": 12,
+          "training_model_name": "meta-llama/Llama-3.1-8B-Instruct",
+          "training_layers": [
+            12
+          ],
+          "model_match": true,
+          "layer_match": true,
+          "claim_grade_ready": true
+        }
+      },
+      "sycophancy": {
+        "raw_bidirectional_effect_mean": -66.0,
+        "glp_bidirectional_effect_mean": -73.5,
+        "raw_coherence_mean": 27.0,
+        "glp_coherence_mean": 25.0,
+        "glp_minus_raw_bidirectional": -7.5,
+        "glp_minus_raw_coherence": -2.0,
+        "glp_minus_raw_neutral_shift_abs": 0.8000000000000003,
+        "glp_minus_raw_capability_fraction": 0.0,
+        "random_glp_bidirectional_effect_mean": -85.0,
+        "baseline_glp_bidirectional_effect_mean": -82.5,
+        "selected_glp_geometry_repair_ratio_mean": 2.3309415956218817,
+        "selected_glp_geometry_retention_cosine_mean": 0.3774331093677968,
+        "selected_glp_metric_validity": {
+          "status": "unavailable",
+          "reason": "artifact_missing_family_records"
+        },
+        "random_glp_draw_distribution": null,
+        "conditioning_regimes": {
+          "selected_glp": null,
+          "baseline_glp_control": null,
+          "random_glp": null
+        },
+        "glp_alignment": {
+          "target_model_name": "meta-llama/Llama-3.1-8B-Instruct",
+          "target_layer": 12,
+          "training_model_name": "meta-llama/Llama-3.1-8B-Instruct",
+          "training_layers": [
+            12
+          ],
+          "model_match": true,
+          "layer_match": true,
+          "claim_grade_ready": true
+        }
+      }
+    }
+  }
+}

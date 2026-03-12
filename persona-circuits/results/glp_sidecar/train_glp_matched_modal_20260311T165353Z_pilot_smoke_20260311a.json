@@ -1,0 +1,135 @@
+{
+  "timestamp_utc": "2026-03-11T16:53:53.164079+00:00",
+  "artifact_type": "train_glp_matched_modal_summary",
+  "inputs": {
+    "config_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/train_glp_llama31_8b_instruct_layer12.yaml",
+    "dataset_volume_subdir": "glp-llama31-instruct-l12-response-all-tranche1-20260311a",
+    "dataset_dir": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranche1-20260311a",
+    "output_volume_root": "/models/persona-circuits/glp_runs",
+    "run_name": "matched-glp-llama31-instruct-l12-response-all-tranche1-20260311a-pilot_smoke_20260311a",
+    "batch_size": 256,
+    "gradient_accumulation_steps": 1,
+    "num_epochs": 1,
+    "epoch_size": 4096,
+    "learning_rate": 5e-05,
+    "save_every_n_steps": null,
+    "overwrite": false,
+    "wandb_enabled": false,
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct"
+  },
+  "training_summary": {
+    "timestamp_utc": "2026-03-11T16:52:17.867362+00:00",
+    "artifact_type": "matched_glp_train_summary",
+    "run_name": "matched-glp-llama31-instruct-l12-response-all-tranche1-20260311a-pilot_smoke_20260311a",
+    "output_path": "/models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranche1-20260311a-pilot_smoke_20260311a",
+    "dataset_dir": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranche1-20260311a",
+    "rep_statistic": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranche1-20260311a/rep_statistics.pt",
+    "trainer_repo_dir": "/root/generative_latent_prior",
+    "return_code": 0,
+    "started_at_utc": "2026-03-11T16:49:05.122828+00:00",
+    "finished_at_utc": "2026-03-11T16:52:17.867362+00:00",
+    "config": {
+      "save_root": "/models/persona-circuits/glp_runs",
+      "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+      "run_name": "matched-glp-llama31-instruct-l12-response-all-tranche1-20260311a-pilot_smoke_20260311a",
+      "output_path": "/models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranche1-20260311a-pilot_smoke_20260311a",
+      "wandb_enabled": false,
+      "wandb_project": "persona-circuits-glp",
+      "wandb_run_name": "${run_name}",
+      "train_dataset": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranche1-20260311a",
+      "rep_statistic": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranche1-20260311a/rep_statistics.pt",
+      "num_epochs": 1,
+      "save_epochs": [
+        1
+      ],
+      "shuffle": true,
+      "glp_kwargs": {
+        "normalizer_config": {
+          "rep_statistic": "/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranche1-20260311a/rep_statistics.pt"
+        },
+        "denoiser_config": {
+          "d_input": 4096,
+          "d_model": 8192,
+          "d_mlp": 16384,
+          "n_layers": 6,
+          "multi_layer_n_layers": null
+        },
+        "tracedict_config": {
+          "layer_prefix": "model.layers",
+          "layers": [
+            12
+          ],
+          "retain": "output"
+        }
+      },
+      "use_bf16": true,
+      "learning_rate": 5e-05,
+      "batch_size": 256,
+      "gradient_accumulation_steps": 1,
+      "gradient_clipping_threshold": 1,
+      "log_every_n_steps": 10,
+      "save_opt_state": true,
+      "lr_scheduler": {
+        "scheduler_cls": "cosine_scheduler_with_warmup",
+        "warmup_ratio": 0.01,
+        "initial_factor": 0.01,
+        "final_factor": 0.1
+      },
+      "epoch_size": 4096
+    },
+    "output_summary": {
+      "exists": true,
+      "file_count": 7,
+      "checkpoint_files": [
+        "checkpoints/epoch_1.safetensors",
+        "final.safetensors"
+      ],
+      "has_final": true
+    },
+    "log_tail": [
+      "INFO:__main__:Saving checkpoints to /models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranche1-20260311a-pilot_smoke_20260311a",
+      "INFO:__main__:Waiting for rep_statistic /models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranche1-20260311a/rep_statistics.pt...",
+      "INFO:__main__:Config: {'model_name': 'meta-llama/Llama-3.1-8B-Instruct', 'glp_kwargs': {'normalizer_config': {'rep_statistic': '/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranche1-20260311a/rep_statistics.pt'}, 'denoiser_config': {'d_input': 4096, 'd_model': 8192, 'd_mlp': 16384, 'n_layers': 6, 'multi_layer_n_layers': None}, 'tracedict_config': {'layer_prefix': 'model.layers', 'layers': [12], 'retain': 'output'}}, 'shuffle': True, 'train_dataset': '/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranche1-20260311a', 'rep_statistic': '/models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranche1-20260311a/rep_statistics.pt', 'use_bf16': True, 'num_epochs': 1, 'epoch_size': 4096, 'batch_size': 256, 'learning_rate': 5e-05, 'lr_scheduler': {'scheduler_cls': 'cosine_scheduler_with_warmup', 'warmup_ratio': 0.01, 'initial_factor': 0.01, 'final_factor': 0.1}, 'gradient_accumulation_steps': 1, 'gradient_clipping_threshold': 1.0, 'log_every_n_steps': 10, 'save_every_n_steps': None, 'save_epochs': [1], 'save_opt_state': True, 'output_path': PosixPath('/models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranche1-20260311a-pilot_smoke_20260311a'), 'wandb_enabled': False, 'wandb_entity': None, 'wandb_project': 'persona-circuits-glp', 'wandb_run_name': '${run_name}', 'save_root': '/models/persona-circuits/glp_runs', 'run_name': 'matched-glp-llama31-instruct-l12-response-all-tranche1-20260311a-pilot_smoke_20260311a'}",
+      "INFO:__main__:Model param count: 3423039488",
+      "INFO:glp.utils_acts:Loaded 46237 indices from /models/persona-circuits/glp_datasets/glp-llama31-instruct-l12-response-all-tranche1-20260311a/data_indices.npy",
+      "Training Epoch: 1:   0%|          | 0/16 [00:00<?, ?it/s]",
+      "Training Epoch: 1:   6%|\u258b         | 1/16 [00:06<01:35,  6.38s/it]",
+      "Epoch: 1/1, batch 1/16 (loss: 2.3166):   6%|\u258b         | 1/16 [00:06<01:35,  6.38s/it]",
+      "Epoch: 1/1, batch 1/16 (loss: 2.3166):  12%|\u2588\u258e        | 2/16 [00:06<00:39,  2.84s/it]",
+      "Epoch: 1/1, batch 2/16 (loss: 2.3171):  12%|\u2588\u258e        | 2/16 [00:06<00:39,  2.84s/it]",
+      "Epoch: 1/1, batch 2/16 (loss: 2.3171):  19%|\u2588\u2589        | 3/16 [00:07<00:22,  1.73s/it]",
+      "Epoch: 1/1, batch 3/16 (loss: 2.3176):  19%|\u2588\u2589        | 3/16 [00:07<00:22,  1.73s/it]",
+      "Epoch: 1/1, batch 3/16 (loss: 2.3176):  25%|\u2588\u2588\u258c       | 4/16 [00:07<00:14,  1.20s/it]",
+      "Epoch: 1/1, batch 4/16 (loss: 2.3209):  25%|\u2588\u2588\u258c       | 4/16 [00:07<00:14,  1.20s/it]",
+      "Epoch: 1/1, batch 4/16 (loss: 2.3209):  31%|\u2588\u2588\u2588\u258f      | 5/16 [00:07<00:10,  1.10it/s]",
+      "Epoch: 1/1, batch 5/16 (loss: 2.3025):  31%|\u2588\u2588\u2588\u258f      | 5/16 [00:08<00:10,  1.10it/s]",
+      "Epoch: 1/1, batch 5/16 (loss: 2.3025):  38%|\u2588\u2588\u2588\u258a      | 6/16 [00:08<00:07,  1.36it/s]",
+      "Epoch: 1/1, batch 6/16 (loss: 2.2857):  38%|\u2588\u2588\u2588\u258a      | 6/16 [00:08<00:07,  1.36it/s]",
+      "Epoch: 1/1, batch 6/16 (loss: 2.2857):  44%|\u2588\u2588\u2588\u2588\u258d     | 7/16 [00:08<00:05,  1.62it/s]",
+      "Epoch: 1/1, batch 7/16 (loss: 2.3086):  44%|\u2588\u2588\u2588\u2588\u258d     | 7/16 [00:08<00:05,  1.62it/s]",
+      "Epoch: 1/1, batch 7/16 (loss: 2.3086):  50%|\u2588\u2588\u2588\u2588\u2588     | 8/16 [00:09<00:04,  1.84it/s]",
+      "Epoch: 1/1, batch 8/16 (loss: 2.2668):  50%|\u2588\u2588\u2588\u2588\u2588     | 8/16 [00:09<00:04,  1.84it/s]",
+      "Epoch: 1/1, batch 8/16 (loss: 2.2668):  56%|\u2588\u2588\u2588\u2588\u2588\u258b    | 9/16 [00:09<00:03,  2.01it/s]",
+      "Epoch: 1/1, batch 9/16 (loss: 2.2576):  56%|\u2588\u2588\u2588\u2588\u2588\u258b    | 9/16 [00:09<00:03,  2.01it/s]",
+      "Epoch: 1/1, batch 9/16 (loss: 2.2576):  62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 10/16 [00:09<00:02,  2.13it/s]",
+      "Epoch: 1/1, batch 10/16 (loss: 2.2499):  62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 10/16 [00:10<00:02,  2.13it/s]",
+      "Epoch: 1/1, batch 10/16 (loss: 2.2499):  69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 11/16 [00:10<00:02,  2.25it/s]",
+      "Epoch: 1/1, batch 11/16 (loss: 2.2261):  69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 11/16 [00:10<00:02,  2.25it/s]",
+      "Epoch: 1/1, batch 11/16 (loss: 2.2261):  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 12/16 [00:10<00:01,  2.31it/s]",
+      "Epoch: 1/1, batch 12/16 (loss: 2.2245):  75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 12/16 [00:10<00:01,  2.31it/s]",
+      "Epoch: 1/1, batch 12/16 (loss: 2.2245):  81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 13/16 [00:11<00:01,  2.37it/s]",
+      "Epoch: 1/1, batch 13/16 (loss: 2.2424):  81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 13/16 [00:11<00:01,  2.37it/s]",
+      "Epoch: 1/1, batch 13/16 (loss: 2.2424):  88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 14/16 [00:11<00:00,  2.38it/s]",
+      "Epoch: 1/1, batch 14/16 (loss: 2.2196):  88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 14/16 [00:11<00:00,  2.38it/s]",
+      "Epoch: 1/1, batch 14/16 (loss: 2.2196):  94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 15/16 [00:11<00:00,  2.42it/s]",
+      "Epoch: 1/1, batch 15/16 (loss: 2.2038):  94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 15/16 [00:12<00:00,  2.42it/s]",
+      "Epoch: 1/1, batch 15/16 (loss: 2.2038): 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 16/16 [00:12<00:00,  2.45it/s]",
+      "Epoch: 1/1, batch 16/16 (loss: 2.2506): 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 16/16 [00:12<00:00,  2.45it/s]",
+      "Epoch: 1/1, batch 16/16 (loss: 2.2506): : 17it [00:12,  2.46it/s]",
+      "Epoch: 1/1, batch 17/16 (loss: 2.2216): : 17it [00:12,  2.46it/s]",
+      "Epoch: 1/1, batch 17/16 (loss: 2.2216): : 17it [00:12,  1.33it/s]",
+      "INFO:__main__:Model saved to /models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranche1-20260311a-pilot_smoke_20260311a/checkpoints/epoch_1",
+      "INFO:__main__:Model saved to /models/persona-circuits/glp_runs/matched-glp-llama31-instruct-l12-response-all-tranche1-20260311a-pilot_smoke_20260311a/final"
+    ]
+  }
+}

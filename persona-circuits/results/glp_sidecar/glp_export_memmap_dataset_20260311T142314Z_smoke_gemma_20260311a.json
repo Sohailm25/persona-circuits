@@ -1,0 +1,37 @@
+{
+  "timestamp_utc": "2026-03-11T14:23:14.054501+00:00",
+  "artifact_type": "glp_export_memmap_dataset_summary",
+  "inputs": {
+    "prompt_paths": [
+      "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/sycophancy_extraction_free_eval.jsonl"
+    ],
+    "prompt_hash": "ec7716e50bab6de1679ecbba33fdb149b6782ca611531b1558456571c4434854",
+    "model_name": "google/gemma-2-2b-it",
+    "layer": 12,
+    "capture_mode": "response_last",
+    "max_new_tokens": 8,
+    "temperature": 0.0,
+    "limit_per_file": 1,
+    "samples_per_shard": 8,
+    "seed": 0,
+    "dedupe": true,
+    "dataset_name": "glp-smoke-gemma2-2b-it-l12-response-last-20260311a"
+  },
+  "export_summary": {
+    "timestamp_utc": "2026-03-11T14:23:11.756005+00:00",
+    "artifact_type": "glp_memmap_export",
+    "model_name": "google/gemma-2-2b-it",
+    "layer": 12,
+    "hook_name": "blocks.12.hook_resid_post",
+    "capture_mode": "response_last",
+    "max_new_tokens": 8,
+    "temperature": 0.0,
+    "dataset_dir": "/models/persona-circuits/glp_datasets/glp-smoke-gemma2-2b-it-l12-response-last-20260311a",
+    "samples_per_shard": 8,
+    "prompt_count": 1,
+    "prompt_manifest_count": 1,
+    "sample_count": 1,
+    "vector_dim": 2304,
+    "skipped_no_response": 0
+  }
+}

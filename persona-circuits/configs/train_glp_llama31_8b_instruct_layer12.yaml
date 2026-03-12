@@ -1,0 +1,55 @@
+# Matched single-layer repair-model training config for persona-circuits.
+# Intended for the external GLP trainer:
+#   python3 /tmp/generative_latent_prior/glp_train.py config=configs/train_glp_llama31_8b_instruct_layer12.yaml
+#
+# Important:
+# - Keep the dataset directory name free of the substring `layer_<N>`.
+#   The upstream trainer auto-infers multi-layer mode from that pattern.
+# - This template is single-layer only and aligned to the current claim lane:
+#   Llama-3.1-8B-Instruct, resid_post layer 12.
+
+save_root: .
+model_name: meta-llama/Llama-3.1-8B-Instruct
+run_name: glp-llama31-8b-instruct-l12-d${glp_kwargs.denoiser_config.n_layers}
+output_path: ${save_root}/runs/${run_name}
+
+# Logging
+wandb_enabled: false
+wandb_project: persona-circuits-glp
+wandb_run_name: ${run_name}
+
+# Data
+train_dataset: ${save_root}/data/glp_llama31_8b_instruct_l12_chat_1m
+rep_statistic: ${train_dataset}/rep_statistics.pt
+num_epochs: 1
+save_epochs: [1]
+shuffle: true
+
+glp_kwargs:
+  normalizer_config:
+    rep_statistic: ${rep_statistic}
+  denoiser_config:
+    d_input: 4096
+    d_model: 8192
+    d_mlp: 16384
+    n_layers: 6
+    multi_layer_n_layers: null
+  # Metadata describing the activation source.
+  tracedict_config:
+    layer_prefix: "model.layers"
+    layers: [12]
+    retain: "output"
+
+# Training
+use_bf16: true
+learning_rate: 5e-5
+batch_size: 4096
+gradient_accumulation_steps: 1
+gradient_clipping_threshold: 1
+log_every_n_steps: 10
+save_opt_state: true
+lr_scheduler:
+  scheduler_cls: cosine_scheduler_with_warmup
+  warmup_ratio: 0.01
+  initial_factor: 0.01
+  final_factor: 0.1

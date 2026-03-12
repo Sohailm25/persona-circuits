@@ -1,0 +1,263 @@
+{
+  "timestamp_utc": "2026-03-12T14:27:04.475268+00:00",
+  "artifact_type": "week2_glp_sidecar_analysis",
+  "inputs": [
+    "/Users/sohailmohammad/braindstorms/persona-circuits/results/glp_sidecar/week2_glp_sidecar_validation_20260312T141947Z_matched_responseall_val3e_rowdiag5_20260312a.json"
+  ],
+  "summary_by_artifact": {
+    "/Users/sohailmohammad/braindstorms/persona-circuits/results/glp_sidecar/week2_glp_sidecar_validation_20260312T141947Z_matched_responseall_val3e_rowdiag5_20260312a.json": {
+      "evil": {
+        "raw_bidirectional_effect_mean": -50.4,
+        "glp_bidirectional_effect_mean": -50.2,
+        "raw_coherence_mean": 43.1,
+        "glp_coherence_mean": 44.4,
+        "glp_minus_raw_bidirectional": 0.19999999999999574,
+        "glp_minus_raw_coherence": 1.2999999999999972,
+        "glp_minus_raw_neutral_shift_abs": 0.0,
+        "glp_minus_raw_capability_fraction": 0.0,
+        "random_glp_bidirectional_effect_mean": -49.333333333333336,
+        "baseline_glp_bidirectional_effect_mean": -59.2,
+        "selected_glp_geometry_repair_ratio_mean": 2.0300708177078572,
+        "selected_glp_geometry_retention_cosine_mean": 0.4212851110799857,
+        "selected_glp_metric_validity": {
+          "status": "available",
+          "n_rows": 5,
+          "nll_vs_coherence_delta": {
+            "n": 5,
+            "pearson": -0.18241313819337437,
+            "spearman": -0.05129891760425771
+          },
+          "nll_vs_effect_delta": {
+            "n": 5,
+            "pearson": 0.1352684326430507,
+            "spearman": -0.35909242322980395
+          },
+          "repair_ratio_vs_coherence_delta": {
+            "n": 5,
+            "pearson": 0.29283231868191895,
+            "spearman": 0.46169025843831935
+          },
+          "repair_ratio_vs_effect_delta": {
+            "n": 5,
+            "pearson": 0.7404835862233734,
+            "spearman": 0.8720815992723809
+          },
+          "nll_vs_glp_coherence": {
+            "n": 5,
+            "pearson": -0.1540362222159953,
+            "spearman": -0.39999999999999997
+          },
+          "nll_vs_glp_effect": {
+            "n": 5,
+            "pearson": 0.11064827469740458,
+            "spearman": 0.11180339887498948
+          }
+        },
+        "random_glp_draw_distribution": {
+          "bidirectional_effect_mean": {
+            "n": 3,
+            "mean": -49.333333333333336,
+            "median": -50.4,
+            "std": 4.473129652591003,
+            "min": -54.2,
+            "max": -43.4,
+            "p90": -44.8
+          },
+          "capability_correct_fraction_mean": {
+            "n": 3,
+            "mean": 1.0,
+            "median": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0,
+            "p90": 1.0
+          },
+          "coherence_mean": {
+            "n": 3,
+            "mean": 37.9,
+            "median": 38.4,
+            "std": 2.6770630673681683,
+            "min": 34.4,
+            "max": 40.9,
+            "p90": 40.4
+          },
+          "delta_target_nll_vs_clean_mean": {
+            "n": 3,
+            "mean": 0.11604722056715532,
+            "median": 0.06494537976839361,
+            "std": 0.11866845355420122,
+            "min": 0.0031613170949523093,
+            "max": 0.28003496483812,
+            "p90": 0.23701704782417474
+          },
+          "neutral_trait_shift_abs_mean": {
+            "n": 3,
+            "mean": 0.0,
+            "median": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "p90": 0.0
+          },
+          "repair_to_edit_ratio_mean": {
+            "n": 3,
+            "mean": 2.1272968391113816,
+            "median": 2.1182630890158705,
+            "std": 0.01684308514428688,
+            "min": 2.112726341496158,
+            "max": 2.150901086822116,
+            "p90": 2.1443734872608666
+          }
+        },
+        "conditioning_regimes": {
+          "selected_glp": {
+            "unconditional_or_disabled": 5
+          },
+          "baseline_glp_control": {
+            "unconditional_or_disabled": 5
+          },
+          "random_glp": {
+            "unconditional_or_disabled": 15
+          }
+        },
+        "glp_alignment": {
+          "target_model_name": "meta-llama/Llama-3.1-8B-Instruct",
+          "target_layer": 12,
+          "training_model_name": "meta-llama/Llama-3.1-8B-Instruct",
+          "training_layers": [
+            12
+          ],
+          "model_match": true,
+          "layer_match": true,
+          "claim_grade_ready": true
+        }
+      },
+      "sycophancy": {
+        "raw_bidirectional_effect_mean": -81.0,
+        "glp_bidirectional_effect_mean": -76.4,
+        "raw_coherence_mean": 45.3,
+        "glp_coherence_mean": 42.5,
+        "glp_minus_raw_bidirectional": 4.599999999999994,
+        "glp_minus_raw_coherence": -2.799999999999997,
+        "glp_minus_raw_neutral_shift_abs": 0.0,
+        "glp_minus_raw_capability_fraction": 0.0,
+        "random_glp_bidirectional_effect_mean": -80.86666666666666,
+        "baseline_glp_bidirectional_effect_mean": -80.0,
+        "selected_glp_geometry_repair_ratio_mean": 2.009189832296853,
+        "selected_glp_geometry_retention_cosine_mean": 0.43410781802684495,
+        "selected_glp_metric_validity": {
+          "status": "available",
+          "n_rows": 5,
+          "nll_vs_coherence_delta": {
+            "n": 5,
+            "pearson": -0.4453663129908759,
+            "spearman": -0.46169025843831935
+          },
+          "nll_vs_effect_delta": {
+            "n": 5,
+            "pearson": 0.17364638474824465,
+            "spearman": -0.09999999999999999
+          },
+          "repair_ratio_vs_coherence_delta": {
+            "n": 5,
+            "pearson": 0.30643059571690734,
+            "spearman": 0.20519567041703085
+          },
+          "repair_ratio_vs_effect_delta": {
+            "n": 5,
+            "pearson": -0.10479138168687738,
+            "spearman": -0.39999999999999997
+          },
+          "nll_vs_glp_coherence": {
+            "n": 5,
+            "pearson": -0.12108989660864605,
+            "spearman": -0.4103913408340617
+          },
+          "nll_vs_glp_effect": {
+            "n": 5,
+            "pearson": -0.27282424323091586,
+            "spearman": -0.20519567041703085
+          }
+        },
+        "random_glp_draw_distribution": {
+          "bidirectional_effect_mean": {
+            "n": 3,
+            "mean": -80.86666666666666,
+            "median": -81.0,
+            "std": 2.288133640230733,
+            "min": -83.6,
+            "max": -78.0,
+            "p90": -78.6
+          },
+          "capability_correct_fraction_mean": {
+            "n": 3,
+            "mean": 1.0,
+            "median": 1.0,
+            "std": 0.0,
+            "min": 1.0,
+            "max": 1.0,
+            "p90": 1.0
+          },
+          "coherence_mean": {
+            "n": 3,
+            "mean": 50.96666666666667,
+            "median": 51.3,
+            "std": 0.6944222218666553,
+            "min": 50.0,
+            "max": 51.6,
+            "p90": 51.54
+          },
+          "delta_target_nll_vs_clean_mean": {
+            "n": 3,
+            "mean": 0.04579324744670749,
+            "median": 0.037903654916423335,
+            "std": 0.017683412756390526,
+            "min": 0.029186392261202697,
+            "max": 0.07028969516249646,
+            "p90": 0.06381248711328183
+          },
+          "neutral_trait_shift_abs_mean": {
+            "n": 3,
+            "mean": 0.0,
+            "median": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "p90": 0.0
+          },
+          "repair_to_edit_ratio_mean": {
+            "n": 3,
+            "mean": 2.1290077672596968,
+            "median": 2.1352569912599817,
+            "std": 0.017799821340513597,
+            "min": 2.1047653698837863,
+            "max": 2.1470009406353223,
+            "p90": 2.1446521507602543
+          }
+        },
+        "conditioning_regimes": {
+          "selected_glp": {
+            "unconditional_or_disabled": 5
+          },
+          "baseline_glp_control": {
+            "unconditional_or_disabled": 5
+          },
+          "random_glp": {
+            "unconditional_or_disabled": 15
+          }
+        },
+        "glp_alignment": {
+          "target_model_name": "meta-llama/Llama-3.1-8B-Instruct",
+          "target_layer": 12,
+          "training_model_name": "meta-llama/Llama-3.1-8B-Instruct",
+          "training_layers": [
+            12
+          ],
+          "model_match": true,
+          "layer_match": true,
+          "claim_grade_ready": true
+        }
+      }
+    }
+  }
+}

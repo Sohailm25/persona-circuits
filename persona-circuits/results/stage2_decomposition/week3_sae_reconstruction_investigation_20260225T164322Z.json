@@ -1,0 +1,533 @@
+{
+  "timestamp_utc": "2026-02-25T16:43:22.041405+00:00",
+  "inputs": {
+    "sae_source": "primary",
+    "layer": 16,
+    "sae_release": "llama_scope_lxr_32x",
+    "sae_id": "l16r_32x",
+    "model_names": [
+      "meta-llama/Llama-3.1-8B",
+      "meta-llama/Llama-3.1-8B-Instruct"
+    ],
+    "n_probe_rows": 12,
+    "probe_traits": [
+      "evil",
+      "hallucination",
+      "sycophancy"
+    ],
+    "seed": 42
+  },
+  "evidence_status": {
+    "reconstruction_metrics": "observed",
+    "permutation_control": "observed",
+    "vector_projection_diagnostics": "observed",
+    "base_vs_instruct_gap": "observed",
+    "hook_mismatch_interpretation": "inferred"
+  },
+  "vector_projection_diagnostics": {
+    "sycophancy": {
+      "evidence_status": "observed",
+      "top_100_projection_mass": 0.0298552322875236,
+      "top_feature_pairwise_max_abs_cosine": 0.6039775013923645,
+      "feature_splitting_risk_ge_0_4": true
+    },
+    "evil": {
+      "evidence_status": "observed",
+      "top_100_projection_mass": 0.041443144896872695,
+      "top_feature_pairwise_max_abs_cosine": 0.6717478036880493,
+      "feature_splitting_risk_ge_0_4": true
+    },
+    "hallucination": {
+      "evidence_status": "observed",
+      "top_100_projection_mass": 0.02043327473906877,
+      "top_feature_pairwise_max_abs_cosine": 0.9718686938285828,
+      "feature_splitting_risk_ge_0_4": true
+    }
+  },
+  "model_results": {
+    "meta-llama/Llama-3.1-8B": {
+      "evidence_status": {
+        "overall_metrics": "observed",
+        "trait_metrics": "observed"
+      },
+      "overall": {
+        "reconstruction_cosine": {
+          "n": 12,
+          "mean": 0.1261052650709947,
+          "median": 0.12607397139072418,
+          "std": 0.0003480153956995625,
+          "p10": 0.12568577229976655,
+          "p90": 0.1265204980969429,
+          "frac_lt_0_8": 1.0,
+          "frac_ge_0_9": 0.0
+        },
+        "explained_variance": {
+          "n": 12,
+          "mean": -27152.318196614582,
+          "median": -27131.6044921875,
+          "std": 170.1232874201962,
+          "p10": -27357.6599609375,
+          "p90": -26949.3349609375,
+          "frac_lt_0_8": 1.0,
+          "frac_ge_0_9": 0.0
+        },
+        "relative_error_norm": {
+          "n": 12,
+          "mean": 164.78183237711588,
+          "median": 164.71974182128906,
+          "std": 0.5162924147265445,
+          "p10": 164.16556091308593,
+          "p90": 165.4045425415039,
+          "frac_lt_0_8": 0.0,
+          "frac_ge_0_9": 1.0
+        },
+        "feature_l0_mean": {
+          "n": 12,
+          "mean": 1606.5236206054688,
+          "median": 1516.8389892578125,
+          "std": 265.05160471444765,
+          "p10": 1320.1527954101562,
+          "p90": 1930.3230712890625,
+          "frac_lt_0_8": 0.0,
+          "frac_ge_0_9": 1.0
+        },
+        "permutation_reconstruction_cosine": {
+          "n": 12,
+          "mean": -0.06769674830138683,
+          "median": -0.06756260991096497,
+          "std": 0.0009805785024261772,
+          "p10": -0.06890433505177498,
+          "p90": -0.06654344573616981,
+          "frac_lt_0_8": 1.0,
+          "frac_ge_0_9": 0.0
+        },
+        "permutation_median_gap": 0.19363658130168915,
+        "status": "fail"
+      },
+      "by_trait": {
+        "sycophancy": {
+          "evidence_status": {
+            "reconstruction_metrics": "observed",
+            "permutation_control": "observed"
+          },
+          "reconstruction_cosine": {
+            "n": 4,
+            "mean": 0.1257423833012581,
+            "median": 0.12578383088111877,
+            "std": 0.0001643717218793323,
+            "p10": 0.12555525153875352,
+            "p90": 0.12589635699987411,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "explained_variance": {
+            "n": 4,
+            "mean": -26976.69873046875,
+            "median": -26995.3056640625,
+            "std": 76.84296998430523,
+            "p10": -27049.1931640625,
+            "p90": -26889.31875,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "relative_error_norm": {
+            "n": 4,
+            "mean": 164.24872207641602,
+            "median": 164.30545043945312,
+            "std": 0.23398702178326383,
+            "p10": 163.98263397216797,
+            "p90": 164.46942749023438,
+            "frac_lt_0_8": 0.0,
+            "frac_ge_0_9": 1.0
+          },
+          "feature_l0_mean": {
+            "n": 4,
+            "mean": 1352.1207275390625,
+            "median": 1372.347412109375,
+            "std": 85.44205243744373,
+            "p10": 1255.3167236328125,
+            "p90": 1432.7433837890626,
+            "frac_lt_0_8": 0.0,
+            "frac_ge_0_9": 1.0
+          },
+          "permutation_reconstruction_cosine": {
+            "n": 4,
+            "mean": -0.06820019334554672,
+            "median": -0.06825071945786476,
+            "std": 0.0013305323687710258,
+            "p10": -0.06961153447628021,
+            "p90": -0.0667484313249588,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "permutation_median_gap": 0.19403455033898354,
+          "status": "fail"
+        },
+        "evil": {
+          "evidence_status": {
+            "reconstruction_metrics": "observed",
+            "permutation_control": "observed"
+          },
+          "reconstruction_cosine": {
+            "n": 4,
+            "mean": 0.12611474469304085,
+            "median": 0.12607397139072418,
+            "std": 0.00027902420741991865,
+            "p10": 0.12584047317504882,
+            "p90": 0.1264216348528862,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "explained_variance": {
+            "n": 4,
+            "mean": -27160.44921875,
+            "median": -27131.6044921875,
+            "std": 145.58501685700696,
+            "p10": -27321.5412109375,
+            "p90": -27022.4330078125,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "relative_error_norm": {
+            "n": 4,
+            "mean": 164.80672073364258,
+            "median": 164.71974182128906,
+            "std": 0.44136897948500287,
+            "p10": 164.38799285888672,
+            "p90": 165.29503173828124,
+            "frac_lt_0_8": 0.0,
+            "frac_ge_0_9": 1.0
+          },
+          "feature_l0_mean": {
+            "n": 4,
+            "mean": 1626.2309875488281,
+            "median": 1516.8389892578125,
+            "std": 274.73230879076647,
+            "p10": 1406.1623413085938,
+            "p90": 1933.813232421875,
+            "frac_lt_0_8": 0.0,
+            "frac_ge_0_9": 1.0
+          },
+          "permutation_reconstruction_cosine": {
+            "n": 4,
+            "mean": -0.06727566570043564,
+            "median": -0.06732296198606491,
+            "std": 0.0004110465943024912,
+            "p10": -0.06768594905734063,
+            "p90": -0.06682754531502724,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "permutation_median_gap": 0.1933969333767891,
+          "status": "fail"
+        },
+        "hallucination": {
+          "evidence_status": {
+            "reconstruction_metrics": "observed",
+            "permutation_control": "observed"
+          },
+          "reconstruction_cosine": {
+            "n": 4,
+            "mean": 0.12645866721868515,
+            "median": 0.1264428123831749,
+            "std": 4.249065330566503e-05,
+            "p10": 0.12642263621091843,
+            "p90": 0.12650738209486007,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "explained_variance": {
+            "n": 4,
+            "mean": -27319.806640625,
+            "median": -27312.306640625,
+            "std": 27.663519504133795,
+            "p10": -27351.4134765625,
+            "p90": -27294.1998046875,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "relative_error_norm": {
+            "n": 4,
+            "mean": 165.29005432128906,
+            "median": 165.2673797607422,
+            "std": 0.08367498165996222,
+            "p10": 165.21259307861328,
+            "p90": 165.38565521240236,
+            "frac_lt_0_8": 0.0,
+            "frac_ge_0_9": 1.0
+          },
+          "feature_l0_mean": {
+            "n": 4,
+            "mean": 1841.2191467285156,
+            "median": 1841.1109008789062,
+            "std": 88.24778395128186,
+            "p10": 1752.6325805664062,
+            "p90": 1929.8923095703126,
+            "frac_lt_0_8": 0.0,
+            "frac_ge_0_9": 1.0
+          },
+          "permutation_reconstruction_cosine": {
+            "n": 4,
+            "mean": -0.06761438585817814,
+            "median": -0.06770896911621094,
+            "std": 0.0007125839388182269,
+            "p10": -0.06831021457910538,
+            "p90": -0.06684289053082466,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "permutation_median_gap": 0.19415178149938583,
+          "status": "fail"
+        }
+      }
+    },
+    "meta-llama/Llama-3.1-8B-Instruct": {
+      "evidence_status": {
+        "overall_metrics": "observed",
+        "trait_metrics": "observed"
+      },
+      "overall": {
+        "reconstruction_cosine": {
+          "n": 12,
+          "mean": 0.12707349533836046,
+          "median": 0.12705179303884506,
+          "std": 0.00011846223847655516,
+          "p10": 0.12694742977619172,
+          "p90": 0.127211032807827,
+          "frac_lt_0_8": 1.0,
+          "frac_ge_0_9": 0.0
+        },
+        "explained_variance": {
+          "n": 12,
+          "mean": -27499.770670572918,
+          "median": -27489.38671875,
+          "std": 162.93543563812617,
+          "p10": -27684.47578125,
+          "p90": -27322.9626953125,
+          "frac_lt_0_8": 1.0,
+          "frac_ge_0_9": 0.0
+        },
+        "relative_error_norm": {
+          "n": 12,
+          "mean": 165.83283487955728,
+          "median": 165.80194091796875,
+          "std": 0.4912661832117421,
+          "p10": 165.2996078491211,
+          "p90": 166.38953247070313,
+          "frac_lt_0_8": 0.0,
+          "frac_ge_0_9": 1.0
+        },
+        "feature_l0_mean": {
+          "n": 12,
+          "mean": 1957.6031188964844,
+          "median": 1889.0916748046875,
+          "std": 204.37423857535353,
+          "p10": 1732.6608520507812,
+          "p90": 2200.7661865234377,
+          "frac_lt_0_8": 0.0,
+          "frac_ge_0_9": 1.0
+        },
+        "permutation_reconstruction_cosine": {
+          "n": 12,
+          "mean": -0.06889019533991814,
+          "median": -0.0689057968556881,
+          "std": 0.0012702703298254486,
+          "p10": -0.07052566111087799,
+          "p90": -0.06720613166689873,
+          "frac_lt_0_8": 1.0,
+          "frac_ge_0_9": 0.0
+        },
+        "permutation_median_gap": 0.19595758989453316,
+        "status": "fail"
+      },
+      "by_trait": {
+        "sycophancy": {
+          "evidence_status": {
+            "reconstruction_metrics": "observed",
+            "permutation_control": "observed"
+          },
+          "reconstruction_cosine": {
+            "n": 4,
+            "mean": 0.1271529458463192,
+            "median": 0.1271713823080063,
+            "std": 6.334540004308673e-05,
+            "p10": 0.12708041071891785,
+            "p90": 0.12721073180437087,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "explained_variance": {
+            "n": 4,
+            "mean": -27331.875,
+            "median": -27340.3330078125,
+            "std": 29.355096997656492,
+            "p10": -27358.7005859375,
+            "p90": -27298.2830078125,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "relative_error_norm": {
+            "n": 4,
+            "mean": 165.32654190063477,
+            "median": 165.35213470458984,
+            "std": 0.08878942533643688,
+            "p10": 165.22493591308594,
+            "p90": 165.40767364501954,
+            "frac_lt_0_8": 0.0,
+            "frac_ge_0_9": 1.0
+          },
+          "feature_l0_mean": {
+            "n": 4,
+            "mean": 1758.8518676757812,
+            "median": 1777.721435546875,
+            "std": 74.93824799317365,
+            "p10": 1673.71298828125,
+            "p90": 1828.8950927734375,
+            "frac_lt_0_8": 0.0,
+            "frac_ge_0_9": 1.0
+          },
+          "permutation_reconstruction_cosine": {
+            "n": 4,
+            "mean": -0.06892978399991989,
+            "median": -0.06893185526132584,
+            "std": 0.0012372277403388428,
+            "p10": -0.07024354711174965,
+            "p90": -0.06761436387896538,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "permutation_median_gap": 0.19610323756933212,
+          "status": "fail"
+        },
+        "evil": {
+          "evidence_status": {
+            "reconstruction_metrics": "observed",
+            "permutation_control": "observed"
+          },
+          "reconstruction_cosine": {
+            "n": 4,
+            "mean": 0.12707406654953957,
+            "median": 0.12709658592939377,
+            "std": 0.00015547721255404392,
+            "p10": 0.12690173238515853,
+            "p90": 0.12722838521003724,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "explained_variance": {
+            "n": 4,
+            "mean": -27499.87744140625,
+            "median": -27489.38671875,
+            "std": 148.92978879325514,
+            "p10": -27662.8271484375,
+            "p90": -27345.3203125,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "relative_error_norm": {
+            "n": 4,
+            "mean": 165.8332748413086,
+            "median": 165.80194091796875,
+            "std": 0.4489706702653338,
+            "p10": 165.3672103881836,
+            "p90": 166.32440643310548,
+            "frac_lt_0_8": 0.0,
+            "frac_ge_0_9": 1.0
+          },
+          "feature_l0_mean": {
+            "n": 4,
+            "mean": 1966.0676574707031,
+            "median": 1888.5489501953125,
+            "std": 202.55200211144827,
+            "p10": 1798.5587524414063,
+            "p90": 2195.5915283203126,
+            "frac_lt_0_8": 0.0,
+            "frac_ge_0_9": 1.0
+          },
+          "permutation_reconstruction_cosine": {
+            "n": 4,
+            "mean": -0.0685668233782053,
+            "median": -0.06794752553105354,
+            "std": 0.0017356163715721207,
+            "p10": -0.07055596560239792,
+            "p90": -0.06707311943173408,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "permutation_median_gap": 0.1950441114604473,
+          "status": "fail"
+        },
+        "hallucination": {
+          "evidence_status": {
+            "reconstruction_metrics": "observed",
+            "permutation_control": "observed"
+          },
+          "reconstruction_cosine": {
+            "n": 4,
+            "mean": 0.12699347361922264,
+            "median": 0.1269996240735054,
+            "std": 3.461094441863606e-05,
+            "p10": 0.12695436775684357,
+            "p90": 0.1270276591181755,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "explained_variance": {
+            "n": 4,
+            "mean": -27667.5595703125,
+            "median": -27670.2392578125,
+            "std": 16.12396902292693,
+            "p10": -27683.57578125,
+            "p90": -27649.399609375,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "relative_error_norm": {
+            "n": 4,
+            "mean": 166.33868789672852,
+            "median": 166.34674835205078,
+            "std": 0.048467663843045565,
+            "p10": 166.28409881591796,
+            "p90": 166.38682861328124,
+            "frac_lt_0_8": 0.0,
+            "frac_ge_0_9": 1.0
+          },
+          "feature_l0_mean": {
+            "n": 4,
+            "mean": 2147.8898315429688,
+            "median": 2154.95166015625,
+            "std": 53.67208141342046,
+            "p10": 2089.44931640625,
+            "p90": 2200.6808837890626,
+            "frac_lt_0_8": 0.0,
+            "frac_ge_0_9": 1.0
+          },
+          "permutation_reconstruction_cosine": {
+            "n": 4,
+            "mean": -0.06917397864162922,
+            "median": -0.06919791549444199,
+            "std": 0.0003331573379330609,
+            "p10": -0.06951214596629143,
+            "p90": -0.0688166618347168,
+            "frac_lt_0_8": 1.0,
+            "frac_ge_0_9": 0.0
+          },
+          "permutation_median_gap": 0.1961975395679474,
+          "status": "fail"
+        }
+      }
+    }
+  },
+  "interpretation": {
+    "status_by_model": {
+      "meta-llama/Llama-3.1-8B": "fail",
+      "meta-llama/Llama-3.1-8B-Instruct": "fail"
+    },
+    "base_minus_instruct_median_reconstruction_cosine": -0.0009778216481208801,
+    "possible_distribution_shift_signal": false,
+    "notes": [
+      "known: pass/warning/fail thresholds follow policy: pass>=0.9, warning>=0.8, fail<0.8 for both median cosine and explained variance.",
+      "inferred: large base-vs-instruct gap suggests model/SAE alignment risk rather than hook wiring failure."
+    ]
+  }
+}

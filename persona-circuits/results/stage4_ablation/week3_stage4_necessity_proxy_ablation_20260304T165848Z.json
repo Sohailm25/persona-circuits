@@ -1,0 +1,274 @@
+{
+  "timestamp_utc": "2026-03-04T16:58:48.442183+00:00",
+  "inputs": {
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+    "sae_release": "llama_scope_lxr_32x",
+    "sae_id": "l12r_32x",
+    "layer": 12,
+    "traits": [
+      "sycophancy",
+      "evil"
+    ],
+    "random_baseline_samples": 100,
+    "n_bootstrap": 500,
+    "seed": 42,
+    "methods": [
+      "resample",
+      "mean",
+      "zero"
+    ]
+  },
+  "thresholds": {
+    "necessity": 0.8,
+    "significance": 0.01
+  },
+  "evidence_status": {
+    "stage4_proxy_necessity": "observed",
+    "behavioral_causal_validation": "unknown",
+    "sufficiency_validation": "unknown"
+  },
+  "results_by_trait": {
+    "sycophancy": {
+      "claim_trait_name": "sycophancy",
+      "n_prompts": 20,
+      "target_set_size": 10,
+      "target_feature_ids": [
+        46611,
+        112811,
+        95531,
+        129143,
+        6997,
+        42713,
+        34012,
+        80941,
+        37691,
+        120627
+      ],
+      "methods": {
+        "resample": {
+          "observed_mean_reduction": -0.020251141155952463,
+          "observed_median_reduction": -0.0013225961249987406,
+          "observed_mean_ci95": {
+            "lower": -0.06779160241036307,
+            "upper": 0.03186341232940588
+          },
+          "selectivity_vs_random": {
+            "n_random": 100,
+            "observed_effect": -0.020251141155952463,
+            "percentile_rank": 0.0,
+            "p_value_one_sided_ge": 1.0,
+            "top_1pct_pass": false
+          },
+          "effect_sizes_vs_random_prompt_distribution": {
+            "n_a": 20,
+            "n_b": 2000,
+            "cohens_d": -1.6055481121730573,
+            "a12": 0.45,
+            "cohens_d_ci95": {
+              "lower": -6.816317470832577,
+              "upper": 3.0998162609580544
+            },
+            "a12_ci95": {
+              "lower": 0.25,
+              "upper": 0.7
+            }
+          },
+          "necessity_threshold_pass": false,
+          "selectivity_p_threshold_pass": false
+        },
+        "mean": {
+          "observed_mean_reduction": 0.28200151077185676,
+          "observed_median_reduction": 0.30207186052652246,
+          "observed_mean_ci95": {
+            "lower": 0.23231906299785493,
+            "upper": 0.32978372880425655
+          },
+          "selectivity_vs_random": {
+            "n_random": 100,
+            "observed_effect": 0.28200151077185676,
+            "percentile_rank": 1.0,
+            "p_value_one_sided_ge": 0.009900990099009901,
+            "top_1pct_pass": true
+          },
+          "effect_sizes_vs_random_prompt_distribution": {
+            "n_a": 20,
+            "n_b": 2000,
+            "cohens_d": 0.09837828332620008,
+            "a12": 0.999975,
+            "cohens_d_ci95": {
+              "lower": 0.07287199623143382,
+              "upper": 0.11969722311472492
+            },
+            "a12_ci95": {
+              "lower": 0.999861875,
+              "upper": 1.0
+            }
+          },
+          "necessity_threshold_pass": false,
+          "selectivity_p_threshold_pass": true
+        },
+        "zero": {
+          "observed_mean_reduction": 0.536466042200846,
+          "observed_median_reduction": 0.5407604456352826,
+          "observed_mean_ci95": {
+            "lower": 0.4136193088501103,
+            "upper": 0.6427860702180342
+          },
+          "selectivity_vs_random": {
+            "n_random": 100,
+            "observed_effect": 0.536466042200846,
+            "percentile_rank": 1.0,
+            "p_value_one_sided_ge": 0.009900990099009901,
+            "top_1pct_pass": true
+          },
+          "effect_sizes_vs_random_prompt_distribution": {
+            "n_a": 20,
+            "n_b": 2000,
+            "cohens_d": 20.91004262361829,
+            "a12": 1.0,
+            "cohens_d_ci95": {
+              "lower": 16.732715611974452,
+              "upper": 30.806634124808465
+            },
+            "a12_ci95": {
+              "lower": 1.0,
+              "upper": 1.0
+            }
+          },
+          "necessity_threshold_pass": false,
+          "selectivity_p_threshold_pass": true
+        }
+      },
+      "evidence_status": {
+        "necessity_proxy_feature_space": "observed",
+        "behavioral_necessity": "unknown",
+        "sufficiency": "unknown"
+      },
+      "limitations": [
+        "Measures feature-space proxy necessity, not direct behavioral trait-score shift.",
+        "Layer12 cross-SAE overlap limitation remains in force for cross-source claims."
+      ]
+    },
+    "evil": {
+      "claim_trait_name": "machiavellian_disposition",
+      "n_prompts": 20,
+      "target_set_size": 10,
+      "target_feature_ids": [
+        36353,
+        124173,
+        112811,
+        85773,
+        60240,
+        47486,
+        6380,
+        88403,
+        46040,
+        17210
+      ],
+      "methods": {
+        "resample": {
+          "observed_mean_reduction": -0.13517446177867898,
+          "observed_median_reduction": -0.04702940876370304,
+          "observed_mean_ci95": {
+            "lower": -0.24828369309482023,
+            "upper": -0.03531216479666509
+          },
+          "selectivity_vs_random": {
+            "n_random": 100,
+            "observed_effect": -0.13517446177867898,
+            "percentile_rank": 0.01,
+            "p_value_one_sided_ge": 0.9900990099009901,
+            "top_1pct_pass": false
+          },
+          "effect_sizes_vs_random_prompt_distribution": {
+            "n_a": 20,
+            "n_b": 2000,
+            "cohens_d": 0.0385458829273126,
+            "a12": 0.352975,
+            "cohens_d_ci95": {
+              "lower": -0.24086697774876686,
+              "upper": 0.05495023633541121
+            },
+            "a12_ci95": {
+              "lower": 0.1542975,
+              "upper": 0.552616875
+            }
+          },
+          "necessity_threshold_pass": false,
+          "selectivity_p_threshold_pass": false
+        },
+        "mean": {
+          "observed_mean_reduction": 0.3387907897891266,
+          "observed_median_reduction": 0.3959774382756319,
+          "observed_mean_ci95": {
+            "lower": 0.2623157780949457,
+            "upper": 0.40165948427803483
+          },
+          "selectivity_vs_random": {
+            "n_random": 100,
+            "observed_effect": 0.3387907897891266,
+            "percentile_rank": 1.0,
+            "p_value_one_sided_ge": 0.009900990099009901,
+            "top_1pct_pass": true
+          },
+          "effect_sizes_vs_random_prompt_distribution": {
+            "n_a": 20,
+            "n_b": 2000,
+            "cohens_d": 0.05510137927615537,
+            "a12": 0.949725,
+            "cohens_d_ci95": {
+              "lower": 0.03178144272198422,
+              "upper": 0.07470099557942946
+            },
+            "a12_ci95": {
+              "lower": 0.850135625,
+              "upper": 0.99985
+            }
+          },
+          "necessity_threshold_pass": false,
+          "selectivity_p_threshold_pass": true
+        },
+        "zero": {
+          "observed_mean_reduction": -1.4563274549914351,
+          "observed_median_reduction": -1.3578148197346938,
+          "observed_mean_ci95": {
+            "lower": -1.6438839974891672,
+            "upper": -1.2816003909642655
+          },
+          "selectivity_vs_random": {
+            "n_random": 100,
+            "observed_effect": -1.4563274549914351,
+            "percentile_rank": 0.01,
+            "p_value_one_sided_ge": 0.9900990099009901,
+            "top_1pct_pass": false
+          },
+          "effect_sizes_vs_random_prompt_distribution": {
+            "n_a": 20,
+            "n_b": 2000,
+            "cohens_d": -0.21453954784268625,
+            "a12": 0.0055,
+            "cohens_d_ci95": {
+              "lower": -2.6413455712163043,
+              "upper": -0.095957161818075
+            },
+            "a12_ci95": {
+              "lower": 0.0025,
+              "upper": 0.008762499999999989
+            }
+          },
+          "necessity_threshold_pass": false,
+          "selectivity_p_threshold_pass": false
+        }
+      },
+      "evidence_status": {
+        "necessity_proxy_feature_space": "observed",
+        "behavioral_necessity": "unknown",
+        "sufficiency": "unknown"
+      },
+      "limitations": [
+        "Measures feature-space proxy necessity, not direct behavioral trait-score shift.",
+        "Layer12 cross-SAE overlap limitation remains in force for cross-source claims."
+      ]
+    }
+  }
+}

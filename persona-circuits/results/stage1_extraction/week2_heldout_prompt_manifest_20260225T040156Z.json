@@ -1,0 +1,23 @@
+{
+  "timestamp_utc": "2026-02-25T04:01:56.957050+00:00",
+  "files": {
+    "sycophancy": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/sycophancy_heldout_pairs.jsonl",
+      "count": 50,
+      "sha256_canonical_rows": "dc767df95cad15d981cee18e7aad8adb40c626a1182d2725ea760c4102629003",
+      "sha256_raw_file": "9e15a77cd2499d01e2d737bd31e0bf66a6b5a3b9b3868ff34744ba7b1cc110b8"
+    },
+    "evil": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/evil_heldout_pairs.jsonl",
+      "count": 50,
+      "sha256_canonical_rows": "3917e9fd13ffd34cc0ea8187d498ad84d5e438034e5c0ecfa39e4f3a173eacf0",
+      "sha256_raw_file": "e350083ddecbb0155d68c80c97e098f2eb1b5bde1d8774b860aa368f49025a2a"
+    },
+    "hallucination": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/hallucination_heldout_pairs.jsonl",
+      "count": 50,
+      "sha256_canonical_rows": "4174926d6c767a7ffd6333bd144852e87bd4e343cd3202506ebd0364e3e30124",
+      "sha256_raw_file": "5d913ad4017c27afb87f92ccf78593fd062e49065fb50afc9a9f0215b94e690d"
+    }
+  }
+}

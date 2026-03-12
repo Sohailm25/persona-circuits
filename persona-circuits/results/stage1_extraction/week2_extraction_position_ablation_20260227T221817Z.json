@@ -1,0 +1,602 @@
+{
+  "timestamp_utc": "2026-02-27T22:12:18.867508+00:00",
+  "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+  "traits": [
+    "sycophancy",
+    "evil",
+    "hallucination"
+  ],
+  "layers": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "extraction_pairs_per_trait": 12,
+  "max_new_tokens": 96,
+  "temperature": 0.0,
+  "seed": 42,
+  "diagnostics": {
+    "sycophancy": {
+      "layers": {
+        "11": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 2.9666600227355957,
+              "projection_margin_mean": 2.9666597843170166,
+              "projection_margin_std": 0.25026869773864746
+            },
+            "response_mean": {
+              "vector_norm": 1.823635458946228,
+              "projection_margin_mean": 1.8236351013183594,
+              "projection_margin_std": 0.297141969203949
+            },
+            "response_last": {
+              "vector_norm": 3.3040452003479004,
+              "projection_margin_mean": 3.304044485092163,
+              "projection_margin_std": 0.8043534755706787
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.387362003326416,
+            "prompt_last_vs_response_last": 0.2244073748588562,
+            "response_mean_vs_response_last": 0.5418896675109863
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "12": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 3.3522257804870605,
+              "projection_margin_mean": 3.3522253036499023,
+              "projection_margin_std": 0.3749198317527771
+            },
+            "response_mean": {
+              "vector_norm": 2.018153429031372,
+              "projection_margin_mean": 2.018153190612793,
+              "projection_margin_std": 0.31194132566452026
+            },
+            "response_last": {
+              "vector_norm": 3.5715432167053223,
+              "projection_margin_mean": 3.571542501449585,
+              "projection_margin_std": 0.8271847367286682
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.41824090480804443,
+            "prompt_last_vs_response_last": 0.22713106870651245,
+            "response_mean_vs_response_last": 0.5711215734481812
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "13": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 4.7897114753723145,
+              "projection_margin_mean": 4.789710998535156,
+              "projection_margin_std": 0.36991870403289795
+            },
+            "response_mean": {
+              "vector_norm": 2.6082870960235596,
+              "projection_margin_mean": 2.6082870960235596,
+              "projection_margin_std": 0.3708668351173401
+            },
+            "response_last": {
+              "vector_norm": 4.061099529266357,
+              "projection_margin_mean": 4.061099529266357,
+              "projection_margin_std": 0.8798799514770508
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.5259873867034912,
+            "prompt_last_vs_response_last": 0.27697181701660156,
+            "response_mean_vs_response_last": 0.5954837203025818
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "14": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 5.878789901733398,
+              "projection_margin_mean": 5.87878942489624,
+              "projection_margin_std": 0.42095574736595154
+            },
+            "response_mean": {
+              "vector_norm": 2.7511799335479736,
+              "projection_margin_mean": 2.7511799335479736,
+              "projection_margin_std": 0.405760258436203
+            },
+            "response_last": {
+              "vector_norm": 4.365170478820801,
+              "projection_margin_mean": 4.365170478820801,
+              "projection_margin_std": 0.9126930832862854
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.5385511517524719,
+            "prompt_last_vs_response_last": 0.250918984413147,
+            "response_mean_vs_response_last": 0.5728131532669067
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "15": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 6.721710205078125,
+              "projection_margin_mean": 6.72170877456665,
+              "projection_margin_std": 0.6382265090942383
+            },
+            "response_mean": {
+              "vector_norm": 3.0359842777252197,
+              "projection_margin_mean": 3.0359842777252197,
+              "projection_margin_std": 0.4718494117259979
+            },
+            "response_last": {
+              "vector_norm": 4.744295597076416,
+              "projection_margin_mean": 4.7442946434021,
+              "projection_margin_std": 1.1209195852279663
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.5409659147262573,
+            "prompt_last_vs_response_last": 0.2449224889278412,
+            "response_mean_vs_response_last": 0.5655787587165833
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "16": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 7.550807476043701,
+              "projection_margin_mean": 7.550807476043701,
+              "projection_margin_std": 0.9196550250053406
+            },
+            "response_mean": {
+              "vector_norm": 3.556321144104004,
+              "projection_margin_mean": 3.5563223361968994,
+              "projection_margin_std": 0.5625056028366089
+            },
+            "response_last": {
+              "vector_norm": 5.343868732452393,
+              "projection_margin_mean": 5.34386682510376,
+              "projection_margin_std": 1.3378534317016602
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.5292545557022095,
+            "prompt_last_vs_response_last": 0.23356449604034424,
+            "response_mean_vs_response_last": 0.5736840963363647
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        }
+      },
+      "summary": {
+        "prompt_last_vs_response_mean": {
+          "mean": 0.4900603195031484,
+          "min": 0.387362003326416,
+          "max": 0.5409659147262573,
+          "all_layers_ge_0_7": false,
+          "any_layer_ge_0_7": false
+        }
+      }
+    },
+    "evil": {
+      "layers": {
+        "11": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 2.9916703701019287,
+              "projection_margin_mean": 2.991670846939087,
+              "projection_margin_std": 0.30910855531692505
+            },
+            "response_mean": {
+              "vector_norm": 1.9651308059692383,
+              "projection_margin_mean": 1.9651308059692383,
+              "projection_margin_std": 0.4135209918022156
+            },
+            "response_last": {
+              "vector_norm": 3.2382774353027344,
+              "projection_margin_mean": 3.238276243209839,
+              "projection_margin_std": 0.4334622025489807
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.37018507719039917,
+            "prompt_last_vs_response_last": 0.1350535750389099,
+            "response_mean_vs_response_last": 0.5460976362228394
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "12": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 3.4375410079956055,
+              "projection_margin_mean": 3.437540292739868,
+              "projection_margin_std": 0.29489666223526
+            },
+            "response_mean": {
+              "vector_norm": 2.1327011585235596,
+              "projection_margin_mean": 2.1327011585235596,
+              "projection_margin_std": 0.4602334499359131
+            },
+            "response_last": {
+              "vector_norm": 3.5094635486602783,
+              "projection_margin_mean": 3.50946307182312,
+              "projection_margin_std": 0.4604317247867584
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.3902568221092224,
+            "prompt_last_vs_response_last": 0.16144223511219025,
+            "response_mean_vs_response_last": 0.5568252801895142
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "13": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 5.32028341293335,
+              "projection_margin_mean": 5.320284366607666,
+              "projection_margin_std": 0.40419909358024597
+            },
+            "response_mean": {
+              "vector_norm": 2.7301409244537354,
+              "projection_margin_mean": 2.7301409244537354,
+              "projection_margin_std": 0.5179411172866821
+            },
+            "response_last": {
+              "vector_norm": 4.052398204803467,
+              "projection_margin_mean": 4.052397727966309,
+              "projection_margin_std": 0.5069633722305298
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.48859602212905884,
+            "prompt_last_vs_response_last": 0.23194444179534912,
+            "response_mean_vs_response_last": 0.6032311916351318
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "14": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 5.640722751617432,
+              "projection_margin_mean": 5.640721797943115,
+              "projection_margin_std": 0.39256349205970764
+            },
+            "response_mean": {
+              "vector_norm": 2.9163942337036133,
+              "projection_margin_mean": 2.9163942337036133,
+              "projection_margin_std": 0.5569174289703369
+            },
+            "response_last": {
+              "vector_norm": 4.403382301330566,
+              "projection_margin_mean": 4.403380870819092,
+              "projection_margin_std": 0.5858252644538879
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.5083288550376892,
+            "prompt_last_vs_response_last": 0.2315518707036972,
+            "response_mean_vs_response_last": 0.5949187874794006
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "15": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 6.584258079528809,
+              "projection_margin_mean": 6.584255218505859,
+              "projection_margin_std": 0.4632672369480133
+            },
+            "response_mean": {
+              "vector_norm": 3.3740715980529785,
+              "projection_margin_mean": 3.3740711212158203,
+              "projection_margin_std": 0.6545512080192566
+            },
+            "response_last": {
+              "vector_norm": 5.057420253753662,
+              "projection_margin_mean": 5.057418346405029,
+              "projection_margin_std": 0.7871620059013367
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.5719133019447327,
+            "prompt_last_vs_response_last": 0.27791014313697815,
+            "response_mean_vs_response_last": 0.6209933161735535
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "16": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 7.763017177581787,
+              "projection_margin_mean": 7.7630181312561035,
+              "projection_margin_std": 0.5870426297187805
+            },
+            "response_mean": {
+              "vector_norm": 3.913604736328125,
+              "projection_margin_mean": 3.9136040210723877,
+              "projection_margin_std": 0.7206664085388184
+            },
+            "response_last": {
+              "vector_norm": 5.749600410461426,
+              "projection_margin_mean": 5.749599456787109,
+              "projection_margin_std": 0.8296707272529602
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.5711700916290283,
+            "prompt_last_vs_response_last": 0.2883686423301697,
+            "response_mean_vs_response_last": 0.6395273804664612
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        }
+      },
+      "summary": {
+        "prompt_last_vs_response_mean": {
+          "mean": 0.4834083616733551,
+          "min": 0.37018507719039917,
+          "max": 0.5719133019447327,
+          "all_layers_ge_0_7": false,
+          "any_layer_ge_0_7": false
+        }
+      }
+    },
+    "hallucination": {
+      "layers": {
+        "11": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 2.492095708847046,
+              "projection_margin_mean": 2.492095708847046,
+              "projection_margin_std": 0.13849326968193054
+            },
+            "response_mean": {
+              "vector_norm": 0.8210178017616272,
+              "projection_margin_mean": 0.8210177421569824,
+              "projection_margin_std": 0.3101685345172882
+            },
+            "response_last": {
+              "vector_norm": 2.613243341445923,
+              "projection_margin_mean": 2.6132428646087646,
+              "projection_margin_std": 1.1926218271255493
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.2391742765903473,
+            "prompt_last_vs_response_last": 0.09325604885816574,
+            "response_mean_vs_response_last": 0.23631513118743896
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "12": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 2.4151625633239746,
+              "projection_margin_mean": 2.4151628017425537,
+              "projection_margin_std": 0.1521376520395279
+            },
+            "response_mean": {
+              "vector_norm": 0.8664918541908264,
+              "projection_margin_mean": 0.8664918541908264,
+              "projection_margin_std": 0.3060958981513977
+            },
+            "response_last": {
+              "vector_norm": 2.7230310440063477,
+              "projection_margin_mean": 2.7230308055877686,
+              "projection_margin_std": 1.2415211200714111
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.23261414468288422,
+            "prompt_last_vs_response_last": 0.0727706253528595,
+            "response_mean_vs_response_last": 0.2685505747795105
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "13": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 3.126772880554199,
+              "projection_margin_mean": 3.126772165298462,
+              "projection_margin_std": 0.15422323346138
+            },
+            "response_mean": {
+              "vector_norm": 1.0182255506515503,
+              "projection_margin_mean": 1.0182255506515503,
+              "projection_margin_std": 0.32975053787231445
+            },
+            "response_last": {
+              "vector_norm": 2.9669673442840576,
+              "projection_margin_mean": 2.966966390609741,
+              "projection_margin_std": 1.2677676677703857
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.3649965524673462,
+            "prompt_last_vs_response_last": 0.15122458338737488,
+            "response_mean_vs_response_last": 0.2819644808769226
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "14": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 3.723984479904175,
+              "projection_margin_mean": 3.7239840030670166,
+              "projection_margin_std": 0.19524864852428436
+            },
+            "response_mean": {
+              "vector_norm": 1.1066503524780273,
+              "projection_margin_mean": 1.1066502332687378,
+              "projection_margin_std": 0.4043528139591217
+            },
+            "response_last": {
+              "vector_norm": 3.1941325664520264,
+              "projection_margin_mean": 3.194132089614868,
+              "projection_margin_std": 1.3638451099395752
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.4101521074771881,
+            "prompt_last_vs_response_last": 0.17322932183742523,
+            "response_mean_vs_response_last": 0.27527809143066406
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "15": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 4.143712997436523,
+              "projection_margin_mean": 4.143712520599365,
+              "projection_margin_std": 0.28929972648620605
+            },
+            "response_mean": {
+              "vector_norm": 1.2476190328598022,
+              "projection_margin_mean": 1.2476191520690918,
+              "projection_margin_std": 0.4625180959701538
+            },
+            "response_last": {
+              "vector_norm": 3.3913023471832275,
+              "projection_margin_mean": 3.3913018703460693,
+              "projection_margin_std": 1.6919679641723633
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.40208059549331665,
+            "prompt_last_vs_response_last": 0.16307708621025085,
+            "response_mean_vs_response_last": 0.24478785693645477
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        },
+        "16": {
+          "n_pairs": 12,
+          "methods": {
+            "prompt_last": {
+              "vector_norm": 4.35228157043457,
+              "projection_margin_mean": 4.352281093597412,
+              "projection_margin_std": 0.42933449149131775
+            },
+            "response_mean": {
+              "vector_norm": 1.4350628852844238,
+              "projection_margin_mean": 1.4350627660751343,
+              "projection_margin_std": 0.48863479495048523
+            },
+            "response_last": {
+              "vector_norm": 3.8751635551452637,
+              "projection_margin_mean": 3.8751628398895264,
+              "projection_margin_std": 2.1094141006469727
+            }
+          },
+          "pairwise_cosines": {
+            "prompt_last_vs_response_mean": 0.4103705585002899,
+            "prompt_last_vs_response_last": 0.1670142412185669,
+            "response_mean_vs_response_last": 0.2403016984462738
+          },
+          "passes": {
+            "prompt_last_vs_response_mean_ge_0_7": false,
+            "prompt_last_vs_response_last_ge_0_7": false,
+            "response_mean_vs_response_last_ge_0_7": false
+          }
+        }
+      },
+      "summary": {
+        "prompt_last_vs_response_mean": {
+          "mean": 0.34323137253522873,
+          "min": 0.23261414468288422,
+          "max": 0.4103705585002899,
+          "all_layers_ge_0_7": false,
+          "any_layer_ge_0_7": false
+        }
+      }
+    }
+  }
+}

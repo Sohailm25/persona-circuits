@@ -1,0 +1,25 @@
+{
+  "timestamp_utc": "2026-02-25T16:03:26.522971+00:00",
+  "n_eval_per_trait": 50,
+  "seed": 42,
+  "traits": {
+    "sycophancy": {
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/sycophancy_heldout_pairs.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/sycophancy_extraction_free_eval.jsonl",
+      "n_rows": 50,
+      "sha256": "32f8191dbfcb31a58d8518505e525a4f4776d604e7e7458ddc62cba47591a621"
+    },
+    "evil": {
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/evil_heldout_pairs.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/evil_extraction_free_eval.jsonl",
+      "n_rows": 50,
+      "sha256": "4f84e46d69ea7df568d8df5907046ff013f6bd8367a227edaf5cbe8a9e5e4c23"
+    },
+    "hallucination": {
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/hallucination_heldout_pairs.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/hallucination_extraction_free_eval.jsonl",
+      "n_rows": 50,
+      "sha256": "24695d7983bf03ae5ad2e1806cf5d4caa47fc95f124a100e049a1d6f81936781"
+    }
+  }
+}

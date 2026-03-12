@@ -1,0 +1,93 @@
+{
+  "timestamp_utc": "2026-03-10T14:33:54.460841+00:00",
+  "artifact_type": "week3_h3_sufficiency_execution_plan",
+  "scope": {
+    "traits_in_scope": [
+      "sycophancy",
+      "evil_machiavellian_disposition"
+    ],
+    "traits_out_of_scope": [
+      "hallucination_primary_claims"
+    ],
+    "policy_context": {
+      "h2_strict_status": "fail",
+      "h2_dual_scorecard_lane": "locked",
+      "source_decisions": [
+        "DECISIONS.md::2026-03-10T09:24:10-0500",
+        "DECISIONS.md::2026-03-10T09:31:40-0500",
+        "DECISIONS.md::2026-03-10T09:32:30-0500"
+      ]
+    }
+  },
+  "inputs": {
+    "target_set_freeze_artifact": "results/stage4_ablation/week3_stage4_target_set_freeze_20260304T164918Z.json",
+    "stage3_attribution_artifacts": [
+      "results/stage3_attribution/week3_stage3_activation_delta_attribution_20260304T163657Z.json",
+      "results/stage3_attribution/week3_stage3_activation_delta_attribution_20260304T164549Z.json"
+    ],
+    "stage4_h2_policy_artifacts": [
+      "results/stage4_ablation/week3_stage4_threshold_binding_diagnostic_20260310T044638Z.json",
+      "results/stage4_ablation/week3_stage4_tranche_comparison_20260310T141458Z.json",
+      "results/stage4_ablation/week3_stage4_policy_decision_packet_20260310T142000Z.json",
+      "history/20260310-stage4-h2-synthesis-memo-v1.md"
+    ]
+  },
+  "protocol_plan": {
+    "primary_test": {
+      "name": "circuit_only_preservation",
+      "proposal_section": "6.5.2",
+      "description": "Ablate all selected features except circuit set and measure preserved steering effect.",
+      "success_criterion": "preserved_effect_fraction > 0.60",
+      "partial_band": "0.40 to 0.60",
+      "failure_band": "< 0.40"
+    },
+    "required_controls": [
+      "coherence/perplexity health check on circuit-only generations",
+      "capability proxy check (MMLU sample) on circuit-only condition",
+      "mean-ablation sensitivity mirror run alongside resample-primary",
+      "dose response on preserved set fractions {25,50,75,100}"
+    ],
+    "fallback_claims_if_full_sufficiency_breaks": [
+      "path_specific_necessity",
+      "counterfactual_mediation",
+      "feature_wise_necessity"
+    ]
+  },
+  "execution_matrix_draft": {
+    "traits": [
+      "sycophancy",
+      "evil_machiavellian_disposition"
+    ],
+    "selected_layer_alpha": {
+      "sycophancy": {
+        "layer": 12,
+        "alpha": 3.0
+      },
+      "evil_machiavellian_disposition": {
+        "layer": 12,
+        "alpha": 3.0
+      }
+    },
+    "ablation_methods": [
+      "resample_primary",
+      "mean_secondary"
+    ],
+    "n_random_same_size_baselines": 100,
+    "heldout_prompts_per_trait": 30,
+    "rollout_count": 3
+  },
+  "readiness": {
+    "launch_recommended_now": false,
+    "blocking_items": [
+      "implement/validate explicit circuit-only ablation path in runner",
+      "pre-register strict stop criteria for any additional Stage4 reruns",
+      "wire sufficiency-specific quality controls into artifact schema"
+    ]
+  },
+  "evidence_status": {
+    "upstream_artifact_inputs": "known",
+    "execution_matrix_defaults": "inferred",
+    "launch_readiness": "inferred"
+  },
+  "supersedes": "results/stage4_ablation/week3_h3_sufficiency_execution_plan_20260310T143023Z.json"
+}

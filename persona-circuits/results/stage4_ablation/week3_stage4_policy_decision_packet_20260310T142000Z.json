@@ -1,0 +1,294 @@
+{
+  "timestamp_utc": "2026-03-10T14:20:00.237848+00:00",
+  "artifact_type": "week3_stage4_policy_decision_packet",
+  "trait": "evil",
+  "inputs": {
+    "reference_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage4_ablation/week3_stage4_behavioral_ablation_20260310T001903Z.json",
+    "tranche_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage4_ablation/week3_stage4_behavioral_ablation_20260310T080841Z.json",
+    "threshold_binding_diagnostic_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage4_ablation/week3_stage4_threshold_binding_diagnostic_20260310T044638Z.json",
+    "tranche_comparison_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage4_ablation/week3_stage4_tranche_comparison_20260310T141458Z.json"
+  },
+  "reference": {
+    "coverage_valid_fraction": 0.7,
+    "baseline_effect_abs_mean": 12.333333333333334,
+    "any_method_strict_pass": false,
+    "methods": {
+      "resample": {
+        "mean_reduction": 0.25854119425548,
+        "p_value_one_sided_ge": 0.047619047619047616,
+        "a12": 0.5574263038548752,
+        "strict_gate_pass": false,
+        "gate_flags": {
+          "necessity": false,
+          "significance": false,
+          "a12": false
+        }
+      },
+      "mean": {
+        "mean_reduction": 0.17826908541194256,
+        "p_value_one_sided_ge": 0.047619047619047616,
+        "a12": 0.5365079365079365,
+        "strict_gate_pass": false,
+        "gate_flags": {
+          "necessity": false,
+          "significance": false,
+          "a12": false
+        }
+      },
+      "zero": {
+        "mean_reduction": 0.5627362055933485,
+        "p_value_one_sided_ge": 0.047619047619047616,
+        "a12": 0.7031746031746032,
+        "strict_gate_pass": false,
+        "gate_flags": {
+          "necessity": false,
+          "significance": false,
+          "a12": false
+        }
+      }
+    }
+  },
+  "tranche": {
+    "coverage_valid_fraction": 0.6666666666666666,
+    "baseline_effect_abs_mean": 14.7,
+    "any_method_strict_pass": false,
+    "methods": {
+      "resample": {
+        "mean_reduction": 0.2549161546338966,
+        "p_value_one_sided_ge": 0.6190476190476191,
+        "a12": 0.4260625,
+        "strict_gate_pass": false,
+        "gate_flags": {
+          "necessity": false,
+          "significance": false,
+          "a12": false
+        }
+      },
+      "mean": {
+        "mean_reduction": 0.28527329749103947,
+        "p_value_one_sided_ge": 0.23809523809523808,
+        "a12": 0.4135,
+        "strict_gate_pass": false,
+        "gate_flags": {
+          "necessity": false,
+          "significance": false,
+          "a12": false
+        }
+      },
+      "zero": {
+        "mean_reduction": 0.5279672299027138,
+        "p_value_one_sided_ge": 0.047619047619047616,
+        "a12": 0.549375,
+        "strict_gate_pass": false,
+        "gate_flags": {
+          "necessity": false,
+          "significance": false,
+          "a12": false
+        }
+      }
+    }
+  },
+  "strict_summary": {
+    "any_method_strict_pass_reference": false,
+    "any_method_strict_pass_tranche": false,
+    "any_method_strict_pass_either_run": false
+  },
+  "threshold_binding_reference_methods": {
+    "resample": {
+      "observed": {
+        "mean_reduction": 0.25854119425548,
+        "p_value_one_sided_ge": 0.047619047619047616,
+        "a12": 0.5574263038548752
+      },
+      "thresholds": {
+        "necessity": 0.8,
+        "significance": 0.01,
+        "a12_minimum": 0.71
+      },
+      "margins": {
+        "necessity_margin": -0.54145880574452,
+        "significance_margin": -0.037619047619047614,
+        "a12_margin": -0.15257369614512473
+      },
+      "gates": {
+        "necessity": false,
+        "significance": false,
+        "a12": false
+      },
+      "failed_gates": [
+        "necessity",
+        "significance",
+        "a12"
+      ],
+      "binding_gate": "necessity",
+      "binding_distance": 0.54145880574452
+    },
+    "mean": {
+      "observed": {
+        "mean_reduction": 0.17826908541194256,
+        "p_value_one_sided_ge": 0.047619047619047616,
+        "a12": 0.5365079365079365
+      },
+      "thresholds": {
+        "necessity": 0.8,
+        "significance": 0.01,
+        "a12_minimum": 0.71
+      },
+      "margins": {
+        "necessity_margin": -0.6217309145880575,
+        "significance_margin": -0.037619047619047614,
+        "a12_margin": -0.17349206349206348
+      },
+      "gates": {
+        "necessity": false,
+        "significance": false,
+        "a12": false
+      },
+      "failed_gates": [
+        "necessity",
+        "significance",
+        "a12"
+      ],
+      "binding_gate": "necessity",
+      "binding_distance": 0.6217309145880575
+    },
+    "zero": {
+      "observed": {
+        "mean_reduction": 0.5627362055933485,
+        "p_value_one_sided_ge": 0.047619047619047616,
+        "a12": 0.7031746031746032
+      },
+      "thresholds": {
+        "necessity": 0.8,
+        "significance": 0.01,
+        "a12_minimum": 0.71
+      },
+      "margins": {
+        "necessity_margin": -0.23726379440665157,
+        "significance_margin": -0.037619047619047614,
+        "a12_margin": -0.0068253968253967345
+      },
+      "gates": {
+        "necessity": false,
+        "significance": false,
+        "a12": false
+      },
+      "failed_gates": [
+        "necessity",
+        "significance",
+        "a12"
+      ],
+      "binding_gate": "necessity",
+      "binding_distance": 0.23726379440665157
+    }
+  },
+  "tranche_comparison_summary": {
+    "coverage_stability": {
+      "label": "stable",
+      "reference_valid_fraction": 0.7,
+      "tranche_valid_fraction": 0.6666666666666666,
+      "delta": -0.033333333333333326
+    },
+    "per_method_deltas": {
+      "resample": {
+        "mean_reduction_delta": -0.0036250396215833924,
+        "p_value_delta": 0.5714285714285714,
+        "a12_delta": -0.13136380385487523,
+        "valid_fraction_delta": -0.033333333333333326,
+        "n_valid_prompts_delta": -1.0
+      },
+      "mean": {
+        "mean_reduction_delta": 0.10700421207909691,
+        "p_value_delta": 0.19047619047619047,
+        "a12_delta": -0.12300793650793651,
+        "valid_fraction_delta": -0.033333333333333326,
+        "n_valid_prompts_delta": -1.0
+      },
+      "zero": {
+        "mean_reduction_delta": -0.03476897569063464,
+        "p_value_delta": 0.0,
+        "a12_delta": -0.15379960317460328,
+        "valid_fraction_delta": -0.033333333333333326,
+        "n_valid_prompts_delta": -1.0
+      }
+    },
+    "per_method_gate_states": {
+      "resample": {
+        "necessity": {
+          "reference": false,
+          "tranche": false
+        },
+        "significance": {
+          "reference": false,
+          "tranche": false
+        },
+        "a12": {
+          "reference": false,
+          "tranche": false
+        }
+      },
+      "mean": {
+        "necessity": {
+          "reference": false,
+          "tranche": false
+        },
+        "significance": {
+          "reference": false,
+          "tranche": false
+        },
+        "a12": {
+          "reference": false,
+          "tranche": false
+        }
+      },
+      "zero": {
+        "necessity": {
+          "reference": false,
+          "tranche": false
+        },
+        "significance": {
+          "reference": false,
+          "tranche": false
+        },
+        "a12": {
+          "reference": false,
+          "tranche": false
+        }
+      }
+    }
+  },
+  "policy_options": [
+    {
+      "id": "strict_only_continue",
+      "description": "Keep strict thresholds authoritative and continue targeted reruns only.",
+      "pros": [
+        "Maintains strongest evidentiary bar",
+        "Avoids interpretation drift"
+      ],
+      "cons": [
+        "May extend Stage4 loop with diminishing returns"
+      ]
+    },
+    {
+      "id": "dual_scorecard_h2",
+      "description": "Retain strict fail status while adding explicit secondary narrative interpretation lane.",
+      "pros": [
+        "Acknowledges stable high-coverage effects",
+        "Preserves strict-governance traceability"
+      ],
+      "cons": [
+        "Requires careful wording to avoid over-claiming"
+      ]
+    }
+  ],
+  "recommendation": {
+    "recommended_path": "strict_fail_with_dual_scorecard_candidate",
+    "rationale": "Coverage is no longer limiting, but strict gates fail in both reference and tranche runs; policy choice should explicitly separate strict gate status from narrative interpretation.",
+    "evidence_status": "inferred"
+  },
+  "evidence_status": {
+    "input_artifacts": "known",
+    "policy_recommendation": "inferred",
+    "future_decision": "unknown"
+  }
+}

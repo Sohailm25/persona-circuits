@@ -1,0 +1,4677 @@
+{
+  "timestamp_utc": "2026-03-01T03:30:02.361154+00:00",
+  "evidence_status": {
+    "seed_reports": "observed",
+    "seed_aggregate": "inferred"
+  },
+  "seed_schedule": [
+    42,
+    123,
+    456,
+    789
+  ],
+  "seed_reports": {
+    "42": {
+      "timestamp_utc": "2026-03-01T03:26:50.511839+00:00",
+      "inputs": {
+        "sae_source": "primary",
+        "layer": 12,
+        "sae_release": "llama_scope_lxr_32x",
+        "sae_id": "l12r_32x",
+        "configured_hook": "blocks.12.hook_resid_post",
+        "expected_hook_name": null,
+        "model_names": [
+          "meta-llama/Llama-3.1-8B",
+          "meta-llama/Llama-3.1-8B-Instruct"
+        ],
+        "n_probe_rows": 8,
+        "probe_traits": [
+          "evil",
+          "sycophancy"
+        ],
+        "seed": 42
+      },
+      "sae_cfg_snapshot": {
+        "hook_name": null,
+        "hook_layer": null,
+        "hook_head_index": null,
+        "prepend_bos": null,
+        "normalize_activations": "none",
+        "activation_fn_str": "unknown",
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "evidence_status": {
+        "variant_metrics": "observed",
+        "hook_name_alignment": "unknown",
+        "root_cause_flags": "inferred"
+      },
+      "model_results": {
+        "meta-llama/Llama-3.1-8B": {
+          "rows": [
+            {
+              "trait": "sycophancy",
+              "row_id": 25,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.055685702711343765,
+                    "explained_variance": -36791.94140625,
+                    "relative_error_norm": 191.8148651123047,
+                    "feature_l0_mean": 1383.20751953125,
+                    "act_norm_mean": 17.81784439086914,
+                    "recon_norm_mean": 1817.7479248046875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7721399664878845,
+                    "explained_variance": 0.5865328311920166,
+                    "relative_error_norm": 0.643014132976532,
+                    "feature_l0_mean": 18.0,
+                    "act_norm_mean": 7.5030999183654785,
+                    "recon_norm_mean": 5.055719375610352
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05562341585755348,
+                    "explained_variance": -36724.2109375,
+                    "relative_error_norm": 191.63821411132812,
+                    "feature_l0_mean": 1382.4339599609375,
+                    "act_norm_mean": 17.815895080566406,
+                    "recon_norm_mean": 1815.9771728515625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.23524995148181915,
+                    "explained_variance": -0.0999060869216919,
+                    "relative_error_norm": 1.0487641096115112,
+                    "feature_l0_mean": 0.7358490824699402,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6280102133750916
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 23,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05568953976035118,
+                    "explained_variance": -36796.375,
+                    "relative_error_norm": 191.826416015625,
+                    "feature_l0_mean": 1383.11328125,
+                    "act_norm_mean": 17.789979934692383,
+                    "recon_norm_mean": 1817.781005859375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.745333731174469,
+                    "explained_variance": 0.5485308170318604,
+                    "relative_error_norm": 0.6719145774841309,
+                    "feature_l0_mean": 23.0,
+                    "act_norm_mean": 7.562568187713623,
+                    "recon_norm_mean": 5.004284858703613
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05562727525830269,
+                    "explained_variance": -36728.58203125,
+                    "relative_error_norm": 191.64962768554688,
+                    "feature_l0_mean": 1382.3773193359375,
+                    "act_norm_mean": 17.788326263427734,
+                    "recon_norm_mean": 1816.016357421875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.21606455743312836,
+                    "explained_variance": -0.11744892597198486,
+                    "relative_error_norm": 1.0570945739746094,
+                    "feature_l0_mean": 0.6603773832321167,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6202693581581116
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 19,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05565761402249336,
+                    "explained_variance": -36748.27734375,
+                    "relative_error_norm": 191.7010040283203,
+                    "feature_l0_mean": 1267.2413330078125,
+                    "act_norm_mean": 16.95165252685547,
+                    "recon_norm_mean": 1661.6693115234375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7500645518302917,
+                    "explained_variance": 0.5558716058731079,
+                    "relative_error_norm": 0.6664295792579651,
+                    "feature_l0_mean": 21.0,
+                    "act_norm_mean": 7.828294277191162,
+                    "recon_norm_mean": 5.229750633239746
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05559540167450905,
+                    "explained_variance": -36680.546875,
+                    "relative_error_norm": 191.52426147460938,
+                    "feature_l0_mean": 1266.637939453125,
+                    "act_norm_mean": 16.950305938720703,
+                    "recon_norm_mean": 1660.059814453125
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.2114740014076233,
+                    "explained_variance": -0.12102234363555908,
+                    "relative_error_norm": 1.0587834119796753,
+                    "feature_l0_mean": 0.6379310488700867,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.617621660232544
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 11,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.055616967380046844,
+                    "explained_variance": -36687.05078125,
+                    "relative_error_norm": 191.54124450683594,
+                    "feature_l0_mean": 1188.306396484375,
+                    "act_norm_mean": 16.51807403564453,
+                    "recon_norm_mean": 1554.9476318359375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7473727464675903,
+                    "explained_variance": 0.5499807000160217,
+                    "relative_error_norm": 0.6708347797393799,
+                    "feature_l0_mean": 19.0,
+                    "act_norm_mean": 7.539267063140869,
+                    "recon_norm_mean": 4.936079978942871
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.055554818361997604,
+                    "explained_variance": -36619.4453125,
+                    "relative_error_norm": 191.36468505859375,
+                    "feature_l0_mean": 1187.6934814453125,
+                    "act_norm_mean": 16.516698837280273,
+                    "recon_norm_mean": 1553.4407958984375
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.23596951365470886,
+                    "explained_variance": -0.10004353523254395,
+                    "relative_error_norm": 1.0488296747207642,
+                    "feature_l0_mean": 0.7096773982048035,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6288942694664001
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 42,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05570881813764572,
+                    "explained_variance": -36829.03515625,
+                    "relative_error_norm": 191.91152954101562,
+                    "feature_l0_mean": 1407.03857421875,
+                    "act_norm_mean": 17.801513671875,
+                    "recon_norm_mean": 1852.3172607421875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7785319685935974,
+                    "explained_variance": 0.6043920516967773,
+                    "relative_error_norm": 0.6289737224578857,
+                    "feature_l0_mean": 28.0,
+                    "act_norm_mean": 8.022140502929688,
+                    "recon_norm_mean": 5.912792205810547
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05564652755856514,
+                    "explained_variance": -36761.19140625,
+                    "relative_error_norm": 191.73468017578125,
+                    "feature_l0_mean": 1406.2308349609375,
+                    "act_norm_mean": 17.799795150756836,
+                    "recon_norm_mean": 1850.5166015625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.21056611835956573,
+                    "explained_variance": -0.12317657470703125,
+                    "relative_error_norm": 1.0598002672195435,
+                    "feature_l0_mean": 0.6730769276618958,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6185888648033142
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 41,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.0557328537106514,
+                    "explained_variance": -36864.94921875,
+                    "relative_error_norm": 192.00506591796875,
+                    "feature_l0_mean": 1521.229248046875,
+                    "act_norm_mean": 18.63850975036621,
+                    "recon_norm_mean": 2006.1517333984375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7708754539489746,
+                    "explained_variance": 0.5892166495323181,
+                    "relative_error_norm": 0.640923798084259,
+                    "feature_l0_mean": 25.0,
+                    "act_norm_mean": 8.089634895324707,
+                    "recon_norm_mean": 5.662232875823975
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05567051097750664,
+                    "explained_variance": -36797.015625,
+                    "relative_error_norm": 191.8280792236328,
+                    "feature_l0_mean": 1520.4375,
+                    "act_norm_mean": 18.63690948486328,
+                    "recon_norm_mean": 2004.202392578125
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.22100527584552765,
+                    "explained_variance": -0.1148836612701416,
+                    "relative_error_norm": 1.0558805465698242,
+                    "feature_l0_mean": 0.75,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6242733001708984
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 13,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05567103624343872,
+                    "explained_variance": -36767.8984375,
+                    "relative_error_norm": 191.75218200683594,
+                    "feature_l0_mean": 1333.5272216796875,
+                    "act_norm_mean": 17.501487731933594,
+                    "recon_norm_mean": 1751.99365234375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7753354907035828,
+                    "explained_variance": 0.5978041291236877,
+                    "relative_error_norm": 0.6341891288757324,
+                    "feature_l0_mean": 26.0,
+                    "act_norm_mean": 7.671893119812012,
+                    "recon_norm_mean": 5.50484561920166
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05560880899429321,
+                    "explained_variance": -36700.125,
+                    "relative_error_norm": 191.57537841796875,
+                    "feature_l0_mean": 1332.8544921875,
+                    "act_norm_mean": 17.500085830688477,
+                    "recon_norm_mean": 1750.2989501953125
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.2475067526102066,
+                    "explained_variance": -0.08663308620452881,
+                    "relative_error_norm": 1.042417049407959,
+                    "feature_l0_mean": 0.8727272748947144,
+                    "act_norm_mean": 0.9999999403953552,
+                    "recon_norm_mean": 0.6314486265182495
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 9,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.055907830595970154,
+                    "explained_variance": -36960.578125,
+                    "relative_error_norm": 192.2539520263672,
+                    "feature_l0_mean": 2015.111083984375,
+                    "act_norm_mean": 22.12936782836914,
+                    "recon_norm_mean": 2671.88720703125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7981140613555908,
+                    "explained_variance": 0.6361517906188965,
+                    "relative_error_norm": 0.6031983494758606,
+                    "feature_l0_mean": 32.0,
+                    "act_norm_mean": 8.281344413757324,
+                    "recon_norm_mean": 6.370253562927246
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.055846601724624634,
+                    "explained_variance": -36892.0234375,
+                    "relative_error_norm": 192.0755615234375,
+                    "feature_l0_mean": 2013.638916015625,
+                    "act_norm_mean": 22.127695083618164,
+                    "recon_norm_mean": 2669.271484375
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.21821892261505127,
+                    "explained_variance": -0.11636483669281006,
+                    "relative_error_norm": 1.0565816164016724,
+                    "feature_l0_mean": 0.7222222089767456,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6222568154335022
+                  }
+                }
+              }
+            }
+          ],
+          "variants_summary": {
+            "blocks.12.hook_resid_post::raw_seq": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.05570879532024264,
+                "median": 0.05568762123584747,
+                "std": 8.183484629659495e-05,
+                "p10": 0.055645420029759404,
+                "p90": 0.055785346776247025
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36805.76318359375,
+                "median": -36794.158203125,
+                "std": 76.74829991691242,
+                "p10": -36893.637890625,
+                "p90": -36729.909375
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 191.85078239440918,
+                "median": 191.82064056396484,
+                "std": 0.19996638604585337,
+                "p10": 191.653076171875,
+                "p90": 192.0797317504883
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1437.3468322753906,
+                "median": 1383.160400390625,
+                "std": 237.00586887787628,
+                "p10": 1243.5608520507812,
+                "p90": 1669.393798828125
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 18.143553733825684,
+                "median": 17.79574680328369,
+                "std": 1.6184425133919165,
+                "p10": 16.821578979492188,
+                "p90": 19.68576717376709
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 1891.8119659423828,
+                "median": 1817.7644653320312,
+                "std": 320.1775372653838,
+                "p10": 1629.6528076171876,
+                "p90": 2205.8723754882812
+              }
+            },
+            "blocks.12.hook_resid_post::last_token": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.7672209963202477,
+                "median": 0.7715077102184296,
+                "std": 0.01715030937594835,
+                "p10": 0.746761041879654,
+                "p90": 0.7844065964221955
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": 0.5835600718855858,
+                "median": 0.5878747403621674,
+                "std": 0.028646251190673325,
+                "p10": 0.5495457351207733,
+                "p90": 0.6139199733734131
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 0.6449347585439682,
+                "median": 0.6419689655303955,
+                "std": 0.0223402012179886,
+                "p10": 0.6212411105632782,
+                "p90": 0.6711587190628052
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 24.0,
+                "median": 24.0,
+                "std": 4.415880433163924,
+                "p10": 18.7,
+                "p90": 29.2
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 7.812280297279358,
+                "median": 7.750093698501587,
+                "std": 0.2723595743391151,
+                "p10": 7.528416919708252,
+                "p90": 8.147147750854492
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 5.459494888782501,
+                "median": 5.367298126220703,
+                "std": 0.471051433976837,
+                "p10": 4.98382339477539,
+                "p90": 6.050030612945557
+              }
+            },
+            "blocks.12.hook_resid_post::token_centered": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.055646670050919056,
+                "median": 0.055625345557928085,
+                "std": 8.21253907991623e-05,
+                "p10": 0.05558322668075562,
+                "p90": 0.055723338201642034
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36737.892578125,
+                "median": -36726.396484375,
+                "std": 76.49611085467753,
+                "p10": -36825.51796875,
+                "p90": -36662.21640625
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 191.6738109588623,
+                "median": 191.6439208984375,
+                "std": 0.19949062542092696,
+                "p10": 191.47638854980468,
+                "p90": 191.9023239135742
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1436.5380554199219,
+                "median": 1382.4056396484375,
+                "std": 236.74977267106235,
+                "p10": 1242.9546020507812,
+                "p90": 1668.3979248046874
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 18.141963958740234,
+                "median": 17.794060707092285,
+                "std": 1.6183721289712898,
+                "p10": 16.820223808288574,
+                "p90": 19.684145164489745
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 1889.9729461669922,
+                "median": 1815.9967651367188,
+                "std": 319.8591670851007,
+                "p10": 1628.0741088867187,
+                "p90": 2203.7231201171876
+              }
+            },
+            "blocks.12.hook_resid_post::token_unit_norm": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.22450688667595387,
+                "median": 0.21961209923028946,
+                "std": 0.012565194511141728,
+                "p10": 0.21120163649320603,
+                "p90": 0.2394306853413582
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -0.10993488132953644,
+                "median": -0.11562424898147583,
+                "std": 0.01205175806981667,
+                "p10": -0.12166861295700074,
+                "p90": -0.09592418670654297
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 1.0535189062356949,
+                "median": 1.0562310814857483,
+                "std": 0.005731073886138334,
+                "p10": 1.0468599915504455,
+                "p90": 1.0590884685516357
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 0.7202326655387878,
+                "median": 0.7159498035907745,
+                "std": 0.06808066819397098,
+                "p10": 0.6536434829235077,
+                "p90": 0.7868181824684143
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 0.9999999925494194,
+                "median": 1.0,
+                "std": 1.971238338250362e-08,
+                "p10": 0.9999999821186065,
+                "p90": 1.0
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 0.623920388519764,
+                "median": 0.6232650578022003,
+                "std": 0.004775742014392212,
+                "p10": 0.6182987034320832,
+                "p90": 0.629660576581955
+              }
+            }
+          },
+          "best_variant_by_median_cosine": "blocks.12.hook_resid_post::last_token",
+          "best_variant_median_cosine": 0.7715077102184296,
+          "hook_rawseq_median_delta_expected_minus_configured": null,
+          "configured_raw_to_centered_median_gain": -6.227567791938782e-05,
+          "configured_raw_to_unitnorm_median_gain": 0.16392447799444199,
+          "inferred_flags": {
+            "hook_mismatch_likely": false,
+            "centering_or_scale_mismatch_likely": true
+          }
+        },
+        "meta-llama/Llama-3.1-8B-Instruct": {
+          "rows": [
+            {
+              "trait": "sycophancy",
+              "row_id": 25,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05658474192023277,
+                    "explained_variance": -36267.140625,
+                    "relative_error_norm": 190.44195556640625,
+                    "feature_l0_mean": 1760.46337890625,
+                    "act_norm_mean": 20.99660873413086,
+                    "recon_norm_mean": 2501.217529296875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.6984708309173584,
+                    "explained_variance": 0.46858757734298706,
+                    "relative_error_norm": 0.7289804220199585,
+                    "feature_l0_mean": 12.0,
+                    "act_norm_mean": 8.217626571655273,
+                    "recon_norm_mean": 4.59891414642334
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05652231350541115,
+                    "explained_variance": -36199.80078125,
+                    "relative_error_norm": 190.26507568359375,
+                    "feature_l0_mean": 1759.5242919921875,
+                    "act_norm_mean": 20.99437713623047,
+                    "recon_norm_mean": 2498.7666015625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.22435003519058228,
+                    "explained_variance": -0.11575663089752197,
+                    "relative_error_norm": 1.0562937259674072,
+                    "feature_l0_mean": 0.5121951103210449,
+                    "act_norm_mean": 0.9999999403953552,
+                    "recon_norm_mean": 0.6291534304618835
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 23,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05658412724733353,
+                    "explained_variance": -36265.625,
+                    "relative_error_norm": 190.43797302246094,
+                    "feature_l0_mean": 1760.5975341796875,
+                    "act_norm_mean": 21.012523651123047,
+                    "recon_norm_mean": 2501.26513671875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.705983579158783,
+                    "explained_variance": 0.4827302098274231,
+                    "relative_error_norm": 0.7192147374153137,
+                    "feature_l0_mean": 17.0,
+                    "act_norm_mean": 7.814667701721191,
+                    "recon_norm_mean": 4.538396835327148
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.0565217062830925,
+                    "explained_variance": -36198.25390625,
+                    "relative_error_norm": 190.26101684570312,
+                    "feature_l0_mean": 1759.621826171875,
+                    "act_norm_mean": 21.01055908203125,
+                    "recon_norm_mean": 2498.816162109375
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.21424640715122223,
+                    "explained_variance": -0.124916672706604,
+                    "relative_error_norm": 1.060620903968811,
+                    "feature_l0_mean": 0.5121951103210449,
+                    "act_norm_mean": 0.9999999403953552,
+                    "recon_norm_mean": 0.6252514123916626
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 19,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05657574534416199,
+                    "explained_variance": -36253.765625,
+                    "relative_error_norm": 190.40684509277344,
+                    "feature_l0_mean": 1662.4482421875,
+                    "act_norm_mean": 20.188743591308594,
+                    "recon_norm_mean": 2357.831787109375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.6956443190574646,
+                    "explained_variance": 0.4645066261291504,
+                    "relative_error_norm": 0.731774091720581,
+                    "feature_l0_mean": 15.0,
+                    "act_norm_mean": 7.83696174621582,
+                    "recon_norm_mean": 4.35977029800415
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05651332065463066,
+                    "explained_variance": -36186.38671875,
+                    "relative_error_norm": 190.22982788085938,
+                    "feature_l0_mean": 1661.609130859375,
+                    "act_norm_mean": 20.187152862548828,
+                    "recon_norm_mean": 2355.526123046875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.19797661900520325,
+                    "explained_variance": -0.13803184032440186,
+                    "relative_error_norm": 1.0667856931686401,
+                    "feature_l0_mean": 0.5057471394538879,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6171613931655884
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 11,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.056556250900030136,
+                    "explained_variance": -36224.96484375,
+                    "relative_error_norm": 190.33119201660156,
+                    "feature_l0_mean": 1590.3956298828125,
+                    "act_norm_mean": 19.7694091796875,
+                    "recon_norm_mean": 2254.55029296875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7191547155380249,
+                    "explained_variance": 0.4992865324020386,
+                    "relative_error_norm": 0.7076111435890198,
+                    "feature_l0_mean": 19.0,
+                    "act_norm_mean": 8.294207572937012,
+                    "recon_norm_mean": 4.855221748352051
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.0564938522875309,
+                    "explained_variance": -36157.6484375,
+                    "relative_error_norm": 190.15426635742188,
+                    "feature_l0_mean": 1589.593505859375,
+                    "act_norm_mean": 19.767765045166016,
+                    "recon_norm_mean": 2252.344482421875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.21603187918663025,
+                    "explained_variance": -0.12377071380615234,
+                    "relative_error_norm": 1.0600805282592773,
+                    "feature_l0_mean": 0.49450549483299255,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6258116960525513
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 42,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05660347640514374,
+                    "explained_variance": -36295.3125,
+                    "relative_error_norm": 190.5159149169922,
+                    "feature_l0_mean": 1759.4998779296875,
+                    "act_norm_mean": 20.69778060913086,
+                    "recon_norm_mean": 2500.929931640625
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7280863523483276,
+                    "explained_variance": 0.510165810585022,
+                    "relative_error_norm": 0.6998815536499023,
+                    "feature_l0_mean": 17.0,
+                    "act_norm_mean": 8.058244705200195,
+                    "recon_norm_mean": 4.729090213775635
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05654099956154823,
+                    "explained_variance": -36227.8671875,
+                    "relative_error_norm": 190.33883666992188,
+                    "feature_l0_mean": 1758.5853271484375,
+                    "act_norm_mean": 20.69597053527832,
+                    "recon_norm_mean": 2498.479736328125
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.1914844661951065,
+                    "explained_variance": -0.1450263261795044,
+                    "relative_error_norm": 1.070059061050415,
+                    "feature_l0_mean": 0.46341460943222046,
+                    "act_norm_mean": 0.9999999403953552,
+                    "recon_norm_mean": 0.6156250834465027
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 41,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05604775249958038,
+                    "explained_variance": -36620.6484375,
+                    "relative_error_norm": 191.36782836914062,
+                    "feature_l0_mean": 1876.402587890625,
+                    "act_norm_mean": 21.62742805480957,
+                    "recon_norm_mean": 2663.861083984375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7404933571815491,
+                    "explained_variance": 0.5281857252120972,
+                    "relative_error_norm": 0.6868874430656433,
+                    "feature_l0_mean": 16.0,
+                    "act_norm_mean": 8.037586212158203,
+                    "recon_norm_mean": 4.810988426208496
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.055986348539590836,
+                    "explained_variance": -36552.37109375,
+                    "relative_error_norm": 191.18936157226562,
+                    "feature_l0_mean": 1874.8441162109375,
+                    "act_norm_mean": 21.625682830810547,
+                    "recon_norm_mean": 2661.242431640625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.21253648400306702,
+                    "explained_variance": -0.12684142589569092,
+                    "relative_error_norm": 1.061527967453003,
+                    "feature_l0_mean": 0.5194805264472961,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6247428059577942
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 13,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.056574370712041855,
+                    "explained_variance": -36250.171875,
+                    "relative_error_norm": 190.3974151611328,
+                    "feature_l0_mean": 1718.7261962890625,
+                    "act_norm_mean": 20.778226852416992,
+                    "recon_norm_mean": 2442.0078125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7307174205780029,
+                    "explained_variance": 0.5204373598098755,
+                    "relative_error_norm": 0.6925046443939209,
+                    "feature_l0_mean": 16.0,
+                    "act_norm_mean": 7.820760250091553,
+                    "recon_norm_mean": 4.805717468261719
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05651196092367172,
+                    "explained_variance": -36182.8125,
+                    "relative_error_norm": 190.22042846679688,
+                    "feature_l0_mean": 1717.857177734375,
+                    "act_norm_mean": 20.776493072509766,
+                    "recon_norm_mean": 2439.619384765625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.24573160707950592,
+                    "explained_variance": -0.0953291654586792,
+                    "relative_error_norm": 1.0465797185897827,
+                    "feature_l0_mean": 0.5476190447807312,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6373216509819031
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 9,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05609273537993431,
+                    "explained_variance": -36687.82421875,
+                    "relative_error_norm": 191.54327392578125,
+                    "feature_l0_mean": 2214.107666015625,
+                    "act_norm_mean": 23.90220069885254,
+                    "recon_norm_mean": 3154.273681640625
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7241315245628357,
+                    "explained_variance": 0.5051796436309814,
+                    "relative_error_norm": 0.7034347057342529,
+                    "feature_l0_mean": 19.0,
+                    "act_norm_mean": 8.1896333694458,
+                    "recon_norm_mean": 4.7959675788879395
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.056031327694654465,
+                    "explained_variance": -36619.41015625,
+                    "relative_error_norm": 191.36460876464844,
+                    "feature_l0_mean": 2212.384521484375,
+                    "act_norm_mean": 23.90030860900879,
+                    "recon_norm_mean": 3151.179443359375
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.18798382580280304,
+                    "explained_variance": -0.14931440353393555,
+                    "relative_error_norm": 1.0720609426498413,
+                    "feature_l0_mean": 0.4153846204280853,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6155005097389221
+                  }
+                }
+              }
+            }
+          ],
+          "variants_summary": {
+            "blocks.12.hook_resid_post::raw_seq": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.05645240005105734,
+                "median": 0.05657505802810192,
+                "std": 0.00022126474759167052,
+                "p10": 0.05607924051582813,
+                "p90": 0.05659036226570606
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36358.181640625,
+                "median": -36266.3828125,
+                "std": 172.72677290538402,
+                "p10": -36640.801171875,
+                "p90": -36242.609765625
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 190.68029975891113,
+                "median": 190.4399642944336,
+                "std": 0.4523065810314061,
+                "p10": 190.37754821777344,
+                "p90": 191.42046203613282
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1792.8301391601562,
+                "median": 1759.9816284179688,
+                "std": 177.17474674763497,
+                "p10": 1640.8324584960938,
+                "p90": 1977.714111328125
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 21.121615171432495,
+                "median": 20.887417793273926,
+                "std": 1.1732056416294818,
+                "p10": 20.062943267822266,
+                "p90": 22.309859848022462
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 2546.992156982422,
+                "median": 2501.07373046875,
+                "std": 255.21628174938837,
+                "p10": 2326.8473388671873,
+                "p90": 2810.98486328125
+              }
+            },
+            "blocks.12.hook_resid_post::last_token": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.7178352624177933,
+                "median": 0.7216431200504303,
+                "std": 0.015139722364180491,
+                "p10": 0.6976228773593902,
+                "p90": 0.7336502015590668
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": 0.4973849356174469,
+                "median": 0.50223308801651,
+                "std": 0.021888522321819707,
+                "p10": 0.4673632919788361,
+                "p90": 0.522761869430542
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 0.7087860926985741,
+                "median": 0.7055229246616364,
+                "std": 0.01540681969359885,
+                "p10": 0.6908194839954376,
+                "p90": 0.7298185229301453
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 16.375,
+                "median": 16.5,
+                "std": 2.117634293262177,
+                "p10": 14.1,
+                "p90": 19.0
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 8.033711016178131,
+                "median": 8.0479154586792,
+                "std": 0.17980905307262288,
+                "p10": 7.8189324855804445,
+                "p90": 8.240600872039796
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 4.68675833940506,
+                "median": 4.762528896331787,
+                "std": 0.16137374007555927,
+                "p10": 4.484808874130249,
+                "p90": 4.824258422851562
+              }
+            },
+            "blocks.12.hook_resid_post::token_centered": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.05639022868126631,
+                "median": 0.05651264078915119,
+                "std": 0.00022082287314897337,
+                "p10": 0.05601783394813538,
+                "p90": 0.056527919322252276
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36290.56884765625,
+                "median": -36199.02734375,
+                "std": 172.30154985136517,
+                "p10": -36572.4828125,
+                "p90": -36175.26328125
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 190.50292778015137,
+                "median": 190.26304626464844,
+                "std": 0.45161655295696274,
+                "p10": 190.20057983398436,
+                "p90": 191.24193572998047
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1791.7524871826172,
+                "median": 1759.0548095703125,
+                "std": 176.87307851449177,
+                "p10": 1640.004443359375,
+                "p90": 1976.1062377929686
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 21.119788646697998,
+                "median": 20.885435104370117,
+                "std": 1.1731437624435868,
+                "p10": 20.061336517333984,
+                "p90": 22.308070564270018
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 2544.496795654297,
+                "median": 2498.6231689453125,
+                "std": 254.96349733283668,
+                "p10": 2324.571630859375,
+                "p90": 2808.22353515625
+              }
+            },
+            "blocks.12.hook_resid_post::token_unit_norm": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.21129266545176506,
+                "median": 0.21339144557714462,
+                "std": 0.01768562722564228,
+                "p10": 0.19043427407741548,
+                "p90": 0.23076450675725937
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -0.12737339735031128,
+                "median": -0.12587904930114746,
+                "std": 0.016154395430874848,
+                "p10": -0.14631274938583375,
+                "p90": -0.10962839126586914
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 1.0617510676383972,
+                "median": 1.061074435710907,
+                "std": 0.007621793481641069,
+                "p10": 1.05337952375412,
+                "p90": 1.070659625530243
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 0.49631770700216293,
+                "median": 0.5089711248874664,
+                "std": 0.03774503936981573,
+                "p10": 0.44900561273097994,
+                "p90": 0.5279220819473267
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 0.9999999776482582,
+                "median": 1.0,
+                "std": 2.8855974571462102e-08,
+                "p10": 0.9999999403953552,
+                "p90": 1.0
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 0.623820997774601,
+                "median": 0.6249971091747284,
+                "std": 0.007056158991434004,
+                "p10": 0.6155877113342285,
+                "p90": 0.6316038966178894
+              }
+            }
+          },
+          "best_variant_by_median_cosine": "blocks.12.hook_resid_post::last_token",
+          "best_variant_median_cosine": 0.7216431200504303,
+          "hook_rawseq_median_delta_expected_minus_configured": null,
+          "configured_raw_to_centered_median_gain": -6.241723895072937e-05,
+          "configured_raw_to_unitnorm_median_gain": 0.1568163875490427,
+          "inferred_flags": {
+            "hook_mismatch_likely": false,
+            "centering_or_scale_mismatch_likely": true
+          }
+        }
+      }
+    },
+    "123": {
+      "timestamp_utc": "2026-03-01T03:27:56.602329+00:00",
+      "inputs": {
+        "sae_source": "primary",
+        "layer": 12,
+        "sae_release": "llama_scope_lxr_32x",
+        "sae_id": "l12r_32x",
+        "configured_hook": "blocks.12.hook_resid_post",
+        "expected_hook_name": null,
+        "model_names": [
+          "meta-llama/Llama-3.1-8B",
+          "meta-llama/Llama-3.1-8B-Instruct"
+        ],
+        "n_probe_rows": 8,
+        "probe_traits": [
+          "evil",
+          "sycophancy"
+        ],
+        "seed": 123
+      },
+      "sae_cfg_snapshot": {
+        "hook_name": null,
+        "hook_layer": null,
+        "hook_head_index": null,
+        "prepend_bos": null,
+        "normalize_activations": "none",
+        "activation_fn_str": "unknown",
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "evidence_status": {
+        "variant_metrics": "observed",
+        "hook_name_alignment": "unknown",
+        "root_cause_flags": "inferred"
+      },
+      "model_results": {
+        "meta-llama/Llama-3.1-8B": {
+          "rows": [
+            {
+              "trait": "sycophancy",
+              "row_id": 47,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05568401888012886,
+                    "explained_variance": -36789.42578125,
+                    "relative_error_norm": 191.8083038330078,
+                    "feature_l0_mean": 1334.745361328125,
+                    "act_norm_mean": 17.351076126098633,
+                    "recon_norm_mean": 1751.813720703125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.753519594669342,
+                    "explained_variance": 0.5628330707550049,
+                    "relative_error_norm": 0.6611860394477844,
+                    "feature_l0_mean": 22.0,
+                    "act_norm_mean": 7.583834171295166,
+                    "recon_norm_mean": 5.180538654327393
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05562179908156395,
+                    "explained_variance": -36721.71484375,
+                    "relative_error_norm": 191.63169860839844,
+                    "feature_l0_mean": 1334.036376953125,
+                    "act_norm_mean": 17.348983764648438,
+                    "recon_norm_mean": 1750.1129150390625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.17522768676280975,
+                    "explained_variance": -0.1573084592819214,
+                    "relative_error_norm": 1.0757827758789062,
+                    "feature_l0_mean": 0.49090906977653503,
+                    "act_norm_mean": 0.9999999403953552,
+                    "recon_norm_mean": 0.6079068183898926
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 18,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05561874806880951,
+                    "explained_variance": -36690.2421875,
+                    "relative_error_norm": 191.54957580566406,
+                    "feature_l0_mean": 1169.476318359375,
+                    "act_norm_mean": 16.308191299438477,
+                    "recon_norm_mean": 1530.3065185546875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7575722932815552,
+                    "explained_variance": 0.5689347982406616,
+                    "relative_error_norm": 0.6565555930137634,
+                    "feature_l0_mean": 25.0,
+                    "act_norm_mean": 7.575430393218994,
+                    "recon_norm_mean": 5.204297065734863
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.055556520819664,
+                    "explained_variance": -36622.609375,
+                    "relative_error_norm": 191.37295532226562,
+                    "feature_l0_mean": 1168.825439453125,
+                    "act_norm_mean": 16.30696678161621,
+                    "recon_norm_mean": 1528.8197021484375
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.21369501948356628,
+                    "explained_variance": -0.11928391456604004,
+                    "relative_error_norm": 1.0579622983932495,
+                    "feature_l0_mean": 0.6349206566810608,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6187224984169006
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 25,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.055685702711343765,
+                    "explained_variance": -36791.94140625,
+                    "relative_error_norm": 191.8148651123047,
+                    "feature_l0_mean": 1383.20751953125,
+                    "act_norm_mean": 17.81784439086914,
+                    "recon_norm_mean": 1817.7479248046875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7721399664878845,
+                    "explained_variance": 0.5865328311920166,
+                    "relative_error_norm": 0.643014132976532,
+                    "feature_l0_mean": 18.0,
+                    "act_norm_mean": 7.5030999183654785,
+                    "recon_norm_mean": 5.055719375610352
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05562341585755348,
+                    "explained_variance": -36724.2109375,
+                    "relative_error_norm": 191.63821411132812,
+                    "feature_l0_mean": 1382.4339599609375,
+                    "act_norm_mean": 17.815895080566406,
+                    "recon_norm_mean": 1815.9771728515625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.23524995148181915,
+                    "explained_variance": -0.0999060869216919,
+                    "relative_error_norm": 1.0487641096115112,
+                    "feature_l0_mean": 0.7358490824699402,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6280102133750916
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 40,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05564001947641373,
+                    "explained_variance": -36722.828125,
+                    "relative_error_norm": 191.63462829589844,
+                    "feature_l0_mean": 1225.7333984375,
+                    "act_norm_mean": 16.697616577148438,
+                    "recon_norm_mean": 1606.44970703125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7572653293609619,
+                    "explained_variance": 0.5540764331817627,
+                    "relative_error_norm": 0.6677750945091248,
+                    "feature_l0_mean": 17.0,
+                    "act_norm_mean": 7.372618675231934,
+                    "recon_norm_mean": 4.55682373046875
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.0555778369307518,
+                    "explained_variance": -36655.15625,
+                    "relative_error_norm": 191.45797729492188,
+                    "feature_l0_mean": 1225.1334228515625,
+                    "act_norm_mean": 16.696212768554688,
+                    "recon_norm_mean": 1604.8927001953125
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.2204243242740631,
+                    "explained_variance": -0.1139223575592041,
+                    "relative_error_norm": 1.0554251670837402,
+                    "feature_l0_mean": 0.7166666984558105,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6226224303245544
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 6,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.055918894708156586,
+                    "explained_variance": -36977.12109375,
+                    "relative_error_norm": 192.29696655273438,
+                    "feature_l0_mean": 2130.705810546875,
+                    "act_norm_mean": 22.995145797729492,
+                    "recon_norm_mean": 2828.713134765625
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7729433178901672,
+                    "explained_variance": 0.5949726104736328,
+                    "relative_error_norm": 0.6364176273345947,
+                    "feature_l0_mean": 28.0,
+                    "act_norm_mean": 8.27558708190918,
+                    "recon_norm_mean": 5.985380172729492
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.055857643485069275,
+                    "explained_variance": -36908.5390625,
+                    "relative_error_norm": 192.11856079101562,
+                    "feature_l0_mean": 2129.176513671875,
+                    "act_norm_mean": 22.993379592895508,
+                    "recon_norm_mean": 2825.943603515625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.24057205021381378,
+                    "explained_variance": -0.0945667028427124,
+                    "relative_error_norm": 1.046215534210205,
+                    "feature_l0_mean": 0.8529411554336548,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6302933692932129
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 29,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05574018508195877,
+                    "explained_variance": -36873.9375,
+                    "relative_error_norm": 192.0284881591797,
+                    "feature_l0_mean": 1622.0,
+                    "act_norm_mean": 19.508813858032227,
+                    "recon_norm_mean": 2139.7587890625
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7718119621276855,
+                    "explained_variance": 0.5927866697311401,
+                    "relative_error_norm": 0.6381326913833618,
+                    "feature_l0_mean": 29.0,
+                    "act_norm_mean": 8.065322875976562,
+                    "recon_norm_mean": 5.7900543212890625
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.055677808821201324,
+                    "explained_variance": -36805.96875,
+                    "relative_error_norm": 191.85142517089844,
+                    "feature_l0_mean": 1621.1112060546875,
+                    "act_norm_mean": 19.507234573364258,
+                    "recon_norm_mean": 2137.678466796875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.21290990710258484,
+                    "explained_variance": -0.12268936634063721,
+                    "relative_error_norm": 1.0595703125,
+                    "feature_l0_mean": 0.6888889074325562,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6218981742858887
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 19,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.055593229830265045,
+                    "explained_variance": -36671.578125,
+                    "relative_error_norm": 191.50086975097656,
+                    "feature_l0_mean": 1134.7230224609375,
+                    "act_norm_mean": 16.136728286743164,
+                    "recon_norm_mean": 1483.696533203125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7687742114067078,
+                    "explained_variance": 0.5865548849105835,
+                    "relative_error_norm": 0.6429969668388367,
+                    "feature_l0_mean": 25.0,
+                    "act_norm_mean": 7.827830791473389,
+                    "recon_norm_mean": 5.495128631591797
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05553120747208595,
+                    "explained_variance": -36603.96484375,
+                    "relative_error_norm": 191.32423400878906,
+                    "feature_l0_mean": 1134.3077392578125,
+                    "act_norm_mean": 16.13547134399414,
+                    "recon_norm_mean": 1482.265869140625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.2278403639793396,
+                    "explained_variance": -0.106453537940979,
+                    "relative_error_norm": 1.051880955696106,
+                    "feature_l0_mean": 0.800000011920929,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6250088214874268
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 49,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05569818988442421,
+                    "explained_variance": -36811.98046875,
+                    "relative_error_norm": 191.86709594726562,
+                    "feature_l0_mean": 1382.6981201171875,
+                    "act_norm_mean": 17.678817749023438,
+                    "recon_norm_mean": 1817.6143798828125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.758342981338501,
+                    "explained_variance": 0.5725231170654297,
+                    "relative_error_norm": 0.6538171172142029,
+                    "feature_l0_mean": 27.0,
+                    "act_norm_mean": 7.867620944976807,
+                    "recon_norm_mean": 5.568212032318115
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.055635955184698105,
+                    "explained_variance": -36744.12890625,
+                    "relative_error_norm": 191.690185546875,
+                    "feature_l0_mean": 1382.0,
+                    "act_norm_mean": 17.67742156982422,
+                    "recon_norm_mean": 1815.8536376953125
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.20433899760246277,
+                    "explained_variance": -0.12982332706451416,
+                    "relative_error_norm": 1.0629314184188843,
+                    "feature_l0_mean": 0.6792452931404114,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6177705526351929
+                  }
+                }
+              }
+            }
+          ],
+          "variants_summary": {
+            "blocks.12.hook_resid_post::raw_seq": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.05569737358018756,
+                "median": 0.05568486079573631,
+                "std": 9.456283841545025e-05,
+                "p10": 0.05561109259724617,
+                "p90": 0.055793797969818114
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36791.1318359375,
+                "median": -36790.68359375,
+                "std": 94.22328628576741,
+                "p10": -36904.892578125,
+                "p90": -36684.64296875
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 191.8125991821289,
+                "median": 191.81158447265625,
+                "std": 0.24552073567024785,
+                "p10": 191.53496398925782,
+                "p90": 192.1090316772461
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1422.9111938476562,
+                "median": 1358.7217407226562,
+                "std": 303.67272689613725,
+                "p10": 1159.0503295898438,
+                "p90": 1774.6117431640623
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 18.061779260635376,
+                "median": 17.514946937561035,
+                "std": 2.1149795808010805,
+                "p10": 16.25675239562988,
+                "p90": 20.554713439941406
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 1872.0125885009766,
+                "median": 1784.7140502929688,
+                "std": 410.0901716146945,
+                "p10": 1516.3235229492188,
+                "p90": 2346.4450927734374
+              }
+            },
+            "blocks.12.hook_resid_post::last_token": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.7640462070703506,
+                "median": 0.7635585963726044,
+                "std": 0.00757097016329555,
+                "p10": 0.7561416089534759,
+                "p90": 0.7723809719085694
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": 0.577401801943779,
+                "median": 0.5795279741287231,
+                "std": 0.013983895050836097,
+                "p10": 0.5602060794830322,
+                "p90": 0.5934424519538879
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 0.6499869078397751,
+                "median": 0.6484156250953674,
+                "std": 0.010734203208889759,
+                "p10": 0.6376181721687317,
+                "p90": 0.6631627559661866
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 23.875,
+                "median": 25.0,
+                "std": 4.19635258289863,
+                "p10": 17.7,
+                "p90": 28.3
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 7.758918106555939,
+                "median": 7.705832481384277,
+                "std": 0.2864411587529534,
+                "p10": 7.463955545425415,
+                "p90": 8.128402137756348
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 5.354519248008728,
+                "median": 5.34971284866333,
+                "std": 0.4230170452664769,
+                "p10": 4.906050682067871,
+                "p90": 5.848652076721192
+              }
+            },
+            "blocks.12.hook_resid_post::token_centered": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.055635273456573486,
+                "median": 0.055622607469558716,
+                "std": 9.480966093502524e-05,
+                "p10": 0.05554892681539059,
+                "p90": 0.05573175922036171
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36723.28662109375,
+                "median": -36722.962890625,
+                "std": 93.94670635371051,
+                "p10": -36836.73984375,
+                "p90": -36617.016015625
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 191.63565635681152,
+                "median": 191.63495635986328,
+                "std": 0.24502909867743197,
+                "p10": 191.35833892822265,
+                "p90": 191.9315658569336
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1422.1280822753906,
+                "median": 1358.0181884765625,
+                "std": 303.3701281698247,
+                "p10": 1158.4701293945313,
+                "p90": 1773.5307983398436
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 18.060195684432983,
+                "median": 17.513202667236328,
+                "std": 2.11486024924398,
+                "p10": 16.25551815032959,
+                "p90": 20.55307807922363
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 1870.1930084228516,
+                "median": 1782.9832763671875,
+                "std": 409.68379216485573,
+                "p10": 1514.8535522460938,
+                "p90": 2344.1580078125
+              }
+            },
+            "blocks.12.hook_resid_post::token_unit_norm": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.2162822876125574,
+                "median": 0.2170596718788147,
+                "std": 0.019192120032584272,
+                "p10": 0.19560560435056687,
+                "p90": 0.23684658110141754
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -0.11799421906471252,
+                "median": -0.11660313606262207,
+                "std": 0.018490002095833225,
+                "p10": -0.13806886672973634,
+                "p90": -0.09830427169799805
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 1.0573165714740753,
+                "median": 1.0566937327384949,
+                "std": 0.00871438813757632,
+                "p10": 1.0479995369911195,
+                "p90": 1.0667868256568909
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 0.6999276094138622,
+                "median": 0.7027778029441833,
+                "std": 0.10214110662531584,
+                "p10": 0.591717180609703,
+                "p90": 0.8158823549747467
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 0.9999999925494194,
+                "median": 1.0,
+                "std": 1.971238338250362e-08,
+                "p10": 0.9999999821186065,
+                "p90": 1.0
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 0.62152910977602,
+                "median": 0.6222603023052216,
+                "std": 0.00651754883455007,
+                "p10": 0.6148114323616027,
+                "p90": 0.628695160150528
+              }
+            }
+          },
+          "best_variant_by_median_cosine": "blocks.12.hook_resid_post::last_token",
+          "best_variant_median_cosine": 0.7635585963726044,
+          "hook_rawseq_median_delta_expected_minus_configured": null,
+          "configured_raw_to_centered_median_gain": -6.225332617759705e-05,
+          "configured_raw_to_unitnorm_median_gain": 0.16137481108307838,
+          "inferred_flags": {
+            "hook_mismatch_likely": false,
+            "centering_or_scale_mismatch_likely": true
+          }
+        },
+        "meta-llama/Llama-3.1-8B-Instruct": {
+          "rows": [
+            {
+              "trait": "sycophancy",
+              "row_id": 47,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05658647045493126,
+                    "explained_variance": -36268.8125,
+                    "relative_error_norm": 190.4463348388672,
+                    "feature_l0_mean": 1721.416748046875,
+                    "act_norm_mean": 20.59737777709961,
+                    "recon_norm_mean": 2441.8505859375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7034111022949219,
+                    "explained_variance": 0.47724390029907227,
+                    "relative_error_norm": 0.7230187654495239,
+                    "feature_l0_mean": 16.0,
+                    "act_norm_mean": 8.021326065063477,
+                    "recon_norm_mean": 4.579858779907227
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05652404576539993,
+                    "explained_variance": -36201.4453125,
+                    "relative_error_norm": 190.2694091796875,
+                    "feature_l0_mean": 1720.547607421875,
+                    "act_norm_mean": 20.59537124633789,
+                    "recon_norm_mean": 2439.45947265625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.19515442848205566,
+                    "explained_variance": -0.14214181900024414,
+                    "relative_error_norm": 1.0687103271484375,
+                    "feature_l0_mean": 0.4285714328289032,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6174424290657043
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 18,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05654590204358101,
+                    "explained_variance": -36209.39453125,
+                    "relative_error_norm": 190.29029846191406,
+                    "feature_l0_mean": 1574.5,
+                    "act_norm_mean": 19.756366729736328,
+                    "recon_norm_mean": 2230.248046875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.6977385878562927,
+                    "explained_variance": 0.4717066287994385,
+                    "relative_error_norm": 0.7268379330635071,
+                    "feature_l0_mean": 12.0,
+                    "act_norm_mean": 8.066374778747559,
+                    "recon_norm_mean": 4.635944843292236
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05648349970579147,
+                    "explained_variance": -36142.08984375,
+                    "relative_error_norm": 190.11337280273438,
+                    "feature_l0_mean": 1573.684814453125,
+                    "act_norm_mean": 19.754980087280273,
+                    "recon_norm_mean": 2228.065185546875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.2314227968454361,
+                    "explained_variance": -0.10741209983825684,
+                    "relative_error_norm": 1.0523364543914795,
+                    "feature_l0_mean": 0.5652173757553101,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6301477551460266
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 25,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05658474192023277,
+                    "explained_variance": -36267.140625,
+                    "relative_error_norm": 190.44195556640625,
+                    "feature_l0_mean": 1760.46337890625,
+                    "act_norm_mean": 20.99660873413086,
+                    "recon_norm_mean": 2501.217529296875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.6984708309173584,
+                    "explained_variance": 0.46858757734298706,
+                    "relative_error_norm": 0.7289804220199585,
+                    "feature_l0_mean": 12.0,
+                    "act_norm_mean": 8.217626571655273,
+                    "recon_norm_mean": 4.59891414642334
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05652231350541115,
+                    "explained_variance": -36199.80078125,
+                    "relative_error_norm": 190.26507568359375,
+                    "feature_l0_mean": 1759.5242919921875,
+                    "act_norm_mean": 20.99437713623047,
+                    "recon_norm_mean": 2498.7666015625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.22435003519058228,
+                    "explained_variance": -0.11575663089752197,
+                    "relative_error_norm": 1.0562937259674072,
+                    "feature_l0_mean": 0.5121951103210449,
+                    "act_norm_mean": 0.9999999403953552,
+                    "recon_norm_mean": 0.6291534304618835
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 40,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05656176432967186,
+                    "explained_variance": -36233.33203125,
+                    "relative_error_norm": 190.35317993164062,
+                    "feature_l0_mean": 1626.1124267578125,
+                    "act_norm_mean": 20.032176971435547,
+                    "recon_norm_mean": 2305.071044921875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.6820542812347412,
+                    "explained_variance": 0.45094943046569824,
+                    "relative_error_norm": 0.7409794330596924,
+                    "feature_l0_mean": 12.0,
+                    "act_norm_mean": 7.774874210357666,
+                    "recon_norm_mean": 4.374817848205566
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05649938806891441,
+                    "explained_variance": -36165.99609375,
+                    "relative_error_norm": 190.1762237548828,
+                    "feature_l0_mean": 1625.348388671875,
+                    "act_norm_mean": 20.030555725097656,
+                    "recon_norm_mean": 2302.81884765625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.20150043070316315,
+                    "explained_variance": -0.13685286045074463,
+                    "relative_error_norm": 1.0662330389022827,
+                    "feature_l0_mean": 0.49438202381134033,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6206703186035156
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 6,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05611393228173256,
+                    "explained_variance": -36694.453125,
+                    "relative_error_norm": 191.56057739257812,
+                    "feature_l0_mean": 2283.5556640625,
+                    "act_norm_mean": 24.397777557373047,
+                    "recon_norm_mean": 3254.112548828125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7409740090370178,
+                    "explained_variance": 0.5307540893554688,
+                    "relative_error_norm": 0.6850153207778931,
+                    "feature_l0_mean": 22.0,
+                    "act_norm_mean": 8.128735542297363,
+                    "recon_norm_mean": 4.923893928527832
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05605242773890495,
+                    "explained_variance": -36626.01953125,
+                    "relative_error_norm": 191.38186645507812,
+                    "feature_l0_mean": 2281.619140625,
+                    "act_norm_mean": 24.395854949951172,
+                    "recon_norm_mean": 3250.916015625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.19124199450016022,
+                    "explained_variance": -0.14559698104858398,
+                    "relative_error_norm": 1.0703256130218506,
+                    "feature_l0_mean": 0.4126984477043152,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6157901287078857
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 29,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05605588108301163,
+                    "explained_variance": -36631.87109375,
+                    "relative_error_norm": 191.39715576171875,
+                    "feature_l0_mean": 1951.027099609375,
+                    "act_norm_mean": 22.185985565185547,
+                    "recon_norm_mean": 2771.671630859375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7530679702758789,
+                    "explained_variance": 0.5533086061477661,
+                    "relative_error_norm": 0.6683496832847595,
+                    "feature_l0_mean": 21.0,
+                    "act_norm_mean": 8.178206443786621,
+                    "recon_norm_mean": 5.197931289672852
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05599449574947357,
+                    "explained_variance": -36563.55078125,
+                    "relative_error_norm": 191.2185821533203,
+                    "feature_l0_mean": 1949.4730224609375,
+                    "act_norm_mean": 22.184310913085938,
+                    "recon_norm_mean": 2768.9501953125
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.21167095005512238,
+                    "explained_variance": -0.12784230709075928,
+                    "relative_error_norm": 1.0619992017745972,
+                    "feature_l0_mean": 0.4729729890823364,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6244013905525208
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 19,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05654717609286308,
+                    "explained_variance": -36213.44140625,
+                    "relative_error_norm": 190.30093383789062,
+                    "feature_l0_mean": 1540.1063232421875,
+                    "act_norm_mean": 19.3912296295166,
+                    "recon_norm_mean": 2182.68603515625
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7552671432495117,
+                    "explained_variance": 0.5413209199905396,
+                    "relative_error_norm": 0.6772585511207581,
+                    "feature_l0_mean": 15.0,
+                    "act_norm_mean": 7.86852502822876,
+                    "recon_norm_mean": 4.600394248962402
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.056484781205654144,
+                    "explained_variance": -36146.13671875,
+                    "relative_error_norm": 190.12400817871094,
+                    "feature_l0_mean": 1539.3297119140625,
+                    "act_norm_mean": 19.3897705078125,
+                    "recon_norm_mean": 2180.551025390625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.22819741070270538,
+                    "explained_variance": -0.11088860034942627,
+                    "relative_error_norm": 1.05398690700531,
+                    "feature_l0_mean": 0.5531914830207825,
+                    "act_norm_mean": 0.9999999403953552,
+                    "recon_norm_mean": 0.6295429468154907
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 49,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05659475922584534,
+                    "explained_variance": -36281.54296875,
+                    "relative_error_norm": 190.47976684570312,
+                    "feature_l0_mean": 1761.0609130859375,
+                    "act_norm_mean": 20.851301193237305,
+                    "recon_norm_mean": 2501.158447265625
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7244490385055542,
+                    "explained_variance": 0.5035130977630615,
+                    "relative_error_norm": 0.7046182751655579,
+                    "feature_l0_mean": 14.0,
+                    "act_norm_mean": 7.927359580993652,
+                    "recon_norm_mean": 4.585649490356445
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05653229355812073,
+                    "explained_variance": -36214.11328125,
+                    "relative_error_norm": 190.3026885986328,
+                    "feature_l0_mean": 1760.146240234375,
+                    "act_norm_mean": 20.84967803955078,
+                    "recon_norm_mean": 2498.710693359375
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.21324945986270905,
+                    "explained_variance": -0.12525033950805664,
+                    "relative_error_norm": 1.0607781410217285,
+                    "feature_l0_mean": 0.5365853309631348,
+                    "act_norm_mean": 0.9999999403953552,
+                    "recon_norm_mean": 0.6242929697036743
+                  }
+                }
+              }
+            }
+          ],
+          "variants_summary": {
+            "blocks.12.hook_resid_post::raw_seq": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.05644882842898369,
+                "median": 0.05655447021126747,
+                "std": 0.00021128378881821812,
+                "p10": 0.05609651692211628,
+                "p90": 0.05658895708620548
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36349.99853515625,
+                "median": -36267.9765625,
+                "std": 183.1230059303584,
+                "p10": -36650.645703125,
+                "p90": -36212.22734375
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 190.65877532958984,
+                "median": 190.44414520263672,
+                "std": 0.4795639575321397,
+                "p10": 190.29774322509766,
+                "p90": 191.44618225097656
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1777.2803192138672,
+                "median": 1740.9400634765625,
+                "std": 226.49293025242716,
+                "p10": 1564.1818969726562,
+                "p90": 2050.7856689453124
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 21.026103019714355,
+                "median": 20.724339485168457,
+                "std": 1.5083798373491895,
+                "p10": 19.64682559967041,
+                "p90": 22.8495231628418
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 2523.501983642578,
+                "median": 2471.5045166015625,
+                "std": 326.5172679571645,
+                "p10": 2215.979443359375,
+                "p90": 2916.40390625
+              }
+            },
+            "blocks.12.hook_resid_post::last_token": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.7194291204214096,
+                "median": 0.713930070400238,
+                "std": 0.02614503421687715,
+                "p10": 0.6930332958698273,
+                "p90": 0.7537277221679688
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": 0.499673031270504,
+                "median": 0.4903784990310669,
+                "std": 0.03573790024989607,
+                "p10": 0.4632961332798004,
+                "p90": 0.5449172258377075
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 0.7068822979927063,
+                "median": 0.7138185203075409,
+                "std": 0.025384970763237476,
+                "p10": 0.6745858907699585,
+                "p90": 0.7325801253318787
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 15.5,
+                "median": 14.5,
+                "std": 3.7416573867739413,
+                "p10": 12.0,
+                "p90": 21.3
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 8.022878527641296,
+                "median": 8.043850421905518,
+                "std": 0.14560589663302587,
+                "p10": 7.840429782867432,
+                "p90": 8.190032482147217
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 4.6871755719184875,
+                "median": 4.599654197692871,
+                "std": 0.23828670625495274,
+                "p10": 4.518346500396729,
+                "p90": 5.006105136871338
+              }
+            },
+            "blocks.12.hook_resid_post::token_centered": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.056386655662208796,
+                "median": 0.05649208463728428,
+                "std": 0.00021086227022954675,
+                "p10": 0.056035048142075536,
+                "p90": 0.05652652010321617
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36282.39404296875,
+                "median": -36200.623046875,
+                "std": 182.675943698197,
+                "p10": -36582.29140625,
+                "p90": -36144.92265625
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 190.48140335083008,
+                "median": 190.26724243164062,
+                "std": 0.4788341204144272,
+                "p10": 190.12081756591797,
+                "p90": 191.26756744384767
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1776.2091522216797,
+                "median": 1740.0359497070312,
+                "std": 226.103179153869,
+                "p10": 1563.3782836914063,
+                "p90": 2049.1168579101563
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 21.024362325668335,
+                "median": 20.722524642944336,
+                "std": 1.5082590765542803,
+                "p10": 19.64541721343994,
+                "p90": 22.84777412414551
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 2521.029754638672,
+                "median": 2469.0850830078125,
+                "std": 326.193194672283,
+                "p10": 2213.8109375,
+                "p90": 2913.53994140625
+              }
+            },
+            "blocks.12.hook_resid_post::token_unit_norm": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.21209843829274178,
+                "median": 0.2124602049589157,
+                "std": 0.014224211096451776,
+                "p10": 0.19398069828748704,
+                "p90": 0.2291650265455246
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -0.12646770477294922,
+                "median": -0.12654632329940796,
+                "std": 0.013432152254214322,
+                "p10": -0.1431783676147461,
+                "p90": -0.10984565019607544
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 1.0613329261541367,
+                "median": 1.0613886713981628,
+                "std": 0.006328026126434678,
+                "p10": 1.0534917712211609,
+                "p90": 1.0691949129104614
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 0.4969767741858959,
+                "median": 0.5032885670661926,
+                "std": 0.05241940264128287,
+                "p10": 0.4238095372915268,
+                "p90": 0.5567992508411408
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 0.9999999776482582,
+                "median": 1.0,
+                "std": 2.8855974571462102e-08,
+                "p10": 0.9999999403953552,
+                "p90": 1.0
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 0.6239301711320877,
+                "median": 0.6243471801280975,
+                "std": 0.005205471120734324,
+                "p10": 0.6169467389583587,
+                "p90": 0.6297243893146515
+              }
+            }
+          },
+          "best_variant_by_median_cosine": "blocks.12.hook_resid_post::last_token",
+          "best_variant_median_cosine": 0.713930070400238,
+          "hook_rawseq_median_delta_expected_minus_configured": null,
+          "configured_raw_to_centered_median_gain": -6.238557398319244e-05,
+          "configured_raw_to_unitnorm_median_gain": 0.15590573474764824,
+          "inferred_flags": {
+            "hook_mismatch_likely": false,
+            "centering_or_scale_mismatch_likely": true
+          }
+        }
+      }
+    },
+    "456": {
+      "timestamp_utc": "2026-03-01T03:29:00.747408+00:00",
+      "inputs": {
+        "sae_source": "primary",
+        "layer": 12,
+        "sae_release": "llama_scope_lxr_32x",
+        "sae_id": "l12r_32x",
+        "configured_hook": "blocks.12.hook_resid_post",
+        "expected_hook_name": null,
+        "model_names": [
+          "meta-llama/Llama-3.1-8B",
+          "meta-llama/Llama-3.1-8B-Instruct"
+        ],
+        "n_probe_rows": 8,
+        "probe_traits": [
+          "evil",
+          "sycophancy"
+        ],
+        "seed": 456
+      },
+      "sae_cfg_snapshot": {
+        "hook_name": null,
+        "hook_layer": null,
+        "hook_head_index": null,
+        "prepend_bos": null,
+        "normalize_activations": "none",
+        "activation_fn_str": "unknown",
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "evidence_status": {
+        "variant_metrics": "observed",
+        "hook_name_alignment": "unknown",
+        "root_cause_flags": "inferred"
+      },
+      "model_results": {
+        "meta-llama/Llama-3.1-8B": {
+          "rows": [
+            {
+              "trait": "sycophancy",
+              "row_id": 25,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.055685702711343765,
+                    "explained_variance": -36791.94140625,
+                    "relative_error_norm": 191.8148651123047,
+                    "feature_l0_mean": 1383.20751953125,
+                    "act_norm_mean": 17.81784439086914,
+                    "recon_norm_mean": 1817.7479248046875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7721399664878845,
+                    "explained_variance": 0.5865328311920166,
+                    "relative_error_norm": 0.643014132976532,
+                    "feature_l0_mean": 18.0,
+                    "act_norm_mean": 7.5030999183654785,
+                    "recon_norm_mean": 5.055719375610352
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05562341585755348,
+                    "explained_variance": -36724.2109375,
+                    "relative_error_norm": 191.63821411132812,
+                    "feature_l0_mean": 1382.4339599609375,
+                    "act_norm_mean": 17.815895080566406,
+                    "recon_norm_mean": 1815.9771728515625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.23524995148181915,
+                    "explained_variance": -0.0999060869216919,
+                    "relative_error_norm": 1.0487641096115112,
+                    "feature_l0_mean": 0.7358490824699402,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6280102133750916
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 45,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05571037903428078,
+                    "explained_variance": -36831.6015625,
+                    "relative_error_norm": 191.918212890625,
+                    "feature_l0_mean": 1434.7451171875,
+                    "act_norm_mean": 18.052555084228516,
+                    "recon_norm_mean": 1888.5296630859375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.765051007270813,
+                    "explained_variance": 0.5834513902664185,
+                    "relative_error_norm": 0.6454057693481445,
+                    "feature_l0_mean": 27.0,
+                    "act_norm_mean": 7.837399482727051,
+                    "recon_norm_mean": 5.658763885498047
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.055648110806941986,
+                    "explained_variance": -36763.74609375,
+                    "relative_error_norm": 191.74134826660156,
+                    "feature_l0_mean": 1434.039306640625,
+                    "act_norm_mean": 18.050811767578125,
+                    "recon_norm_mean": 1886.697021484375
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.210733100771904,
+                    "explained_variance": -0.12176525592803955,
+                    "relative_error_norm": 1.0591341257095337,
+                    "feature_l0_mean": 0.686274528503418,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6175580024719238
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 0,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.055753596127033234,
+                    "explained_variance": -36896.66796875,
+                    "relative_error_norm": 192.08766174316406,
+                    "feature_l0_mean": 1585.6304931640625,
+                    "act_norm_mean": 18.994199752807617,
+                    "recon_norm_mean": 2093.0107421875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7606176137924194,
+                    "explained_variance": 0.57340407371521,
+                    "relative_error_norm": 0.6531431674957275,
+                    "feature_l0_mean": 25.0,
+                    "act_norm_mean": 7.599696636199951,
+                    "recon_norm_mean": 5.235869407653809
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05569125711917877,
+                    "explained_variance": -36828.6796875,
+                    "relative_error_norm": 191.9105987548828,
+                    "feature_l0_mean": 1584.847900390625,
+                    "act_norm_mean": 18.992534637451172,
+                    "recon_norm_mean": 2090.981201171875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.19913318753242493,
+                    "explained_variance": -0.13377153873443604,
+                    "relative_error_norm": 1.0647871494293213,
+                    "feature_l0_mean": 0.6304348111152649,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6147406101226807
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 8,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.055752791464328766,
+                    "explained_variance": -36895.9140625,
+                    "relative_error_norm": 192.08567810058594,
+                    "feature_l0_mean": 1586.9130859375,
+                    "act_norm_mean": 18.999149322509766,
+                    "recon_norm_mean": 2093.032470703125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7819201946258545,
+                    "explained_variance": 0.6088317632675171,
+                    "relative_error_norm": 0.6254344582557678,
+                    "feature_l0_mean": 25.0,
+                    "act_norm_mean": 7.776541709899902,
+                    "recon_norm_mean": 5.686607837677002
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05569041892886162,
+                    "explained_variance": -36827.890625,
+                    "relative_error_norm": 191.90853881835938,
+                    "feature_l0_mean": 1586.1304931640625,
+                    "act_norm_mean": 18.997699737548828,
+                    "recon_norm_mean": 2091.001708984375
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.19304810464382172,
+                    "explained_variance": -0.1400463581085205,
+                    "relative_error_norm": 1.0677294731140137,
+                    "feature_l0_mean": 0.5869565606117249,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.613336980342865
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 3,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05576043203473091,
+                    "explained_variance": -36906.44140625,
+                    "relative_error_norm": 192.1130828857422,
+                    "feature_l0_mean": 1654.20458984375,
+                    "act_norm_mean": 19.5738468170166,
+                    "recon_norm_mean": 2187.908935546875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.787902295589447,
+                    "explained_variance": 0.6164625883102417,
+                    "relative_error_norm": 0.6193039417266846,
+                    "feature_l0_mean": 25.0,
+                    "act_norm_mean": 7.989301681518555,
+                    "recon_norm_mean": 5.7692341804504395
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.055698081851005554,
+                    "explained_variance": -36838.41015625,
+                    "relative_error_norm": 191.93594360351562,
+                    "feature_l0_mean": 1653.3636474609375,
+                    "act_norm_mean": 19.572254180908203,
+                    "recon_norm_mean": 2185.78955078125
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.24052675068378448,
+                    "explained_variance": -0.09505081176757812,
+                    "relative_error_norm": 1.046446681022644,
+                    "feature_l0_mean": 0.8181818723678589,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6304412484169006
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 12,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05568603053689003,
+                    "explained_variance": -36790.4453125,
+                    "relative_error_norm": 191.8109588623047,
+                    "feature_l0_mean": 1435.60791015625,
+                    "act_norm_mean": 18.356542587280273,
+                    "recon_norm_mean": 1889.0020751953125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7828556299209595,
+                    "explained_variance": 0.6083939075469971,
+                    "relative_error_norm": 0.6257843971252441,
+                    "feature_l0_mean": 27.0,
+                    "act_norm_mean": 7.785809516906738,
+                    "recon_norm_mean": 5.574676513671875
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.0556238517165184,
+                    "explained_variance": -36722.6875,
+                    "relative_error_norm": 191.63426208496094,
+                    "feature_l0_mean": 1434.86279296875,
+                    "act_norm_mean": 18.354711532592773,
+                    "recon_norm_mean": 1887.1727294921875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.24714164435863495,
+                    "explained_variance": -0.08930754661560059,
+                    "relative_error_norm": 1.043699026107788,
+                    "feature_l0_mean": 0.8235294222831726,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6340357065200806
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 48,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.0556909553706646,
+                    "explained_variance": -36802.32421875,
+                    "relative_error_norm": 191.8419189453125,
+                    "feature_l0_mean": 1383.4906005859375,
+                    "act_norm_mean": 17.7501277923584,
+                    "recon_norm_mean": 1817.6004638671875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7671554684638977,
+                    "explained_variance": 0.580670952796936,
+                    "relative_error_norm": 0.6475562453269958,
+                    "feature_l0_mean": 20.0,
+                    "act_norm_mean": 8.024954795837402,
+                    "recon_norm_mean": 5.445082187652588
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.055628709495067596,
+                    "explained_variance": -36734.5078125,
+                    "relative_error_norm": 191.6650848388672,
+                    "feature_l0_mean": 1382.84912109375,
+                    "act_norm_mean": 17.748584747314453,
+                    "recon_norm_mean": 1815.840087890625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.20210972428321838,
+                    "explained_variance": -0.13274765014648438,
+                    "relative_error_norm": 1.0643061399459839,
+                    "feature_l0_mean": 0.6603773832321167,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6174326539039612
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 11,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05567513406276703,
+                    "explained_variance": -36776.16796875,
+                    "relative_error_norm": 191.77374267578125,
+                    "feature_l0_mean": 1332.127197265625,
+                    "act_norm_mean": 17.442888259887695,
+                    "recon_norm_mean": 1751.820556640625
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7800359725952148,
+                    "explained_variance": 0.6069722175598145,
+                    "relative_error_norm": 0.6269192695617676,
+                    "feature_l0_mean": 26.0,
+                    "act_norm_mean": 7.665733337402344,
+                    "recon_norm_mean": 5.684251308441162
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05561290681362152,
+                    "explained_variance": -36708.36328125,
+                    "relative_error_norm": 191.5968780517578,
+                    "feature_l0_mean": 1331.4544677734375,
+                    "act_norm_mean": 17.441675186157227,
+                    "recon_norm_mean": 1750.1246337890625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.2452544867992401,
+                    "explained_variance": -0.08865725994110107,
+                    "relative_error_norm": 1.043387532234192,
+                    "feature_l0_mean": 0.8545454144477844,
+                    "act_norm_mean": 0.9999999403953552,
+                    "recon_norm_mean": 0.6302784085273743
+                  }
+                }
+              }
+            }
+          ],
+          "variants_summary": {
+            "blocks.12.hook_resid_post::raw_seq": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.05571437766775489,
+                "median": 0.05570066720247269,
+                "std": 3.3288846836228816e-05,
+                "p10": 0.055682532116770746,
+                "p90": 0.05575564689934254
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36836.43798828125,
+                "median": -36816.962890625,
+                "std": 51.210863175327304,
+                "p10": -36899.6,
+                "p90": -36786.162109375
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 191.93076515197754,
+                "median": 191.88006591796875,
+                "std": 0.13339225520694775,
+                "p10": 191.79979400634767,
+                "p90": 192.0952880859375
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1474.4908142089844,
+                "median": 1435.176513671875,
+                "std": 110.2613460300665,
+                "p10": 1367.8834228515625,
+                "p90": 1607.100537109375
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 18.37339425086975,
+                "median": 18.204548835754395,
+                "std": 0.6967975960071133,
+                "p10": 17.657955932617188,
+                "p90": 19.171558570861816
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 1942.3316040039062,
+                "median": 1888.765869140625,
+                "std": 149.5139110480078,
+                "p10": 1797.8664916992188,
+                "p90": 2121.49541015625
+              }
+            },
+            "blocks.12.hook_resid_post::last_token": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.7747097685933113,
+                "median": 0.7760879695415497,
+                "std": 0.009194484409669995,
+                "p10": 0.7637209892272949,
+                "p90": 0.7843696296215057
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": 0.5955899655818939,
+                "median": 0.5967525243759155,
+                "std": 0.015201462141374838,
+                "p10": 0.5784908890724182,
+                "p90": 0.6111210107803344
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 0.635820172727108,
+                "median": 0.6349667012691498,
+                "std": 0.011948065194333052,
+                "p10": 0.6235953032970428,
+                "p90": 0.6492323219776154
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 24.125,
+                "median": 25.0,
+                "std": 3.0998991919093113,
+                "p10": 19.4,
+                "p90": 27.0
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 7.772817134857178,
+                "median": 7.78117561340332,
+                "std": 0.1691809448266195,
+                "p10": 7.570717620849609,
+                "p90": 7.999997615814209
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 5.513775587081909,
+                "median": 5.616720199584961,
+                "std": 0.2347042557770391,
+                "p10": 5.181824398040772,
+                "p90": 5.711395740509033
+              }
+            },
+            "blocks.12.hook_resid_post::token_centered": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.055652094073593616,
+                "median": 0.05563841015100479,
+                "std": 3.32337016834848e-05,
+                "p10": 0.05562026314437389,
+                "p90": 0.055693304538726805
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36768.56201171875,
+                "median": -36749.126953125,
+                "std": 51.10166325549743,
+                "p10": -36831.598828125,
+                "p90": -36718.390234375
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 191.75385856628418,
+                "median": 191.70321655273438,
+                "std": 0.1332317297104746,
+                "p10": 191.623046875,
+                "p90": 191.91820220947267
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1473.7477111816406,
+                "median": 1434.4510498046875,
+                "std": 110.2111283577311,
+                "p10": 1367.1401123046876,
+                "p90": 1606.300439453125
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 18.37177085876465,
+                "median": 18.20276165008545,
+                "std": 0.6967816521595649,
+                "p10": 17.656511878967287,
+                "p90": 19.17006607055664
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 1940.448013305664,
+                "median": 1886.9348754882812,
+                "std": 149.36936806117396,
+                "p10": 1796.1254516601562,
+                "p90": 2119.4380615234377
+              }
+            },
+            "blocks.12.hook_resid_post::token_unit_norm": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.22164961881935596,
+                "median": 0.22299152612686157,
+                "std": 0.0211375331170521,
+                "p10": 0.19730766266584396,
+                "p90": 0.24582063406705856
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -0.11265656352043152,
+                "median": -0.11083567142486572,
+                "std": 0.02023716684732191,
+                "p10": -0.1356539845466614,
+                "p90": -0.08911246061325073
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 1.0547817796468735,
+                "median": 1.0539491176605225,
+                "std": 0.009590027814079893,
+                "p10": 1.0436055779457092,
+                "p90": 1.065669846534729
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 0.7245186343789101,
+                "median": 0.7110618054866791,
+                "std": 0.09284603016078924,
+                "p10": 0.6173913359642029,
+                "p90": 0.8328342199325561
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 0.9999999925494194,
+                "median": 1.0,
+                "std": 1.971238338250362e-08,
+                "p10": 0.9999999821186065,
+                "p90": 1.0
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 0.6232292279601097,
+                "median": 0.6227841079235077,
+                "std": 0.007721870330282002,
+                "p10": 0.614319521188736,
+                "p90": 0.6315195858478546
+              }
+            }
+          },
+          "best_variant_by_median_cosine": "blocks.12.hook_resid_post::last_token",
+          "best_variant_median_cosine": 0.7760879695415497,
+          "hook_rawseq_median_delta_expected_minus_configured": null,
+          "configured_raw_to_centered_median_gain": -6.225705146789551e-05,
+          "configured_raw_to_unitnorm_median_gain": 0.16729085892438889,
+          "inferred_flags": {
+            "hook_mismatch_likely": false,
+            "centering_or_scale_mismatch_likely": true
+          }
+        },
+        "meta-llama/Llama-3.1-8B-Instruct": {
+          "rows": [
+            {
+              "trait": "sycophancy",
+              "row_id": 25,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05658474192023277,
+                    "explained_variance": -36267.140625,
+                    "relative_error_norm": 190.44195556640625,
+                    "feature_l0_mean": 1760.46337890625,
+                    "act_norm_mean": 20.99660873413086,
+                    "recon_norm_mean": 2501.217529296875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.6984708309173584,
+                    "explained_variance": 0.46858757734298706,
+                    "relative_error_norm": 0.7289804220199585,
+                    "feature_l0_mean": 12.0,
+                    "act_norm_mean": 8.217626571655273,
+                    "recon_norm_mean": 4.59891414642334
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05652231350541115,
+                    "explained_variance": -36199.80078125,
+                    "relative_error_norm": 190.26507568359375,
+                    "feature_l0_mean": 1759.5242919921875,
+                    "act_norm_mean": 20.99437713623047,
+                    "recon_norm_mean": 2498.7666015625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.22435003519058228,
+                    "explained_variance": -0.11575663089752197,
+                    "relative_error_norm": 1.0562937259674072,
+                    "feature_l0_mean": 0.5121951103210449,
+                    "act_norm_mean": 0.9999999403953552,
+                    "recon_norm_mean": 0.6291534304618835
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 45,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05659839138388634,
+                    "explained_variance": -36287.50390625,
+                    "relative_error_norm": 190.4954071044922,
+                    "feature_l0_mean": 1803.75,
+                    "act_norm_mean": 21.193267822265625,
+                    "recon_norm_mean": 2563.467529296875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7002440690994263,
+                    "explained_variance": 0.46691471338272095,
+                    "relative_error_norm": 0.7301269173622131,
+                    "feature_l0_mean": 13.0,
+                    "act_norm_mean": 7.9626641273498535,
+                    "recon_norm_mean": 4.357054710388184
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05653592571616173,
+                    "explained_variance": -36220.078125,
+                    "relative_error_norm": 190.318359375,
+                    "feature_l0_mean": 1802.800048828125,
+                    "act_norm_mean": 21.19141960144043,
+                    "recon_norm_mean": 2560.957275390625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.1941491812467575,
+                    "explained_variance": -0.14328229427337646,
+                    "relative_error_norm": 1.0692437887191772,
+                    "feature_l0_mean": 0.4375,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6174716353416443
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 0,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05605519562959671,
+                    "explained_variance": -36632.640625,
+                    "relative_error_norm": 191.39915466308594,
+                    "feature_l0_mean": 1900.7105712890625,
+                    "act_norm_mean": 21.718502044677734,
+                    "recon_norm_mean": 2698.6923828125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7354199290275574,
+                    "explained_variance": 0.5071219205856323,
+                    "relative_error_norm": 0.7020527720451355,
+                    "feature_l0_mean": 19.0,
+                    "act_norm_mean": 7.986751556396484,
+                    "recon_norm_mean": 4.406997203826904
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05599382519721985,
+                    "explained_variance": -36564.3359375,
+                    "relative_error_norm": 191.2206573486328,
+                    "feature_l0_mean": 1899.1973876953125,
+                    "act_norm_mean": 21.716787338256836,
+                    "recon_norm_mean": 2696.043701171875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.18974798917770386,
+                    "explained_variance": -0.14720439910888672,
+                    "relative_error_norm": 1.0710761547088623,
+                    "feature_l0_mean": 0.46052631735801697,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6156657934188843
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 8,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05606382340192795,
+                    "explained_variance": -36646.79296875,
+                    "relative_error_norm": 191.43612670898438,
+                    "feature_l0_mean": 1900.0657958984375,
+                    "act_norm_mean": 21.552959442138672,
+                    "recon_norm_mean": 2698.477294921875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7477696537971497,
+                    "explained_variance": 0.5393918752670288,
+                    "relative_error_norm": 0.6786811351776123,
+                    "feature_l0_mean": 25.0,
+                    "act_norm_mean": 8.247628211975098,
+                    "recon_norm_mean": 5.007734298706055
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.056002426892519,
+                    "explained_variance": -36578.453125,
+                    "relative_error_norm": 191.257568359375,
+                    "feature_l0_mean": 1898.5263671875,
+                    "act_norm_mean": 21.551328659057617,
+                    "recon_norm_mean": 2695.828125
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.17265968024730682,
+                    "explained_variance": -0.1625446081161499,
+                    "relative_error_norm": 1.0782135725021362,
+                    "feature_l0_mean": 0.3815789520740509,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.609605610370636
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 3,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05606912449002266,
+                    "explained_variance": -36653.22265625,
+                    "relative_error_norm": 191.4529266357422,
+                    "feature_l0_mean": 1976.1781005859375,
+                    "act_norm_mean": 22.1857967376709,
+                    "recon_norm_mean": 2809.27197265625
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7148991823196411,
+                    "explained_variance": 0.49776172637939453,
+                    "relative_error_norm": 0.7086877226829529,
+                    "feature_l0_mean": 24.0,
+                    "act_norm_mean": 8.187573432922363,
+                    "recon_norm_mean": 4.90837287902832
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.0560077428817749,
+                    "explained_variance": -36584.87890625,
+                    "relative_error_norm": 191.2743377685547,
+                    "feature_l0_mean": 1974.630126953125,
+                    "act_norm_mean": 22.183979034423828,
+                    "recon_norm_mean": 2806.5166015625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.19377925992012024,
+                    "explained_variance": -0.14273834228515625,
+                    "relative_error_norm": 1.0689893960952759,
+                    "feature_l0_mean": 0.45205479860305786,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6164242625236511
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 12,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.056587446480989456,
+                    "explained_variance": -36269.54296875,
+                    "relative_error_norm": 190.44827270507812,
+                    "feature_l0_mean": 1803.2874755859375,
+                    "act_norm_mean": 21.377412796020508,
+                    "recon_norm_mean": 2563.75634765625
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7349444627761841,
+                    "explained_variance": 0.5267233848571777,
+                    "relative_error_norm": 0.6879510283470154,
+                    "feature_l0_mean": 16.0,
+                    "act_norm_mean": 7.721712112426758,
+                    "recon_norm_mean": 4.78051233291626
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.056525006890296936,
+                    "explained_variance": -36202.17578125,
+                    "relative_error_norm": 190.2713165283203,
+                    "feature_l0_mean": 1802.300048828125,
+                    "act_norm_mean": 21.375385284423828,
+                    "recon_norm_mean": 2561.242919921875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.2378055900335312,
+                    "explained_variance": -0.10399949550628662,
+                    "relative_error_norm": 1.0507137775421143,
+                    "feature_l0_mean": 0.5250000357627869,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6352992057800293
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 48,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05659367889165878,
+                    "explained_variance": -36280.46484375,
+                    "relative_error_norm": 190.47694396972656,
+                    "feature_l0_mean": 1740.66259765625,
+                    "act_norm_mean": 20.662904739379883,
+                    "recon_norm_mean": 2471.028076171875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7327794432640076,
+                    "explained_variance": 0.520980715751648,
+                    "relative_error_norm": 0.692112147808075,
+                    "feature_l0_mean": 18.0,
+                    "act_norm_mean": 8.041001319885254,
+                    "recon_norm_mean": 4.875637054443359
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05653119459748268,
+                    "explained_variance": -36213.03515625,
+                    "relative_error_norm": 190.29986572265625,
+                    "feature_l0_mean": 1739.6746826171875,
+                    "act_norm_mean": 20.661243438720703,
+                    "recon_norm_mean": 2468.6044921875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.1970853954553604,
+                    "explained_variance": -0.14037370681762695,
+                    "relative_error_norm": 1.067882776260376,
+                    "feature_l0_mean": 0.48192769289016724,
+                    "act_norm_mean": 0.9999999403953552,
+                    "recon_norm_mean": 0.6182841658592224
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 11,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05657340958714485,
+                    "explained_variance": -36249.0546875,
+                    "relative_error_norm": 190.39447021484375,
+                    "feature_l0_mean": 1719.25,
+                    "act_norm_mean": 20.795001983642578,
+                    "recon_norm_mean": 2442.00927734375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7309398651123047,
+                    "explained_variance": 0.5113744735717773,
+                    "relative_error_norm": 0.6990175843238831,
+                    "feature_l0_mean": 14.0,
+                    "act_norm_mean": 7.72540283203125,
+                    "recon_norm_mean": 4.4777727127075195
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05651096627116203,
+                    "explained_variance": -36181.68359375,
+                    "relative_error_norm": 190.21746826171875,
+                    "feature_l0_mean": 1718.34521484375,
+                    "act_norm_mean": 20.79340934753418,
+                    "recon_norm_mean": 2439.61865234375
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.24414551258087158,
+                    "explained_variance": -0.09700512886047363,
+                    "relative_error_norm": 1.0473800897598267,
+                    "feature_l0_mean": 0.5357142686843872,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6368619799613953
+                  }
+                }
+              }
+            }
+          ],
+          "variants_summary": {
+            "blocks.12.hook_resid_post::raw_seq": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.05639072647318244,
+                "median": 0.05657907575368881,
+                "std": 0.0002541905474149918,
+                "p10": 0.056061235070228574,
+                "p90": 0.05659509263932705
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36410.79541015625,
+                "median": -36283.984375,
+                "std": 181.18256642196528,
+                "p10": -36648.721875,
+                "p90": -36261.71484375
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 190.81815719604492,
+                "median": 190.48617553710938,
+                "std": 0.4744501508925997,
+                "p10": 190.4277099609375,
+                "p90": 191.44116668701173
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1825.5459899902344,
+                "median": 1803.5187377929688,
+                "std": 84.8551922304401,
+                "p10": 1734.238818359375,
+                "p90": 1923.350830078125
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 21.310306787490845,
+                "median": 21.285340309143066,
+                "std": 0.47345308490846905,
+                "p10": 20.75537281036377,
+                "p90": 21.858690452575683
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 2593.4900512695312,
+                "median": 2563.6119384765625,
+                "std": 120.87944044091277,
+                "p10": 2462.3224365234373,
+                "p90": 2731.866259765625
+              }
+            },
+            "blocks.12.hook_resid_post::last_token": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.7244334295392036,
+                "median": 0.7318596541881561,
+                "std": 0.016725121666311675,
+                "p10": 0.6997120976448059,
+                "p90": 0.739124846458435
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": 0.5048570483922958,
+                "median": 0.5092481970787048,
+                "std": 0.024453550290404535,
+                "p10": 0.46808571815490724,
+                "p90": 0.530523931980133
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 0.7034512162208557,
+                "median": 0.7005351781845093,
+                "std": 0.017301569038084816,
+                "p10": 0.6851700603961944,
+                "p90": 0.7293243706226349
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 17.625,
+                "median": 17.0,
+                "std": 4.553501400021746,
+                "p10": 12.7,
+                "p90": 24.3
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 8.011295020580292,
+                "median": 8.01387643814087,
+                "std": 0.19330758481583507,
+                "p10": 7.724295616149902,
+                "p90": 8.22662706375122
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 4.676624417304993,
+                "median": 4.6897132396698,
+                "std": 0.2329550252387919,
+                "p10": 4.392014455795288,
+                "p90": 4.938181304931641
+              }
+            },
+            "blocks.12.hook_resid_post::token_centered": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.056328675244003534,
+                "median": 0.05651663988828659,
+                "std": 0.00025367274162447264,
+                "p10": 0.055999846383929255,
+                "p90": 0.056532613933086395
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36343.05517578125,
+                "median": -36216.556640625,
+                "std": 180.72571066469828,
+                "p10": -36580.380859375,
+                "p90": -36194.365625
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 190.64058113098145,
+                "median": 190.30911254882812,
+                "std": 0.47369665549057044,
+                "p10": 190.25079345703125,
+                "p90": 191.2625991821289
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1824.374771118164,
+                "median": 1802.550048828125,
+                "std": 84.59334603925524,
+                "p10": 1733.2758422851562,
+                "p90": 1921.8272094726562
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 21.308491230010986,
+                "median": 21.28340244293213,
+                "std": 0.47345035619637693,
+                "p10": 20.753759574890136,
+                "p90": 21.856944847106934
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 2590.947296142578,
+                "median": 2561.10009765625,
+                "std": 120.75932672538278,
+                "p10": 2459.908740234375,
+                "p90": 2729.1855712890624
+              }
+            },
+            "blocks.12.hook_resid_post::token_unit_norm": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.20671533048152924,
+                "median": 0.19561728835105896,
+                "std": 0.023833456635948252,
+                "p10": 0.18462149649858475,
+                "p90": 0.2397075667977333
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -0.13161307573318481,
+                "median": -0.1415560245513916,
+                "std": 0.021645399559927128,
+                "p10": -0.15180646181106566,
+                "p90": -0.10190118551254272
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 1.063724160194397,
+                "median": 1.068436086177826,
+                "std": 0.010192448405699193,
+                "p10": 1.049713671207428,
+                "p90": 1.0732173800468445
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 0.473312146961689,
+                "median": 0.4712270051240921,
+                "std": 0.04804245040541382,
+                "p10": 0.4207236856222153,
+                "p90": 0.528214305639267
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 0.9999999850988388,
+                "median": 1.0,
+                "std": 2.5809568279517847e-08,
+                "p10": 0.9999999403953552,
+                "p90": 1.0
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 0.6223457604646683,
+                "median": 0.6178779006004333,
+                "std": 0.009401515258701467,
+                "p10": 0.6138477385044098,
+                "p90": 0.635768038034439
+              }
+            }
+          },
+          "best_variant_by_median_cosine": "blocks.12.hook_resid_post::last_token",
+          "best_variant_median_cosine": 0.7318596541881561,
+          "hook_rawseq_median_delta_expected_minus_configured": null,
+          "configured_raw_to_centered_median_gain": -6.243586540222168e-05,
+          "configured_raw_to_unitnorm_median_gain": 0.13903821259737015,
+          "inferred_flags": {
+            "hook_mismatch_likely": false,
+            "centering_or_scale_mismatch_likely": true
+          }
+        }
+      }
+    },
+    "789": {
+      "timestamp_utc": "2026-03-01T03:30:02.280428+00:00",
+      "inputs": {
+        "sae_source": "primary",
+        "layer": 12,
+        "sae_release": "llama_scope_lxr_32x",
+        "sae_id": "l12r_32x",
+        "configured_hook": "blocks.12.hook_resid_post",
+        "expected_hook_name": null,
+        "model_names": [
+          "meta-llama/Llama-3.1-8B",
+          "meta-llama/Llama-3.1-8B-Instruct"
+        ],
+        "n_probe_rows": 8,
+        "probe_traits": [
+          "evil",
+          "sycophancy"
+        ],
+        "seed": 789
+      },
+      "sae_cfg_snapshot": {
+        "hook_name": null,
+        "hook_layer": null,
+        "hook_head_index": null,
+        "prepend_bos": null,
+        "normalize_activations": "none",
+        "activation_fn_str": "unknown",
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "evidence_status": {
+        "variant_metrics": "observed",
+        "hook_name_alignment": "unknown",
+        "root_cause_flags": "inferred"
+      },
+      "model_results": {
+        "meta-llama/Llama-3.1-8B": {
+          "rows": [
+            {
+              "trait": "sycophancy",
+              "row_id": 15,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05565715953707695,
+                    "explained_variance": -36749.5546875,
+                    "relative_error_norm": 191.704345703125,
+                    "feature_l0_mean": 1267.67236328125,
+                    "act_norm_mean": 16.941984176635742,
+                    "recon_norm_mean": 1661.553955078125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7517678141593933,
+                    "explained_variance": 0.5577977895736694,
+                    "relative_error_norm": 0.6649828553199768,
+                    "feature_l0_mean": 23.0,
+                    "act_norm_mean": 7.465612888336182,
+                    "recon_norm_mean": 4.972061634063721
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.055594898760318756,
+                    "explained_variance": -36681.79296875,
+                    "relative_error_norm": 191.52752685546875,
+                    "feature_l0_mean": 1266.9654541015625,
+                    "act_norm_mean": 16.940793991088867,
+                    "recon_norm_mean": 1659.9410400390625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.17811407148838043,
+                    "explained_variance": -0.1538076400756836,
+                    "relative_error_norm": 1.0741543769836426,
+                    "feature_l0_mean": 0.5,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.607961893081665
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 28,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05566350743174553,
+                    "explained_variance": -36758.40625,
+                    "relative_error_norm": 191.72743225097656,
+                    "feature_l0_mean": 1335.8363037109375,
+                    "act_norm_mean": 17.57402229309082,
+                    "recon_norm_mean": 1751.9813232421875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7509319186210632,
+                    "explained_variance": 0.5608817338943481,
+                    "relative_error_norm": 0.6626600027084351,
+                    "feature_l0_mean": 28.0,
+                    "act_norm_mean": 7.636931419372559,
+                    "recon_norm_mean": 5.31534481048584
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05560140684247017,
+                    "explained_variance": -36690.71875,
+                    "relative_error_norm": 191.5508270263672,
+                    "feature_l0_mean": 1335.2545166015625,
+                    "act_norm_mean": 17.572189331054688,
+                    "recon_norm_mean": 1750.2894287109375
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.22338640689849854,
+                    "explained_variance": -0.11160647869110107,
+                    "relative_error_norm": 1.0543276071548462,
+                    "feature_l0_mean": 0.7636363506317139,
+                    "act_norm_mean": 0.9999999403953552,
+                    "recon_norm_mean": 0.6243223547935486
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 0,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.055753596127033234,
+                    "explained_variance": -36896.66796875,
+                    "relative_error_norm": 192.08766174316406,
+                    "feature_l0_mean": 1585.6304931640625,
+                    "act_norm_mean": 18.994199752807617,
+                    "recon_norm_mean": 2093.0107421875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7606176137924194,
+                    "explained_variance": 0.57340407371521,
+                    "relative_error_norm": 0.6531431674957275,
+                    "feature_l0_mean": 25.0,
+                    "act_norm_mean": 7.599696636199951,
+                    "recon_norm_mean": 5.235869407653809
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05569125711917877,
+                    "explained_variance": -36828.6796875,
+                    "relative_error_norm": 191.9105987548828,
+                    "feature_l0_mean": 1584.847900390625,
+                    "act_norm_mean": 18.992534637451172,
+                    "recon_norm_mean": 2090.981201171875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.19913318753242493,
+                    "explained_variance": -0.13377153873443604,
+                    "relative_error_norm": 1.0647871494293213,
+                    "feature_l0_mean": 0.6304348111152649,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6147406101226807
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 4,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05573507025837898,
+                    "explained_variance": -36866.62109375,
+                    "relative_error_norm": 192.00942993164062,
+                    "feature_l0_mean": 1588.478271484375,
+                    "act_norm_mean": 19.246511459350586,
+                    "recon_norm_mean": 2093.359619140625
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7633169293403625,
+                    "explained_variance": 0.5806620121002197,
+                    "relative_error_norm": 0.647563099861145,
+                    "feature_l0_mean": 28.0,
+                    "act_norm_mean": 7.705639362335205,
+                    "recon_norm_mean": 5.538042068481445
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.055672720074653625,
+                    "explained_variance": -36798.6640625,
+                    "relative_error_norm": 191.83238220214844,
+                    "feature_l0_mean": 1587.5653076171875,
+                    "act_norm_mean": 19.244993209838867,
+                    "recon_norm_mean": 2091.324951171875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.2171182781457901,
+                    "explained_variance": -0.11762344837188721,
+                    "relative_error_norm": 1.0571770668029785,
+                    "feature_l0_mean": 0.760869562625885,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6222655177116394
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 13,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05567103624343872,
+                    "explained_variance": -36767.8984375,
+                    "relative_error_norm": 191.75218200683594,
+                    "feature_l0_mean": 1333.5272216796875,
+                    "act_norm_mean": 17.501487731933594,
+                    "recon_norm_mean": 1751.99365234375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7753354907035828,
+                    "explained_variance": 0.5978041291236877,
+                    "relative_error_norm": 0.6341891288757324,
+                    "feature_l0_mean": 26.0,
+                    "act_norm_mean": 7.671893119812012,
+                    "recon_norm_mean": 5.50484561920166
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05560880899429321,
+                    "explained_variance": -36700.125,
+                    "relative_error_norm": 191.57537841796875,
+                    "feature_l0_mean": 1332.8544921875,
+                    "act_norm_mean": 17.500085830688477,
+                    "recon_norm_mean": 1750.2989501953125
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.2475067526102066,
+                    "explained_variance": -0.08663308620452881,
+                    "relative_error_norm": 1.042417049407959,
+                    "feature_l0_mean": 0.8727272748947144,
+                    "act_norm_mean": 0.9999999403953552,
+                    "recon_norm_mean": 0.6314486265182495
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 1,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.055891964584589005,
+                    "explained_variance": -36911.9609375,
+                    "relative_error_norm": 192.12745666503906,
+                    "feature_l0_mean": 1913.23681640625,
+                    "act_norm_mean": 21.619279861450195,
+                    "recon_norm_mean": 2531.665283203125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7547545433044434,
+                    "explained_variance": 0.5685641765594482,
+                    "relative_error_norm": 0.6568377614021301,
+                    "feature_l0_mean": 29.0,
+                    "act_norm_mean": 8.102824211120605,
+                    "recon_norm_mean": 5.84808349609375
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05583086982369423,
+                    "explained_variance": -36843.45703125,
+                    "relative_error_norm": 191.9490966796875,
+                    "feature_l0_mean": 1912.105224609375,
+                    "act_norm_mean": 21.617685317993164,
+                    "recon_norm_mean": 2529.199951171875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.20990125834941864,
+                    "explained_variance": -0.12544095516204834,
+                    "relative_error_norm": 1.0608680248260498,
+                    "feature_l0_mean": 0.7368420958518982,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6208658218383789
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 5,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05575958639383316,
+                    "explained_variance": -36904.234375,
+                    "relative_error_norm": 192.1073455810547,
+                    "feature_l0_mean": 1693.93017578125,
+                    "act_norm_mean": 19.947429656982422,
+                    "recon_norm_mean": 2238.82421875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7710677981376648,
+                    "explained_variance": 0.5923582315444946,
+                    "relative_error_norm": 0.6384682655334473,
+                    "feature_l0_mean": 28.0,
+                    "act_norm_mean": 8.000907897949219,
+                    "recon_norm_mean": 5.79506254196167
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.0556972362101078,
+                    "explained_variance": -36836.21875,
+                    "relative_error_norm": 191.93023681640625,
+                    "feature_l0_mean": 1693.0697021484375,
+                    "act_norm_mean": 19.94577407836914,
+                    "recon_norm_mean": 2236.651123046875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.20017363131046295,
+                    "explained_variance": -0.13392961025238037,
+                    "relative_error_norm": 1.0648612976074219,
+                    "feature_l0_mean": 0.6744186282157898,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6165798306465149
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 35,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05587740242481232,
+                    "explained_variance": -36891.58984375,
+                    "relative_error_norm": 192.07443237304688,
+                    "feature_l0_mean": 1732.7381591796875,
+                    "act_norm_mean": 20.16130828857422,
+                    "recon_norm_mean": 2290.91162109375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.786824107170105,
+                    "explained_variance": 0.6190589666366577,
+                    "relative_error_norm": 0.6172041893005371,
+                    "feature_l0_mean": 32.0,
+                    "act_norm_mean": 8.059250831604004,
+                    "recon_norm_mean": 6.387696743011475
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05581625550985336,
+                    "explained_variance": -36823.12109375,
+                    "relative_error_norm": 191.8961181640625,
+                    "feature_l0_mean": 1731.547607421875,
+                    "act_norm_mean": 20.159862518310547,
+                    "recon_norm_mean": 2288.6728515625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.2165655493736267,
+                    "explained_variance": -0.11684525012969971,
+                    "relative_error_norm": 1.0568090677261353,
+                    "feature_l0_mean": 0.6666666865348816,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.620124101638794
+                  }
+                }
+              }
+            }
+          ],
+          "variants_summary": {
+            "blocks.12.hook_resid_post::raw_seq": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.05575116537511349,
+                "median": 0.05574433319270611,
+                "std": 8.590530787069347e-05,
+                "p10": 0.05566160306334496,
+                "p90": 0.05588177107274532
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36843.36669921875,
+                "median": -36879.10546875,
+                "std": 66.92508624252616,
+                "p10": -36906.55234375,
+                "p90": -36755.75078125
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 191.94878578186035,
+                "median": 192.04193115234375,
+                "std": 0.17436211884484829,
+                "p10": 191.7205062866211,
+                "p90": 192.11337890625
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1556.3812255859375,
+                "median": 1587.0543823242188,
+                "std": 212.39995033855473,
+                "p10": 1313.7707641601562,
+                "p90": 1786.8877563476562
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 18.99827790260315,
+                "median": 19.1203556060791,
+                "std": 1.4866928597354856,
+                "p10": 17.333636665344237,
+                "p90": 20.59869976043701
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 2051.662551879883,
+                "median": 2093.1851806640625,
+                "std": 286.77420395856933,
+                "p10": 1724.8531127929687,
+                "p90": 2363.1377197265624
+              }
+            },
+            "blocks.12.hook_resid_post::last_token": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.7643270269036293,
+                "median": 0.761967271566391,
+                "std": 0.011812695121198011,
+                "p10": 0.7515170454978943,
+                "p90": 0.7787820756435394
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": 0.581316389143467,
+                "median": 0.5770330429077148,
+                "std": 0.019412050189598084,
+                "p10": 0.5599565505981445,
+                "p90": 0.6041805803775787
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 0.6468810588121414,
+                "median": 0.6503531336784363,
+                "std": 0.01511639002534198,
+                "p10": 0.6290936470031738,
+                "p90": 0.6633568584918976
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 27.375,
+                "median": 28.0,
+                "std": 2.54644359843292,
+                "p10": 24.4,
+                "p90": 29.9
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 7.780344545841217,
+                "median": 7.688766241073608,
+                "std": 0.22361507877304318,
+                "p10": 7.559471511840821,
+                "p90": 8.072322845458984
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 5.574625790119171,
+                "median": 5.521443843841553,
+                "std": 0.408614972976173,
+                "p10": 5.156727075576782,
+                "p90": 6.009967470169068
+              }
+            },
+            "blocks.12.hook_resid_post::token_centered": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.05568918166682124,
+                "median": 0.0556819885969162,
+                "std": 8.632563010591694e-05,
+                "p10": 0.05559945441782475,
+                "p90": 0.055820639804005624
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36775.34716796875,
+                "median": -36810.892578125,
+                "std": 66.69653105965912,
+                "p10": -36838.390234375,
+                "p90": -36688.041015625
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 191.77152061462402,
+                "median": 191.86425018310547,
+                "std": 0.17392738375708294,
+                "p10": 191.54383697509766,
+                "p90": 191.93589477539064
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1555.5262756347656,
+                "median": 1586.2066040039062,
+                "std": 212.22223794198771,
+                "p10": 1313.0877807617187,
+                "p90": 1785.714892578125
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 18.996739864349365,
+                "median": 19.11876392364502,
+                "std": 1.4866385605685382,
+                "p10": 17.332298278808594,
+                "p90": 20.59720935821533
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 2049.669937133789,
+                "median": 2091.153076171875,
+                "std": 286.4907158094091,
+                "p10": 1723.184912109375,
+                "p90": 2360.8309814453123
+              }
+            },
+            "blocks.12.hook_resid_post::token_unit_norm": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.2114873919636011,
+                "median": 0.21323340386152267,
+                "std": 0.01901774614115893,
+                "p10": 0.1928274527192116,
+                "p90": 0.23062251061201094
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -0.12245725095272064,
+                "median": -0.12153220176696777,
+                "std": 0.018396153687948943,
+                "p10": -0.13989301919937133,
+                "p90": -0.1041144609451294
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 1.0594252049922943,
+                "median": 1.0590225458145142,
+                "std": 0.008692618616507086,
+                "p10": 1.05075443983078,
+                "p90": 1.0676492214202882
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 0.7006994262337685,
+                "median": 0.705630362033844,
+                "std": 0.10340917427406192,
+                "p10": 0.5913043677806854,
+                "p90": 0.796363627910614
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 0.9999999850988388,
+                "median": 1.0,
+                "std": 2.5809568279517847e-08,
+                "p10": 0.9999999403953552,
+                "p90": 1.0
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 0.6197885945439339,
+                "median": 0.6204949617385864,
+                "std": 0.0065150656138348965,
+                "p10": 0.612706995010376,
+                "p90": 0.6264602363109588
+              }
+            }
+          },
+          "best_variant_by_median_cosine": "blocks.12.hook_resid_post::last_token",
+          "best_variant_median_cosine": 0.761967271566391,
+          "hook_rawseq_median_delta_expected_minus_configured": null,
+          "configured_raw_to_centered_median_gain": -6.234459578990936e-05,
+          "configured_raw_to_unitnorm_median_gain": 0.15748907066881657,
+          "inferred_flags": {
+            "hook_mismatch_likely": false,
+            "centering_or_scale_mismatch_likely": true
+          }
+        },
+        "meta-llama/Llama-3.1-8B-Instruct": {
+          "rows": [
+            {
+              "trait": "sycophancy",
+              "row_id": 15,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05657433718442917,
+                    "explained_variance": -36251.94140625,
+                    "relative_error_norm": 190.4020538330078,
+                    "feature_l0_mean": 1662.6666259765625,
+                    "act_norm_mean": 20.209318161010742,
+                    "recon_norm_mean": 2357.8310546875
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.6846849918365479,
+                    "explained_variance": 0.4498981833457947,
+                    "relative_error_norm": 0.7416885495185852,
+                    "feature_l0_mean": 11.0,
+                    "act_norm_mean": 8.085904121398926,
+                    "recon_norm_mean": 4.424806118011475
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05651189386844635,
+                    "explained_variance": -36184.5703125,
+                    "relative_error_norm": 190.2250518798828,
+                    "feature_l0_mean": 1661.7701416015625,
+                    "act_norm_mean": 20.207735061645508,
+                    "recon_norm_mean": 2355.522705078125
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.18941755592823029,
+                    "explained_variance": -0.1485304832458496,
+                    "relative_error_norm": 1.0716952085494995,
+                    "feature_l0_mean": 0.4252873659133911,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.616543710231781
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 28,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05657524615526199,
+                    "explained_variance": -36252.50390625,
+                    "relative_error_norm": 190.4035186767578,
+                    "feature_l0_mean": 1721.40478515625,
+                    "act_norm_mean": 20.754491806030273,
+                    "recon_norm_mean": 2441.95166015625
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.6914583444595337,
+                    "explained_variance": 0.4620208144187927,
+                    "relative_error_norm": 0.733470618724823,
+                    "feature_l0_mean": 14.0,
+                    "act_norm_mean": 7.685004234313965,
+                    "recon_norm_mean": 4.33892822265625
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.056512825191020966,
+                    "explained_variance": -36185.15234375,
+                    "relative_error_norm": 190.22659301757812,
+                    "feature_l0_mean": 1720.4881591796875,
+                    "act_norm_mean": 20.752685546875,
+                    "recon_norm_mean": 2439.5595703125
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.21881797909736633,
+                    "explained_variance": -0.12122106552124023,
+                    "relative_error_norm": 1.0588772296905518,
+                    "feature_l0_mean": 0.523809552192688,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6274735331535339
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 0,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05605519562959671,
+                    "explained_variance": -36632.640625,
+                    "relative_error_norm": 191.39915466308594,
+                    "feature_l0_mean": 1900.7105712890625,
+                    "act_norm_mean": 21.718502044677734,
+                    "recon_norm_mean": 2698.6923828125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7354199290275574,
+                    "explained_variance": 0.5071219205856323,
+                    "relative_error_norm": 0.7020527720451355,
+                    "feature_l0_mean": 19.0,
+                    "act_norm_mean": 7.986751556396484,
+                    "recon_norm_mean": 4.406997203826904
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05599382519721985,
+                    "explained_variance": -36564.3359375,
+                    "relative_error_norm": 191.2206573486328,
+                    "feature_l0_mean": 1899.1973876953125,
+                    "act_norm_mean": 21.716787338256836,
+                    "recon_norm_mean": 2696.043701171875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.18974798917770386,
+                    "explained_variance": -0.14720439910888672,
+                    "relative_error_norm": 1.0710761547088623,
+                    "feature_l0_mean": 0.46052631735801697,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6156657934188843
+                  }
+                }
+              }
+            },
+            {
+              "trait": "sycophancy",
+              "row_id": 4,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.056058619171381,
+                    "explained_variance": -36637.91796875,
+                    "relative_error_norm": 191.41293334960938,
+                    "feature_l0_mean": 1925.9466552734375,
+                    "act_norm_mean": 21.892290115356445,
+                    "recon_norm_mean": 2734.59130859375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.6864694952964783,
+                    "explained_variance": 0.44921374320983887,
+                    "relative_error_norm": 0.7421497106552124,
+                    "feature_l0_mean": 18.0,
+                    "act_norm_mean": 7.937719821929932,
+                    "recon_norm_mean": 4.270935535430908
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05599726364016533,
+                    "explained_variance": -36569.60546875,
+                    "relative_error_norm": 191.23443603515625,
+                    "feature_l0_mean": 1924.453369140625,
+                    "act_norm_mean": 21.890466690063477,
+                    "recon_norm_mean": 2731.90966796875
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.18047133088111877,
+                    "explained_variance": -0.15584468841552734,
+                    "relative_error_norm": 1.0751022100448608,
+                    "feature_l0_mean": 0.4533333480358124,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6129637360572815
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 13,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.056574370712041855,
+                    "explained_variance": -36250.171875,
+                    "relative_error_norm": 190.3974151611328,
+                    "feature_l0_mean": 1718.7261962890625,
+                    "act_norm_mean": 20.778226852416992,
+                    "recon_norm_mean": 2442.0078125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7307174205780029,
+                    "explained_variance": 0.5204373598098755,
+                    "relative_error_norm": 0.6925046443939209,
+                    "feature_l0_mean": 16.0,
+                    "act_norm_mean": 7.820760250091553,
+                    "recon_norm_mean": 4.805717468261719
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05651196092367172,
+                    "explained_variance": -36182.8125,
+                    "relative_error_norm": 190.22042846679688,
+                    "feature_l0_mean": 1717.857177734375,
+                    "act_norm_mean": 20.776493072509766,
+                    "recon_norm_mean": 2439.619384765625
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.24573160707950592,
+                    "explained_variance": -0.0953291654586792,
+                    "relative_error_norm": 1.0465797185897827,
+                    "feature_l0_mean": 0.5476190447807312,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6373216509819031
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 1,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.056081097573041916,
+                    "explained_variance": -36670.21484375,
+                    "relative_error_norm": 191.49729919433594,
+                    "feature_l0_mean": 2150.4775390625,
+                    "act_norm_mean": 23.550064086914062,
+                    "recon_norm_mean": 3060.427734375
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.6911170482635498,
+                    "explained_variance": 0.4604431986808777,
+                    "relative_error_norm": 0.7345452904701233,
+                    "feature_l0_mean": 17.0,
+                    "act_norm_mean": 8.153202056884766,
+                    "recon_norm_mean": 4.565541744232178
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05601971223950386,
+                    "explained_variance": -36601.828125,
+                    "relative_error_norm": 191.3186492919922,
+                    "feature_l0_mean": 2148.86572265625,
+                    "act_norm_mean": 23.548255920410156,
+                    "recon_norm_mean": 3057.428955078125
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.1943877637386322,
+                    "explained_variance": -0.1430884599685669,
+                    "relative_error_norm": 1.0691533088684082,
+                    "feature_l0_mean": 0.4477611780166626,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6174335479736328
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 5,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.05606701597571373,
+                    "explained_variance": -36648.59765625,
+                    "relative_error_norm": 191.44085693359375,
+                    "feature_l0_mean": 2004.40283203125,
+                    "act_norm_mean": 22.480310440063477,
+                    "recon_norm_mean": 2848.404541015625
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7179897427558899,
+                    "explained_variance": 0.4909970164299011,
+                    "relative_error_norm": 0.7134443521499634,
+                    "feature_l0_mean": 15.0,
+                    "act_norm_mean": 8.113580703735352,
+                    "recon_norm_mean": 4.555172920227051
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05600564181804657,
+                    "explained_variance": -36580.265625,
+                    "relative_error_norm": 191.26229858398438,
+                    "feature_l0_mean": 2002.8472900390625,
+                    "act_norm_mean": 22.478403091430664,
+                    "recon_norm_mean": 2845.609375
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.19969595968723297,
+                    "explained_variance": -0.13773179054260254,
+                    "relative_error_norm": 1.0666451454162598,
+                    "feature_l0_mean": 0.4861111044883728,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.619044303894043
+                  }
+                }
+              }
+            },
+            {
+              "trait": "evil",
+              "row_id": 35,
+              "hooks_observed": [
+                "blocks.12.hook_resid_post"
+              ],
+              "hook_variant_metrics": {
+                "blocks.12.hook_resid_post": {
+                  "raw_seq": {
+                    "reconstruction_cosine": 0.056067898869514465,
+                    "explained_variance": -36650.14453125,
+                    "relative_error_norm": 191.44488525390625,
+                    "feature_l0_mean": 2030.859130859375,
+                    "act_norm_mean": 22.713909149169922,
+                    "recon_norm_mean": 2888.41845703125
+                  },
+                  "last_token": {
+                    "reconstruction_cosine": 0.7197502851486206,
+                    "explained_variance": 0.5018993616104126,
+                    "relative_error_norm": 0.7057624459266663,
+                    "feature_l0_mean": 15.0,
+                    "act_norm_mean": 8.097850799560547,
+                    "recon_norm_mean": 4.799612522125244
+                  },
+                  "token_centered": {
+                    "reconstruction_cosine": 0.05600651353597641,
+                    "explained_variance": -36581.8046875,
+                    "relative_error_norm": 191.2663116455078,
+                    "feature_l0_mean": 2029.2535400390625,
+                    "act_norm_mean": 22.712120056152344,
+                    "recon_norm_mean": 2885.583984375
+                  },
+                  "token_unit_norm": {
+                    "reconstruction_cosine": 0.2114090472459793,
+                    "explained_variance": -0.1280195713043213,
+                    "relative_error_norm": 1.0620826482772827,
+                    "feature_l0_mean": 0.4647887349128723,
+                    "act_norm_mean": 1.0,
+                    "recon_norm_mean": 0.6242431998252869
+                  }
+                }
+              }
+            }
+          ],
+          "variants_summary": {
+            "blocks.12.hook_resid_post::raw_seq": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.056256722658872604,
+                "median": 0.05607449822127819,
+                "std": 0.0002463690943989595,
+                "p10": 0.056057592108845714,
+                "p90": 0.056574633345007896
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36499.2666015625,
+                "median": -36635.279296875,
+                "std": 192.16197908738212,
+                "p10": -36656.165625,
+                "p90": -36251.410546875
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 191.0497646331787,
+                "median": 191.40604400634766,
+                "std": 0.5032455335019941,
+                "p10": 190.40066223144532,
+                "p90": 191.46060943603516
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1889.3992919921875,
+                "median": 1913.32861328125,
+                "std": 162.6427710858173,
+                "p10": 1701.9083251953125,
+                "p90": 2066.7446533203124
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 21.762139081954956,
+                "median": 21.80539608001709,
+                "std": 1.0625349868924603,
+                "p10": 20.590939712524413,
+                "p90": 22.964755630493165
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 2684.0406188964844,
+                "median": 2716.641845703125,
+                "std": 233.6725084989378,
+                "p10": 2416.715478515625,
+                "p90": 2940.021240234375
+              }
+            },
+            "blocks.12.hook_resid_post::last_token": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.7072009071707726,
+                "median": 0.7047240436077118,
+                "std": 0.019578374990037093,
+                "p10": 0.6859341442584992,
+                "p90": 0.7321281731128693
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": 0.4802539497613907,
+                "median": 0.4765089154243469,
+                "std": 0.02629261230633896,
+                "p10": 0.4496928513050079,
+                "p90": 0.5111165523529053
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 0.7207022979855537,
+                "median": 0.7234574854373932,
+                "std": 0.018282034084822416,
+                "p10": 0.6991883337497711,
+                "p90": 0.7418268978595733
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 15.625,
+                "median": 15.5,
+                "std": 2.341874249399399,
+                "p10": 13.1,
+                "p90": 18.3
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 7.98509669303894,
+                "median": 8.036327838897705,
+                "std": 0.15286940392923018,
+                "p10": 7.780033445358276,
+                "p90": 8.125467109680176
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 4.520963966846466,
+                "median": 4.489989519119263,
+                "std": 0.1870070146745777,
+                "p10": 4.318530416488647,
+                "p90": 4.801444005966187
+              }
+            },
+            "blocks.12.hook_resid_post::token_centered": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.05619495455175638,
+                "median": 0.056013112887740135,
+                "std": 0.0002458605354067043,
+                "p10": 0.055996232107281683,
+                "p90": 0.056512220203876494
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -36431.296875,
+                "median": -36566.970703125,
+                "std": 191.6896802481588,
+                "p10": -36587.81171875,
+                "p90": -36184.04296875
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 190.8718032836914,
+                "median": 191.22754669189453,
+                "std": 0.5024775207907501,
+                "p10": 190.22366485595703,
+                "p90": 191.28201293945312
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 1888.0915985107422,
+                "median": 1911.8253784179688,
+                "std": 162.3408050849179,
+                "p10": 1701.0310668945312,
+                "p90": 2065.1371948242186
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 21.76036834716797,
+                "median": 21.803627014160156,
+                "std": 1.0624780802821938,
+                "p10": 20.58920040130615,
+                "p90": 22.96296081542969
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 2681.40966796875,
+                "median": 2713.9766845703125,
+                "std": 233.4416222112611,
+                "p10": 2414.3485107421875,
+                "p90": 2937.1374755859374
+              }
+            },
+            "blocks.12.hook_resid_post::token_unit_norm": {
+              "reconstruction_cosine": {
+                "n": 8,
+                "mean": 0.2037099041044712,
+                "median": 0.1970418617129326,
+                "std": 0.019671063383437732,
+                "p10": 0.18673368841409682,
+                "p90": 0.22689206749200821
+              },
+              "explained_variance": {
+                "n": 8,
+                "mean": -0.13462120294570923,
+                "median": -0.14041012525558472,
+                "std": 0.01820240667305748,
+                "p10": -0.15072474479675294,
+                "p90": -0.11345349550247193
+              },
+              "relative_error_norm": {
+                "n": 8,
+                "mean": 1.0651514530181885,
+                "median": 1.067899227142334,
+                "std": 0.008579620619446109,
+                "p10": 1.0551879763603211,
+                "p90": 1.072717308998108
+              },
+              "feature_l0_mean": {
+                "n": 8,
+                "mean": 0.4761545807123184,
+                "median": 0.46265752613544464,
+                "std": 0.03834903988727217,
+                "p10": 0.44101903438568113,
+                "p90": 0.5309523999691009
+              },
+              "act_norm_mean": {
+                "n": 8,
+                "mean": 1.0,
+                "median": 1.0,
+                "std": 0.0,
+                "p10": 1.0,
+                "p90": 1.0
+              },
+              "recon_norm_mean": {
+                "n": 8,
+                "mean": 0.6213361844420433,
+                "median": 0.6182389259338379,
+                "std": 0.007477927949637427,
+                "p10": 0.6148551762104034,
+                "p90": 0.6304279685020446
+              }
+            }
+          },
+          "best_variant_by_median_cosine": "blocks.12.hook_resid_post::last_token",
+          "best_variant_median_cosine": 0.7047240436077118,
+          "hook_rawseq_median_delta_expected_minus_configured": null,
+          "configured_raw_to_centered_median_gain": -6.138533353805542e-05,
+          "configured_raw_to_unitnorm_median_gain": 0.1409673634916544,
+          "inferred_flags": {
+            "hook_mismatch_likely": false,
+            "centering_or_scale_mismatch_likely": true
+          }
+        }
+      }
+    }
+  },
+  "aggregate": {
+    "meta-llama/Llama-3.1-8B": {
+      "best_variant_by_seed": [
+        "blocks.12.hook_resid_post::last_token",
+        "blocks.12.hook_resid_post::last_token",
+        "blocks.12.hook_resid_post::last_token",
+        "blocks.12.hook_resid_post::last_token"
+      ],
+      "best_variant_unique": [
+        "blocks.12.hook_resid_post::last_token"
+      ],
+      "best_variant_consistent": true,
+      "best_variant_median_cosine_summary": {
+        "n": 4,
+        "mean": 0.7682803869247437,
+        "median": 0.767533153295517,
+        "std": 0.005777644275705269
+      }
+    },
+    "meta-llama/Llama-3.1-8B-Instruct": {
+      "best_variant_by_seed": [
+        "blocks.12.hook_resid_post::last_token",
+        "blocks.12.hook_resid_post::last_token",
+        "blocks.12.hook_resid_post::last_token",
+        "blocks.12.hook_resid_post::last_token"
+      ],
+      "best_variant_unique": [
+        "blocks.12.hook_resid_post::last_token"
+      ],
+      "best_variant_consistent": true,
+      "best_variant_median_cosine_summary": {
+        "n": 4,
+        "mean": 0.7180392220616341,
+        "median": 0.7177865952253342,
+        "std": 0.00997711793948536
+      }
+    }
+  }
+}

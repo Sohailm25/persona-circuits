@@ -1,0 +1,87 @@
+{
+  "timestamp_utc": "2026-03-10T14:33:54.460845+00:00",
+  "artifact_type": "week3_stage5_planning_stub",
+  "scope": {
+    "phase": "Stage 5 Cross-Persona Analysis",
+    "traits_in_scope": [
+      "sycophancy",
+      "evil_machiavellian_disposition"
+    ],
+    "traits_exploratory": [
+      "hallucination_negative_control_only"
+    ]
+  },
+  "proposal_alignment": {
+    "sections": [
+      "6.6.1",
+      "6.6.2"
+    ],
+    "h4_target_pattern": "early-layer overlap higher than late-layer overlap",
+    "h5_target_pattern": "shared early-layer router candidates with persona-dependent activation variance"
+  },
+  "planned_analyses": {
+    "circuit_comparison": {
+      "metrics": [
+        "global_jaccard",
+        "layerwise_jaccard",
+        "shared_feature_count"
+      ],
+      "expected_pattern_gate": {
+        "early_layer_jaccard_min": 0.2,
+        "late_layer_jaccard_max": 0.1
+      }
+    },
+    "router_search": {
+      "candidate_pool": "intersection of early-layer features across in-scope traits",
+      "screening": [
+        "context-conditional activation variance",
+        "ablation impact consistency"
+      ],
+      "significance_goal": "p < 0.01 for >=3 candidates"
+    }
+  },
+  "required_inputs": {
+    "stage2_decomposition_primary": "results/stage2_decomposition/week3_sae_decomposition_20260303T202729Z.json",
+    "stage2_sensitivity_overlap_layers": [
+      "results/stage2_decomposition/week3_sae_decomposition_20260303T203716Z.json",
+      "results/stage2_decomposition/week3_sae_decomposition_20260303T211749Z.json",
+      "results/stage2_decomposition/week3_sae_decomposition_sensitivity_summary_20260304T162002Z.json"
+    ],
+    "stage3_candidate_and_attribution": [
+      "results/stage3_attribution/week3_stage3_candidate_selection_20260304T163200Z.json",
+      "results/stage3_attribution/week3_stage3_activation_delta_attribution_20260304T164549Z.json"
+    ]
+  },
+  "gating_checklist": [
+    {
+      "id": "S5-G1",
+      "item": "Input trait scope locked and hallucination marked exploratory",
+      "status": "done"
+    },
+    {
+      "id": "S5-G2",
+      "item": "Layerwise feature-ID comparability policy explicit",
+      "status": "pending"
+    },
+    {
+      "id": "S5-G3",
+      "item": "Cross-trait ablation specificity controls specified",
+      "status": "pending"
+    },
+    {
+      "id": "S5-G4",
+      "item": "Router-candidate multiple-testing correction plan specified",
+      "status": "pending"
+    }
+  ],
+  "readiness": {
+    "launch_recommended_now": false,
+    "reason": "planning stub only; comparator and router-search code paths not yet implemented"
+  },
+  "evidence_status": {
+    "input_references": "known",
+    "expected_pattern_gates": "known",
+    "operational_checklist_status": "inferred"
+  },
+  "supersedes": "results/stage5_cross_persona/week3_stage5_planning_stub_20260310T143023Z.json"
+}

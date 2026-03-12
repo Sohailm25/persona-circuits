@@ -1,0 +1,220 @@
+{
+  "timestamp_utc": "2026-03-10T14:38:05.288597+00:00",
+  "artifact_type": "week3_stage5_cross_persona_analysis",
+  "inputs": {
+    "artifacts": [
+      "results/stage2_decomposition/week3_sae_decomposition_20260303T202729Z.json",
+      "results/stage2_decomposition/week3_sae_decomposition_20260303T203716Z.json",
+      "results/stage2_decomposition/week3_sae_decomposition_20260303T211749Z.json"
+    ],
+    "trait_a": "sycophancy",
+    "trait_b": "evil",
+    "router_early_layer_max": 12
+  },
+  "layerwise_overlap": {
+    "candidate_union": [
+      {
+        "layer": 11,
+        "trait_a_count": 100,
+        "trait_b_count": 100,
+        "shared_count": 29,
+        "jaccard": 0.1695906432748538
+      },
+      {
+        "layer": 12,
+        "trait_a_count": 100,
+        "trait_b_count": 100,
+        "shared_count": 33,
+        "jaccard": 0.19760479041916168
+      },
+      {
+        "layer": 15,
+        "trait_a_count": 100,
+        "trait_b_count": 100,
+        "shared_count": 22,
+        "jaccard": 0.12359550561797752
+      }
+    ],
+    "direct_projection": [
+      {
+        "layer": 11,
+        "trait_a_count": 100,
+        "trait_b_count": 100,
+        "shared_count": 18,
+        "jaccard": 0.0989010989010989
+      },
+      {
+        "layer": 12,
+        "trait_a_count": 100,
+        "trait_b_count": 100,
+        "shared_count": 16,
+        "jaccard": 0.08695652173913043
+      },
+      {
+        "layer": 15,
+        "trait_a_count": 100,
+        "trait_b_count": 100,
+        "shared_count": 13,
+        "jaccard": 0.06951871657754011
+      }
+    ],
+    "differential_activation": [
+      {
+        "layer": 11,
+        "trait_a_count": 100,
+        "trait_b_count": 100,
+        "shared_count": 38,
+        "jaccard": 0.2345679012345679
+      },
+      {
+        "layer": 12,
+        "trait_a_count": 100,
+        "trait_b_count": 100,
+        "shared_count": 40,
+        "jaccard": 0.25
+      },
+      {
+        "layer": 15,
+        "trait_a_count": 100,
+        "trait_b_count": 100,
+        "shared_count": 30,
+        "jaccard": 0.17647058823529413
+      }
+    ]
+  },
+  "gradient_summary": {
+    "candidate_union": {
+      "available": true,
+      "early_layer": 11,
+      "late_layer": 15,
+      "early_jaccard": 0.1695906432748538,
+      "late_jaccard": 0.12359550561797752,
+      "delta_early_minus_late": 0.04599513765687627,
+      "proposal_pattern_pass": false
+    },
+    "direct_projection": {
+      "available": true,
+      "early_layer": 11,
+      "late_layer": 15,
+      "early_jaccard": 0.0989010989010989,
+      "late_jaccard": 0.06951871657754011,
+      "delta_early_minus_late": 0.02938238232355879,
+      "proposal_pattern_pass": false
+    },
+    "differential_activation": {
+      "available": true,
+      "early_layer": 11,
+      "late_layer": 15,
+      "early_jaccard": 0.2345679012345679,
+      "late_jaccard": 0.17647058823529413,
+      "delta_early_minus_late": 0.05809731299927376,
+      "proposal_pattern_pass": false
+    }
+  },
+  "router_candidate_stub": {
+    "candidate_union": {
+      "available": true,
+      "early_layer_max": 12,
+      "layers_used": [
+        11,
+        12
+      ],
+      "candidate_union_count": 62,
+      "candidate_stable_count": 0,
+      "candidate_union_preview": [
+        3024,
+        3597,
+        3635,
+        6039,
+        6380,
+        7874,
+        13032,
+        15039,
+        15044,
+        17516,
+        18158,
+        23132,
+        23304,
+        24106,
+        25761,
+        27763,
+        27766,
+        30631,
+        34968,
+        35164
+      ],
+      "candidate_stable_preview": []
+    },
+    "direct_projection": {
+      "available": true,
+      "early_layer_max": 12,
+      "layers_used": [
+        11,
+        12
+      ],
+      "candidate_union_count": 34,
+      "candidate_stable_count": 0,
+      "candidate_union_preview": [
+        3024,
+        9590,
+        9891,
+        13032,
+        15039,
+        23132,
+        25408,
+        27766,
+        34539,
+        37821,
+        37978,
+        39163,
+        41831,
+        42878,
+        43788,
+        44694,
+        49453,
+        50576,
+        54775,
+        74216
+      ],
+      "candidate_stable_preview": []
+    },
+    "differential_activation": {
+      "available": true,
+      "early_layer_max": 12,
+      "layers_used": [
+        11,
+        12
+      ],
+      "candidate_union_count": 78,
+      "candidate_stable_count": 0,
+      "candidate_union_preview": [
+        3597,
+        3635,
+        5981,
+        6039,
+        6380,
+        7874,
+        10347,
+        11721,
+        15044,
+        17210,
+        17516,
+        17570,
+        18158,
+        19931,
+        21491,
+        23304,
+        23326,
+        24106,
+        25761,
+        27763
+      ],
+      "candidate_stable_preview": []
+    }
+  },
+  "evidence_status": {
+    "input_artifacts": "known",
+    "layerwise_overlap_metrics": "known",
+    "router_candidate_stub_interpretation": "inferred"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "timestamp_utc": "2026-02-25T16:03:26.508722+00:00",
+  "inputs": {
+    "current_total": 50,
+    "proposed_total": 150,
+    "current_split": {
+      "sweep": 15,
+      "confirm": 15,
+      "test": 20,
+      "sum": 50
+    },
+    "proposed_split": {
+      "sweep": 50,
+      "confirm": 50,
+      "test": 50,
+      "sum": 150
+    },
+    "grid": {
+      "layers": 6,
+      "alphas": 10,
+      "combos": 60
+    }
+  },
+  "diagnostics": {
+    "split_sum_matches_current_total": true,
+    "split_sum_matches_proposed_total": true,
+    "sweep_prompt_per_combo_current": 15.0,
+    "sweep_prompt_per_combo_proposed": 50.0,
+    "sweep_standard_error_reduction_factor": 0.5477225575051661,
+    "test_standard_error_reduction_factor": 0.6324555320336759,
+    "relative_total_judge_load_multiplier": 3.0,
+    "relative_sweep_load_multiplier": 3.3333333333333335
+  },
+  "recommendation": {
+    "status": "ready_for_post_primary_execution",
+    "generator_command": "python3 scripts/generate_week2_heldout_prompts.py --traits sycophancy evil hallucination --target-per-trait 150",
+    "notes": [
+      "Do not regenerate held-out prompts while primary runs are in-flight if it risks file mutation for active jobs.",
+      "Run after primary artifact closeout and before replication/stress launch if budget allows."
+    ]
+  }
+}

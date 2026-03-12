@@ -1,0 +1,67 @@
+{
+  "timestamp_utc": "2026-03-03T16:47:26.332863+00:00",
+  "artifact_type": "week2_capability_suite_spec",
+  "inputs": {
+    "config": "configs/experiment.yaml",
+    "week2_artifact": "results/stage1_extraction/week2_behavioral_validation_upgrade_sycophancy_20260303T082321Z.json"
+  },
+  "week2_proxy_gate": {
+    "gate_name": "week2_capability_proxy",
+    "benchmark": "MMLU sample",
+    "implementation": {
+      "sample_count_cap": 30,
+      "metric": "accuracy drop (baseline_accuracy - steered_accuracy)",
+      "pass_threshold": "<= 0.05",
+      "availability_required_by_default": true,
+      "override_flag": "--allow-missing-capability-proxy"
+    },
+    "latest_observed": {
+      "available": true,
+      "n_questions": 30,
+      "baseline_accuracy": 0.6333333333333333,
+      "steered_accuracy": 0.6666666666666666,
+      "degradation": -0.033333333333333326,
+      "pass_lt_5pct_drop": true
+    },
+    "evidence_status": {
+      "implementation_fields": "known",
+      "latest_observed_values": "known",
+      "claim_strength": "inferred"
+    }
+  },
+  "broader_suite_requirement": {
+    "suite_name": "capability_preservation_broader_suite",
+    "benchmarks": [
+      {
+        "name": "TriviaQA",
+        "target_n": 50,
+        "status": "pending_implementation"
+      },
+      {
+        "name": "GSM8K",
+        "target_n": 50,
+        "status": "pending_implementation"
+      },
+      {
+        "name": "HumanEval",
+        "target_n": 50,
+        "status": "pending_implementation"
+      }
+    ],
+    "intended_use": "Stronger capability-preservation claims beyond Week 2 interim gate.",
+    "evidence_status": {
+      "benchmark_targets": "known",
+      "execution_status": "known",
+      "future_claim_support": "inferred"
+    }
+  },
+  "governance_note": {
+    "week2_closeout_use": "MMLU proxy is sufficient for interim Week2 gate under frozen policy.",
+    "strong_claim_boundary": "Do not claim broad capability preservation until the broader suite is implemented and run."
+  },
+  "evidence_status": {
+    "config_fields": "known",
+    "week2_artifact_fields": "known",
+    "policy_interpretation": "inferred"
+  }
+}

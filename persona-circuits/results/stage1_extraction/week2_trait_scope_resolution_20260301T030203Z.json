@@ -1,0 +1,143 @@
+{
+  "timestamp_utc": "2026-03-01T03:02:03.365123+00:00",
+  "artifact_type": "week2_trait_scope_resolution",
+  "inputs": {
+    "ingestion_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_primary_postrun_ingestion_20260227T220017Z.json",
+    "gap_check_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_prelaunch_gap_checks_20260227T205237Z.json",
+    "extraction_free_reanalysis_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_extraction_free_reanalysis_20260225T174958Z.json",
+    "response_mean_sensitivity_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_response_mean_sensitivity_20260301T025554Z.json"
+  },
+  "evidence_status": {
+    "input_artifacts": "known",
+    "lane_classifications": "inferred",
+    "stage2_scope_recommendation": "inferred"
+  },
+  "trait_scope": {
+    "sycophancy": {
+      "selected_primary_combo": {
+        "layer": 12,
+        "alpha": 3.0
+      },
+      "week2_section623_pass": true,
+      "week2_runner_overall_pass": false,
+      "response_mean_lane": {
+        "selected_prompt_last": {
+          "layer": 12,
+          "alpha": 2.0
+        },
+        "selected_response_mean": {
+          "layer": 12,
+          "alpha": 2.0
+        },
+        "overall_pass_prompt_last": false,
+        "overall_pass_response_mean": false,
+        "failing_gates_prompt_last": [
+          "cross_trait_bleed_pass",
+          "coherence_pass"
+        ],
+        "failing_gates_response_mean": [
+          "coherence_pass"
+        ],
+        "bidirectional_effect_prompt_last": 32.199999999999996,
+        "bidirectional_effect_response_mean": 33.68333333333333,
+        "delta_bidirectional_effect": 1.4833333333333343,
+        "cross_trait_bleed_prompt_last": 0.5002616431187858,
+        "cross_trait_bleed_response_mean": 0.2360217714002969,
+        "delta_cross_trait_bleed": -0.26423987171848895
+      },
+      "status": "retain_as_primary_trait_pending_coherence_remediation"
+    },
+    "evil": {
+      "selected_primary_combo": {
+        "layer": 12,
+        "alpha": 3.0
+      },
+      "harmful_content_lane": {
+        "external_transfer": {
+          "pass": false,
+          "plus_vs_minus": 18.8,
+          "baseline_vs_minus": -5.85
+        },
+        "status": "disconfirmed_bidirectional_harmful_content"
+      },
+      "machiavellian_disposition_lane": {
+        "extraction_free_overlap": {
+          "classification": "moderate_overlap",
+          "passes": true,
+          "mean_cosine": 0.22255422894995097,
+          "positive_fraction": 1.0,
+          "sign_test_p": 1.7763568394002505e-15
+        },
+        "response_mean_lane": {
+          "selected_prompt_last": {
+            "layer": 12,
+            "alpha": 2.0
+          },
+          "selected_response_mean": {
+            "layer": 12,
+            "alpha": 2.0
+          },
+          "overall_pass_prompt_last": false,
+          "overall_pass_response_mean": false,
+          "failing_gates_prompt_last": [
+            "coherence_pass"
+          ],
+          "failing_gates_response_mean": [
+            "coherence_pass"
+          ],
+          "bidirectional_effect_prompt_last": 34.38333333333333,
+          "bidirectional_effect_response_mean": 47.8,
+          "delta_bidirectional_effect": 13.416666666666664,
+          "cross_trait_bleed_prompt_last": 0.10179350460494424,
+          "cross_trait_bleed_response_mean": 0.1691073919107392,
+          "delta_cross_trait_bleed": 0.06731388730579496
+        },
+        "status": "supported_but_week2_not_validated_due_to_coherence"
+      },
+      "lane_split_decision": "split_required"
+    },
+    "hallucination": {
+      "selected_primary_combo": {
+        "layer": 13,
+        "alpha": 3.0
+      },
+      "week2_section623_pass": false,
+      "week2_runner_overall_pass": false,
+      "extraction_free_overlap": {
+        "classification": "null_overlap",
+        "passes": false,
+        "mean_cosine": -0.0059028447631284545,
+        "positive_fraction": 0.44,
+        "sign_test_p": 0.47988766169832786
+      },
+      "extraction_ab_similarity": {
+        "method_cosine_similarity": 0.39489617943763733,
+        "threshold": null,
+        "pass": null
+      },
+      "status": "negative_finding_stage1"
+    }
+  },
+  "stage2_scope_recommendation": {
+    "primary_claim_traits": [
+      "sycophancy",
+      "machiavellian_disposition"
+    ],
+    "exploratory_control_traits": [
+      "hallucination_instruction_following_control"
+    ],
+    "blocked_claim_lanes": [
+      "evil_harmful_content_bidirectionality"
+    ]
+  },
+  "known": [
+    "Hallucination fails Section 6.2.3 in primary ingestion and is null-overlap in extraction-free reanalysis.",
+    "Evil harmful-content transfer fails directional reversal (baseline_vs_minus < 0).",
+    "Evil machiavellian lane shows moderate extraction-free overlap but still fails Week 2 overall due to coherence.",
+    "Response-mean switch improves selected metrics for sycophancy/evil but does not produce overall pass."
+  ],
+  "unknown": [
+    "Whether coherence failures can be resolved without collapsing steering effect in a superseding remediation tranche.",
+    "Whether an evil construct-aligned external benchmark will show bidirectional transfer for the machiavellian lane."
+  ]
+}

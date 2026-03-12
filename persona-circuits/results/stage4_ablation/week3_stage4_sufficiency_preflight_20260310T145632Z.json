@@ -1,0 +1,389 @@
+{
+  "timestamp_utc": "2026-03-10T14:56:32.472770+00:00",
+  "artifact_type": "week3_stage4_sufficiency_preflight",
+  "inputs": {
+    "traits": [
+      "sycophancy",
+      "evil"
+    ],
+    "methods": [
+      "resample",
+      "mean"
+    ],
+    "dose_response": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "heldout_prompts_per_trait": 30,
+    "seed": 42
+  },
+  "thresholds": {
+    "sufficiency": 0.6,
+    "partial_floor": 0.4,
+    "random_baseline_samples": 100
+  },
+  "target_set_validation": {
+    "traits": {
+      "sycophancy": {
+        "target_feature_count": 10,
+        "candidate_pool_size": 50,
+        "prompt_count_used": 50
+      },
+      "evil": {
+        "target_feature_count": 10,
+        "candidate_pool_size": 50,
+        "prompt_count_used": 50
+      }
+    },
+    "top_k_values": [
+      10
+    ],
+    "top_k_consistent": true
+  },
+  "selected_combo_map": {
+    "sycophancy": {
+      "layer": 12.0,
+      "alpha": 3.0,
+      "test_bidirectional_effect": 61.86666666666666
+    },
+    "evil": {
+      "layer": 12.0,
+      "alpha": 3.0,
+      "test_bidirectional_effect": 67.28333333333333
+    }
+  },
+  "heldout_availability": {
+    "counts_by_trait": {
+      "sycophancy": 50,
+      "evil": 50
+    },
+    "heldout_ready_for_requested_prompts": true
+  },
+  "condition_matrix": {
+    "n_rows_total": 20,
+    "rows": [
+      {
+        "trait": "sycophancy",
+        "condition": "baseline_unsteered"
+      },
+      {
+        "trait": "sycophancy",
+        "condition": "steered_no_ablation"
+      },
+      {
+        "trait": "sycophancy",
+        "condition": "circuit_only_preservation",
+        "method": "resample",
+        "preserved_fraction_target": 0.25
+      },
+      {
+        "trait": "sycophancy",
+        "condition": "circuit_only_preservation",
+        "method": "resample",
+        "preserved_fraction_target": 0.5
+      },
+      {
+        "trait": "sycophancy",
+        "condition": "circuit_only_preservation",
+        "method": "resample",
+        "preserved_fraction_target": 0.75
+      },
+      {
+        "trait": "sycophancy",
+        "condition": "circuit_only_preservation",
+        "method": "resample",
+        "preserved_fraction_target": 1.0
+      },
+      {
+        "trait": "sycophancy",
+        "condition": "circuit_only_preservation",
+        "method": "mean",
+        "preserved_fraction_target": 0.25
+      },
+      {
+        "trait": "sycophancy",
+        "condition": "circuit_only_preservation",
+        "method": "mean",
+        "preserved_fraction_target": 0.5
+      },
+      {
+        "trait": "sycophancy",
+        "condition": "circuit_only_preservation",
+        "method": "mean",
+        "preserved_fraction_target": 0.75
+      },
+      {
+        "trait": "sycophancy",
+        "condition": "circuit_only_preservation",
+        "method": "mean",
+        "preserved_fraction_target": 1.0
+      },
+      {
+        "trait": "evil",
+        "condition": "baseline_unsteered"
+      },
+      {
+        "trait": "evil",
+        "condition": "steered_no_ablation"
+      },
+      {
+        "trait": "evil",
+        "condition": "circuit_only_preservation",
+        "method": "resample",
+        "preserved_fraction_target": 0.25
+      },
+      {
+        "trait": "evil",
+        "condition": "circuit_only_preservation",
+        "method": "resample",
+        "preserved_fraction_target": 0.5
+      },
+      {
+        "trait": "evil",
+        "condition": "circuit_only_preservation",
+        "method": "resample",
+        "preserved_fraction_target": 0.75
+      },
+      {
+        "trait": "evil",
+        "condition": "circuit_only_preservation",
+        "method": "resample",
+        "preserved_fraction_target": 1.0
+      },
+      {
+        "trait": "evil",
+        "condition": "circuit_only_preservation",
+        "method": "mean",
+        "preserved_fraction_target": 0.25
+      },
+      {
+        "trait": "evil",
+        "condition": "circuit_only_preservation",
+        "method": "mean",
+        "preserved_fraction_target": 0.5
+      },
+      {
+        "trait": "evil",
+        "condition": "circuit_only_preservation",
+        "method": "mean",
+        "preserved_fraction_target": 0.75
+      },
+      {
+        "trait": "evil",
+        "condition": "circuit_only_preservation",
+        "method": "mean",
+        "preserved_fraction_target": 1.0
+      }
+    ],
+    "rows_per_trait": 10
+  },
+  "dryrun_validation": {
+    "preserved_fraction_formula_smoke": {
+      "example_preserved_10_to_7": 0.7,
+      "example_unevaluable_zero_denominator": null
+    },
+    "synthetic_sufficiency_rows": [
+      {
+        "trait": "sycophancy",
+        "method": "resample",
+        "dose_fraction": 0.25,
+        "steered_effect_abs": 61.86666666666666,
+        "circuit_only_effect_abs_simulated": 14.108518300008074,
+        "preserved_effect_fraction": 0.22804717079754433,
+        "sufficiency_tier": "fail",
+        "sufficiency_pass": false
+      },
+      {
+        "trait": "sycophancy",
+        "method": "resample",
+        "dose_fraction": 0.5,
+        "steered_effect_abs": 61.86666666666666,
+        "circuit_only_effect_abs_simulated": 27.196596499605878,
+        "preserved_effect_fraction": 0.4396001589375951,
+        "sufficiency_tier": "partial",
+        "sufficiency_pass": false
+      },
+      {
+        "trait": "sycophancy",
+        "method": "resample",
+        "dose_fraction": 0.75,
+        "steered_effect_abs": 61.86666666666666,
+        "circuit_only_effect_abs_simulated": 42.224279139805596,
+        "preserved_effect_fraction": 0.6825045119580646,
+        "sufficiency_tier": "strong",
+        "sufficiency_pass": true
+      },
+      {
+        "trait": "sycophancy",
+        "method": "resample",
+        "dose_fraction": 1.0,
+        "steered_effect_abs": 61.86666666666666,
+        "circuit_only_effect_abs_simulated": 56.261896037874024,
+        "preserved_effect_fraction": 0.9094056471639121,
+        "sufficiency_tier": "strong",
+        "sufficiency_pass": true
+      },
+      {
+        "trait": "sycophancy",
+        "method": "mean",
+        "dose_fraction": 0.25,
+        "steered_effect_abs": 61.86666666666666,
+        "circuit_only_effect_abs_simulated": 10.392959563286158,
+        "preserved_effect_fraction": 0.16798964811346162,
+        "sufficiency_tier": "fail",
+        "sufficiency_pass": false
+      },
+      {
+        "trait": "sycophancy",
+        "method": "mean",
+        "dose_fraction": 0.5,
+        "steered_effect_abs": 61.86666666666666,
+        "circuit_only_effect_abs_simulated": 22.394384945087843,
+        "preserved_effect_fraction": 0.36197820493137683,
+        "sufficiency_tier": "fail",
+        "sufficiency_pass": false
+      },
+      {
+        "trait": "sycophancy",
+        "method": "mean",
+        "dose_fraction": 0.75,
+        "steered_effect_abs": 61.86666666666666,
+        "circuit_only_effect_abs_simulated": 34.87909059609282,
+        "preserved_effect_fraction": 0.5637784040316729,
+        "sufficiency_tier": "partial",
+        "sufficiency_pass": false
+      },
+      {
+        "trait": "sycophancy",
+        "method": "mean",
+        "dose_fraction": 1.0,
+        "steered_effect_abs": 61.86666666666666,
+        "circuit_only_effect_abs_simulated": 46.204351249536764,
+        "preserved_effect_fraction": 0.7468375740765641,
+        "sufficiency_tier": "strong",
+        "sufficiency_pass": true
+      },
+      {
+        "trait": "evil",
+        "method": "resample",
+        "dose_fraction": 0.25,
+        "steered_effect_abs": 67.28333333333333,
+        "circuit_only_effect_abs_simulated": 15.12744562119253,
+        "preserved_effect_fraction": 0.2248319884249571,
+        "sufficiency_tier": "fail",
+        "sufficiency_pass": false
+      },
+      {
+        "trait": "evil",
+        "method": "resample",
+        "dose_fraction": 0.5,
+        "steered_effect_abs": 67.28333333333333,
+        "circuit_only_effect_abs_simulated": 29.703543610730907,
+        "preserved_effect_fraction": 0.4414695607242642,
+        "sufficiency_tier": "partial",
+        "sufficiency_pass": false
+      },
+      {
+        "trait": "evil",
+        "method": "resample",
+        "dose_fraction": 0.75,
+        "steered_effect_abs": 67.28333333333333,
+        "circuit_only_effect_abs_simulated": 46.00793827075354,
+        "preserved_effect_fraction": 0.6837939797486283,
+        "sufficiency_tier": "strong",
+        "sufficiency_pass": true
+      },
+      {
+        "trait": "evil",
+        "method": "resample",
+        "dose_fraction": 1.0,
+        "steered_effect_abs": 67.28333333333333,
+        "circuit_only_effect_abs_simulated": 61.078324340554445,
+        "preserved_effect_fraction": 0.9077779193542895,
+        "sufficiency_tier": "strong",
+        "sufficiency_pass": true
+      },
+      {
+        "trait": "evil",
+        "method": "mean",
+        "dose_fraction": 0.25,
+        "steered_effect_abs": 67.28333333333333,
+        "circuit_only_effect_abs_simulated": 12.660052654342438,
+        "preserved_effect_fraction": 0.18816030697561217,
+        "sufficiency_tier": "fail",
+        "sufficiency_pass": false
+      },
+      {
+        "trait": "evil",
+        "method": "mean",
+        "dose_fraction": 0.5,
+        "steered_effect_abs": 67.28333333333333,
+        "circuit_only_effect_abs_simulated": 25.98969545875499,
+        "preserved_effect_fraction": 0.3862724120696803,
+        "sufficiency_tier": "fail",
+        "sufficiency_pass": false
+      },
+      {
+        "trait": "evil",
+        "method": "mean",
+        "dose_fraction": 0.75,
+        "steered_effect_abs": 67.28333333333333,
+        "circuit_only_effect_abs_simulated": 38.16143086911192,
+        "preserved_effect_fraction": 0.5671750934225205,
+        "sufficiency_tier": "partial",
+        "sufficiency_pass": false
+      },
+      {
+        "trait": "evil",
+        "method": "mean",
+        "dose_fraction": 1.0,
+        "steered_effect_abs": 67.28333333333333,
+        "circuit_only_effect_abs_simulated": 49.88433938789006,
+        "preserved_effect_fraction": 0.7414070753711676,
+        "sufficiency_tier": "strong",
+        "sufficiency_pass": true
+      }
+    ],
+    "synthetic_summary_by_trait_method": {
+      "sycophancy": {
+        "resample": {
+          "n_rows": 4,
+          "full_fraction_preserved_mean": 0.9094056471639121,
+          "full_fraction_sufficiency_pass_any": true
+        },
+        "mean": {
+          "n_rows": 4,
+          "full_fraction_preserved_mean": 0.7468375740765641,
+          "full_fraction_sufficiency_pass_any": true
+        }
+      },
+      "evil": {
+        "resample": {
+          "n_rows": 4,
+          "full_fraction_preserved_mean": 0.9077779193542895,
+          "full_fraction_sufficiency_pass_any": true
+        },
+        "mean": {
+          "n_rows": 4,
+          "full_fraction_preserved_mean": 0.7414070753711676,
+          "full_fraction_sufficiency_pass_any": true
+        }
+      }
+    }
+  },
+  "readiness": {
+    "inputs_valid": true,
+    "dryrun_path_exercised": true,
+    "launch_recommended_now": false,
+    "blocking_items": [
+      "remote_circuit_only_execution_not_run_dryrun_only"
+    ]
+  },
+  "evidence_status": {
+    "input_artifacts": "known",
+    "dryrun_simulation": "inferred",
+    "launch_readiness": "inferred"
+  }
+}

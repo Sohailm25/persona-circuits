@@ -1,0 +1,292 @@
+{
+  "timestamp_utc": "2026-02-25T17:09:28.665854+00:00",
+  "inputs": {
+    "vectors_path": "results/stage1_extraction/week2_persona_vectors_20260225T170852Z.pt",
+    "summary_path": "results/stage1_extraction/week2_vector_extraction_summary_20260225T170852Z.json",
+    "traits": [
+      "sycophancy",
+      "evil",
+      "hallucination"
+    ],
+    "layers": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ]
+  },
+  "evidence_status": {
+    "cross_trait_vector_cosines_by_layer": "known",
+    "norm_trend_diagnostics_from_summary": "known",
+    "cosine_margin_from_summary": "known"
+  },
+  "cross_trait_vector_cosines_by_layer": {
+    "11": {
+      "sycophancy": {
+        "sycophancy": 1.0000000000000009,
+        "evil": 0.24039770466296642,
+        "hallucination": 0.2662426063361964
+      },
+      "evil": {
+        "sycophancy": 0.24039770466296642,
+        "evil": 1.0000000000000004,
+        "hallucination": 0.09141115666517065
+      },
+      "hallucination": {
+        "sycophancy": 0.2662426063361964,
+        "evil": 0.09141115666517065,
+        "hallucination": 1.0000000000000004
+      }
+    },
+    "12": {
+      "sycophancy": {
+        "sycophancy": 1.000000000000001,
+        "evil": 0.2991796577314842,
+        "hallucination": 0.2528440307299367
+      },
+      "evil": {
+        "sycophancy": 0.2991796577314842,
+        "evil": 1.0000000000000016,
+        "hallucination": 0.030523473802212354
+      },
+      "hallucination": {
+        "sycophancy": 0.2528440307299367,
+        "evil": 0.030523473802212354,
+        "hallucination": 1.0000000000000009
+      }
+    },
+    "13": {
+      "sycophancy": {
+        "sycophancy": 1.0000000000000009,
+        "evil": 0.2540321224623521,
+        "hallucination": 0.19010234878796828
+      },
+      "evil": {
+        "sycophancy": 0.2540321224623521,
+        "evil": 1.000000000000001,
+        "hallucination": 0.03678484197927127
+      },
+      "hallucination": {
+        "sycophancy": 0.19010234878796828,
+        "evil": 0.03678484197927127,
+        "hallucination": 1.0000000000000007
+      }
+    },
+    "14": {
+      "sycophancy": {
+        "sycophancy": 1.0000000000000009,
+        "evil": 0.23415370275363673,
+        "hallucination": 0.16840263970689673
+      },
+      "evil": {
+        "sycophancy": 0.23415370275363673,
+        "evil": 1.0000000000000007,
+        "hallucination": 0.03508344784876852
+      },
+      "hallucination": {
+        "sycophancy": 0.16840263970689673,
+        "evil": 0.03508344784876852,
+        "hallucination": 1.0000000000000009
+      }
+    },
+    "15": {
+      "sycophancy": {
+        "sycophancy": 1.0000000000000007,
+        "evil": 0.23376205956008123,
+        "hallucination": 0.14028732861910714
+      },
+      "evil": {
+        "sycophancy": 0.23376205956008123,
+        "evil": 1.000000000000001,
+        "hallucination": 0.03580064291968699
+      },
+      "hallucination": {
+        "sycophancy": 0.14028732861910714,
+        "evil": 0.03580064291968699,
+        "hallucination": 1.0000000000000009
+      }
+    },
+    "16": {
+      "sycophancy": {
+        "sycophancy": 1.0000000000000002,
+        "evil": 0.28042680998156516,
+        "hallucination": 0.08731614340773179
+      },
+      "evil": {
+        "sycophancy": 0.28042680998156516,
+        "evil": 1.000000000000001,
+        "hallucination": -0.010879970146366286
+      },
+      "hallucination": {
+        "sycophancy": 0.08731614340773179,
+        "evil": -0.010879970146366286,
+        "hallucination": 1.000000000000001
+      }
+    }
+  },
+  "norm_trend_diagnostics": {
+    "sycophancy": {
+      "layers": {
+        "11": {
+          "raw_vector_norm": 2.901027202606201,
+          "projection_margin_mean": 2.901027202606201,
+          "projection_margin_over_raw_vector_norm": 0.9999999965529451,
+          "cosine_margin_mean": 0.4315932095050812,
+          "cosine_margin_evidence": "known"
+        },
+        "12": {
+          "raw_vector_norm": 3.270634889602661,
+          "projection_margin_mean": 3.270634651184082,
+          "projection_margin_over_raw_vector_norm": 0.9999999240457628,
+          "cosine_margin_mean": 0.4090653359889984,
+          "cosine_margin_evidence": "known"
+        },
+        "13": {
+          "raw_vector_norm": 4.8023457527160645,
+          "projection_margin_mean": 4.80234432220459,
+          "projection_margin_over_raw_vector_norm": 0.9999997000400334,
+          "cosine_margin_mean": 0.5888050198554993,
+          "cosine_margin_evidence": "known"
+        },
+        "14": {
+          "raw_vector_norm": 5.8598504066467285,
+          "projection_margin_mean": 5.8598504066467285,
+          "projection_margin_over_raw_vector_norm": 0.9999999982934719,
+          "cosine_margin_mean": 0.6392684578895569,
+          "cosine_margin_evidence": "known"
+        },
+        "15": {
+          "raw_vector_norm": 6.705094337463379,
+          "projection_margin_mean": 6.705095291137695,
+          "projection_margin_over_raw_vector_norm": 1.0000001407399013,
+          "cosine_margin_mean": 0.6600633859634399,
+          "cosine_margin_evidence": "known"
+        },
+        "16": {
+          "raw_vector_norm": 7.474791526794434,
+          "projection_margin_mean": 7.474790573120117,
+          "projection_margin_over_raw_vector_norm": 0.9999998710767636,
+          "cosine_margin_mean": 0.6613620519638062,
+          "cosine_margin_evidence": "known"
+        }
+      },
+      "cosine_margin_data_present": true,
+      "trend_checks": {
+        "raw_vector_norm_monotonic_non_decreasing": true,
+        "projection_margin_monotonic_non_decreasing": true,
+        "cosine_margin_monotonic_non_decreasing": false
+      }
+    },
+    "evil": {
+      "layers": {
+        "11": {
+          "raw_vector_norm": 2.9317433834075928,
+          "projection_margin_mean": 2.9317431449890137,
+          "projection_margin_over_raw_vector_norm": 0.99999991526592,
+          "cosine_margin_mean": 0.4351421594619751,
+          "cosine_margin_evidence": "known"
+        },
+        "12": {
+          "raw_vector_norm": 3.3429222106933594,
+          "projection_margin_mean": 3.3429219722747803,
+          "projection_margin_over_raw_vector_norm": 0.9999999256881965,
+          "cosine_margin_mean": 0.41807761788368225,
+          "cosine_margin_evidence": "known"
+        },
+        "13": {
+          "raw_vector_norm": 5.224006652832031,
+          "projection_margin_mean": 5.224005222320557,
+          "projection_margin_over_raw_vector_norm": 0.9999997242516008,
+          "cosine_margin_mean": 0.6273537874221802,
+          "cosine_margin_evidence": "known"
+        },
+        "14": {
+          "raw_vector_norm": 5.661656379699707,
+          "projection_margin_mean": 5.661656379699707,
+          "projection_margin_over_raw_vector_norm": 0.9999999982337324,
+          "cosine_margin_mean": 0.6204674243927002,
+          "cosine_margin_evidence": "known"
+        },
+        "15": {
+          "raw_vector_norm": 6.558012008666992,
+          "projection_margin_mean": 6.558011531829834,
+          "projection_margin_over_raw_vector_norm": 0.9999999257645218,
+          "cosine_margin_mean": 0.6490532159805298,
+          "cosine_margin_evidence": "known"
+        },
+        "16": {
+          "raw_vector_norm": 7.698451519012451,
+          "projection_margin_mean": 7.698451995849609,
+          "projection_margin_over_raw_vector_norm": 1.0000000606403971,
+          "cosine_margin_mean": 0.6814541816711426,
+          "cosine_margin_evidence": "known"
+        }
+      },
+      "cosine_margin_data_present": true,
+      "trend_checks": {
+        "raw_vector_norm_monotonic_non_decreasing": true,
+        "projection_margin_monotonic_non_decreasing": true,
+        "cosine_margin_monotonic_non_decreasing": false
+      }
+    },
+    "hallucination": {
+      "layers": {
+        "11": {
+          "raw_vector_norm": 2.476714849472046,
+          "projection_margin_mean": 2.476715326309204,
+          "projection_margin_over_raw_vector_norm": 1.0000001884904741,
+          "cosine_margin_mean": 0.3720127046108246,
+          "cosine_margin_evidence": "known"
+        },
+        "12": {
+          "raw_vector_norm": 2.3890302181243896,
+          "projection_margin_mean": 2.3890304565429688,
+          "projection_margin_over_raw_vector_norm": 1.0000000956114228,
+          "cosine_margin_mean": 0.3078582286834717,
+          "cosine_margin_evidence": "known"
+        },
+        "13": {
+          "raw_vector_norm": 3.1229135990142822,
+          "projection_margin_mean": 3.1229143142700195,
+          "projection_margin_over_raw_vector_norm": 1.000000225832612,
+          "cosine_margin_mean": 0.40022730827331543,
+          "cosine_margin_evidence": "known"
+        },
+        "14": {
+          "raw_vector_norm": 3.6959593296051025,
+          "projection_margin_mean": 3.69596004486084,
+          "projection_margin_over_raw_vector_norm": 1.0000001908180456,
+          "cosine_margin_mean": 0.4294876754283905,
+          "cosine_margin_evidence": "known"
+        },
+        "15": {
+          "raw_vector_norm": 4.095144271850586,
+          "projection_margin_mean": 4.095144271850586,
+          "projection_margin_over_raw_vector_norm": 0.9999999975580837,
+          "cosine_margin_mean": 0.42931675910949707,
+          "cosine_margin_evidence": "known"
+        },
+        "16": {
+          "raw_vector_norm": 4.290371894836426,
+          "projection_margin_mean": 4.290370941162109,
+          "projection_margin_over_raw_vector_norm": 0.9999997753867642,
+          "cosine_margin_mean": 0.3971516489982605,
+          "cosine_margin_evidence": "known"
+        }
+      },
+      "cosine_margin_data_present": true,
+      "trend_checks": {
+        "raw_vector_norm_monotonic_non_decreasing": false,
+        "projection_margin_monotonic_non_decreasing": false,
+        "cosine_margin_monotonic_non_decreasing": false
+      }
+    }
+  },
+  "risk_flags": {
+    "cosine_abs_flag_threshold": 0.6,
+    "high_alignment_pairs": [],
+    "high_alignment_pair_count": 0
+  }
+}

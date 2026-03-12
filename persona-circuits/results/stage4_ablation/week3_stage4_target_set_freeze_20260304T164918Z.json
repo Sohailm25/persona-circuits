@@ -1,0 +1,444 @@
+{
+  "timestamp_utc": "2026-03-04T16:49:18.917723+00:00",
+  "evidence_status": {
+    "target_feature_ranking": "known",
+    "stage4_runtime_selectivity": "unknown",
+    "causal_necessity": "unknown",
+    "causal_sufficiency": "unknown"
+  },
+  "inputs": {
+    "config_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/experiment.yaml",
+    "stage3_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage3_attribution/week3_stage3_activation_delta_attribution_20260304T164549Z.json",
+    "candidate_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage3_attribution/week3_stage3_candidate_selection_20260304T163200Z.json",
+    "traits": [
+      "sycophancy",
+      "evil"
+    ],
+    "top_k": 10,
+    "seed": 42,
+    "random_baseline_samples_required": 100
+  },
+  "policy": {
+    "target_freeze_source": "stage3_pass2_depth_sensitivity",
+    "top_k_selection": "top_k_by_mean_abs_delta_from_stage3_artifact",
+    "random_baseline_policy": "sample_same_size_sets_at_runtime_from_full_sae_feature_space"
+  },
+  "targets_by_trait": {
+    "sycophancy": {
+      "trait": "sycophancy",
+      "claim_trait_name": "sycophancy",
+      "target_feature_ids": [
+        46611,
+        112811,
+        95531,
+        129143,
+        6997,
+        42713,
+        34012,
+        80941,
+        37691,
+        120627
+      ],
+      "target_ranked_rows": [
+        {
+          "rank": 1,
+          "feature_id": 46611,
+          "mean_delta": 3.125058078765869,
+          "mean_abs_delta": 3.125058078765869
+        },
+        {
+          "rank": 2,
+          "feature_id": 112811,
+          "mean_delta": 2.5613578844070433,
+          "mean_abs_delta": 2.5613578844070433
+        },
+        {
+          "rank": 3,
+          "feature_id": 95531,
+          "mean_delta": 1.9999693393707276,
+          "mean_abs_delta": 1.9999693393707276
+        },
+        {
+          "rank": 4,
+          "feature_id": 129143,
+          "mean_delta": 1.8235404729843139,
+          "mean_abs_delta": 1.8235404729843139
+        },
+        {
+          "rank": 5,
+          "feature_id": 6997,
+          "mean_delta": -1.8057264804840087,
+          "mean_abs_delta": 1.8057264804840087
+        },
+        {
+          "rank": 6,
+          "feature_id": 42713,
+          "mean_delta": -1.7207582473754883,
+          "mean_abs_delta": 1.7207582473754883
+        },
+        {
+          "rank": 7,
+          "feature_id": 34012,
+          "mean_delta": 1.5814625930786133,
+          "mean_abs_delta": 1.5814625930786133
+        },
+        {
+          "rank": 8,
+          "feature_id": 80941,
+          "mean_delta": -1.444555139541626,
+          "mean_abs_delta": 1.444555139541626
+        },
+        {
+          "rank": 9,
+          "feature_id": 37691,
+          "mean_delta": -1.3940785646438598,
+          "mean_abs_delta": 1.3940785646438598
+        },
+        {
+          "rank": 10,
+          "feature_id": 120627,
+          "mean_delta": -1.3104308557510376,
+          "mean_abs_delta": 1.3104308557510376
+        }
+      ],
+      "candidate_pool_size": 50,
+      "candidate_pool_feature_ids": [
+        129143,
+        46611,
+        34012,
+        36205,
+        35776,
+        82057,
+        112811,
+        13032,
+        95531,
+        120324,
+        43788,
+        10101,
+        42713,
+        80941,
+        6997,
+        118364,
+        37691,
+        53103,
+        120627,
+        42878,
+        122515,
+        106437,
+        44034,
+        37821,
+        7874,
+        3024,
+        23304,
+        110514,
+        77531,
+        103758,
+        85773,
+        100624,
+        129807,
+        55046,
+        50576,
+        36217,
+        122605,
+        88403,
+        113865,
+        47486,
+        88070,
+        42565,
+        44429,
+        91011,
+        30631,
+        64364,
+        46714,
+        32996,
+        52245,
+        82258
+      ],
+      "prompt_count_used": 50,
+      "attribution_method": "activation_delta_proxy",
+      "prompt_top10_pairwise_jaccard_mean": 0.32540386482510697,
+      "mean_abs_delta_concentration": {
+        "gini": 0.5771202087718772,
+        "entropy_normalized": 0.8232408752394076,
+        "top_10pct_mass": 0.3194301328455337,
+        "top_20pct_mass": 0.5297728538364681
+      },
+      "random_baseline_sampling": {
+        "full_run_mode": "runtime_sae_full_feature_space",
+        "n_sets_required": 100,
+        "set_size": 10,
+        "exclude_target_ids": true,
+        "preview_sets_from_candidate_pool": [
+          [
+            13032,
+            50576,
+            82057,
+            100624,
+            7874,
+            3024,
+            122605,
+            82258,
+            118364,
+            88070
+          ],
+          [
+            113865,
+            3024,
+            44034,
+            55046,
+            52245,
+            10101,
+            37821,
+            23304,
+            100624,
+            44429
+          ],
+          [
+            50576,
+            36217,
+            53103,
+            110514,
+            44034,
+            43788,
+            85773,
+            64364,
+            46714,
+            82057
+          ],
+          [
+            64364,
+            3024,
+            122605,
+            44034,
+            129807,
+            55046,
+            37821,
+            46714,
+            120324,
+            42565
+          ],
+          [
+            113865,
+            42565,
+            118364,
+            129807,
+            44429,
+            50576,
+            3024,
+            43788,
+            77531,
+            122515
+          ]
+        ]
+      }
+    },
+    "evil": {
+      "trait": "evil",
+      "claim_trait_name": "machiavellian_disposition",
+      "target_feature_ids": [
+        36353,
+        124173,
+        112811,
+        85773,
+        60240,
+        47486,
+        6380,
+        88403,
+        46040,
+        17210
+      ],
+      "target_ranked_rows": [
+        {
+          "rank": 1,
+          "feature_id": 36353,
+          "mean_delta": -3.3066462802886964,
+          "mean_abs_delta": 3.3066462802886964
+        },
+        {
+          "rank": 2,
+          "feature_id": 124173,
+          "mean_delta": -2.9775107717514038,
+          "mean_abs_delta": 2.9775107717514038
+        },
+        {
+          "rank": 3,
+          "feature_id": 112811,
+          "mean_delta": 2.8479549503326416,
+          "mean_abs_delta": 2.8479549503326416
+        },
+        {
+          "rank": 4,
+          "feature_id": 85773,
+          "mean_delta": -2.5846324157714844,
+          "mean_abs_delta": 2.5846324157714844
+        },
+        {
+          "rank": 5,
+          "feature_id": 60240,
+          "mean_delta": 1.5753677892684936,
+          "mean_abs_delta": 1.5753677892684936
+        },
+        {
+          "rank": 6,
+          "feature_id": 47486,
+          "mean_delta": 1.5489066219329835,
+          "mean_abs_delta": 1.566631736755371
+        },
+        {
+          "rank": 7,
+          "feature_id": 6380,
+          "mean_delta": 1.3599056577682496,
+          "mean_abs_delta": 1.3599056577682496
+        },
+        {
+          "rank": 8,
+          "feature_id": 88403,
+          "mean_delta": -1.2039079904556274,
+          "mean_abs_delta": 1.2039079904556274
+        },
+        {
+          "rank": 9,
+          "feature_id": 46040,
+          "mean_delta": 1.1769278240203858,
+          "mean_abs_delta": 1.1769278240203858
+        },
+        {
+          "rank": 10,
+          "feature_id": 17210,
+          "mean_delta": -1.038172812461853,
+          "mean_abs_delta": 1.1194441080093385
+        }
+      ],
+      "candidate_pool_size": 50,
+      "candidate_pool_feature_ids": [
+        90779,
+        26546,
+        108375,
+        70038,
+        36353,
+        37821,
+        124173,
+        25209,
+        85773,
+        115588,
+        112811,
+        118364,
+        60240,
+        117682,
+        47486,
+        3733,
+        17210,
+        88403,
+        77657,
+        57919,
+        23132,
+        46040,
+        98976,
+        44034,
+        106437,
+        30631,
+        9590,
+        78782,
+        17177,
+        6380,
+        127230,
+        65908,
+        79356,
+        95531,
+        3024,
+        112602,
+        23304,
+        62135,
+        3275,
+        122515,
+        130284,
+        42518,
+        3116,
+        113412,
+        75837,
+        98503,
+        18268,
+        117358,
+        8606,
+        108258
+      ],
+      "prompt_count_used": 50,
+      "attribution_method": "activation_delta_proxy",
+      "prompt_top10_pairwise_jaccard_mean": 0.37435062301556266,
+      "mean_abs_delta_concentration": {
+        "gini": 0.6476157902969548,
+        "entropy_normalized": 0.7927954452344472,
+        "top_10pct_mass": 0.41613839698675065,
+        "top_20pct_mass": 0.6173438498368495
+      },
+      "random_baseline_sampling": {
+        "full_run_mode": "runtime_sae_full_feature_space",
+        "n_sets_required": 100,
+        "set_size": 10,
+        "exclude_target_ids": true,
+        "preview_sets_from_candidate_pool": [
+          [
+            70038,
+            3024,
+            108375,
+            65908,
+            44034,
+            106437,
+            23304,
+            108258,
+            118364,
+            130284
+          ],
+          [
+            3275,
+            106437,
+            23132,
+            95531,
+            8606,
+            115588,
+            98976,
+            30631,
+            65908,
+            3116
+          ],
+          [
+            3024,
+            112602,
+            117682,
+            9590,
+            23132,
+            25209,
+            127230,
+            98503,
+            18268,
+            108375
+          ],
+          [
+            98503,
+            106437,
+            23304,
+            23132,
+            79356,
+            95531,
+            98976,
+            18268,
+            37821,
+            42518
+          ],
+          [
+            3275,
+            42518,
+            118364,
+            79356,
+            3116,
+            3024,
+            106437,
+            25209,
+            78782,
+            77657
+          ]
+        ]
+      }
+    }
+  }
+}

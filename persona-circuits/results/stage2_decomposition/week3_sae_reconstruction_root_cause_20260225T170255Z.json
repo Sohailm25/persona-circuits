@@ -1,0 +1,985 @@
+{
+  "timestamp_utc": "2026-02-25T17:02:55.239592+00:00",
+  "inputs": {
+    "sae_source": "primary",
+    "layer": 16,
+    "sae_release": "llama_scope_lxr_32x",
+    "sae_id": "l16r_32x",
+    "configured_hook": "blocks.16.hook_resid_post",
+    "expected_hook_name": null,
+    "model_names": [
+      "meta-llama/Llama-3.1-8B",
+      "meta-llama/Llama-3.1-8B-Instruct"
+    ],
+    "n_probe_rows": 6,
+    "probe_traits": [
+      "evil",
+      "hallucination",
+      "sycophancy"
+    ],
+    "seed": 42
+  },
+  "sae_cfg_snapshot": {
+    "hook_name": null,
+    "hook_layer": null,
+    "hook_head_index": null,
+    "prepend_bos": null,
+    "normalize_activations": "none",
+    "activation_fn_str": "unknown",
+    "d_in": 4096,
+    "d_sae": 131072
+  },
+  "evidence_status": {
+    "variant_metrics": "observed",
+    "hook_name_alignment": "unknown",
+    "root_cause_flags": "inferred"
+  },
+  "model_results": {
+    "meta-llama/Llama-3.1-8B": {
+      "rows": [
+        {
+          "trait": "sycophancy",
+          "row_id": 25,
+          "hooks_observed": [
+            "blocks.16.hook_resid_post"
+          ],
+          "hook_variant_metrics": {
+            "blocks.16.hook_resid_post": {
+              "raw_seq": {
+                "reconstruction_cosine": 0.12589843571186066,
+                "explained_variance": -27050.626953125,
+                "relative_error_norm": 164.47378540039062,
+                "feature_l0_mean": 1431.660400390625,
+                "act_norm_mean": 22.195478439331055,
+                "recon_norm_mean": 1579.440673828125
+              },
+              "last_token": {
+                "reconstruction_cosine": 0.8109533190727234,
+                "explained_variance": 0.656369149684906,
+                "relative_error_norm": 0.5862003564834595,
+                "feature_l0_mean": 37.0,
+                "act_norm_mean": 12.646187782287598,
+                "recon_norm_mean": 9.803698539733887
+              },
+              "token_centered": {
+                "reconstruction_cosine": 0.1260327845811844,
+                "explained_variance": -26927.482421875,
+                "relative_error_norm": 164.0989990234375,
+                "feature_l0_mean": 1429.603759765625,
+                "act_norm_mean": 22.193504333496094,
+                "recon_norm_mean": 1575.77587890625
+              },
+              "token_unit_norm": {
+                "reconstruction_cosine": 0.17598968744277954,
+                "explained_variance": -0.3571479320526123,
+                "relative_error_norm": 1.1649669408798218,
+                "feature_l0_mean": 0.2641509473323822,
+                "act_norm_mean": 1.0,
+                "recon_norm_mean": 0.7983126640319824
+              }
+            }
+          }
+        },
+        {
+          "trait": "sycophancy",
+          "row_id": 23,
+          "hooks_observed": [
+            "blocks.16.hook_resid_post"
+          ],
+          "hook_variant_metrics": {
+            "blocks.16.hook_resid_post": {
+              "raw_seq": {
+                "reconstruction_cosine": 0.12589150667190552,
+                "explained_variance": -27045.84765625,
+                "relative_error_norm": 164.45925903320312,
+                "feature_l0_mean": 1433.20751953125,
+                "act_norm_mean": 22.223119735717773,
+                "recon_norm_mean": 1579.6549072265625
+              },
+              "last_token": {
+                "reconstruction_cosine": 0.797218382358551,
+                "explained_variance": 0.6336216926574707,
+                "relative_error_norm": 0.6052919626235962,
+                "feature_l0_mean": 35.0,
+                "act_norm_mean": 12.13029670715332,
+                "recon_norm_mean": 9.13685131072998
+              },
+              "token_centered": {
+                "reconstruction_cosine": 0.12602567672729492,
+                "explained_variance": -26922.658203125,
+                "relative_error_norm": 164.0843048095703,
+                "feature_l0_mean": 1431.20751953125,
+                "act_norm_mean": 22.221532821655273,
+                "recon_norm_mean": 1575.9901123046875
+              },
+              "token_unit_norm": {
+                "reconstruction_cosine": 0.18338219821453094,
+                "explained_variance": -0.34796690940856934,
+                "relative_error_norm": 1.1610198020935059,
+                "feature_l0_mean": 0.30188679695129395,
+                "act_norm_mean": 1.0,
+                "recon_norm_mean": 0.8004246950149536
+              }
+            }
+          }
+        },
+        {
+          "trait": "evil",
+          "row_id": 42,
+          "hooks_observed": [
+            "blocks.16.hook_resid_post"
+          ],
+          "hook_variant_metrics": {
+            "blocks.16.hook_resid_post": {
+              "raw_seq": {
+                "reconstruction_cosine": 0.12599948048591614,
+                "explained_variance": -27096.998046875,
+                "relative_error_norm": 164.6147003173828,
+                "feature_l0_mean": 1457.365478515625,
+                "act_norm_mean": 22.17039680480957,
+                "recon_norm_mean": 1609.4854736328125
+              },
+              "last_token": {
+                "reconstruction_cosine": 0.8332618474960327,
+                "explained_variance": 0.689719021320343,
+                "relative_error_norm": 0.5570287108421326,
+                "feature_l0_mean": 27.0,
+                "act_norm_mean": 12.682731628417969,
+                "recon_norm_mean": 9.70726203918457
+              },
+              "token_centered": {
+                "reconstruction_cosine": 0.12613409757614136,
+                "explained_variance": -26973.630859375,
+                "relative_error_norm": 164.2395477294922,
+                "feature_l0_mean": 1455.4615478515625,
+                "act_norm_mean": 22.168405532836914,
+                "recon_norm_mean": 1605.7635498046875
+              },
+              "token_unit_norm": {
+                "reconstruction_cosine": 0.1915428638458252,
+                "explained_variance": -0.3366692066192627,
+                "relative_error_norm": 1.156144142150879,
+                "feature_l0_mean": 0.3076923191547394,
+                "act_norm_mean": 1.0,
+                "recon_norm_mean": 0.8018229603767395
+              }
+            }
+          }
+        },
+        {
+          "trait": "evil",
+          "row_id": 41,
+          "hooks_observed": [
+            "blocks.16.hook_resid_post"
+          ],
+          "hook_variant_metrics": {
+            "blocks.16.hook_resid_post": {
+              "raw_seq": {
+                "reconstruction_cosine": 0.12614846229553223,
+                "explained_variance": -27166.2109375,
+                "relative_error_norm": 164.8247833251953,
+                "feature_l0_mean": 1576.3125,
+                "act_norm_mean": 22.95883560180664,
+                "recon_norm_mean": 1742.6986083984375
+              },
+              "last_token": {
+                "reconstruction_cosine": 0.8278033137321472,
+                "explained_variance": 0.6793299913406372,
+                "relative_error_norm": 0.5662773251533508,
+                "feature_l0_mean": 27.0,
+                "act_norm_mean": 12.578192710876465,
+                "recon_norm_mean": 9.443806648254395
+              },
+              "token_centered": {
+                "reconstruction_cosine": 0.12628304958343506,
+                "explained_variance": -27042.47265625,
+                "relative_error_norm": 164.44900512695312,
+                "feature_l0_mean": 1574.1875,
+                "act_norm_mean": 22.957172393798828,
+                "recon_norm_mean": 1738.6624755859375
+              },
+              "token_unit_norm": {
+                "reconstruction_cosine": 0.1827727109193802,
+                "explained_variance": -0.3475593328475952,
+                "relative_error_norm": 1.1608442068099976,
+                "feature_l0_mean": 0.2708333432674408,
+                "act_norm_mean": 1.0,
+                "recon_norm_mean": 0.7992836236953735
+              }
+            }
+          }
+        },
+        {
+          "trait": "hallucination",
+          "row_id": 22,
+          "hooks_observed": [
+            "blocks.16.hook_resid_post"
+          ],
+          "hook_variant_metrics": {
+            "blocks.16.hook_resid_post": {
+              "raw_seq": {
+                "reconstruction_cosine": 0.12652705609798431,
+                "explained_variance": -27360.783203125,
+                "relative_error_norm": 165.4139862060547,
+                "feature_l0_mean": 1928.3846435546875,
+                "act_norm_mean": 25.035860061645508,
+                "recon_norm_mean": 2142.23876953125
+              },
+              "last_token": {
+                "reconstruction_cosine": 0.8029643297195435,
+                "explained_variance": 0.6442493200302124,
+                "relative_error_norm": 0.5964483618736267,
+                "feature_l0_mean": 35.0,
+                "act_norm_mean": 12.495227813720703,
+                "recon_norm_mean": 9.753165245056152
+              },
+              "token_centered": {
+                "reconstruction_cosine": 0.1266632229089737,
+                "explained_variance": -27236.064453125,
+                "relative_error_norm": 165.03656005859375,
+                "feature_l0_mean": 1925.4102783203125,
+                "act_norm_mean": 25.033740997314453,
+                "recon_norm_mean": 2137.24951171875
+              },
+              "token_unit_norm": {
+                "reconstruction_cosine": 0.1767576038837433,
+                "explained_variance": -0.35778021812438965,
+                "relative_error_norm": 1.1652382612228394,
+                "feature_l0_mean": 0.25641027092933655,
+                "act_norm_mean": 1.0,
+                "recon_norm_mean": 0.7996865510940552
+              }
+            }
+          }
+        },
+        {
+          "trait": "hallucination",
+          "row_id": 18,
+          "hooks_observed": [
+            "blocks.16.hook_resid_post"
+          ],
+          "hook_variant_metrics": {
+            "blocks.16.hook_resid_post": {
+              "raw_seq": {
+                "reconstruction_cosine": 0.1264219880104065,
+                "explained_variance": -27295.0625,
+                "relative_error_norm": 165.2152099609375,
+                "feature_l0_mean": 1753.837158203125,
+                "act_norm_mean": 23.78693962097168,
+                "recon_norm_mean": 1943.5537109375
+              },
+              "last_token": {
+                "reconstruction_cosine": 0.8275759220123291,
+                "explained_variance": 0.6774430274963379,
+                "relative_error_norm": 0.5679409503936768,
+                "feature_l0_mean": 28.0,
+                "act_norm_mean": 12.355955123901367,
+                "recon_norm_mean": 9.159797668457031
+              },
+              "token_centered": {
+                "reconstruction_cosine": 0.12655679881572723,
+                "explained_variance": -27170.744140625,
+                "relative_error_norm": 164.8385467529297,
+                "feature_l0_mean": 1751.348876953125,
+                "act_norm_mean": 23.785144805908203,
+                "recon_norm_mean": 1939.04052734375
+              },
+              "token_unit_norm": {
+                "reconstruction_cosine": 0.18072474002838135,
+                "explained_variance": -0.3508528470993042,
+                "relative_error_norm": 1.162261962890625,
+                "feature_l0_mean": 0.25581395626068115,
+                "act_norm_mean": 1.0,
+                "recon_norm_mean": 0.7992535829544067
+              }
+            }
+          }
+        }
+      ],
+      "variants_summary": {
+        "blocks.16.hook_resid_post::raw_seq": {
+          "reconstruction_cosine": {
+            "n": 6,
+            "mean": 0.1261478215456009,
+            "median": 0.12607397139072418,
+            "std": 0.0002479523426124848,
+            "p10": 0.1258949711918831,
+            "p90": 0.1264745220541954
+          },
+          "explained_variance": {
+            "n": 6,
+            "mean": -27169.2548828125,
+            "median": -27131.6044921875,
+            "std": 120.44563035984264,
+            "p10": -27327.9228515625,
+            "p90": -27048.2373046875
+          },
+          "relative_error_norm": {
+            "n": 6,
+            "mean": 164.833620707194,
+            "median": 164.71974182128906,
+            "std": 0.36516362045242545,
+            "p10": 164.46652221679688,
+            "p90": 165.3145980834961
+          },
+          "feature_l0_mean": {
+            "n": 6,
+            "mean": 1596.7946166992188,
+            "median": 1516.8389892578125,
+            "std": 186.41546573304683,
+            "p10": 1432.4339599609375,
+            "p90": 1841.1109008789062
+          },
+          "act_norm_mean": {
+            "n": 6,
+            "mean": 23.061771710713703,
+            "median": 22.590977668762207,
+            "std": 1.0552913932458439,
+            "p10": 22.182937622070312,
+            "p90": 24.411399841308594
+          },
+          "recon_norm_mean": {
+            "n": 6,
+            "mean": 1766.178690592448,
+            "median": 1676.092041015625,
+            "std": 211.2066002681809,
+            "p10": 1579.5477905273438,
+            "p90": 2042.896240234375
+          }
+        },
+        "blocks.16.hook_resid_post::last_token": {
+          "reconstruction_cosine": {
+            "n": 6,
+            "mean": 0.8166295190652212,
+            "median": 0.8192646205425262,
+            "std": 0.013644661032937343,
+            "p10": 0.8000913560390472,
+            "p90": 0.83053258061409
+          },
+          "explained_variance": {
+            "n": 6,
+            "mean": 0.6634553670883179,
+            "median": 0.666906088590622,
+            "std": 0.02019312062392434,
+            "p10": 0.6389355063438416,
+            "p90": 0.6845245063304901
+          },
+          "relative_error_norm": {
+            "n": 6,
+            "mean": 0.5798646112283071,
+            "median": 0.5770706534385681,
+            "std": 0.017368453344177,
+            "p10": 0.5616530179977417,
+            "p90": 0.6008701622486115
+          },
+          "feature_l0_mean": {
+            "n": 6,
+            "mean": 31.5,
+            "median": 31.5,
+            "std": 4.232808366400098,
+            "p10": 27.0,
+            "p90": 36.0
+          },
+          "act_norm_mean": {
+            "n": 6,
+            "mean": 12.48143196105957,
+            "median": 12.536710262298584,
+            "std": 0.1898505588447274,
+            "p10": 12.243125915527344,
+            "p90": 12.664459705352783
+          },
+          "recon_norm_mean": {
+            "n": 6,
+            "mean": 9.500763575236002,
+            "median": 9.575534343719482,
+            "std": 0.2738770370778182,
+            "p10": 9.148324489593506,
+            "p90": 9.77843189239502
+          }
+        },
+        "blocks.16.hook_resid_post::token_centered": {
+          "reconstruction_cosine": {
+            "n": 6,
+            "mean": 0.1262826050321261,
+            "median": 0.1262085735797882,
+            "std": 0.00024850528927387226,
+            "p10": 0.12602923065423965,
+            "p90": 0.12661001086235046
+          },
+          "explained_variance": {
+            "n": 6,
+            "mean": -27045.5087890625,
+            "median": -27008.0517578125,
+            "std": 119.85651079698404,
+            "p10": -27203.404296875,
+            "p90": -26925.0703125
+          },
+          "relative_error_norm": {
+            "n": 6,
+            "mean": 164.45782725016275,
+            "median": 164.34427642822266,
+            "std": 0.3642067847309985,
+            "p10": 164.0916519165039,
+            "p90": 164.93755340576172
+          },
+          "feature_l0_mean": {
+            "n": 6,
+            "mean": 1594.5365804036458,
+            "median": 1514.8245239257812,
+            "std": 186.05674202774844,
+            "p10": 1430.4056396484375,
+            "p90": 1838.3795776367188
+          },
+          "act_norm_mean": {
+            "n": 6,
+            "mean": 23.059916814168293,
+            "median": 22.58935260772705,
+            "std": 1.0552128246788661,
+            "p10": 22.180954933166504,
+            "p90": 24.409442901611328
+          },
+          "recon_norm_mean": {
+            "n": 6,
+            "mean": 1762.080342610677,
+            "median": 1672.2130126953125,
+            "std": 210.70875462379922,
+            "p10": 1575.8829956054688,
+            "p90": 2038.14501953125
+          }
+        },
+        "blocks.16.hook_resid_post::token_unit_norm": {
+          "reconstruction_cosine": {
+            "n": 6,
+            "mean": 0.1818616340557734,
+            "median": 0.18174872547388077,
+            "std": 0.005142823409251113,
+            "p10": 0.1763736456632614,
+            "p90": 0.18746253103017807
+          },
+          "explained_variance": {
+            "n": 6,
+            "mean": -0.3496627410252889,
+            "median": -0.34940987825393677,
+            "std": 0.0070648186911413035,
+            "p10": -0.357464075088501,
+            "p90": -0.34211426973342896
+          },
+          "relative_error_norm": {
+            "n": 6,
+            "mean": 1.1617458860079448,
+            "median": 1.1616408824920654,
+            "std": 0.003042969272083939,
+            "p10": 1.1584941744804382,
+            "p90": 1.1651026010513306
+          },
+          "feature_l0_mean": {
+            "n": 6,
+            "mean": 0.276131272315979,
+            "median": 0.2674921452999115,
+            "std": 0.02094737132712001,
+            "p10": 0.25611211359500885,
+            "p90": 0.30478955805301666
+          },
+          "act_norm_mean": {
+            "n": 6,
+            "mean": 1.0,
+            "median": 1.0,
+            "std": 0.0,
+            "p10": 1.0,
+            "p90": 1.0
+          },
+          "recon_norm_mean": {
+            "n": 6,
+            "mean": 0.7997973461945852,
+            "median": 0.7994850873947144,
+            "std": 0.0011009711851497491,
+            "p10": 0.7987831234931946,
+            "p90": 0.8011238276958466
+          }
+        }
+      },
+      "best_variant_by_median_cosine": "blocks.16.hook_resid_post::last_token",
+      "best_variant_median_cosine": 0.8192646205425262,
+      "hook_rawseq_median_delta_expected_minus_configured": null,
+      "configured_raw_to_centered_median_gain": 0.00013460218906402588,
+      "configured_raw_to_unitnorm_median_gain": 0.055674754083156586,
+      "inferred_flags": {
+        "hook_mismatch_likely": false,
+        "centering_or_scale_mismatch_likely": true
+      }
+    },
+    "meta-llama/Llama-3.1-8B-Instruct": {
+      "rows": [
+        {
+          "trait": "sycophancy",
+          "row_id": 25,
+          "hooks_observed": [
+            "blocks.16.hook_resid_post"
+          ],
+          "hook_variant_metrics": {
+            "blocks.16.hook_resid_post": {
+              "raw_seq": {
+                "reconstruction_cosine": 0.12720967829227448,
+                "explained_variance": -27358.384765625,
+                "relative_error_norm": 165.40672302246094,
+                "feature_l0_mean": 1828.707275390625,
+                "act_norm_mean": 23.425846099853516,
+                "recon_norm_mean": 2182.81689453125
+              },
+              "last_token": {
+                "reconstruction_cosine": 0.7395339608192444,
+                "explained_variance": 0.5357021689414978,
+                "relative_error_norm": 0.6813939809799194,
+                "feature_l0_mean": 30.0,
+                "act_norm_mean": 11.822043418884277,
+                "recon_norm_mean": 7.491207122802734
+              },
+              "token_centered": {
+                "reconstruction_cosine": 0.1273472011089325,
+                "explained_variance": -27234.134765625,
+                "relative_error_norm": 165.0307159423828,
+                "feature_l0_mean": 1825.9755859375,
+                "act_norm_mean": 23.423311233520508,
+                "recon_norm_mean": 2177.76123046875
+              },
+              "token_unit_norm": {
+                "reconstruction_cosine": 0.17260223627090454,
+                "explained_variance": -0.36045634746551514,
+                "relative_error_norm": 1.1663860082626343,
+                "feature_l0_mean": 0.25609755516052246,
+                "act_norm_mean": 0.9999999403953552,
+                "recon_norm_mean": 0.796764075756073
+              }
+            }
+          }
+        },
+        {
+          "trait": "sycophancy",
+          "row_id": 23,
+          "hooks_observed": [
+            "blocks.16.hook_resid_post"
+          ],
+          "hook_variant_metrics": {
+            "blocks.16.hook_resid_post": {
+              "raw_seq": {
+                "reconstruction_cosine": 0.12721118330955505,
+                "explained_variance": -27358.8359375,
+                "relative_error_norm": 165.4080810546875,
+                "feature_l0_mean": 1828.9755859375,
+                "act_norm_mean": 23.422096252441406,
+                "recon_norm_mean": 2182.837890625
+              },
+              "last_token": {
+                "reconstruction_cosine": 0.7498799562454224,
+                "explained_variance": 0.5359338521957397,
+                "relative_error_norm": 0.68122398853302,
+                "feature_l0_mean": 28.0,
+                "act_norm_mean": 11.321761131286621,
+                "recon_norm_mean": 6.650879383087158
+              },
+              "token_centered": {
+                "reconstruction_cosine": 0.12734857201576233,
+                "explained_variance": -27234.51953125,
+                "relative_error_norm": 165.03187561035156,
+                "feature_l0_mean": 1826.2681884765625,
+                "act_norm_mean": 23.4201717376709,
+                "recon_norm_mean": 2177.781982421875
+              },
+              "token_unit_norm": {
+                "reconstruction_cosine": 0.1535312980413437,
+                "explained_variance": -0.38293027877807617,
+                "relative_error_norm": 1.175980567932129,
+                "feature_l0_mean": 0.17073169350624084,
+                "act_norm_mean": 0.9999999403953552,
+                "recon_norm_mean": 0.7907391786575317
+              }
+            }
+          }
+        },
+        {
+          "trait": "evil",
+          "row_id": 42,
+          "hooks_observed": [
+            "blocks.16.hook_resid_post"
+          ],
+          "hook_variant_metrics": {
+            "blocks.16.hook_resid_post": {
+              "raw_seq": {
+                "reconstruction_cosine": 0.12726308405399323,
+                "explained_variance": -27383.177734375,
+                "relative_error_norm": 165.48165893554688,
+                "feature_l0_mean": 1827.89013671875,
+                "act_norm_mean": 23.1619930267334,
+                "recon_norm_mean": 2182.56884765625
+              },
+              "last_token": {
+                "reconstruction_cosine": 0.7816711664199829,
+                "explained_variance": 0.5913212895393372,
+                "relative_error_norm": 0.639279842376709,
+                "feature_l0_mean": 28.0,
+                "act_norm_mean": 11.425776481628418,
+                "recon_norm_mean": 7.32798433303833
+              },
+              "token_centered": {
+                "reconstruction_cosine": 0.12740051746368408,
+                "explained_variance": -27258.7734375,
+                "relative_error_norm": 165.1053466796875,
+                "feature_l0_mean": 1825.146240234375,
+                "act_norm_mean": 23.15984535217285,
+                "recon_norm_mean": 2177.5107421875
+              },
+              "token_unit_norm": {
+                "reconstruction_cosine": 0.1659287065267563,
+                "explained_variance": -0.3657405376434326,
+                "relative_error_norm": 1.1686489582061768,
+                "feature_l0_mean": 0.2073170691728592,
+                "act_norm_mean": 0.9999999403953552,
+                "recon_norm_mean": 0.7926496863365173
+              }
+            }
+          }
+        },
+        {
+          "trait": "evil",
+          "row_id": 41,
+          "hooks_observed": [
+            "blocks.16.hook_resid_post"
+          ],
+          "hook_variant_metrics": {
+            "blocks.16.hook_resid_post": {
+              "raw_seq": {
+                "reconstruction_cosine": 0.1268400102853775,
+                "explained_variance": -27595.595703125,
+                "relative_error_norm": 166.12222290039062,
+                "feature_l0_mean": 1949.207763671875,
+                "act_norm_mean": 24.064851760864258,
+                "recon_norm_mean": 2322.840576171875
+              },
+              "last_token": {
+                "reconstruction_cosine": 0.7621963620185852,
+                "explained_variance": 0.5533185601234436,
+                "relative_error_norm": 0.6683423519134521,
+                "feature_l0_mean": 27.0,
+                "act_norm_mean": 11.9819974899292,
+                "recon_norm_mean": 7.141149997711182
+              },
+              "token_centered": {
+                "reconstruction_cosine": 0.12697531282901764,
+                "explained_variance": -27471.009765625,
+                "relative_error_norm": 165.746826171875,
+                "feature_l0_mean": 1945.8961181640625,
+                "act_norm_mean": 24.063005447387695,
+                "recon_norm_mean": 2317.489501953125
+              },
+              "token_unit_norm": {
+                "reconstruction_cosine": 0.17541755735874176,
+                "explained_variance": -0.3567312955856323,
+                "relative_error_norm": 1.1647881269454956,
+                "feature_l0_mean": 0.2467532455921173,
+                "act_norm_mean": 1.0,
+                "recon_norm_mean": 0.7973129749298096
+              }
+            }
+          }
+        },
+        {
+          "trait": "hallucination",
+          "row_id": 22,
+          "hooks_observed": [
+            "blocks.16.hook_resid_post"
+          ],
+          "hook_variant_metrics": {
+            "blocks.16.hook_resid_post": {
+              "raw_seq": {
+                "reconstruction_cosine": 0.12703068554401398,
+                "explained_variance": -27684.92578125,
+                "relative_error_norm": 166.39088439941406,
+                "feature_l0_mean": 2200.38232421875,
+                "act_norm_mean": 25.33428192138672,
+                "recon_norm_mean": 2628.646728515625
+              },
+              "last_token": {
+                "reconstruction_cosine": 0.7924274206161499,
+                "explained_variance": 0.6131913661956787,
+                "relative_error_norm": 0.621939480304718,
+                "feature_l0_mean": 30.0,
+                "act_norm_mean": 11.558781623840332,
+                "recon_norm_mean": 7.755684852600098
+              },
+              "token_centered": {
+                "reconstruction_cosine": 0.12716619670391083,
+                "explained_variance": -27559.939453125,
+                "relative_error_norm": 166.01487731933594,
+                "feature_l0_mean": 2196.61767578125,
+                "act_norm_mean": 25.33226776123047,
+                "recon_norm_mean": 2622.588623046875
+              },
+              "token_unit_norm": {
+                "reconstruction_cosine": 0.15449656546115875,
+                "explained_variance": -0.38276195526123047,
+                "relative_error_norm": 1.1759089231491089,
+                "feature_l0_mean": 0.1764705926179886,
+                "act_norm_mean": 1.0,
+                "recon_norm_mean": 0.791758120059967
+              }
+            }
+          }
+        },
+        {
+          "trait": "hallucination",
+          "row_id": 18,
+          "hooks_observed": [
+            "blocks.16.hook_resid_post"
+          ],
+          "hook_variant_metrics": {
+            "blocks.16.hook_resid_post": {
+              "raw_seq": {
+                "reconstruction_cosine": 0.12694396078586578,
+                "explained_variance": -27644.833984375,
+                "relative_error_norm": 166.27037048339844,
+                "feature_l0_mean": 2080.84716796875,
+                "act_norm_mean": 24.738142013549805,
+                "recon_norm_mean": 2483.206298828125
+              },
+              "last_token": {
+                "reconstruction_cosine": 0.8102924227714539,
+                "explained_variance": 0.6467702984809875,
+                "relative_error_norm": 0.5943312644958496,
+                "feature_l0_mean": 31.0,
+                "act_norm_mean": 12.10270881652832,
+                "recon_norm_mean": 8.608417510986328
+              },
+              "token_centered": {
+                "reconstruction_cosine": 0.1270793378353119,
+                "explained_variance": -27520.013671875,
+                "relative_error_norm": 165.89459228515625,
+                "feature_l0_mean": 2077.291748046875,
+                "act_norm_mean": 24.736352920532227,
+                "recon_norm_mean": 2477.483642578125
+              },
+              "token_unit_norm": {
+                "reconstruction_cosine": 0.1694994866847992,
+                "explained_variance": -0.3645040988922119,
+                "relative_error_norm": 1.1681199073791504,
+                "feature_l0_mean": 0.236111119389534,
+                "act_norm_mean": 1.0,
+                "recon_norm_mean": 0.7960384488105774
+              }
+            }
+          }
+        }
+      ],
+      "variants_summary": {
+        "blocks.16.hook_resid_post::raw_seq": {
+          "reconstruction_cosine": {
+            "n": 6,
+            "mean": 0.12708310037851334,
+            "median": 0.12712018191814423,
+            "std": 0.00015600281162750455,
+            "p10": 0.12689198553562164,
+            "p90": 0.12723713368177414
+          },
+          "explained_variance": {
+            "n": 6,
+            "mean": -27504.292317708332,
+            "median": -27489.38671875,
+            "std": 140.13804563317572,
+            "p10": -27664.8798828125,
+            "p90": -27358.6103515625
+          },
+          "relative_error_norm": {
+            "n": 6,
+            "mean": 165.8466567993164,
+            "median": 165.80194091796875,
+            "std": 0.4224467412584113,
+            "p10": 165.40740203857422,
+            "p90": 166.33062744140625
+          },
+          "feature_l0_mean": {
+            "n": 6,
+            "mean": 1952.6683756510417,
+            "median": 1889.0916748046875,
+            "std": 143.78215493483964,
+            "p10": 1828.2987060546875,
+            "p90": 2140.61474609375
+          },
+          "act_norm_mean": {
+            "n": 6,
+            "mean": 24.024535179138184,
+            "median": 23.745348930358887,
+            "std": 0.7843932802322515,
+            "p10": 23.292044639587402,
+            "p90": 25.03621196746826
+          },
+          "recon_norm_mean": {
+            "n": 6,
+            "mean": 2330.4862060546875,
+            "median": 2252.8392333984375,
+            "std": 172.12755690563412,
+            "p10": 2182.69287109375,
+            "p90": 2555.926513671875
+          }
+        },
+        "blocks.16.hook_resid_post::last_token": {
+          "reconstruction_cosine": {
+            "n": 6,
+            "mean": 0.7726668814818064,
+            "median": 0.7719337642192841,
+            "std": 0.024542152794245785,
+            "p10": 0.7447069585323334,
+            "p90": 0.8013599216938019
+          },
+          "explained_variance": {
+            "n": 6,
+            "mean": 0.5793729225794474,
+            "median": 0.5723199248313904,
+            "std": 0.041436244686147906,
+            "p10": 0.5358180105686188,
+            "p90": 0.6299808323383331
+          },
+          "relative_error_norm": {
+            "n": 6,
+            "mean": 0.6477518181006113,
+            "median": 0.6538110971450806,
+            "std": 0.03232119557902823,
+            "p10": 0.6081353724002838,
+            "p90": 0.6813089847564697
+          },
+          "feature_l0_mean": {
+            "n": 6,
+            "mean": 29.0,
+            "median": 29.0,
+            "std": 1.4142135623730951,
+            "p10": 27.5,
+            "p90": 30.5
+          },
+          "act_norm_mean": {
+            "n": 6,
+            "mean": 11.702178160349527,
+            "median": 11.690412521362305,
+            "std": 0.2871610798352156,
+            "p10": 11.37376880645752,
+            "p90": 12.04235315322876
+          },
+          "recon_norm_mean": {
+            "n": 6,
+            "mean": 7.495887200037639,
+            "median": 7.409595727920532,
+            "std": 0.601845561910457,
+            "p10": 6.89601469039917,
+            "p90": 8.182051181793213
+          }
+        },
+        "blocks.16.hook_resid_post::token_centered": {
+          "reconstruction_cosine": {
+            "n": 6,
+            "mean": 0.12721952299276987,
+            "median": 0.12725669890642166,
+            "std": 0.00015697586105223776,
+            "p10": 0.12702732533216476,
+            "p90": 0.1273745447397232
+          },
+          "explained_variance": {
+            "n": 6,
+            "mean": -27379.731770833332,
+            "median": -27364.8916015625,
+            "std": 139.88179158561368,
+            "p10": -27539.9765625,
+            "p90": -27234.3271484375
+          },
+          "relative_error_norm": {
+            "n": 6,
+            "mean": 165.4707056681315,
+            "median": 165.42608642578125,
+            "std": 0.42262969438725484,
+            "p10": 165.0312957763672,
+            "p90": 165.9547348022461
+          },
+          "feature_l0_mean": {
+            "n": 6,
+            "mean": 1949.5325927734375,
+            "median": 1886.0821533203125,
+            "std": 143.36380060975168,
+            "p10": 1825.5609130859375,
+            "p90": 2136.9547119140625
+          },
+          "act_norm_mean": {
+            "n": 6,
+            "mean": 24.02249240875244,
+            "median": 23.7431583404541,
+            "std": 0.7845081077047334,
+            "p10": 23.290008544921875,
+            "p90": 25.034310340881348
+          },
+          "recon_norm_mean": {
+            "n": 6,
+            "mean": 2325.1026204427085,
+            "median": 2247.6357421875,
+            "std": 171.7420912001485,
+            "p10": 2177.635986328125,
+            "p90": 2550.0361328125
+          }
+        },
+        "blocks.16.hook_resid_post::token_unit_norm": {
+          "reconstruction_cosine": {
+            "n": 6,
+            "mean": 0.16524597505728403,
+            "median": 0.16771409660577774,
+            "std": 0.008454955285080177,
+            "p10": 0.15401393175125122,
+            "p90": 0.17400989681482315
+          },
+          "explained_variance": {
+            "n": 6,
+            "mean": -0.3688540856043498,
+            "median": -0.36512231826782227,
+            "std": 0.010309127522442632,
+            "p10": -0.3828461170196533,
+            "p90": -0.35859382152557373
+          },
+          "relative_error_norm": {
+            "n": 6,
+            "mean": 1.1699720819791157,
+            "median": 1.1683844327926636,
+            "std": 0.004401941016627209,
+            "p10": 1.165587067604065,
+            "p90": 1.175944745540619
+          },
+          "feature_l0_mean": {
+            "n": 6,
+            "mean": 0.2155802125732104,
+            "median": 0.2217140942811966,
+            "std": 0.03327702597647266,
+            "p10": 0.17360114306211472,
+            "p90": 0.2514254003763199
+          },
+          "act_norm_mean": {
+            "n": 6,
+            "mean": 0.9999999701976776,
+            "median": 0.9999999701976776,
+            "std": 2.9802322387695312e-08,
+            "p10": 0.9999999403953552,
+            "p90": 1.0
+          },
+          "recon_norm_mean": {
+            "n": 6,
+            "mean": 0.794210414091746,
+            "median": 0.7943440675735474,
+            "std": 0.002581597540509123,
+            "p10": 0.7912486493587494,
+            "p90": 0.7970385253429413
+          }
+        }
+      },
+      "best_variant_by_median_cosine": "blocks.16.hook_resid_post::last_token",
+      "best_variant_median_cosine": 0.7719337642192841,
+      "hook_rawseq_median_delta_expected_minus_configured": null,
+      "configured_raw_to_centered_median_gain": 0.0001365169882774353,
+      "configured_raw_to_unitnorm_median_gain": 0.040593914687633514,
+      "inferred_flags": {
+        "hook_mismatch_likely": false,
+        "centering_or_scale_mismatch_likely": false
+      }
+    }
+  }
+}

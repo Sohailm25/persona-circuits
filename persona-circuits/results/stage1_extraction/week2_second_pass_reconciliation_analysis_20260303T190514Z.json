@@ -1,0 +1,716 @@
+{
+  "timestamp_utc": "2026-03-03T19:05:14.271961+00:00",
+  "artifact_type": "week2_second_pass_reconciliation_analysis",
+  "inputs": {
+    "trait_scope_artifact": "results/stage1_extraction/week2_trait_scope_resolution_20260301T030203Z.json",
+    "stage2_audit_artifact": "results/stage2_decomposition/week3_sae_reconstruction_audit_20260301T033046Z.json",
+    "seed_replication_artifact": "results/stage1_extraction/week2_extraction_seed_replication_20260302T180612Z.json",
+    "gap_check_artifact": "results/stage1_extraction/week2_prelaunch_gap_checks_20260227T205237Z.json",
+    "position_ablation_artifact": "results/stage1_extraction/week2_extraction_position_ablation_20260227T225251Z.json",
+    "syc_rollout5_artifact": "results/stage1_extraction/week2_behavioral_validation_upgrade_sycophancy_20260303T082321Z.json",
+    "evil_rollout5_artifact": "results/stage1_extraction/week2_behavioral_validation_upgrade_evil_20260303T081318Z.json",
+    "machiavellian_transfer_artifact": "results/stage1_extraction/week2_machiavellian_external_transfer_20260302T180239Z.json",
+    "rollout_sensitivity_artifact": "results/stage1_extraction/week2_rollout_stability_sensitivity_20260303T121253Z.json",
+    "manual_concordance_artifact": "results/stage1_extraction/week2_primary_manual_concordance_ratings_20260227T202822Z.json",
+    "extraction_robustness_artifact": "results/stage1_extraction/week2_extraction_robustness_bootstrap_20260303T164652Z.json",
+    "bleed_sensitivity_artifact": "results/stage1_extraction/week2_cross_trait_bleed_sensitivity_20260303T164726Z.json",
+    "capability_suite_spec_artifact": "results/stage1_extraction/week2_capability_suite_spec_20260303T164726Z.json",
+    "manual_policy_artifact": "results/stage1_extraction/week2_manual_concordance_policy_closure_20260303T164726Z.json",
+    "policy_resolution_artifact": "results/stage1_extraction/week2_policy_resolution_packet_20260303T190245Z.json"
+  },
+  "evidence_status": {
+    "artifact_fields": "known",
+    "finding_severity_assignment": "inferred",
+    "recommended_plan": "inferred"
+  },
+  "scope_snapshot": {
+    "trait_scope_status": {
+      "sycophancy": {
+        "selected_primary_combo": {
+          "layer": 12,
+          "alpha": 3.0
+        },
+        "week2_section623_pass": true,
+        "week2_runner_overall_pass": false,
+        "response_mean_lane": {
+          "selected_prompt_last": {
+            "layer": 12,
+            "alpha": 2.0
+          },
+          "selected_response_mean": {
+            "layer": 12,
+            "alpha": 2.0
+          },
+          "overall_pass_prompt_last": false,
+          "overall_pass_response_mean": false,
+          "failing_gates_prompt_last": [
+            "cross_trait_bleed_pass",
+            "coherence_pass"
+          ],
+          "failing_gates_response_mean": [
+            "coherence_pass"
+          ],
+          "bidirectional_effect_prompt_last": 32.199999999999996,
+          "bidirectional_effect_response_mean": 33.68333333333333,
+          "delta_bidirectional_effect": 1.4833333333333343,
+          "cross_trait_bleed_prompt_last": 0.5002616431187858,
+          "cross_trait_bleed_response_mean": 0.2360217714002969,
+          "delta_cross_trait_bleed": -0.26423987171848895
+        },
+        "status": "retain_as_primary_trait_pending_coherence_remediation"
+      },
+      "evil": {
+        "selected_primary_combo": {
+          "layer": 12,
+          "alpha": 3.0
+        },
+        "harmful_content_lane": {
+          "external_transfer": {
+            "pass": false,
+            "plus_vs_minus": 18.8,
+            "baseline_vs_minus": -5.85
+          },
+          "status": "disconfirmed_bidirectional_harmful_content"
+        },
+        "machiavellian_disposition_lane": {
+          "extraction_free_overlap": {
+            "classification": "moderate_overlap",
+            "passes": true,
+            "mean_cosine": 0.22255422894995097,
+            "positive_fraction": 1.0,
+            "sign_test_p": 1.7763568394002505e-15
+          },
+          "response_mean_lane": {
+            "selected_prompt_last": {
+              "layer": 12,
+              "alpha": 2.0
+            },
+            "selected_response_mean": {
+              "layer": 12,
+              "alpha": 2.0
+            },
+            "overall_pass_prompt_last": false,
+            "overall_pass_response_mean": false,
+            "failing_gates_prompt_last": [
+              "coherence_pass"
+            ],
+            "failing_gates_response_mean": [
+              "coherence_pass"
+            ],
+            "bidirectional_effect_prompt_last": 34.38333333333333,
+            "bidirectional_effect_response_mean": 47.8,
+            "delta_bidirectional_effect": 13.416666666666664,
+            "cross_trait_bleed_prompt_last": 0.10179350460494424,
+            "cross_trait_bleed_response_mean": 0.1691073919107392,
+            "delta_cross_trait_bleed": 0.06731388730579496
+          },
+          "status": "supported_but_week2_not_validated_due_to_coherence"
+        },
+        "lane_split_decision": "split_required"
+      },
+      "hallucination": {
+        "selected_primary_combo": {
+          "layer": 13,
+          "alpha": 3.0
+        },
+        "week2_section623_pass": false,
+        "week2_runner_overall_pass": false,
+        "extraction_free_overlap": {
+          "classification": "null_overlap",
+          "passes": false,
+          "mean_cosine": -0.0059028447631284545,
+          "positive_fraction": 0.44,
+          "sign_test_p": 0.47988766169832786
+        },
+        "extraction_ab_similarity": {
+          "method_cosine_similarity": 0.39489617943763733,
+          "threshold": null,
+          "pass": null
+        },
+        "status": "negative_finding_stage1"
+      }
+    },
+    "stage2_scope_recommendation": {
+      "primary_claim_traits": [
+        "sycophancy",
+        "machiavellian_disposition"
+      ],
+      "exploratory_control_traits": [
+        "hallucination_instruction_following_control"
+      ],
+      "blocked_claim_lanes": [
+        "evil_harmful_content_bidirectionality"
+      ]
+    }
+  },
+  "metrics_snapshot": {
+    "stage2": {
+      "stage2_readiness_gate": "fail",
+      "token_gate": {
+        "status": "fail",
+        "min_median_reconstruction_cosine": 0.7047240436077118,
+        "min_median_explained_variance": 0.4765089154243469
+      },
+      "cross_source_overlap_gate": {
+        "status": "fail",
+        "claim_layers": [
+          12
+        ],
+        "cross_check_layers": [
+          11,
+          15,
+          19,
+          23
+        ],
+        "overlap_layers": []
+      },
+      "seed_schedule_gate": {
+        "status": "pass",
+        "seed_schedule": [
+          42,
+          123,
+          456,
+          789
+        ]
+      },
+      "alignment": {
+        "primary_claim_traits": [
+          "sycophancy",
+          "machiavellian_disposition"
+        ],
+        "primary_claim_layers_by_trait": {
+          "sycophancy": 12,
+          "machiavellian_disposition": 12
+        },
+        "primary_sae_layers": [
+          12,
+          14,
+          16,
+          18,
+          20,
+          22,
+          24
+        ],
+        "cross_check_sae_layers": [
+          11,
+          15,
+          19,
+          23
+        ],
+        "overlap_crosscheck_vs_claim_layers": []
+      }
+    },
+    "seed_replication": {
+      "extraction_method": "prompt_last",
+      "response_temperature": 0.0,
+      "seed_schedule": [
+        42,
+        123,
+        456,
+        789
+      ],
+      "quality_gates": {
+        "min_pairwise_cosine_threshold": 0.7,
+        "trait_pass": {
+          "sycophancy": true,
+          "evil": true
+        },
+        "overall_pass": true
+      },
+      "min_pairwise_cosine_by_trait": {
+        "sycophancy": 1.0,
+        "evil": 1.0
+      }
+    },
+    "extraction_ab": {
+      "gap_check_overall_pass": false,
+      "all_traits_extraction_ab_similarity_pass": false,
+      "method_cosine_similarity": {
+        "sycophancy": 0.40615686774253845,
+        "evil": 0.37578535079956055,
+        "hallucination": 0.39489617943763733
+      },
+      "response_mean_vs_response_last_mean_cosine": {
+        "sycophancy": 0.7515382866064707,
+        "evil": 0.7398479680220286,
+        "hallucination": 0.3335714389880498
+      }
+    },
+    "coherence": {
+      "sycophancy": {
+        "baseline_mean": 69.595,
+        "steered_mean": 69.51,
+        "min_score_threshold": 75.0,
+        "pass_min_score": false,
+        "pass_max_drop": true,
+        "pass": false
+      },
+      "evil": {
+        "baseline_mean": 58.74,
+        "steered_mean": 64.83,
+        "min_score_threshold": 75.0,
+        "pass_min_score": false,
+        "pass_max_drop": true,
+        "pass": false
+      }
+    },
+    "capability": {
+      "proxy_type": "mmlu_sample",
+      "sycophancy": {
+        "available": true,
+        "n_questions": 30,
+        "baseline_accuracy": 0.6333333333333333,
+        "steered_accuracy": 0.6666666666666666,
+        "degradation": -0.033333333333333326
+      },
+      "evil": {
+        "available": true,
+        "n_questions": 30,
+        "baseline_accuracy": 0.6333333333333333,
+        "steered_accuracy": 0.6666666666666666,
+        "degradation": -0.033333333333333326
+      }
+    },
+    "manual_concordance": {
+      "evaluated_examples_total": 15,
+      "mean_trait_mae": 4.7444444444444445,
+      "delta_sign_agreement_by_trait": {
+        "sycophancy": 1.0,
+        "evil": 0.6,
+        "hallucination": 1.0
+      },
+      "examples_per_trait": {
+        "sycophancy": 5,
+        "evil": 5,
+        "hallucination": 5
+      }
+    },
+    "rollout_schema": {
+      "plus_mean_fields_null": {
+        "sycophancy": {
+          "rollout3": null,
+          "rollout5": null,
+          "delta_rollout5_minus_rollout3": null
+        },
+        "evil": {
+          "rollout3": null,
+          "rollout5": null,
+          "delta_rollout5_minus_rollout3": null
+        }
+      },
+      "minus_mean_fields_null": {
+        "sycophancy": {
+          "rollout3": null,
+          "rollout5": null,
+          "delta_rollout5_minus_rollout3": null
+        },
+        "evil": {
+          "rollout3": null,
+          "rollout5": null,
+          "delta_rollout5_minus_rollout3": null
+        }
+      },
+      "bidirectional_effect_delta": {
+        "sycophancy": 0.46666666666666146,
+        "evil": -5.249999999999993
+      }
+    },
+    "evil_asymmetry": {
+      "heldout_rollout5": {
+        "steering_shift_mean": 2.03,
+        "reversal_shift_mean": 40.52,
+        "bidirectional_effect": 42.550000000000004
+      },
+      "machiavellian_external_transfer": {
+        "plus_vs_baseline": 40.233333333333334,
+        "baseline_vs_minus": 2.433333333333333,
+        "plus_vs_minus": 42.666666666666664,
+        "overall_pass": true
+      }
+    },
+    "extraction_robustness": {
+      "min_bootstrap_pairwise_p05_cosine": 0.8,
+      "min_train_vs_heldout_cosine": 0.7,
+      "overall_pass": true
+    },
+    "bleed_sensitivity": {
+      "n_entries": 4,
+      "thresholds": [
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.5
+      ],
+      "traits": {
+        "sycophancy": {
+          "n_lanes": 2,
+          "ratio_min": 0.18532482598607888,
+          "ratio_max": 0.3165212649945476,
+          "ratio_mean": 0.25092304549031325,
+          "passes_by_threshold": {
+            "0.20": 1,
+            "0.25": 1,
+            "0.30": 1,
+            "0.35": 2,
+            "0.40": 2,
+            "0.50": 2
+          }
+        },
+        "evil": {
+          "n_lanes": 2,
+          "ratio_min": 0.16177577125658388,
+          "ratio_max": 0.16776937618147444,
+          "ratio_mean": 0.16477257371902915,
+          "passes_by_threshold": {
+            "0.20": 2,
+            "0.25": 2,
+            "0.30": 2,
+            "0.35": 2,
+            "0.40": 2,
+            "0.50": 2
+          }
+        }
+      }
+    },
+    "capability_suite_spec": {
+      "week2_proxy_gate": "week2_capability_proxy",
+      "broader_suite_present": true
+    },
+    "manual_policy": {
+      "manual_concordance_role": "sanity_check_only",
+      "primary_reliability_signal": "judge_calibration_kappa",
+      "upgrade_condition_for_manual_claim_weight": "Increase to >= 15 examples per trait.",
+      "r2_c5_status_recommendation": "resolved_via_explicit_scope_decision"
+    },
+    "policy_resolution": {
+      "sp_f1_status": "resolved_via_explicit_claim_scope_policy",
+      "sp_f3_status": "resolved_via_explicit_dual_scorecard_policy"
+    }
+  },
+  "reconciled_findings": [
+    {
+      "id": "SP-F1",
+      "severity": "critical",
+      "status": "resolved",
+      "finding": "Stage 2 cross-SAE claim-layer overlap is structurally blocked at claim layer 12.",
+      "evidence_status": "known",
+      "evidence": {
+        "claim_layers": [
+          12
+        ],
+        "cross_check_layers": [
+          11,
+          15,
+          19,
+          23
+        ],
+        "overlap_layers": [],
+        "overlap_gate_status": "fail",
+        "policy_resolution_status": "resolved_via_explicit_claim_scope_policy"
+      },
+      "action": "Policy resolution captured in dedicated artifact; execute overlap-capable sensitivity lane before cross-source claims."
+    },
+    {
+      "id": "SP-F2",
+      "severity": "critical",
+      "status": "partial",
+      "finding": "Extraction A/B remains failed and currently mixes prompt-phase vs generation-phase comparisons.",
+      "evidence_status": "known",
+      "evidence": {
+        "method_cosine_similarity": {
+          "sycophancy": 0.40615686774253845,
+          "evil": 0.37578535079956055,
+          "hallucination": 0.39489617943763733
+        },
+        "response_regime_consistency_mean_cosine": {
+          "sycophancy": 0.7515382866064707,
+          "evil": 0.7398479680220286,
+          "hallucination": 0.3335714389880498
+        },
+        "content_robustness_overall_pass": true
+      },
+      "action": "Retain prompt-vs-response mismatch as limitation; content-robustness tests now pass."
+    },
+    {
+      "id": "SP-F3",
+      "severity": "high",
+      "status": "resolved",
+      "finding": "Coherence failure is dominated by absolute min-score threshold rather than steered-vs-baseline degradation.",
+      "evidence_status": "known",
+      "evidence": {
+        "coherence_snapshot": {
+          "sycophancy": {
+            "baseline_mean": 69.595,
+            "steered_mean": 69.51,
+            "min_score_threshold": 75.0,
+            "pass_min_score": false,
+            "pass_max_drop": true,
+            "pass": false
+          },
+          "evil": {
+            "baseline_mean": 58.74,
+            "steered_mean": 64.83,
+            "min_score_threshold": 75.0,
+            "pass_min_score": false,
+            "pass_max_drop": true,
+            "pass": false
+          }
+        },
+        "policy_resolution_status": "resolved_via_explicit_dual_scorecard_policy"
+      },
+      "action": "Dual-scorecard coherence policy is frozen; report strict and relative interpretations together."
+    },
+    {
+      "id": "SP-F4",
+      "severity": "high",
+      "status": "resolved",
+      "finding": "Seed replication evidence demonstrates numerical determinism, not stochastic robustness under varied prompt order/sampling.",
+      "evidence_status": "known",
+      "evidence": {
+        "extraction_method": "prompt_last",
+        "response_temperature": 0.0,
+        "seed_schedule": [
+          42,
+          123,
+          456,
+          789
+        ],
+        "min_pairwise_cosine_by_trait": {
+          "sycophancy": 1.0,
+          "evil": 1.0
+        },
+        "content_robustness_overall_pass": true
+      },
+      "action": "Determinism evidence is now complemented by bootstrap/heldout robustness checks."
+    },
+    {
+      "id": "SP-F5",
+      "severity": "medium",
+      "status": "resolved",
+      "finding": "Capability evidence is narrow (MMLU sample only) for stronger capability-preservation claims.",
+      "evidence_status": "known",
+      "evidence": {
+        "capability_snapshot": {
+          "proxy_type": "mmlu_sample",
+          "sycophancy": {
+            "available": true,
+            "n_questions": 30,
+            "baseline_accuracy": 0.6333333333333333,
+            "steered_accuracy": 0.6666666666666666,
+            "degradation": -0.033333333333333326
+          },
+          "evil": {
+            "available": true,
+            "n_questions": 30,
+            "baseline_accuracy": 0.6333333333333333,
+            "steered_accuracy": 0.6666666666666666,
+            "degradation": -0.033333333333333326
+          }
+        },
+        "capability_spec_artifact_present": true
+      },
+      "action": "Capability-suite boundary is now explicit (Week2 proxy vs broader suite)."
+    },
+    {
+      "id": "SP-F6",
+      "severity": "medium",
+      "status": "open",
+      "finding": "Rollout sensitivity artifact has null plus/minus fields due metric-key mismatch.",
+      "evidence_status": "known",
+      "evidence": {
+        "plus_mean_fields_null": {
+          "sycophancy": {
+            "rollout3": null,
+            "rollout5": null,
+            "delta_rollout5_minus_rollout3": null
+          },
+          "evil": {
+            "rollout3": null,
+            "rollout5": null,
+            "delta_rollout5_minus_rollout3": null
+          }
+        },
+        "minus_mean_fields_null": {
+          "sycophancy": {
+            "rollout3": null,
+            "rollout5": null,
+            "delta_rollout5_minus_rollout3": null
+          },
+          "evil": {
+            "rollout3": null,
+            "rollout5": null,
+            "delta_rollout5_minus_rollout3": null
+          }
+        },
+        "bidirectional_effect_delta": {
+          "sycophancy": 0.46666666666666146,
+          "evil": -5.249999999999993
+        }
+      },
+      "action": "Patch comparator key mapping and add failing test for missing keys."
+    },
+    {
+      "id": "SP-F7",
+      "severity": "medium",
+      "status": "resolved",
+      "finding": "Cross-trait bleed threshold sensitivity remains unresolved (R1-F6).",
+      "evidence_status": "known",
+      "evidence": {
+        "pending_checklist_id": "R1-F6",
+        "bleed_sensitivity_artifact_present": true
+      },
+      "action": "Threshold sensitivity artifact exists and policy note is now explicit."
+    },
+    {
+      "id": "SP-F8",
+      "severity": "medium",
+      "status": "resolved",
+      "finding": "Manual concordance is still low-power (5 examples per trait).",
+      "evidence_status": "known",
+      "evidence": {
+        "concordance_snapshot": {
+          "evaluated_examples_total": 15,
+          "mean_trait_mae": 4.7444444444444445,
+          "delta_sign_agreement_by_trait": {
+            "sycophancy": 1.0,
+            "evil": 0.6,
+            "hallucination": 1.0
+          },
+          "examples_per_trait": {
+            "sycophancy": 5,
+            "evil": 5,
+            "hallucination": 5
+          }
+        },
+        "manual_policy_artifact_present": true
+      },
+      "action": "Concordance role is explicitly scoped to sanity-check-only with upgrade condition documented."
+    },
+    {
+      "id": "SP-F9",
+      "severity": "medium",
+      "status": "document_limitation",
+      "finding": "Evil directional asymmetry differs by prompt distribution (held-out vs machiavellian transfer).",
+      "evidence_status": "observed",
+      "evidence": {
+        "heldout_rollout5": {
+          "steering_shift_mean": 2.03,
+          "reversal_shift_mean": 40.52,
+          "bidirectional_effect": 42.550000000000004
+        },
+        "machiavellian_external_transfer": {
+          "plus_vs_baseline": 40.233333333333334,
+          "baseline_vs_minus": 2.433333333333333,
+          "plus_vs_minus": 42.666666666666664,
+          "overall_pass": true
+        }
+      },
+      "action": "Document floor/ceiling distribution limitation and avoid over-claiming symmetric bidirectionality."
+    }
+  ],
+  "execution_plan": {
+    "policy_freeze_required_before_new_launch": true,
+    "phases": [
+      {
+        "phase": "P0",
+        "goal": "Close critical policy contradictions that block progression.",
+        "tasks": [
+          {
+            "id": "P0-T1",
+            "title": "Coherence gate decision package",
+            "deliverable": "artifact + decision entry defining absolute vs relative coherence gating for Week 2 scorecard",
+            "acceptance_criteria": [
+              "baseline and steered coherence evidence cited for sycophancy + evil",
+              "binding coherence policy explicitly frozen in DECISIONS.md",
+              "CURRENT_STATE and checklist updated with chosen policy"
+            ]
+          },
+          {
+            "id": "P0-T2",
+            "title": "Stage 2 claim-layer policy resolution",
+            "deliverable": "decision entry choosing one path: layer move, cross-check scope-down, or dual-layer sensitivity",
+            "acceptance_criteria": [
+              "cross-SAE overlap expectation explicitly tied to claim scope",
+              "audit gate criteria updated to match chosen policy",
+              "no ambiguous pass path remains"
+            ]
+          }
+        ]
+      },
+      {
+        "phase": "P1",
+        "goal": "Replace misleading or incomplete robustness evidence with policy-aligned diagnostics.",
+        "tasks": [
+          {
+            "id": "P1-T1",
+            "title": "Extraction robustness closure run",
+            "deliverable": "bootstrap/heldout extraction robustness artifact",
+            "acceptance_criteria": [
+              "pairwise cosine distribution across bootstrap subsets reported",
+              "train-vs-heldout extraction cosine reported",
+              "A/B regime-split metric retained as limitation, not sole blocker"
+            ]
+          },
+          {
+            "id": "P1-T2",
+            "title": "Seed-replication status correction",
+            "deliverable": "checklist/doc update reclassifying current run as determinism-only",
+            "acceptance_criteria": [
+              "R2-G6 marked partial with rationale",
+              "proposal-aligned robustness plan recorded"
+            ]
+          },
+          {
+            "id": "P1-T3",
+            "title": "Rollout sensitivity schema patch",
+            "deliverable": "code + tests + corrected artifact",
+            "acceptance_criteria": [
+              "plus_mean/minus_mean fields either computed or removed",
+              "unit tests fail on missing selected_test_evaluation metric keys"
+            ]
+          }
+        ]
+      },
+      {
+        "phase": "P2",
+        "goal": "Close remaining pending reviewer items and finalize launch-readiness packet.",
+        "tasks": [
+          {
+            "id": "P2-T1",
+            "title": "Capability-suite specification",
+            "deliverable": "spec artifact distinguishing Week 2 proxy gate vs broader capability claims",
+            "acceptance_criteria": [
+              "R2-G8 status updated from pending",
+              "benchmark list and thresholds frozen"
+            ]
+          },
+          {
+            "id": "P2-T2",
+            "title": "Cross-trait bleed sensitivity",
+            "deliverable": "sensitivity analysis artifact and policy note",
+            "acceptance_criteria": [
+              "R1-F6 status updated",
+              "threshold rationale documented with literature caveat"
+            ]
+          },
+          {
+            "id": "P2-T3",
+            "title": "Manual concordance policy closure",
+            "deliverable": "expanded concordance artifact or explicit de-scoping decision",
+            "acceptance_criteria": [
+              "R2-C5 status updated from pending",
+              "judge trust narrative aligns with chosen evidence weighting"
+            ]
+          }
+        ]
+      }
+    ],
+    "superseding_no_go_preconditions": [
+      "Critical policy decisions P0-T1 and P0-T2 are frozen and documented.",
+      "Pending reviewer checklist items R1-F6, R2-C5, R2-G8 are closed or explicitly scoped as limitations.",
+      "No unresolved schema/reporting bugs remain in active closeout synthesis artifacts."
+    ]
+  }
+}

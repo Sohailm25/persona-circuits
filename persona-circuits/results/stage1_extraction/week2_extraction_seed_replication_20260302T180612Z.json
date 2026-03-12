@@ -1,0 +1,152 @@
+{
+  "timestamp_utc": "2026-03-02T18:11:01.758266+00:00",
+  "artifact_type": "week2_extraction_seed_replication",
+  "traits": [
+    "sycophancy",
+    "evil"
+  ],
+  "layers": [
+    12
+  ],
+  "seed_schedule": [
+    42,
+    123,
+    456,
+    789
+  ],
+  "extraction_method": "prompt_last",
+  "response_max_new_tokens": 96,
+  "response_temperature": 0.0,
+  "per_seed_artifacts": {
+    "42": {
+      "summary_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_vector_extraction_summary_seed42_20260302T180612Z.json",
+      "vectors_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_persona_vectors_seed42_20260302T180612Z.pt",
+      "modal_artifacts": {
+        "summary_path": "/models/persona-circuits/week2/vector_extraction_summary_20260302T180841Z.json",
+        "vectors_path": "/models/persona-circuits/week2/persona_vectors_20260302T180841Z.pt"
+      }
+    },
+    "123": {
+      "summary_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_vector_extraction_summary_seed123_20260302T180612Z.json",
+      "vectors_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_persona_vectors_seed123_20260302T180612Z.pt",
+      "modal_artifacts": {
+        "summary_path": "/models/persona-circuits/week2/vector_extraction_summary_20260302T180927Z.json",
+        "vectors_path": "/models/persona-circuits/week2/persona_vectors_20260302T180927Z.pt"
+      }
+    },
+    "456": {
+      "summary_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_vector_extraction_summary_seed456_20260302T180612Z.json",
+      "vectors_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_persona_vectors_seed456_20260302T180612Z.pt",
+      "modal_artifacts": {
+        "summary_path": "/models/persona-circuits/week2/vector_extraction_summary_20260302T181011Z.json",
+        "vectors_path": "/models/persona-circuits/week2/persona_vectors_20260302T181011Z.pt"
+      }
+    },
+    "789": {
+      "summary_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_vector_extraction_summary_seed789_20260302T180612Z.json",
+      "vectors_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_persona_vectors_seed789_20260302T180612Z.pt",
+      "modal_artifacts": {
+        "summary_path": "/models/persona-circuits/week2/vector_extraction_summary_20260302T181055Z.json",
+        "vectors_path": "/models/persona-circuits/week2/persona_vectors_20260302T181055Z.pt"
+      }
+    }
+  },
+  "pairwise_seed_cosines": {
+    "sycophancy": {
+      "layers": {
+        "12": {
+          "n_pairs": 6,
+          "pairwise_cosines": [
+            {
+              "seed_a": 42,
+              "seed_b": 123,
+              "cosine": 1.0
+            },
+            {
+              "seed_a": 42,
+              "seed_b": 456,
+              "cosine": 1.0
+            },
+            {
+              "seed_a": 42,
+              "seed_b": 789,
+              "cosine": 1.0
+            },
+            {
+              "seed_a": 123,
+              "seed_b": 456,
+              "cosine": 1.0
+            },
+            {
+              "seed_a": 123,
+              "seed_b": 789,
+              "cosine": 1.0
+            },
+            {
+              "seed_a": 456,
+              "seed_b": 789,
+              "cosine": 1.0
+            }
+          ],
+          "min_pairwise_cosine": 1.0,
+          "mean_pairwise_cosine": 1.0,
+          "std_pairwise_cosine": 0.0
+        }
+      }
+    },
+    "evil": {
+      "layers": {
+        "12": {
+          "n_pairs": 6,
+          "pairwise_cosines": [
+            {
+              "seed_a": 42,
+              "seed_b": 123,
+              "cosine": 1.0
+            },
+            {
+              "seed_a": 42,
+              "seed_b": 456,
+              "cosine": 1.0
+            },
+            {
+              "seed_a": 42,
+              "seed_b": 789,
+              "cosine": 1.0
+            },
+            {
+              "seed_a": 123,
+              "seed_b": 456,
+              "cosine": 1.0
+            },
+            {
+              "seed_a": 123,
+              "seed_b": 789,
+              "cosine": 1.0
+            },
+            {
+              "seed_a": 456,
+              "seed_b": 789,
+              "cosine": 1.0
+            }
+          ],
+          "min_pairwise_cosine": 1.0,
+          "mean_pairwise_cosine": 1.0,
+          "std_pairwise_cosine": 0.0
+        }
+      }
+    }
+  },
+  "quality_gates": {
+    "min_pairwise_cosine_threshold": 0.7,
+    "trait_pass": {
+      "sycophancy": true,
+      "evil": true
+    },
+    "overall_pass": true
+  },
+  "evidence_status": {
+    "per_seed_extractions": "known",
+    "pairwise_stability": "inferred"
+  }
+}

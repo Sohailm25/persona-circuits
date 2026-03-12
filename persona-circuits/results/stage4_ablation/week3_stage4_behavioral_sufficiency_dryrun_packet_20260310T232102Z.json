@@ -1,0 +1,61 @@
+{
+  "timestamp_utc": "2026-03-10T23:21:02.577419+00:00",
+  "artifact_type": "week3_stage4_behavioral_sufficiency_dryrun_packet",
+  "analysis_target": "behavioral_sufficiency",
+  "inputs": {
+    "run_token": "20260310T232102Z",
+    "traits": [
+      "sycophancy",
+      "evil"
+    ],
+    "methods": [
+      "resample",
+      "mean"
+    ],
+    "dose_response": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "n_prompts": 30,
+    "heldout_start_index": 0,
+    "random_baseline_samples": 20,
+    "n_bootstrap": 200,
+    "seed": 42,
+    "min_baseline_effect_for_preservation": 1.0,
+    "coherence_max_drop": 10.0,
+    "target_freeze_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage4_ablation/week3_stage4_target_set_freeze_20260304T164918Z.json",
+    "persona_vectors_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_persona_vectors_seed42_20260302T180612Z.pt",
+    "behavioral_source_artifacts_by_trait": {
+      "sycophancy": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_behavioral_validation_upgrade_sycophancy_20260303T082321Z.json",
+      "evil": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_behavioral_validation_upgrade_evil_20260303T081318Z.json"
+    }
+  },
+  "target_set_summary": {
+    "sycophancy": {
+      "target_feature_count": 10,
+      "candidate_pool_count": 50
+    },
+    "evil": {
+      "target_feature_count": 10,
+      "candidate_pool_count": 50
+    }
+  },
+  "thresholds": {
+    "sufficiency": 0.6,
+    "significance": 0.01,
+    "a12_minimum": 0.71
+  },
+  "readiness": {
+    "inputs_valid": true,
+    "dryrun_path_exercised": true,
+    "launch_recommended_now": true,
+    "blocking_items": []
+  },
+  "evidence_status": {
+    "input_resolution": "known",
+    "launch_readiness": "inferred",
+    "remote_execution": "unknown"
+  }
+}

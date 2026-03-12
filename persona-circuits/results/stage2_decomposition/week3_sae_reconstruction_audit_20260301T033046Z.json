@@ -1,0 +1,260 @@
+{
+  "timestamp_utc": "2026-03-01T03:30:46.021624+00:00",
+  "inputs": {
+    "experiment_config": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/experiment.yaml",
+    "llama_infra_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/infrastructure/week1_day3_5_modal_validation_20260224T220740Z.json",
+    "gemma_infra_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/infrastructure/week1_day3_5_modal_validation_20260224T224332Z.json",
+    "trait_scope_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_trait_scope_resolution_20260301T030203Z.json",
+    "investigation_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage2_decomposition/week3_sae_reconstruction_investigation_20260301T031743Z.json",
+    "root_cause_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage2_decomposition/week3_sae_reconstruction_root_cause_20260301T033002Z.json"
+  },
+  "evidence_status": {
+    "infra_reconstruction_cosines": "known",
+    "stage2_probe_artifacts": "known",
+    "trait_scope_resolution": "known",
+    "computed_readiness_checks": "inferred"
+  },
+  "metrics": {
+    "llama_scope_layer16_reconstruction_cosine": 0.12783345580101013,
+    "llama_scope_layer16_status": "fail",
+    "gemmascope_layer12_reconstruction_cosine": 0.4526175260543823,
+    "gemmascope_layer12_status": "fail"
+  },
+  "model_sae_alignment": {
+    "primary_model_name": "meta-llama/Llama-3.1-8B-Instruct",
+    "primary_sae_model_name": "meta-llama/Llama-3.1-8B",
+    "instruct_base_mismatch": true,
+    "primary_sae_layers": [
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24
+    ],
+    "cross_check_sae_layers": [
+      11,
+      15,
+      19,
+      23
+    ],
+    "current_steering_layers": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "overlap_primary_sae_vs_steering_layers": [
+      12,
+      14,
+      16
+    ],
+    "overlap_crosscheck_vs_steering_layers": [
+      11,
+      15
+    ],
+    "primary_claim_traits": [
+      "sycophancy",
+      "machiavellian_disposition"
+    ],
+    "primary_claim_layers_by_trait": {
+      "sycophancy": 12,
+      "machiavellian_disposition": 12
+    },
+    "primary_claim_layers_unique": [
+      12
+    ],
+    "overlap_primary_sae_vs_claim_layers": [
+      12
+    ],
+    "overlap_crosscheck_vs_claim_layers": []
+  },
+  "probe_layer_coverage": {
+    "investigation_probe_layers": [
+      12
+    ],
+    "root_cause_probe_layers": [
+      12
+    ]
+  },
+  "computed_checks_before_stage2_claims": [
+    {
+      "check": "Token-level reconstruction gate on primary model (last_token path)",
+      "criterion": "min(last_token median_cos)>=0.75 and min(last_token median_EV)>=0.50",
+      "status": "fail",
+      "details": {
+        "status": "fail",
+        "criterion": "min(last_token median_cos)>=0.75 and min(last_token median_EV)>=0.50",
+        "seed_count": 4,
+        "min_median_reconstruction_cosine": 0.7047240436077118,
+        "min_median_explained_variance": 0.4765089154243469,
+        "per_seed": {
+          "42": {
+            "available": true,
+            "variant_key": "blocks.12.hook_resid_post::last_token",
+            "median_reconstruction_cosine": 0.7216431200504303,
+            "median_explained_variance": 0.50223308801651,
+            "median_feature_l0": 16.5
+          },
+          "123": {
+            "available": true,
+            "variant_key": "blocks.12.hook_resid_post::last_token",
+            "median_reconstruction_cosine": 0.713930070400238,
+            "median_explained_variance": 0.4903784990310669,
+            "median_feature_l0": 14.5
+          },
+          "456": {
+            "available": true,
+            "variant_key": "blocks.12.hook_resid_post::last_token",
+            "median_reconstruction_cosine": 0.7318596541881561,
+            "median_explained_variance": 0.5092481970787048,
+            "median_feature_l0": 17.0
+          },
+          "789": {
+            "available": true,
+            "variant_key": "blocks.12.hook_resid_post::last_token",
+            "median_reconstruction_cosine": 0.7047240436077118,
+            "median_explained_variance": 0.4765089154243469,
+            "median_feature_l0": 15.5
+          }
+        }
+      }
+    },
+    {
+      "check": "Hook verification from root-cause probe rows",
+      "criterion": "configured hook present for all evaluated rows",
+      "status": "pass",
+      "details": {
+        "status": "pass",
+        "per_seed": {
+          "42": {
+            "status": "pass",
+            "total_rows": 16,
+            "missing_hook_rows": 0,
+            "missing_fraction": 0.0
+          },
+          "123": {
+            "status": "pass",
+            "total_rows": 16,
+            "missing_hook_rows": 0,
+            "missing_fraction": 0.0
+          },
+          "456": {
+            "status": "pass",
+            "total_rows": 16,
+            "missing_hook_rows": 0,
+            "missing_fraction": 0.0
+          },
+          "789": {
+            "status": "pass",
+            "total_rows": 16,
+            "missing_hook_rows": 0,
+            "missing_fraction": 0.0
+          }
+        }
+      }
+    },
+    {
+      "check": "Selected claim-layer coverage in primary SAE source",
+      "criterion": "all primary-claim layers are available in primary SAE source",
+      "status": "pass",
+      "details": {
+        "status": "pass",
+        "criterion": "all primary-claim layers are available in primary SAE source",
+        "claim_layers": [
+          12
+        ],
+        "missing_primary_sae_layers": [],
+        "available_primary_sae_layers": [
+          12,
+          14,
+          16,
+          18,
+          20,
+          22,
+          24
+        ]
+      }
+    },
+    {
+      "check": "Selected claim layers are probed by Stage2 reconstruction runs",
+      "criterion": "investigation and root-cause probes include all primary-claim layers",
+      "status": "pass",
+      "details": {
+        "status": "pass",
+        "criterion": "investigation and root-cause probes include all primary-claim layers",
+        "claim_layers": [
+          12
+        ],
+        "investigation_probe_layers": [
+          12
+        ],
+        "root_cause_probe_layers": [
+          12
+        ],
+        "missing_investigation_layers": [],
+        "missing_root_cause_layers": []
+      }
+    },
+    {
+      "check": "Cross-source overlap on selected claim layers",
+      "criterion": "cross-check SAE layers overlap selected primary-claim layers",
+      "status": "fail",
+      "details": {
+        "status": "fail",
+        "criterion": "cross-check SAE layers overlap selected primary-claim layers",
+        "claim_layers": [
+          12
+        ],
+        "cross_check_layers": [
+          11,
+          15,
+          19,
+          23
+        ],
+        "overlap_layers": []
+      }
+    },
+    {
+      "check": "Seed replication schedule consumed by investigation artifact",
+      "criterion": "investigation artifact records >1 seeds when config provides replication seeds",
+      "status": "pass",
+      "details": {
+        "status": "pass",
+        "seed_schedule": [
+          42,
+          123,
+          456,
+          789
+        ]
+      }
+    }
+  ],
+  "stage2_readiness_gate": {
+    "status": "fail",
+    "required_checks": [
+      "Token-level reconstruction gate on primary model (last_token path)",
+      "Hook verification from root-cause probe rows",
+      "Selected claim-layer coverage in primary SAE source",
+      "Selected claim layers are probed by Stage2 reconstruction runs",
+      "Cross-source overlap on selected claim layers",
+      "Seed replication schedule consumed by investigation artifact"
+    ],
+    "required_statuses": [
+      "fail",
+      "pass",
+      "pass",
+      "pass",
+      "fail",
+      "pass"
+    ]
+  },
+  "pre_primary_prep_actions": [
+    "Run token-level reconstruction probes on all selected primary-claim layers using configured seed schedule before Stage2 claims.",
+    "If cross-check overlap is empty on selected claim layers, either add overlapping SAE source/layers or scope cross-SAE agreement claims accordingly.",
+    "Keep full-sequence reconstruction pathology in caveats; do not use it as primary token-level gate."
+  ]
+}

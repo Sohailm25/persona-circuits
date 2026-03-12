@@ -1,0 +1,75 @@
+{
+  "timestamp_utc": "2026-03-02T18:10:11.165304+00:00",
+  "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+  "traits": [
+    "sycophancy",
+    "evil"
+  ],
+  "layers": [
+    12
+  ],
+  "seed": 456,
+  "extraction_method": "prompt_last",
+  "response_max_new_tokens": 96,
+  "response_temperature": 0.0,
+  "diagnostics": {
+    "sycophancy": {
+      "layers": {
+        "12": {
+          "n_pairs": 100,
+          "raw_vector_norm": 3.270634889602661,
+          "unit_vector_norm": 0.9999999403953552,
+          "projection_margin_mean": 3.270634651184082,
+          "projection_margin_std": 0.30854707956314087,
+          "projection_margin_over_raw_vector_norm": 0.9999999240457628,
+          "projection_margin_std_over_raw_vector_norm": 0.09433858838864138,
+          "high_activation_norm_mean": 8.037259101867676,
+          "low_activation_norm_mean": 7.730748176574707,
+          "pair_avg_activation_norm_mean": 7.88400411605835,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.4144543409347534,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.03415081650018692,
+          "cosine_margin_mean": 0.4090653359889984,
+          "cosine_margin_std": 0.03639687970280647,
+          "mean_pair_diff_cosine_to_vector": 0.8985758423805237
+        }
+      },
+      "prelim_best_layer_by_margin": 12,
+      "prelim_best_layer_by_cosine_margin": 12
+    },
+    "evil": {
+      "layers": {
+        "12": {
+          "n_pairs": 100,
+          "raw_vector_norm": 3.3429222106933594,
+          "unit_vector_norm": 1.0,
+          "projection_margin_mean": 3.3429224491119385,
+          "projection_margin_std": 0.325289785861969,
+          "projection_margin_over_raw_vector_norm": 1.000000068329014,
+          "projection_margin_std_over_raw_vector_norm": 0.09730701595399377,
+          "high_activation_norm_mean": 7.876387119293213,
+          "low_activation_norm_mean": 8.089154243469238,
+          "pair_avg_activation_norm_mean": 7.982771396636963,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.4190811812877655,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.04283097758889198,
+          "cosine_margin_mean": 0.41807761788368225,
+          "cosine_margin_std": 0.04302091896533966,
+          "mean_pair_diff_cosine_to_vector": 0.90373694896698
+        }
+      },
+      "prelim_best_layer_by_margin": 12,
+      "prelim_best_layer_by_cosine_margin": 12
+    }
+  },
+  "cross_trait_vector_cosines_by_layer": {
+    "12": {
+      "sycophancy": {
+        "sycophancy": 1.0000000000000004,
+        "evil": 0.2991796577314839
+      },
+      "evil": {
+        "sycophancy": 0.2991796577314839,
+        "evil": 1.0000000000000002
+      }
+    }
+  }
+}

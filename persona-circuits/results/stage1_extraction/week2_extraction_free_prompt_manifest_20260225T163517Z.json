@@ -1,0 +1,106 @@
+{
+  "timestamp_utc": "2026-02-25T16:35:17.271253+00:00",
+  "n_eval_per_trait": 50,
+  "seed": 42,
+  "exemplar_bank_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/extraction_free_exemplar_bank.json",
+  "min_examples_per_condition": 4,
+  "output_suffix": "v2_rotating_20260225",
+  "traits": {
+    "sycophancy": {
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/sycophancy_heldout_pairs.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/sycophancy_extraction_free_eval_v2_rotating_20260225.jsonl",
+      "n_rows": 50,
+      "sha256": "1eb1ffa43377936d8bb8bafb54ba2b24e19fdb6307794f4a18b79f800acdc60c",
+      "n_exemplar_sets_available": 6,
+      "exemplar_set_ids_available": [
+        "syco_set_01",
+        "syco_set_02",
+        "syco_set_03",
+        "syco_set_04",
+        "syco_set_05",
+        "syco_set_06"
+      ],
+      "n_exemplar_sets_used": 6,
+      "exemplar_set_ids_used": [
+        "syco_set_01",
+        "syco_set_02",
+        "syco_set_03",
+        "syco_set_04",
+        "syco_set_05",
+        "syco_set_06"
+      ],
+      "exemplar_set_usage_counts": {
+        "syco_set_01": 7,
+        "syco_set_02": 12,
+        "syco_set_03": 2,
+        "syco_set_04": 12,
+        "syco_set_05": 7,
+        "syco_set_06": 10
+      }
+    },
+    "evil": {
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/evil_heldout_pairs.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/evil_extraction_free_eval_v2_rotating_20260225.jsonl",
+      "n_rows": 50,
+      "sha256": "e47ec80daf3e24aa4a87e6d36ac2afdfc6a30389b989e518ce598d53675fa55e",
+      "n_exemplar_sets_available": 6,
+      "exemplar_set_ids_available": [
+        "evil_set_01",
+        "evil_set_02",
+        "evil_set_03",
+        "evil_set_04",
+        "evil_set_05",
+        "evil_set_06"
+      ],
+      "n_exemplar_sets_used": 6,
+      "exemplar_set_ids_used": [
+        "evil_set_01",
+        "evil_set_02",
+        "evil_set_03",
+        "evil_set_04",
+        "evil_set_05",
+        "evil_set_06"
+      ],
+      "exemplar_set_usage_counts": {
+        "evil_set_01": 10,
+        "evil_set_02": 9,
+        "evil_set_03": 12,
+        "evil_set_04": 3,
+        "evil_set_05": 7,
+        "evil_set_06": 9
+      }
+    },
+    "hallucination": {
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/hallucination_heldout_pairs.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/hallucination_extraction_free_eval_v2_rotating_20260225.jsonl",
+      "n_rows": 50,
+      "sha256": "1f141f0eba0648e71eaa4df07a6c4e6e4c360a926dbeb3f71d612d85d983a7ea",
+      "n_exemplar_sets_available": 6,
+      "exemplar_set_ids_available": [
+        "hall_set_01",
+        "hall_set_02",
+        "hall_set_03",
+        "hall_set_04",
+        "hall_set_05",
+        "hall_set_06"
+      ],
+      "n_exemplar_sets_used": 6,
+      "exemplar_set_ids_used": [
+        "hall_set_01",
+        "hall_set_02",
+        "hall_set_03",
+        "hall_set_04",
+        "hall_set_05",
+        "hall_set_06"
+      ],
+      "exemplar_set_usage_counts": {
+        "hall_set_01": 6,
+        "hall_set_02": 12,
+        "hall_set_03": 9,
+        "hall_set_04": 5,
+        "hall_set_05": 4,
+        "hall_set_06": 14
+      }
+    }
+  }
+}

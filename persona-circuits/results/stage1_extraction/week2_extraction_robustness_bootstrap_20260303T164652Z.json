@@ -1,0 +1,77 @@
+{
+  "timestamp_utc": "2026-03-03T16:46:52.328778+00:00",
+  "artifact_type": "week2_extraction_robustness_bootstrap",
+  "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+  "extraction_method": "prompt_last",
+  "response_max_new_tokens": 96,
+  "response_temperature": 0.0,
+  "trait_layer_map": {
+    "sycophancy": 12,
+    "evil": 12
+  },
+  "traits": {
+    "sycophancy": {
+      "layer": 12,
+      "n_train_pairs": 100,
+      "n_heldout_pairs": 50,
+      "bootstrap": {
+        "subset_size": 80,
+        "n_bootstrap": 20,
+        "pairwise_cosine_summary": {
+          "n_vectors": 20,
+          "n_pairs": 190,
+          "min": 0.9982729429938643,
+          "p05": 0.9987884548934303,
+          "mean": 0.9993777225548441,
+          "p50": 0.9994657904169104,
+          "p95": 0.999696857718208,
+          "max": 0.9997781414349587,
+          "std": 0.0002878828255494364
+        }
+      },
+      "train_vs_heldout_vector_cosine": 0.9956933196712417,
+      "quality_gates": {
+        "bootstrap_pairwise_p05_ge_threshold": true,
+        "train_vs_heldout_cosine_ge_threshold": true,
+        "pass": true
+      }
+    },
+    "evil": {
+      "layer": 12,
+      "n_train_pairs": 100,
+      "n_heldout_pairs": 50,
+      "bootstrap": {
+        "subset_size": 80,
+        "n_bootstrap": 20,
+        "pairwise_cosine_summary": {
+          "n_vectors": 20,
+          "n_pairs": 190,
+          "min": 0.9988405531973958,
+          "p05": 0.9990923157038131,
+          "mean": 0.9994855426508558,
+          "p50": 0.9995308239025709,
+          "p95": 0.9997356297996672,
+          "max": 0.9997877987174157,
+          "std": 0.00020094874687155018
+        }
+      },
+      "train_vs_heldout_vector_cosine": 0.9965424422736244,
+      "quality_gates": {
+        "bootstrap_pairwise_p05_ge_threshold": true,
+        "train_vs_heldout_cosine_ge_threshold": true,
+        "pass": true
+      }
+    }
+  },
+  "quality_gates": {
+    "min_bootstrap_pairwise_p05_cosine": 0.8,
+    "min_train_vs_heldout_cosine": 0.7,
+    "overall_pass": true
+  },
+  "evidence_status": {
+    "activation_capture": "known",
+    "bootstrap_pairwise_cosines": "known",
+    "train_vs_heldout_agreement": "known",
+    "robustness_interpretation": "inferred"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "timestamp_utc": "2026-03-10T20:09:37.520494+00:00",
+  "artifact_type": "week3_stage5_policy_decision_packet",
+  "inputs": {
+    "stage5_analysis_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage5_cross_persona/week3_stage5_cross_persona_analysis_20260310T195835Z.json",
+    "router_pvalues_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage5_cross_persona/week3_stage5_router_candidate_pvalues_20260310T195815Z.json",
+    "planning_stub_artifact": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage5_cross_persona/week3_stage5_planning_stub_20260310T143354Z.json"
+  },
+  "gate_closure": {
+    "S5-G2_cross_layer_comparability": {
+      "status": "pass_with_limitation",
+      "reason": "mixed_source_but_source_consistent_gradients_available",
+      "mixed_source_detected": true,
+      "source_consistent_gradient_available": true,
+      "cross_layer_gradient_interpretation": "limited_mixed_source"
+    },
+    "S5-G4_router_multiple_testing": {
+      "status": "exploratory_null",
+      "reason": "no_fdr_significant_router_candidates",
+      "available": true,
+      "n_tested": 62,
+      "n_rejected": 0,
+      "fdr_alpha": 0.01,
+      "min_q_value": 0.0465
+    }
+  },
+  "supporting_context": {
+    "planning_blocking_items": [],
+    "router_pvalue_summary": {
+      "n_features": 62,
+      "min_p_value": 0.001,
+      "median_p_value": 0.3486
+    },
+    "analysis_gradient_summary_candidate_union": {
+      "available": true,
+      "early_layer": 11,
+      "late_layer": 15,
+      "early_source_signature": "cross_check|llama-3.1-8b-instruct-andyrdt",
+      "late_source_signature": "cross_check|llama-3.1-8b-instruct-andyrdt",
+      "early_jaccard": 0.1695906432748538,
+      "late_jaccard": 0.12359550561797752,
+      "delta_early_minus_late": 0.04599513765687627,
+      "proposal_pattern_pass": false
+    }
+  },
+  "recommendation": {
+    "policy_decision": "lock_exploratory_null_with_optional_sensitivity_lane",
+    "launch_recommended_now": false,
+    "rationale": "comparability gate is acceptable with explicit limitation; multiple-testing executed with no FDR-significant router candidates"
+  },
+  "evidence_status": {
+    "input_artifacts": "known",
+    "gate_statuses": "known",
+    "policy_recommendation": "inferred"
+  }
+}

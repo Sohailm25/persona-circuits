@@ -1,0 +1,92 @@
+{
+  "timestamp_utc": "2026-03-04T16:20:02.471045+00:00",
+  "artifact_type": "week3_stage2_decomposition_sensitivity_summary",
+  "inputs": {
+    "source_artifacts": {
+      "primary_layer12": "results/stage2_decomposition/week3_sae_decomposition_20260303T202729Z.json",
+      "cross_layer11": "results/stage2_decomposition/week3_sae_decomposition_20260303T203716Z.json",
+      "cross_layer15": "results/stage2_decomposition/week3_sae_decomposition_20260303T211749Z.json"
+    },
+    "comparison_scope": "layer12 primary vs cross-source overlap layers 11 and 15"
+  },
+  "results_by_trait": {
+    "evil": {
+      "primary_layer12": {
+        "claim_trait_name": "machiavellian_disposition",
+        "n_pairs": 100,
+        "union_count": 195,
+        "jaccard_direct_vs_differential": 0.02564102564102564,
+        "conc_all_top1pct_mass": 0.04715513489222089,
+        "conc_candidate_top10pct_mass": 0.18630825581148408
+      },
+      "cross_layer11": {
+        "claim_trait_name": "machiavellian_disposition",
+        "n_pairs": 100,
+        "union_count": 176,
+        "jaccard_direct_vs_differential": 0.13636363636363635,
+        "conc_all_top1pct_mass": 0.05645022067149077,
+        "conc_candidate_top10pct_mass": 0.1952176095118815
+      },
+      "cross_layer15": {
+        "claim_trait_name": "machiavellian_disposition",
+        "n_pairs": 100,
+        "union_count": 180,
+        "jaccard_direct_vs_differential": 0.1111111111111111,
+        "conc_all_top1pct_mass": 0.058628090142497875,
+        "conc_candidate_top10pct_mass": 0.2095216432027984
+      },
+      "delta_jaccard_cross11_minus_primary12": 0.11072261072261072,
+      "delta_jaccard_cross15_minus_primary12": 0.08547008547008547,
+      "evidence_status": {
+        "run_metrics": "known",
+        "cross_lane_delta": "observed",
+        "cause_of_delta": "unknown"
+      }
+    },
+    "sycophancy": {
+      "primary_layer12": {
+        "claim_trait_name": "sycophancy",
+        "n_pairs": 100,
+        "union_count": 194,
+        "jaccard_direct_vs_differential": 0.030927835051546393,
+        "conc_all_top1pct_mass": 0.046935474709335866,
+        "conc_candidate_top10pct_mass": 0.19482850114654515
+      },
+      "cross_layer11": {
+        "claim_trait_name": "sycophancy",
+        "n_pairs": 100,
+        "union_count": 174,
+        "jaccard_direct_vs_differential": 0.14942528735632185,
+        "conc_all_top1pct_mass": 0.05352655559843629,
+        "conc_candidate_top10pct_mass": 0.1744976894974313
+      },
+      "cross_layer15": {
+        "claim_trait_name": "sycophancy",
+        "n_pairs": 100,
+        "union_count": 174,
+        "jaccard_direct_vs_differential": 0.14942528735632185,
+        "conc_all_top1pct_mass": 0.05328816366177554,
+        "conc_candidate_top10pct_mass": 0.17046401784874027
+      },
+      "delta_jaccard_cross11_minus_primary12": 0.11849745230477546,
+      "delta_jaccard_cross15_minus_primary12": 0.11849745230477546,
+      "evidence_status": {
+        "run_metrics": "known",
+        "cross_lane_delta": "observed",
+        "cause_of_delta": "unknown"
+      }
+    }
+  },
+  "global_observations": {
+    "known": [
+      "All three decomposition artifacts completed with n_pairs=100 for sycophancy and evil (alias machiavellian_disposition).",
+      "Cross-source overlap layers (11,15) show higher direct-vs-differential top100 jaccard than primary claim layer 12 for both traits."
+    ],
+    "inferred": [
+      "Overlap-capable layers may provide more internally consistent feature candidate sets for cross-source-supported interpretation than claim layer 12."
+    ],
+    "unknown": [
+      "Whether higher jaccard at overlap layers improves downstream Stage3 attribution selectivity or causal concentration."
+    ]
+  }
+}

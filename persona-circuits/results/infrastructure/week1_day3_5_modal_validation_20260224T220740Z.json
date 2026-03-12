@@ -1,0 +1,101 @@
+{
+  "llama_scope_and_andyrdt": {
+    "timestamp_utc": "2026-02-24T22:06:51.756826+00:00",
+    "task": "llama_scope_and_andyrdt_validation",
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+    "forward_pass": {
+      "tokens_shape": [
+        1,
+        12
+      ],
+      "logits_shape": [
+        1,
+        12,
+        128256
+      ],
+      "resid_12_shape": [
+        1,
+        12,
+        4096
+      ],
+      "resid_24_shape": [
+        1,
+        12,
+        4096
+      ]
+    },
+    "llama_scope_release": "llama_scope_lxr_32x",
+    "llama_scope_loaded": {
+      "l12r_32x": {
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "l13r_32x": {
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "l14r_32x": {
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "l15r_32x": {
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "l16r_32x": {
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "l17r_32x": {
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "l18r_32x": {
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "l19r_32x": {
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "l20r_32x": {
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "l21r_32x": {
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "l22r_32x": {
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "l23r_32x": {
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "l24r_32x": {
+        "d_in": 4096,
+        "d_sae": 131072
+      }
+    },
+    "llama_scope_reconstruction_cosine_layer16": 0.12783345580101013,
+    "andyrdt_release": "llama-3.1-8b-instruct-andyrdt",
+    "andyrdt_loaded": {
+      "resid_post_layer_19_trainer_1": {
+        "d_in": 4096,
+        "d_sae": 131072
+      },
+      "resid_post_layer_23_trainer_1": {
+        "d_in": 4096,
+        "d_sae": 131072
+      }
+    },
+    "cache_summary": {
+      "exists": true,
+      "total_bytes": 2006849,
+      "file_count": 1
+    },
+    "output_path": "/models/persona-circuits/week1/llama_scope_and_andyrdt_validation.json"
+  }
+}

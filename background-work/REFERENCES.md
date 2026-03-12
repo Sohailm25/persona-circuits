@@ -90,7 +90,7 @@ These papers define the theoretical framework, extraction methodology, critical 
 
 | # | Paper | URL | Status | When to consult |
 |---|-------|-----|--------|-----------------|
-| 24 | Lu, X., et al. (2026). **The Assistant Axis: Characterizing the Principal Component of AI Assistant Persona Space.** | ? unknown — search arXiv | Week 5 cross-persona analysis; PC1 of persona space; router may align with this axis |
+| 24 | Lu, X., et al. (2026). **The Assistant Axis: Characterizing the Principal Component of AI Assistant Persona Space.** | https://arxiv.org/abs/2601.10387 | ✓ confirmed | Week 5 cross-persona analysis; also relevant if adding an `assistant_likeness` screening lane because it directly targets persona-space structure rather than a single narrow trait |
 
 ### SAE Limitations (Week 3 if SAE decomposition is weak)
 
@@ -103,6 +103,10 @@ These papers define the theoretical framework, extraction methodology, critical 
 | # | Paper | URL | Status | When to consult |
 |---|-------|-----|--------|-----------------|
 | 5 | Elhage, N., et al. (2022). **Toy Models of Superposition.** Anthropic Research. | https://transformer-circuits.pub/2022/toy_model/index.html | ✓ confirmed | Why SAE features are the right unit; cite in intro |
+| 30 | Hewitt, J. (2026). **How the Residual Stream is (Not) Linear.** | https://www.cs.columbia.edu/~johnhew/residual-stream-isnt-linear.html | ✓ confirmed — local copy: `papers/hewitt2026_residual_stream_isnt_linear.md` | When discussing additive steering assumptions, extraction-position sensitivity, or why empirical validation (not architectural linearity claims) is required |
+| 31 | Chen, Z., et al. (2026). **Sycophancy Hides Linearly in the Attention Heads.** | https://arxiv.org/abs/2601.16644 | ✓ confirmed | Week 2 and Week 4–5 if keeping sycophancy as an anchor lane; useful for head-level localization and for arguing that sycophancy remains a strong mechanistic target |
+| 32 | Zou, Y., et al. (2026). **LieCraft: A Multi-Agent Framework for Evaluating Deceptive Capabilities in Language Models.** | https://arxiv.org/abs/2603.06874 | ✓ confirmed | Week 2 if adding honesty / lying / deception screening lanes; useful as an evaluation reference for deception-family held-out and external smoke tests |
+| 33 | Prieto, L., et al. (2026). **From Data Statistics to Feature Geometry: How Correlations Shape Superposition.** | https://arxiv.org/abs/2603.09972 | ✓ confirmed | Future Stage 2 / Stage 5 interpretation only: consult if clustered/shared feature geometry becomes central to the argument, or if adding a geometry-only sidecar diagnostic. Do not treat this as a reason to widen scope or change the pre-registered causal thresholds. Repo: `LucasPrietoAl/correlations-feature-geometry` |
 
 ---
 

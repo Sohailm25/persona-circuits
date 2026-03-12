@@ -1,6 +1,6 @@
 # Papers Download Manifest
 
-All 22 papers are locally available as markdown. Use `grep -r "keyword" .` or `Read` on individual files.
+All 23 papers/resources are locally available as markdown. Use `grep -r "keyword" .` or `Read` on individual files.
 
 | File | Size | Tier | Notes |
 |------|------|------|-------|
@@ -11,6 +11,7 @@ All 22 papers are locally available as markdown. Use `grep -r "keyword" .` or `R
 | conmy2023_acdc.md | 144K | 2 | ACDC — automated circuit discovery |
 | elhage2022_toy_models_superposition.md | 170K | 3 | Superposition hypothesis — why SAE features exist |
 | he2024_llama_scope.md | 91K | 2 | LlamaScope SAEs — primary SAEs for Llama 3.1 8B |
+| hewitt2026_residual_stream_isnt_linear.md | 3K | 3 | Residual-stream linearity caveat; supports empirical-over-architectural framing for steering |
 | lieberum2024_gemma_scope.md | 101K | 2 | GemmaScope SAEs |
 | lindsey2025_circuit_tracing.md | 184K | 1 | Circuit tracing / attribution graphs |
 | marks2026_persona_selection_model.md | 92K | 1 | PSM — the theory being tested |

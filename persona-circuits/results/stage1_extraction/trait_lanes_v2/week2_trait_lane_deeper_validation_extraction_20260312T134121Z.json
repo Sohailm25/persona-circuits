@@ -1,0 +1,238 @@
+{
+  "timestamp_utc": "2026-03-12T13:43:36.886912+00:00",
+  "artifact_type": "week2_trait_lane_deeper_validation_extraction",
+  "deeper_validation_packet_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_deeper_validation_packet_20260312T133907Z.json",
+  "extraction_packet": {
+    "timestamp_utc": "2026-03-12T13:41:21.927039+00:00",
+    "artifact_type": "week2_trait_lane_deeper_validation_split_extract_packet",
+    "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+    "deeper_validation_packet_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_deeper_validation_packet_20260312T133907Z.json",
+    "selected_lane_ids": [
+      "politeness"
+    ],
+    "run_token": "politeness-deeperv1-splitextract-20260312T0840-0500",
+    "response_phase_policy_snapshot": {
+      "status": "tracked_limitation_not_hard_gate",
+      "hard_gate_counterfactual_candidate_count": 0,
+      "screening_candidate_count_without_hard_gate": 2,
+      "rationale": "All screened lanes miss the legacy 0.7 prompt-vs-response persistence threshold while several lanes show positive bounded screening signal; keep persistence explicit but do not let it silently zero the branch at screening depth."
+    },
+    "execution_policy": {
+      "preferred_launch_mode": "split_extract_validate",
+      "legacy_single_app_wrapper_allowed": false,
+      "rationale": "The next deeper-validation attempt should decouple extraction and upgraded validation to reduce wrapper/handoff failure risk and narrow blast radius."
+    },
+    "extraction_method": "prompt_last",
+    "response_max_new_tokens": 96,
+    "response_temperature": 0.0,
+    "candidate_layers": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "lane_packets": [
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "display_name": "Politeness",
+        "screening_layers": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "screening_alpha_grid": [
+          0.5,
+          1.0,
+          2.0
+        ],
+        "prompt_paths": {
+          "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs_deeperv1.jsonl",
+          "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_deeperv1.jsonl"
+        },
+        "prompt_counts": {
+          "extraction_pairs": 48,
+          "heldout_pairs": 30
+        }
+      }
+    ],
+    "launch_recommended_now": true,
+    "notes": [
+      "This is the extraction-only launch contract for split trait-lane deeper validation.",
+      "Vectors produced here should be persisted and reused by the validation-only launch."
+    ]
+  },
+  "extract_vectors": {
+    "timestamp_utc": "2026-03-12T13:43:32.060296+00:00",
+    "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+    "traits": [
+      "politeness"
+    ],
+    "layers": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "seed": 42,
+    "extraction_method": "prompt_last",
+    "response_max_new_tokens": 96,
+    "response_temperature": 0.0,
+    "diagnostics": {
+      "politeness": {
+        "layers": {
+          "11": {
+            "n_pairs": 48,
+            "raw_vector_norm": 1.9166065454483032,
+            "unit_vector_norm": 0.9999999403953552,
+            "projection_margin_mean": 1.916606068611145,
+            "projection_margin_std": 0.3258430063724518,
+            "projection_margin_over_raw_vector_norm": 0.999999745990038,
+            "projection_margin_std_over_raw_vector_norm": 0.17001037873223573,
+            "high_activation_norm_mean": 6.414221286773682,
+            "low_activation_norm_mean": 6.337017059326172,
+            "pair_avg_activation_norm_mean": 6.375619411468506,
+            "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.3001682460308075,
+            "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.04833793640136719,
+            "cosine_margin_mean": 0.29984137415885925,
+            "cosine_margin_std": 0.04827931523323059,
+            "mean_pair_diff_cosine_to_vector": 0.9114267826080322
+          },
+          "12": {
+            "n_pairs": 48,
+            "raw_vector_norm": 2.0634853839874268,
+            "unit_vector_norm": 0.9999998807907104,
+            "projection_margin_mean": 2.0634846687316895,
+            "projection_margin_std": 0.3796623647212982,
+            "projection_margin_over_raw_vector_norm": 0.999999648528776,
+            "projection_margin_std_over_raw_vector_norm": 0.18399081758831756,
+            "high_activation_norm_mean": 7.6840434074401855,
+            "low_activation_norm_mean": 7.6306471824646,
+            "pair_avg_activation_norm_mean": 7.657346725463867,
+            "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.26844799518585205,
+            "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.044308170676231384,
+            "cosine_margin_mean": 0.2683093845844269,
+            "cosine_margin_std": 0.044301338493824005,
+            "mean_pair_diff_cosine_to_vector": 0.8821637034416199
+          },
+          "13": {
+            "n_pairs": 48,
+            "raw_vector_norm": 4.443757057189941,
+            "unit_vector_norm": 1.0000001192092896,
+            "projection_margin_mean": 4.443758487701416,
+            "projection_margin_std": 0.5183498859405518,
+            "projection_margin_over_raw_vector_norm": 1.000000319664521,
+            "projection_margin_std_over_raw_vector_norm": 0.11664676491155175,
+            "high_activation_norm_mean": 7.92416524887085,
+            "low_activation_norm_mean": 7.880957126617432,
+            "pair_avg_activation_norm_mean": 7.902561187744141,
+            "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.5614177584648132,
+            "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.056821852922439575,
+            "cosine_margin_mean": 0.5612223744392395,
+            "cosine_margin_std": 0.056867558509111404,
+            "mean_pair_diff_cosine_to_vector": 0.918498694896698
+          },
+          "14": {
+            "n_pairs": 48,
+            "raw_vector_norm": 6.1469197273254395,
+            "unit_vector_norm": 1.0,
+            "projection_margin_mean": 6.1469197273254395,
+            "projection_margin_std": 0.6937122941017151,
+            "projection_margin_over_raw_vector_norm": 0.999999998373169,
+            "projection_margin_std_over_raw_vector_norm": 0.11285527121646677,
+            "high_activation_norm_mean": 8.804877281188965,
+            "low_activation_norm_mean": 9.01512336730957,
+            "pair_avg_activation_norm_mean": 8.910000801086426,
+            "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.6885761618614197,
+            "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.06427593529224396,
+            "cosine_margin_mean": 0.6873093247413635,
+            "cosine_margin_std": 0.06407229602336884,
+            "mean_pair_diff_cosine_to_vector": 0.9277403354644775
+          },
+          "15": {
+            "n_pairs": 48,
+            "raw_vector_norm": 7.590067386627197,
+            "unit_vector_norm": 0.9999998807907104,
+            "projection_margin_mean": 7.590066432952881,
+            "projection_margin_std": 0.9209217429161072,
+            "projection_margin_over_raw_vector_norm": 0.9999998730348143,
+            "projection_margin_std_over_raw_vector_norm": 0.12133248557520553,
+            "high_activation_norm_mean": 9.321016311645508,
+            "low_activation_norm_mean": 10.130688667297363,
+            "pair_avg_activation_norm_mean": 9.725852012634277,
+            "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.7786908149719238,
+            "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.07752332836389542,
+            "cosine_margin_mean": 0.7706668376922607,
+            "cosine_margin_std": 0.0767756998538971,
+            "mean_pair_diff_cosine_to_vector": 0.9277592301368713
+          },
+          "16": {
+            "n_pairs": 48,
+            "raw_vector_norm": 8.410669326782227,
+            "unit_vector_norm": 0.9999998211860657,
+            "projection_margin_mean": 8.410666465759277,
+            "projection_margin_std": 1.1020454168319702,
+            "projection_margin_over_raw_vector_norm": 0.9999996586451286,
+            "projection_margin_std_over_raw_vector_norm": 0.13102945469659769,
+            "high_activation_norm_mean": 10.497851371765137,
+            "low_activation_norm_mean": 11.079891204833984,
+            "pair_avg_activation_norm_mean": 10.788871765136719,
+            "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.777759850025177,
+            "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.08644909411668777,
+            "cosine_margin_mean": 0.7737759947776794,
+            "cosine_margin_std": 0.08640479296445847,
+            "mean_pair_diff_cosine_to_vector": 0.9121436476707458
+          }
+        },
+        "prelim_best_layer_by_margin": 16,
+        "prelim_best_layer_by_cosine_margin": 16
+      }
+    },
+    "cross_trait_vector_cosines_by_layer": {
+      "11": {
+        "politeness": {
+          "politeness": 1.0000000000000004
+        }
+      },
+      "12": {
+        "politeness": {
+          "politeness": 1.0000000000000004
+        }
+      },
+      "13": {
+        "politeness": {
+          "politeness": 1.0000000000000004
+        }
+      },
+      "14": {
+        "politeness": {
+          "politeness": 1.0000000000000004
+        }
+      },
+      "15": {
+        "politeness": {
+          "politeness": 1.0000000000000004
+        }
+      },
+      "16": {
+        "politeness": {
+          "politeness": 1.0000000000000004
+        }
+      }
+    }
+  },
+  "extract_modal_artifacts": {
+    "summary_path": "/models/persona-circuits/week2/vector_extraction_summary_20260312T134332Z.json",
+    "vectors_path": "/models/persona-circuits/week2/persona_vectors_20260312T134332Z.pt"
+  },
+  "local_artifacts": {
+    "vectors_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_deeper_validation_vectors_20260312T134121Z.pt"
+  }
+}

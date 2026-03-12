@@ -1,0 +1,88 @@
+{
+  "timestamp_utc": "2026-03-12T13:39:07.566088+00:00",
+  "artifact_type": "week2_trait_lane_response_phase_policy_packet",
+  "promotion_packet_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_promotion_packet_20260312T030612Z.json",
+  "n_screened_lanes": 6,
+  "n_response_phase_pass": 0,
+  "legacy_policy": {
+    "threshold": 0.7,
+    "screening_role": "hard_gate",
+    "rationale": "Original branch promotion logic treated prompt-vs-response persistence >=0.7 as a required screening pass."
+  },
+  "frozen_policy": {
+    "status": "pre_registered_superseding_policy",
+    "screening_role": "tracked_limitation_not_hard_gate",
+    "deeper_validation_launch_role": "must_report_not_blocking",
+    "claim_role": "explicit_limitation_not_positive_evidence",
+    "threshold_retained_for_reporting": 0.7,
+    "hard_gate_counterfactual_candidate_count": 0,
+    "screening_candidate_count_without_hard_gate": 2,
+    "rationale": "All screened lanes miss the legacy 0.7 prompt-vs-response persistence threshold, while branch screening also shows strong bootstrap/train-vs-heldout robustness and the core line already established that prompt-end vs response-generation disagreement can be a computational-regime property rather than a content-stability failure. Therefore persistence stays mandatory to report and interpret, but is frozen as a tracked limitation rather than a branch-killing hard gate before the next deeper-validation evidence tranche.",
+    "required_reporting": [
+      "Always report response_phase_persistence and pass/fail against the legacy 0.7 threshold.",
+      "Do not use persistence alone as positive evidence for persona-level generation control.",
+      "Carry persistence failure forward as a limitation in any deeper-validation interpretation."
+    ]
+  },
+  "lane_rows": [
+    {
+      "lane_id": "politeness",
+      "screening_status": "promotion_candidate_supported",
+      "response_phase_persistence": 0.6329874396324158,
+      "response_phase_persistence_pass": false,
+      "selected_layer": 15,
+      "selected_alpha": 2.0,
+      "oriented_bidirectional_effect": 33.0
+    },
+    {
+      "lane_id": "lying",
+      "screening_status": "conditional_followon_candidate",
+      "response_phase_persistence": 0.5360476970672607,
+      "response_phase_persistence_pass": false,
+      "selected_layer": 14,
+      "selected_alpha": 2.0,
+      "oriented_bidirectional_effect": 38.75
+    },
+    {
+      "lane_id": "persona_drift_from_assistant",
+      "screening_status": "orientation_review",
+      "response_phase_persistence": 0.5523361563682556,
+      "response_phase_persistence_pass": false,
+      "selected_layer": 16,
+      "selected_alpha": 0.5,
+      "oriented_bidirectional_effect": 32.25
+    },
+    {
+      "lane_id": "optimism",
+      "screening_status": "weak_positive_hold",
+      "response_phase_persistence": 0.6163065433502197,
+      "response_phase_persistence_pass": false,
+      "selected_layer": 16,
+      "selected_alpha": 1.0,
+      "oriented_bidirectional_effect": 9.5
+    },
+    {
+      "lane_id": "assistant_likeness",
+      "screening_status": "weak_positive_hold",
+      "response_phase_persistence": 0.5814439058303833,
+      "response_phase_persistence_pass": false,
+      "selected_layer": 15,
+      "selected_alpha": 1.0,
+      "oriented_bidirectional_effect": 9.0
+    },
+    {
+      "lane_id": "honesty",
+      "screening_status": "deprioritized_after_followons",
+      "response_phase_persistence": 0.47330284118652344,
+      "response_phase_persistence_pass": false,
+      "selected_layer": 14,
+      "selected_alpha": 0.5,
+      "oriented_bidirectional_effect": 29.5
+    }
+  ],
+  "status": "policy_frozen_before_next_deeper_validation",
+  "notes": [
+    "This artifact freezes the branch response-phase persistence policy before collecting the next deeper-validation evidence.",
+    "It does not assert that persistence is unimportant; it fixes how persistence is treated in screening/launch governance."
+  ]
+}

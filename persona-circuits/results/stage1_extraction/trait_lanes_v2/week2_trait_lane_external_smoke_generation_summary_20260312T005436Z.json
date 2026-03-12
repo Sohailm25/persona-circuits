@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "2026-03-12T00:53:35.049191+00:00",
+  "mode": "external_smoke",
+  "lanes": {
+    "honesty": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/honesty_external_smoke.jsonl",
+      "count": 8
+    },
+    "lying": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/lying_external_smoke.jsonl",
+      "count": 8
+    }
+  }
+}

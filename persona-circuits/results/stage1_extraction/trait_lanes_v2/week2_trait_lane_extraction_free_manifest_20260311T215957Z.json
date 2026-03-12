@@ -1,0 +1,77 @@
+{
+  "timestamp_utc": "2026-03-11T21:59:57.717171+00:00",
+  "seed": 42,
+  "n_eval_per_lane": 12,
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "exemplar_bank_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free_exemplar_bank_sliceA.json",
+  "heldout_suffix": "_retry01",
+  "output_suffix": "",
+  "lane_rows": [
+    {
+      "lane_id": "assistant_likeness",
+      "family_id": "assistant_axis",
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/assistant_likeness_heldout_pairs_retry01.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/assistant_likeness_eval.jsonl",
+      "n_rows": 12,
+      "sha256": "e57233e55851493b758247a5c850c3426b1ba3050bc57e160b4b887d0995d8e0",
+      "n_exemplar_sets_available": 4,
+      "n_exemplar_sets_used": 4,
+      "exemplar_set_ids_used": [
+        "assist_like_set_01",
+        "assist_like_set_02",
+        "assist_like_set_03",
+        "assist_like_set_04"
+      ],
+      "exemplar_set_usage_counts": {
+        "assist_like_set_01": 2,
+        "assist_like_set_02": 2,
+        "assist_like_set_03": 4,
+        "assist_like_set_04": 4
+      }
+    },
+    {
+      "lane_id": "honesty",
+      "family_id": "honesty_deception",
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/honesty_heldout_pairs_retry01.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/honesty_eval.jsonl",
+      "n_rows": 12,
+      "sha256": "c0b8b0da24092dfabe4bb0588b7d3476ad0db7517799d56c03a6889552f9fc03",
+      "n_exemplar_sets_available": 4,
+      "n_exemplar_sets_used": 4,
+      "exemplar_set_ids_used": [
+        "honesty_set_01",
+        "honesty_set_02",
+        "honesty_set_03",
+        "honesty_set_04"
+      ],
+      "exemplar_set_usage_counts": {
+        "honesty_set_01": 7,
+        "honesty_set_02": 1,
+        "honesty_set_03": 2,
+        "honesty_set_04": 2
+      }
+    },
+    {
+      "lane_id": "politeness",
+      "family_id": "light_style_persona",
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_retry01.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/politeness_eval.jsonl",
+      "n_rows": 12,
+      "sha256": "bb1c7f6ab336e1046be76ffcfec6ca712ac5436371c8f843dc1f08820b7ebd9e",
+      "n_exemplar_sets_available": 4,
+      "n_exemplar_sets_used": 4,
+      "exemplar_set_ids_used": [
+        "polite_set_01",
+        "polite_set_02",
+        "polite_set_03",
+        "polite_set_04"
+      ],
+      "exemplar_set_usage_counts": {
+        "polite_set_01": 1,
+        "polite_set_02": 4,
+        "polite_set_03": 5,
+        "polite_set_04": 2
+      }
+    }
+  ]
+}

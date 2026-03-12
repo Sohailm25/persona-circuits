@@ -1,0 +1,18 @@
+{
+  "timestamp_utc": "2026-03-11T20:16:39.146495+00:00",
+  "mode": "extraction",
+  "lanes": {
+    "assistant_likeness": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/assistant_likeness_pairs.jsonl",
+      "count": 24
+    },
+    "honesty": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/honesty_pairs.jsonl",
+      "count": 24
+    },
+    "politeness": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs.jsonl",
+      "count": 24
+    }
+  }
+}

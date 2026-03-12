@@ -1,0 +1,451 @@
+{
+  "timestamp_utc": "2026-03-11T22:43:05.881375+00:00",
+  "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+  "traits": [
+    "assistant_likeness",
+    "honesty",
+    "politeness"
+  ],
+  "layers": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "seed": 42,
+  "extraction_method": "prompt_last",
+  "response_max_new_tokens": 96,
+  "response_temperature": 0.0,
+  "diagnostics": {
+    "assistant_likeness": {
+      "layers": {
+        "11": {
+          "n_pairs": 24,
+          "raw_vector_norm": 1.5129034519195557,
+          "unit_vector_norm": 1.0,
+          "projection_margin_mean": 1.5129035711288452,
+          "projection_margin_std": 0.18787944316864014,
+          "projection_margin_over_raw_vector_norm": 1.0000000721852336,
+          "projection_margin_std_over_raw_vector_norm": 0.12418468719098621,
+          "high_activation_norm_mean": 6.668689727783203,
+          "low_activation_norm_mean": 6.443729400634766,
+          "pair_avg_activation_norm_mean": 6.556209087371826,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.23065964877605438,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.027466610074043274,
+          "cosine_margin_mean": 0.22616155445575714,
+          "cosine_margin_std": 0.028210852295160294,
+          "mean_pair_diff_cosine_to_vector": 0.9322953224182129
+        },
+        "12": {
+          "n_pairs": 24,
+          "raw_vector_norm": 2.048302173614502,
+          "unit_vector_norm": 0.9999999403953552,
+          "projection_margin_mean": 2.0483016967773438,
+          "projection_margin_std": 0.20423276722431183,
+          "projection_margin_over_raw_vector_norm": 0.9999997623216135,
+          "projection_margin_std_over_raw_vector_norm": 0.09970831884967087,
+          "high_activation_norm_mean": 7.931924343109131,
+          "low_activation_norm_mean": 7.40900993347168,
+          "pair_avg_activation_norm_mean": 7.670467376708984,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.26696816086769104,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.025698423385620117,
+          "cosine_margin_mean": 0.2514510750770569,
+          "cosine_margin_std": 0.024086443707346916,
+          "mean_pair_diff_cosine_to_vector": 0.9400365352630615
+        },
+        "13": {
+          "n_pairs": 24,
+          "raw_vector_norm": 3.546069860458374,
+          "unit_vector_norm": 0.9999998211860657,
+          "projection_margin_mean": 3.5460691452026367,
+          "projection_margin_std": 0.26493117213249207,
+          "projection_margin_over_raw_vector_norm": 0.9999997954761852,
+          "projection_margin_std_over_raw_vector_norm": 0.07471121038521623,
+          "high_activation_norm_mean": 8.002894401550293,
+          "low_activation_norm_mean": 7.479938983917236,
+          "pair_avg_activation_norm_mean": 7.7414164543151855,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.4578591287136078,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.03078032284975052,
+          "cosine_margin_mean": 0.4512702524662018,
+          "cosine_margin_std": 0.030554262921214104,
+          "mean_pair_diff_cosine_to_vector": 0.9377774596214294
+        },
+        "14": {
+          "n_pairs": 24,
+          "raw_vector_norm": 5.461488246917725,
+          "unit_vector_norm": 0.9999999403953552,
+          "projection_margin_mean": 5.461488246917725,
+          "projection_margin_std": 0.3420559763908386,
+          "projection_margin_over_raw_vector_norm": 0.9999999981689973,
+          "projection_margin_std_over_raw_vector_norm": 0.06263054323289587,
+          "high_activation_norm_mean": 8.907917976379395,
+          "low_activation_norm_mean": 8.386006355285645,
+          "pair_avg_activation_norm_mean": 8.64696216583252,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.6315215229988098,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.03679182007908821,
+          "cosine_margin_mean": 0.6283065676689148,
+          "cosine_margin_std": 0.0376301147043705,
+          "mean_pair_diff_cosine_to_vector": 0.9483473896980286
+        },
+        "15": {
+          "n_pairs": 24,
+          "raw_vector_norm": 6.232000350952148,
+          "unit_vector_norm": 0.9999999403953552,
+          "projection_margin_mean": 6.231998443603516,
+          "projection_margin_std": 0.41580089926719666,
+          "projection_margin_over_raw_vector_norm": 0.9999996923381704,
+          "projection_margin_std_over_raw_vector_norm": 0.06672029447759355,
+          "high_activation_norm_mean": 9.44066333770752,
+          "low_activation_norm_mean": 9.131163597106934,
+          "pair_avg_activation_norm_mean": 9.28591251373291,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.6707952618598938,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.03736676648259163,
+          "cosine_margin_mean": 0.6703670620918274,
+          "cosine_margin_std": 0.03761207312345505,
+          "mean_pair_diff_cosine_to_vector": 0.9396138191223145
+        },
+        "16": {
+          "n_pairs": 24,
+          "raw_vector_norm": 6.9324445724487305,
+          "unit_vector_norm": 1.0000001192092896,
+          "projection_margin_mean": 6.932444095611572,
+          "projection_margin_std": 0.5189245343208313,
+          "projection_margin_over_raw_vector_norm": 0.9999999297741002,
+          "projection_margin_std_over_raw_vector_norm": 0.0748544799960785,
+          "high_activation_norm_mean": 10.620275497436523,
+          "low_activation_norm_mean": 10.068209648132324,
+          "pair_avg_activation_norm_mean": 10.344243049621582,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.670030415058136,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.04700637608766556,
+          "cosine_margin_mean": 0.668565034866333,
+          "cosine_margin_std": 0.047027986496686935,
+          "mean_pair_diff_cosine_to_vector": 0.9236302375793457
+        }
+      },
+      "prelim_best_layer_by_margin": 16,
+      "prelim_best_layer_by_cosine_margin": 15
+    },
+    "honesty": {
+      "layers": {
+        "11": {
+          "n_pairs": 24,
+          "raw_vector_norm": 2.768618106842041,
+          "unit_vector_norm": 0.9999999403953552,
+          "projection_margin_mean": 2.768617868423462,
+          "projection_margin_std": 0.2844342887401581,
+          "projection_margin_over_raw_vector_norm": 0.9999999102734402,
+          "projection_margin_std_over_raw_vector_norm": 0.10273511070735583,
+          "high_activation_norm_mean": 6.6791253089904785,
+          "low_activation_norm_mean": 6.607147216796875,
+          "pair_avg_activation_norm_mean": 6.643136501312256,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.41664817929267883,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.041220907121896744,
+          "cosine_margin_mean": 0.41614243388175964,
+          "cosine_margin_std": 0.0412917286157608,
+          "mean_pair_diff_cosine_to_vector": 0.9363238215446472
+        },
+        "12": {
+          "n_pairs": 24,
+          "raw_vector_norm": 3.160264492034912,
+          "unit_vector_norm": 1.0000001192092896,
+          "projection_margin_mean": 3.160264730453491,
+          "projection_margin_std": 0.2983798086643219,
+          "projection_margin_over_raw_vector_norm": 1.0000000722783107,
+          "projection_margin_std_over_raw_vector_norm": 0.0944160871573229,
+          "high_activation_norm_mean": 7.783863067626953,
+          "low_activation_norm_mean": 7.541110515594482,
+          "pair_avg_activation_norm_mean": 7.662487030029297,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.41218051314353943,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.03596445918083191,
+          "cosine_margin_mean": 0.4103434383869171,
+          "cosine_margin_std": 0.035914864391088486,
+          "mean_pair_diff_cosine_to_vector": 0.9126722812652588
+        },
+        "13": {
+          "n_pairs": 24,
+          "raw_vector_norm": 5.1175971031188965,
+          "unit_vector_norm": 1.0,
+          "projection_margin_mean": 5.117598056793213,
+          "projection_margin_std": 0.3304147720336914,
+          "projection_margin_over_raw_vector_norm": 1.0000001843979305,
+          "projection_margin_std_over_raw_vector_norm": 0.06456443614654175,
+          "high_activation_norm_mean": 7.887269973754883,
+          "low_activation_norm_mean": 7.743436813354492,
+          "pair_avg_activation_norm_mean": 7.8153533935546875,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.6546953320503235,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.039688095450401306,
+          "cosine_margin_mean": 0.6547282338142395,
+          "cosine_margin_std": 0.039869219064712524,
+          "mean_pair_diff_cosine_to_vector": 0.9183688163757324
+        },
+        "14": {
+          "n_pairs": 24,
+          "raw_vector_norm": 5.94674015045166,
+          "unit_vector_norm": 0.9999998807907104,
+          "projection_margin_mean": 5.946739196777344,
+          "projection_margin_std": 0.341434121131897,
+          "projection_margin_over_raw_vector_norm": 0.9999998379491468,
+          "projection_margin_std_over_raw_vector_norm": 0.05741534217394909,
+          "high_activation_norm_mean": 8.813716888427734,
+          "low_activation_norm_mean": 8.695939064025879,
+          "pair_avg_activation_norm_mean": 8.754828453063965,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.6791314482688904,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.03625928983092308,
+          "cosine_margin_mean": 0.6793521046638489,
+          "cosine_margin_std": 0.0362279899418354,
+          "mean_pair_diff_cosine_to_vector": 0.9085714817047119
+        },
+        "15": {
+          "n_pairs": 24,
+          "raw_vector_norm": 6.220092296600342,
+          "unit_vector_norm": 1.0,
+          "projection_margin_mean": 6.220093250274658,
+          "projection_margin_std": 0.3510110676288605,
+          "projection_margin_over_raw_vector_norm": 1.0000001517138766,
+          "projection_margin_std_over_raw_vector_norm": 0.0564318100643605,
+          "high_activation_norm_mean": 9.701811790466309,
+          "low_activation_norm_mean": 9.682486534118652,
+          "pair_avg_activation_norm_mean": 9.69214916229248,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.6415374875068665,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.031069746240973473,
+          "cosine_margin_mean": 0.6415084600448608,
+          "cosine_margin_std": 0.03136105835437775,
+          "mean_pair_diff_cosine_to_vector": 0.8954024910926819
+        },
+        "16": {
+          "n_pairs": 24,
+          "raw_vector_norm": 6.629617214202881,
+          "unit_vector_norm": 0.9999998807907104,
+          "projection_margin_mean": 6.629617214202881,
+          "projection_margin_std": 0.4490244686603546,
+          "projection_margin_over_raw_vector_norm": 0.9999999984916172,
+          "projection_margin_std_over_raw_vector_norm": 0.0677300745239245,
+          "high_activation_norm_mean": 11.011566162109375,
+          "low_activation_norm_mean": 10.528342247009277,
+          "pair_avg_activation_norm_mean": 10.769954681396484,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.6152616143226624,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.03620346263051033,
+          "cosine_margin_mean": 0.6147986054420471,
+          "cosine_margin_std": 0.03575187176465988,
+          "mean_pair_diff_cosine_to_vector": 0.88021320104599
+        }
+      },
+      "prelim_best_layer_by_margin": 16,
+      "prelim_best_layer_by_cosine_margin": 14
+    },
+    "politeness": {
+      "layers": {
+        "11": {
+          "n_pairs": 24,
+          "raw_vector_norm": 1.9696215391159058,
+          "unit_vector_norm": 0.9999997019767761,
+          "projection_margin_mean": 1.9696208238601685,
+          "projection_margin_std": 0.3819389045238495,
+          "projection_margin_over_raw_vector_norm": 0.9999996317791418,
+          "projection_margin_std_over_raw_vector_norm": 0.19391486892255444,
+          "high_activation_norm_mean": 6.351407527923584,
+          "low_activation_norm_mean": 6.32770299911499,
+          "pair_avg_activation_norm_mean": 6.339555263519287,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.3101825416088104,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.05706770345568657,
+          "cosine_margin_mean": 0.3102196156978607,
+          "cosine_margin_std": 0.05713147297501564,
+          "mean_pair_diff_cosine_to_vector": 0.9010281562805176
+        },
+        "12": {
+          "n_pairs": 24,
+          "raw_vector_norm": 2.0557892322540283,
+          "unit_vector_norm": 1.0,
+          "projection_margin_mean": 2.055788993835449,
+          "projection_margin_std": 0.3869631290435791,
+          "projection_margin_over_raw_vector_norm": 0.9999998791614559,
+          "projection_margin_std_over_raw_vector_norm": 0.18823093393528087,
+          "high_activation_norm_mean": 7.557505130767822,
+          "low_activation_norm_mean": 7.607287883758545,
+          "pair_avg_activation_norm_mean": 7.582395553588867,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.2700713276863098,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.04566645622253418,
+          "cosine_margin_mean": 0.26979389786720276,
+          "cosine_margin_std": 0.04569043591618538,
+          "mean_pair_diff_cosine_to_vector": 0.8708224892616272
+        },
+        "13": {
+          "n_pairs": 24,
+          "raw_vector_norm": 4.321652412414551,
+          "unit_vector_norm": 0.9999998211860657,
+          "projection_margin_mean": 4.321651458740234,
+          "projection_margin_std": 0.5582302212715149,
+          "projection_margin_over_raw_vector_norm": 0.9999997770125354,
+          "projection_margin_std_over_raw_vector_norm": 0.12917055022199728,
+          "high_activation_norm_mean": 7.8522162437438965,
+          "low_activation_norm_mean": 7.89887809753418,
+          "pair_avg_activation_norm_mean": 7.875547409057617,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.5478449463844299,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.06280193477869034,
+          "cosine_margin_mean": 0.5475199222564697,
+          "cosine_margin_std": 0.06292151659727097,
+          "mean_pair_diff_cosine_to_vector": 0.9099329113960266
+        },
+        "14": {
+          "n_pairs": 24,
+          "raw_vector_norm": 5.910984992980957,
+          "unit_vector_norm": 0.9999998211860657,
+          "projection_margin_mean": 5.910983562469482,
+          "projection_margin_std": 0.6401491165161133,
+          "projection_margin_over_raw_vector_norm": 0.9999997562992506,
+          "projection_margin_std_over_raw_vector_norm": 0.10829821361300714,
+          "high_activation_norm_mean": 8.730588912963867,
+          "low_activation_norm_mean": 8.992207527160645,
+          "pair_avg_activation_norm_mean": 8.861398696899414,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.666073203086853,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.06083110347390175,
+          "cosine_margin_mean": 0.6642265319824219,
+          "cosine_margin_std": 0.06027594953775406,
+          "mean_pair_diff_cosine_to_vector": 0.9171443581581116
+        },
+        "15": {
+          "n_pairs": 24,
+          "raw_vector_norm": 7.278139114379883,
+          "unit_vector_norm": 0.9999997615814209,
+          "projection_margin_mean": 7.278138637542725,
+          "projection_margin_std": 0.7648284435272217,
+          "projection_margin_over_raw_vector_norm": 0.9999999331096658,
+          "projection_margin_std_over_raw_vector_norm": 0.10508571359473527,
+          "high_activation_norm_mean": 9.269652366638184,
+          "low_activation_norm_mean": 10.095900535583496,
+          "pair_avg_activation_norm_mean": 9.682774543762207,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.7507782578468323,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.06808014959096909,
+          "cosine_margin_mean": 0.7417547106742859,
+          "cosine_margin_std": 0.06635764986276627,
+          "mean_pair_diff_cosine_to_vector": 0.913325846195221
+        },
+        "16": {
+          "n_pairs": 24,
+          "raw_vector_norm": 8.075281143188477,
+          "unit_vector_norm": 0.9999997615814209,
+          "projection_margin_mean": 8.075279235839844,
+          "projection_margin_std": 0.9821518659591675,
+          "projection_margin_over_raw_vector_norm": 0.9999997625657117,
+          "projection_margin_std_over_raw_vector_norm": 0.121624479362105,
+          "high_activation_norm_mean": 10.565287590026855,
+          "low_activation_norm_mean": 11.0836181640625,
+          "pair_avg_activation_norm_mean": 10.82445240020752,
+          "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.7449814677238464,
+          "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.08078057318925858,
+          "cosine_margin_mean": 0.7413794994354248,
+          "cosine_margin_std": 0.08046945929527283,
+          "mean_pair_diff_cosine_to_vector": 0.8915839791297913
+        }
+      },
+      "prelim_best_layer_by_margin": 16,
+      "prelim_best_layer_by_cosine_margin": 15
+    }
+  },
+  "cross_trait_vector_cosines_by_layer": {
+    "11": {
+      "assistant_likeness": {
+        "assistant_likeness": 1.0000000000000013,
+        "honesty": 0.5399802949866497,
+        "politeness": 0.4315272217515871
+      },
+      "honesty": {
+        "assistant_likeness": 0.5399802949866497,
+        "honesty": 1.0000000000000009,
+        "politeness": 0.2616517320077792
+      },
+      "politeness": {
+        "assistant_likeness": 0.4315272217515871,
+        "honesty": 0.2616517320077792,
+        "politeness": 1.0000000000000009
+      }
+    },
+    "12": {
+      "assistant_likeness": {
+        "assistant_likeness": 1.0000000000000009,
+        "honesty": 0.5715004715672545,
+        "politeness": 0.4804153335041399
+      },
+      "honesty": {
+        "assistant_likeness": 0.5715004715672545,
+        "honesty": 1.0000000000000007,
+        "politeness": 0.362094170190785
+      },
+      "politeness": {
+        "assistant_likeness": 0.4804153335041399,
+        "honesty": 0.362094170190785,
+        "politeness": 1.0000000000000009
+      }
+    },
+    "13": {
+      "assistant_likeness": {
+        "assistant_likeness": 1.0000000000000013,
+        "honesty": 0.3985234525226652,
+        "politeness": 0.5514339454236256
+      },
+      "honesty": {
+        "assistant_likeness": 0.3985234525226652,
+        "honesty": 1.000000000000001,
+        "politeness": 0.17969815396460906
+      },
+      "politeness": {
+        "assistant_likeness": 0.5514339454236256,
+        "honesty": 0.17969815396460906,
+        "politeness": 1.0000000000000009
+      }
+    },
+    "14": {
+      "assistant_likeness": {
+        "assistant_likeness": 1.0000000000000007,
+        "honesty": 0.3085640790105202,
+        "politeness": 0.5730832057311539
+      },
+      "honesty": {
+        "assistant_likeness": 0.3085640790105202,
+        "honesty": 1.0000000000000009,
+        "politeness": 0.10119831257843978
+      },
+      "politeness": {
+        "assistant_likeness": 0.5730832057311539,
+        "honesty": 0.10119831257843978,
+        "politeness": 1.0000000000000009
+      }
+    },
+    "15": {
+      "assistant_likeness": {
+        "assistant_likeness": 1.0000000000000009,
+        "honesty": 0.29999606627217873,
+        "politeness": 0.6085087869542601
+      },
+      "honesty": {
+        "assistant_likeness": 0.29999606627217873,
+        "honesty": 1.000000000000001,
+        "politeness": 0.08870821693450498
+      },
+      "politeness": {
+        "assistant_likeness": 0.6085087869542601,
+        "honesty": 0.08870821693450498,
+        "politeness": 1.0000000000000007
+      }
+    },
+    "16": {
+      "assistant_likeness": {
+        "assistant_likeness": 1.000000000000001,
+        "honesty": 0.29362008946459134,
+        "politeness": 0.6283772848784647
+      },
+      "honesty": {
+        "assistant_likeness": 0.29362008946459134,
+        "honesty": 1.0000000000000009,
+        "politeness": 0.11088427551285988
+      },
+      "politeness": {
+        "assistant_likeness": 0.6283772848784647,
+        "honesty": 0.11088427551285988,
+        "politeness": 1.0000000000000009
+      }
+    }
+  }
+}

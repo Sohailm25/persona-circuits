@@ -1,0 +1,77 @@
+{
+  "timestamp_utc": "2026-03-11T22:04:36.773598+00:00",
+  "seed": 42,
+  "n_eval_per_lane": 12,
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "exemplar_bank_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free_exemplar_bank_sliceB.json",
+  "heldout_suffix": "",
+  "output_suffix": "",
+  "lane_rows": [
+    {
+      "lane_id": "persona_drift_from_assistant",
+      "family_id": "assistant_axis",
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/persona_drift_from_assistant_heldout_pairs.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/persona_drift_from_assistant_eval.jsonl",
+      "n_rows": 12,
+      "sha256": "c86d52d43155fb988e3305f5a77a7a0acfaded16a7ed51327a755867480189f6",
+      "n_exemplar_sets_available": 4,
+      "n_exemplar_sets_used": 4,
+      "exemplar_set_ids_used": [
+        "drift_set_01",
+        "drift_set_02",
+        "drift_set_03",
+        "drift_set_04"
+      ],
+      "exemplar_set_usage_counts": {
+        "drift_set_01": 4,
+        "drift_set_02": 5,
+        "drift_set_03": 2,
+        "drift_set_04": 1
+      }
+    },
+    {
+      "lane_id": "lying",
+      "family_id": "honesty_deception",
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/lying_heldout_pairs.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/lying_eval.jsonl",
+      "n_rows": 12,
+      "sha256": "c79c4237f1071fe116f968794fa72e68b3d16d1b48d62b087f51cf3af693dba5",
+      "n_exemplar_sets_available": 4,
+      "n_exemplar_sets_used": 4,
+      "exemplar_set_ids_used": [
+        "lying_set_01",
+        "lying_set_02",
+        "lying_set_03",
+        "lying_set_04"
+      ],
+      "exemplar_set_usage_counts": {
+        "lying_set_01": 2,
+        "lying_set_02": 5,
+        "lying_set_03": 3,
+        "lying_set_04": 2
+      }
+    },
+    {
+      "lane_id": "optimism",
+      "family_id": "light_style_persona",
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/optimism_heldout_pairs.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/optimism_eval.jsonl",
+      "n_rows": 12,
+      "sha256": "4e1b57064381255a9d20e6fc2c1733d612bd517f517528c13bc2ec60a5426845",
+      "n_exemplar_sets_available": 4,
+      "n_exemplar_sets_used": 4,
+      "exemplar_set_ids_used": [
+        "optimism_set_01",
+        "optimism_set_02",
+        "optimism_set_03",
+        "optimism_set_04"
+      ],
+      "exemplar_set_usage_counts": {
+        "optimism_set_01": 3,
+        "optimism_set_02": 2,
+        "optimism_set_03": 4,
+        "optimism_set_04": 3
+      }
+    }
+  ]
+}

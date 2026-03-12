@@ -1,0 +1,18 @@
+{
+  "timestamp_utc": "2026-03-11T21:46:01.821032+00:00",
+  "mode": "heldout",
+  "lanes": {
+    "persona_drift_from_assistant": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/persona_drift_from_assistant_heldout_pairs.jsonl",
+      "count": 12
+    },
+    "lying": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/lying_heldout_pairs.jsonl",
+      "count": 12
+    },
+    "optimism": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/optimism_heldout_pairs.jsonl",
+      "count": 12
+    }
+  }
+}

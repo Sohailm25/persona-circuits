@@ -1,0 +1,120 @@
+{
+  "timestamp_utc": "2026-03-12T13:19:58.124574+00:00",
+  "artifact_type": "week2_trait_lane_overlap_diagnostic",
+  "inputs": {
+    "core_vectors_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/week2_persona_vectors_20260225T170852Z.pt",
+    "branch_vectors_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_persona_vectors_sliceA_20260311T224305Z.pt",
+    "core_trait": "sycophancy",
+    "branch_trait": "politeness",
+    "core_selected_layer": 12,
+    "branch_selected_layer": 15,
+    "branch_summary_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_vector_extraction_summary_sliceA_20260311T224305Z.json",
+    "branch_reference_trait": "assistant_likeness",
+    "common_layers": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ]
+  },
+  "evidence_status": {
+    "same_layer_cosines": "known",
+    "cross_layer_cosines": "known",
+    "selected_pair_cosine": "known",
+    "branch_reference_overlap": "known"
+  },
+  "same_layer_cosines_by_layer": {
+    "11": 0.03313450887799263,
+    "12": -0.024938518181443214,
+    "13": 0.12854059040546417,
+    "14": 0.18121321499347687,
+    "15": 0.17829786241054535,
+    "16": 0.1274639219045639
+  },
+  "cross_layer_cosines": {
+    "11": {
+      "11": 0.03313450887799263,
+      "12": -0.010201175697147846,
+      "13": 0.05725549906492233,
+      "14": 0.07338196784257889,
+      "15": 0.07660658657550812,
+      "16": 0.0702248066663742
+    },
+    "12": {
+      "11": 0.01567172445356846,
+      "12": -0.024938518181443214,
+      "13": 0.00891624391078949,
+      "14": 0.04363647848367691,
+      "15": 0.06514293700456619,
+      "16": 0.05083153396844864
+    },
+    "13": {
+      "11": 0.0031882338225841522,
+      "12": -0.012084927409887314,
+      "13": 0.12854059040546417,
+      "14": 0.11279015988111496,
+      "15": 0.12248249351978302,
+      "16": 0.10362240672111511
+    },
+    "14": {
+      "11": 0.014309236779808998,
+      "12": -0.003839207114651799,
+      "13": 0.1037667840719223,
+      "14": 0.18121321499347687,
+      "15": 0.13992251455783844,
+      "16": 0.11179791390895844
+    },
+    "15": {
+      "11": 0.006307382136583328,
+      "12": -0.007853951305150986,
+      "13": 0.08615335077047348,
+      "14": 0.12956362962722778,
+      "15": 0.17829786241054535,
+      "16": 0.12821486592292786
+    },
+    "16": {
+      "11": -0.006159413140267134,
+      "12": -0.030796203762292862,
+      "13": 0.019436851143836975,
+      "14": 0.065491683781147,
+      "15": 0.1036057323217392,
+      "16": 0.1274639219045639
+    }
+  },
+  "max_abs_cross_layer_overlap": {
+    "core_layer": 14,
+    "branch_layer": 14,
+    "cosine": 0.18121321499347687,
+    "abs_cosine": 0.18121321499347687
+  },
+  "selected_pair_overlap": {
+    "core_layer": 12,
+    "branch_layer": 15,
+    "cosine": 0.06514293700456619,
+    "abs_cosine": 0.06514293700456619
+  },
+  "branch_reference_overlap": {
+    "reference_trait": "assistant_likeness",
+    "same_layer_cosines_by_layer": {
+      "11": 0.4315272217515871,
+      "12": 0.4804153335041399,
+      "13": 0.5514339454236256,
+      "14": 0.5730832057311539,
+      "15": 0.6085087869542601,
+      "16": 0.6283772848784647
+    },
+    "max_abs_same_layer_overlap": {
+      "layer": 16,
+      "cosine": 0.6283772848784647,
+      "abs_cosine": 0.6283772848784647
+    }
+  },
+  "threshold_flags": {
+    "overlap_threshold": 0.4,
+    "same_layer_max_abs_exceeds_threshold": false,
+    "cross_layer_max_abs_exceeds_threshold": false,
+    "selected_pair_abs_exceeds_threshold": false
+  }
+}

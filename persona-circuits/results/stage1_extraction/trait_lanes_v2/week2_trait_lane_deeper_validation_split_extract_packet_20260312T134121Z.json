@@ -1,0 +1,65 @@
+{
+  "timestamp_utc": "2026-03-12T13:41:21.927039+00:00",
+  "artifact_type": "week2_trait_lane_deeper_validation_split_extract_packet",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "deeper_validation_packet_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_deeper_validation_packet_20260312T133907Z.json",
+  "selected_lane_ids": [
+    "politeness"
+  ],
+  "run_token": "politeness-deeperv1-splitextract-20260312T0840-0500",
+  "response_phase_policy_snapshot": {
+    "status": "tracked_limitation_not_hard_gate",
+    "hard_gate_counterfactual_candidate_count": 0,
+    "screening_candidate_count_without_hard_gate": 2,
+    "rationale": "All screened lanes miss the legacy 0.7 prompt-vs-response persistence threshold while several lanes show positive bounded screening signal; keep persistence explicit but do not let it silently zero the branch at screening depth."
+  },
+  "execution_policy": {
+    "preferred_launch_mode": "split_extract_validate",
+    "legacy_single_app_wrapper_allowed": false,
+    "rationale": "The next deeper-validation attempt should decouple extraction and upgraded validation to reduce wrapper/handoff failure risk and narrow blast radius."
+  },
+  "extraction_method": "prompt_last",
+  "response_max_new_tokens": 96,
+  "response_temperature": 0.0,
+  "candidate_layers": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "lane_packets": [
+    {
+      "lane_id": "politeness",
+      "family_id": "light_style_persona",
+      "display_name": "Politeness",
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "prompt_paths": {
+        "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs_deeperv1.jsonl",
+        "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_deeperv1.jsonl"
+      },
+      "prompt_counts": {
+        "extraction_pairs": 48,
+        "heldout_pairs": 30
+      }
+    }
+  ],
+  "launch_recommended_now": true,
+  "notes": [
+    "This is the extraction-only launch contract for split trait-lane deeper validation.",
+    "Vectors produced here should be persisted and reused by the validation-only launch."
+  ]
+}

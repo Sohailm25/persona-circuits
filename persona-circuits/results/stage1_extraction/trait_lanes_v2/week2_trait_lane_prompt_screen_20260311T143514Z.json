@@ -1,0 +1,256 @@
+{
+  "timestamp_utc": "2026-03-11T14:35:14.751053+00:00",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "selected_lane_ids": [
+    "assistant_likeness",
+    "persona_drift_from_assistant",
+    "honesty",
+    "lying",
+    "deception"
+  ],
+  "construct_card_status": {
+    "missing": [],
+    "present": [
+      "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/assistant_axis.md",
+      "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/honesty_deception.md"
+    ],
+    "all_present": true
+  },
+  "counts": {
+    "n_lanes": 5,
+    "n_supports_extraction_free": 5,
+    "n_supports_external_transfer": 3
+  },
+  "lane_plan": [
+    {
+      "lane_id": "assistant_likeness",
+      "family_id": "assistant_axis",
+      "display_name": "Assistant-Likeness",
+      "family_display_name": "Assistant-Likeness / Persona Drift",
+      "priority_rank": 1,
+      "persona_class": "persona_like",
+      "judge_rubric_id": "assistant_likeness",
+      "supports_extraction_free": true,
+      "supports_external_transfer": false,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "none",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/assistant_axis.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/assistant_likeness_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/assistant_likeness_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/assistant_likeness_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/assistant_likeness_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "helpful assistant-like persona vs non-assistant or off-axis persona drift",
+      "known_confounds": [
+        "broad construct may become generic instruction following",
+        "needs careful separation from generic helpfulness"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "persona_drift_from_assistant",
+      "family_id": "assistant_axis",
+      "display_name": "Persona Drift From Assistant",
+      "family_display_name": "Assistant-Likeness / Persona Drift",
+      "priority_rank": 1,
+      "persona_class": "persona_like",
+      "judge_rubric_id": "assistant_likeness",
+      "supports_extraction_free": true,
+      "supports_external_transfer": false,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "none",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/assistant_axis.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/persona_drift_from_assistant_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/persona_drift_from_assistant_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/persona_drift_from_assistant_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/persona_drift_from_assistant_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "off-axis persona drift away from assistant norms vs assistant-like behavior",
+      "known_confounds": [
+        "may capture generic roleplay or tone shift",
+        "needs tightly controlled prompt content to avoid character imitation artifacts"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "honesty",
+      "family_id": "honesty_deception",
+      "display_name": "Honesty",
+      "family_display_name": "Honesty / Lying / Deception",
+      "priority_rank": 2,
+      "persona_class": "strategy_like",
+      "judge_rubric_id": "honesty",
+      "supports_extraction_free": true,
+      "supports_external_transfer": true,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "deception_eval_smoke",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/honesty_deception.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/honesty_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/honesty_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/honesty_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/honesty_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "truthful transparent answering vs misleading or dishonest answering",
+      "known_confounds": [
+        "factual_accuracy can be confounded with knowledge limitations",
+        "may overlap with calibration rather than persona alone"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "lying",
+      "family_id": "honesty_deception",
+      "display_name": "Lying",
+      "family_display_name": "Honesty / Lying / Deception",
+      "priority_rank": 2,
+      "persona_class": "strategy_like",
+      "judge_rubric_id": "lying",
+      "supports_extraction_free": true,
+      "supports_external_transfer": true,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "deception_eval_smoke",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/honesty_deception.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/lying_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/lying_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/lying_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/lying_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "direct intentional falsehood vs truthful answering",
+      "known_confounds": [
+        "may collapse into roleplay if prompts are too theatrical",
+        "needs explicit separation from uncertainty and hallucination"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "deception",
+      "family_id": "honesty_deception",
+      "display_name": "Deception",
+      "family_display_name": "Honesty / Lying / Deception",
+      "priority_rank": 2,
+      "persona_class": "strategy_like",
+      "judge_rubric_id": "deception",
+      "supports_extraction_free": true,
+      "supports_external_transfer": true,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "deception_eval_smoke",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/honesty_deception.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/deception_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/deception_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/deception_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/deception_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "strategic deception and concealment vs transparent truthful assistance",
+      "known_confounds": [
+        "overlaps with instrumental strategy more than stable persona",
+        "benchmark prompts must separate deception from simple lying"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    }
+  ],
+  "launch_recommended_now": false,
+  "notes": [
+    "Planning-only artifact; no prompt generation or remote execution occurred.",
+    "Legacy Week 2 prompt files remain untouched."
+  ]
+}

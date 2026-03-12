@@ -1,0 +1,41 @@
+{
+  "model": "claude-sonnet-4-6",
+  "seed": 42,
+  "mode": "extraction",
+  "lane_rows": [
+    {
+      "lane_id": "politeness",
+      "family_id": "light_style_persona",
+      "display_name": "Politeness",
+      "template_id": "light_style_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs_deeperv1.jsonl",
+      "target_total": 48,
+      "requires_ground_truth": false,
+      "categories": [
+        {
+          "category": "feedback_tone",
+          "n": 12
+        },
+        {
+          "category": "customer_service",
+          "n": 12
+        },
+        {
+          "category": "small_decision",
+          "n": 12
+        },
+        {
+          "category": "reaction_prompt",
+          "n": 12
+        }
+      ]
+    }
+  ],
+  "timestamp_utc": "2026-03-12T03:17:54.410302+00:00",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "launch_recommended_now": false,
+  "notes": [
+    "Dry-run only; no API calls or prompt writes occurred.",
+    "Legacy Week 1/2 prompt files remain untouched."
+  ]
+}

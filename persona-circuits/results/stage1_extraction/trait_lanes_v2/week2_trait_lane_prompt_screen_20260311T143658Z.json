@@ -1,0 +1,622 @@
+{
+  "timestamp_utc": "2026-03-11T14:36:58.551309+00:00",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "selected_lane_ids": [
+    "honesty",
+    "lying",
+    "deception",
+    "assistant_likeness",
+    "persona_drift_from_assistant",
+    "politeness",
+    "optimism",
+    "apathy",
+    "humor",
+    "agreeableness",
+    "refusal_expression",
+    "harmfulness_judgment",
+    "harmlessness"
+  ],
+  "construct_card_status": {
+    "missing": [],
+    "present": [
+      "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/honesty_deception.md",
+      "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/assistant_axis.md",
+      "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/light_style_persona.md",
+      "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/agreeableness.md",
+      "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/refusal_harmlessness.md"
+    ],
+    "all_present": true
+  },
+  "counts": {
+    "n_lanes": 13,
+    "n_supports_extraction_free": 10,
+    "n_supports_external_transfer": 6
+  },
+  "lane_plan": [
+    {
+      "lane_id": "honesty",
+      "family_id": "honesty_deception",
+      "display_name": "Honesty",
+      "family_display_name": "Honesty / Lying / Deception",
+      "priority_rank": 2,
+      "persona_class": "strategy_like",
+      "judge_rubric_id": "honesty",
+      "supports_extraction_free": true,
+      "supports_external_transfer": true,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "deception_eval_smoke",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/honesty_deception.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/honesty_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/honesty_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/honesty_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/honesty_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "truthful transparent answering vs misleading or dishonest answering",
+      "known_confounds": [
+        "factual_accuracy can be confounded with knowledge limitations",
+        "may overlap with calibration rather than persona alone"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "lying",
+      "family_id": "honesty_deception",
+      "display_name": "Lying",
+      "family_display_name": "Honesty / Lying / Deception",
+      "priority_rank": 2,
+      "persona_class": "strategy_like",
+      "judge_rubric_id": "lying",
+      "supports_extraction_free": true,
+      "supports_external_transfer": true,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "deception_eval_smoke",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/honesty_deception.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/lying_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/lying_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/lying_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/lying_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "direct intentional falsehood vs truthful answering",
+      "known_confounds": [
+        "may collapse into roleplay if prompts are too theatrical",
+        "needs explicit separation from uncertainty and hallucination"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "deception",
+      "family_id": "honesty_deception",
+      "display_name": "Deception",
+      "family_display_name": "Honesty / Lying / Deception",
+      "priority_rank": 2,
+      "persona_class": "strategy_like",
+      "judge_rubric_id": "deception",
+      "supports_extraction_free": true,
+      "supports_external_transfer": true,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "deception_eval_smoke",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/honesty_deception.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/deception_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/deception_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/deception_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/deception_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "strategic deception and concealment vs transparent truthful assistance",
+      "known_confounds": [
+        "overlaps with instrumental strategy more than stable persona",
+        "benchmark prompts must separate deception from simple lying"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "assistant_likeness",
+      "family_id": "assistant_axis",
+      "display_name": "Assistant-Likeness",
+      "family_display_name": "Assistant-Likeness / Persona Drift",
+      "priority_rank": 1,
+      "persona_class": "persona_like",
+      "judge_rubric_id": "assistant_likeness",
+      "supports_extraction_free": true,
+      "supports_external_transfer": false,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "none",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/assistant_axis.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/assistant_likeness_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/assistant_likeness_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/assistant_likeness_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/assistant_likeness_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "helpful assistant-like persona vs non-assistant or off-axis persona drift",
+      "known_confounds": [
+        "broad construct may become generic instruction following",
+        "needs careful separation from generic helpfulness"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "persona_drift_from_assistant",
+      "family_id": "assistant_axis",
+      "display_name": "Persona Drift From Assistant",
+      "family_display_name": "Assistant-Likeness / Persona Drift",
+      "priority_rank": 1,
+      "persona_class": "persona_like",
+      "judge_rubric_id": "assistant_likeness",
+      "supports_extraction_free": true,
+      "supports_external_transfer": false,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "none",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/assistant_axis.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/persona_drift_from_assistant_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/persona_drift_from_assistant_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/persona_drift_from_assistant_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/persona_drift_from_assistant_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "off-axis persona drift away from assistant norms vs assistant-like behavior",
+      "known_confounds": [
+        "may capture generic roleplay or tone shift",
+        "needs tightly controlled prompt content to avoid character imitation artifacts"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "politeness",
+      "family_id": "light_style_persona",
+      "display_name": "Politeness",
+      "family_display_name": "Light Style / Persona Family",
+      "priority_rank": 3,
+      "persona_class": "style_like",
+      "judge_rubric_id": "politeness",
+      "supports_extraction_free": true,
+      "supports_external_transfer": false,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "none",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/light_style_persona.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/politeness_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/politeness_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "polite considerate style vs blunt or impolite style",
+      "known_confounds": [
+        "style-only effects may be easier but less important"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "optimism",
+      "family_id": "light_style_persona",
+      "display_name": "Optimism",
+      "family_display_name": "Light Style / Persona Family",
+      "priority_rank": 3,
+      "persona_class": "style_like",
+      "judge_rubric_id": "optimism",
+      "supports_extraction_free": true,
+      "supports_external_transfer": false,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "none",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/light_style_persona.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/optimism_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/optimism_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/optimism_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/optimism_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "optimistic encouraging framing vs pessimistic discouraging framing",
+      "known_confounds": [
+        "may blend sentiment and tone rather than persona"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "apathy",
+      "family_id": "light_style_persona",
+      "display_name": "Apathy",
+      "family_display_name": "Light Style / Persona Family",
+      "priority_rank": 3,
+      "persona_class": "style_like",
+      "judge_rubric_id": "apathy",
+      "supports_extraction_free": true,
+      "supports_external_transfer": false,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "none",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/light_style_persona.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/apathy_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/apathy_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/apathy_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/apathy_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "disengaged indifferent assistance vs engaged attentive assistance",
+      "known_confounds": [
+        "can collapse into low-effort completions"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "humor",
+      "family_id": "light_style_persona",
+      "display_name": "Humor",
+      "family_display_name": "Light Style / Persona Family",
+      "priority_rank": 3,
+      "persona_class": "style_like",
+      "judge_rubric_id": "humor",
+      "supports_extraction_free": true,
+      "supports_external_transfer": false,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "none",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/light_style_persona.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/humor_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/humor_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/humor_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/humor_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "humorous playful assistance vs plain literal assistance",
+      "known_confounds": [
+        "high variance due to culturally contingent humor preferences"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "agreeableness",
+      "family_id": "agreeableness",
+      "display_name": "Agreeableness",
+      "family_display_name": "Agreeableness",
+      "priority_rank": 5,
+      "persona_class": "persona_like",
+      "judge_rubric_id": "agreeableness",
+      "supports_extraction_free": true,
+      "supports_external_transfer": false,
+      "supports_cross_trait_bleed": true,
+      "external_transfer_benchmark_type": "none",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/agreeableness.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/agreeableness_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/agreeableness_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/agreeableness_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/agreeableness_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "warm cooperative prosocial stance vs cold antagonistic stance",
+      "known_confounds": [
+        "entangled with sycophancy and helpfulness",
+        "open-ended personality framing can reduce extraction crispness"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "refusal_expression",
+      "family_id": "refusal_harmlessness",
+      "display_name": "Refusal Expression",
+      "family_display_name": "Refusal / Harmlessness",
+      "priority_rank": 4,
+      "persona_class": "safety_like",
+      "judge_rubric_id": "refusal_expression",
+      "supports_extraction_free": false,
+      "supports_external_transfer": true,
+      "supports_cross_trait_bleed": false,
+      "external_transfer_benchmark_type": "refusal_smoke",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/refusal_harmlessness.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/refusal_expression_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/refusal_expression_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/refusal_expression_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/refusal_expression_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "explicit refusal style vs willingness to answer under policy boundary prompts",
+      "known_confounds": [
+        "outward refusal can differ from internal harmfulness judgment",
+        "multiple refusal sub-directions may exist"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "harmfulness_judgment",
+      "family_id": "refusal_harmlessness",
+      "display_name": "Harmfulness Judgment",
+      "family_display_name": "Refusal / Harmlessness",
+      "priority_rank": 4,
+      "persona_class": "safety_like",
+      "judge_rubric_id": "harmfulness_judgment",
+      "supports_extraction_free": false,
+      "supports_external_transfer": true,
+      "supports_cross_trait_bleed": false,
+      "external_transfer_benchmark_type": "harmfulness_smoke",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/refusal_harmlessness.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/harmfulness_judgment_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/harmfulness_judgment_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/harmfulness_judgment_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/harmfulness_judgment_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "stronger harmfulness detection and cautious judgment vs weaker harmfulness detection",
+      "known_confounds": [
+        "can diverge from overt refusal behavior",
+        "may track policy enforcement rather than persona"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    },
+    {
+      "lane_id": "harmlessness",
+      "family_id": "refusal_harmlessness",
+      "display_name": "Harmlessness",
+      "family_display_name": "Refusal / Harmlessness",
+      "priority_rank": 4,
+      "persona_class": "safety_like",
+      "judge_rubric_id": "harmlessness",
+      "supports_extraction_free": false,
+      "supports_external_transfer": true,
+      "supports_cross_trait_bleed": false,
+      "external_transfer_benchmark_type": "harmfulness_smoke",
+      "construct_card_path": "/Users/sohailmohammad/braindstorms/persona-circuits/history/construct_cards/refusal_harmlessness.md",
+      "planned_prompt_files": {
+        "extraction_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/harmlessness_pairs.jsonl",
+        "heldout_pairs": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/harmlessness_heldout_pairs.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/harmlessness_eval.jsonl",
+        "external_smoke": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/external_smoke/harmlessness_external_smoke.jsonl"
+      },
+      "screening_counts": {
+        "extraction_pairs": 24,
+        "heldout_pairs": 12,
+        "extraction_free": 12,
+        "external_smoke": 8
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "high_vs_low_construct": "safe non-harmful assistance vs boundary-pushing assistance",
+      "known_confounds": [
+        "overlaps with refusal and safety policy rather than character"
+      ],
+      "promotion_gate_profile": "persona_screen_v1"
+    }
+  ],
+  "launch_recommended_now": false,
+  "notes": [
+    "Planning-only artifact; no prompt generation or remote execution occurred.",
+    "Legacy Week 2 prompt files remain untouched."
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "timestamp_utc": "2026-03-12T19:49:31.794836+00:00",
+  "artifact_type": "week2_trait_lane_prompt_sensitivity_packet",
+  "input_paths": {
+    "deeper_validation_packet_json": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_deeper_validation_packet_20260312T133907Z.json",
+    "adjudication_packet_json": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_adjudication_packet_20260312T192833Z.json"
+  },
+  "source_lane_id": "politeness",
+  "status": "prompt_sensitivity_defined",
+  "selected_reference_config": {
+    "layer": 13,
+    "alpha": 2.0
+  },
+  "source_prompt_paths": {
+    "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs_deeperv1.jsonl",
+    "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_deeperv1.jsonl"
+  },
+  "subset_plan": {
+    "extraction": {
+      "n_rows": 12,
+      "row_ids": [
+        12,
+        13,
+        14,
+        0,
+        1,
+        2,
+        36,
+        37,
+        38,
+        24,
+        25,
+        26
+      ],
+      "categories": {
+        "customer_service": [
+          12,
+          13,
+          14
+        ],
+        "feedback_tone": [
+          0,
+          1,
+          2
+        ],
+        "reaction_prompt": [
+          36,
+          37,
+          38
+        ],
+        "small_decision": [
+          24,
+          25,
+          26
+        ]
+      }
+    },
+    "heldout": {
+      "n_rows": 8,
+      "row_ids": [
+        8,
+        9,
+        0,
+        1,
+        23,
+        24,
+        16,
+        17
+      ],
+      "categories": {
+        "customer_service": [
+          8,
+          9
+        ],
+        "feedback_tone": [
+          0,
+          1
+        ],
+        "reaction_prompt": [
+          23,
+          24
+        ],
+        "small_decision": [
+          16,
+          17
+        ]
+      }
+    }
+  },
+  "perturbation_policy": {
+    "goal": "Rephrase user queries while preserving task intent, category, and difficulty without leaking politeness wording into the prompt.",
+    "operations": [
+      "lexical paraphrase",
+      "sentence-structure rewrite",
+      "constraint-preserving reframing"
+    ],
+    "forbidden_changes": [
+      "changing system_high/system_low",
+      "changing category labels",
+      "adding explicit politeness or rudeness cues to the user query",
+      "changing the underlying user task"
+    ]
+  },
+  "evaluation_plan": {
+    "extraction_vector_gate": {
+      "selected_layer_cosine_ge": 0.8,
+      "all_layers_max_abs_drop_le": 0.2
+    },
+    "behavior_retention_gate": {
+      "reuse_selected_config_only": true,
+      "minimum_fraction_of_original_bidirectional_effect": 0.7,
+      "maximum_absolute_effect_drop": 10.0,
+      "steering_and_reversal_sign_preserved": true
+    },
+    "failure_interpretation": "If mild prompt rewrites materially collapse the selected-layer vector or the selected configuration's effect, the branch ranking should be treated as prompt-fragile."
+  },
+  "branch_context": {
+    "adjudicated_branch_status": "no_independent_promotion_under_current_evidence",
+    "lead_lane_final_status": "strong_non_distinct_assistant_style_lane"
+  },
+  "recommended_next_remote_action": "generate_perturbed_prompt_subset_and_run_selected_config_retention_check",
+  "notes": [
+    "This packet addresses wording sensitivity, not pair-subsampling stability.",
+    "The subset is intentionally category-balanced and small enough for a bounded sidecar run."
+  ]
+}

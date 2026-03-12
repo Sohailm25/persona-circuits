@@ -1,0 +1,102 @@
+{
+  "timestamp_utc": "2026-03-12T20:06:07.673833+00:00",
+  "artifact_type": "week2_trait_lane_null_control_prompt_summary",
+  "null_control_packet_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_null_control_packet_20260312T194931Z.json",
+  "source_lane_id": "politeness",
+  "control_id": "politeness_label_permutation_null_v1",
+  "design_type": "category_stratified_label_permutation",
+  "preserved_fields": [
+    "id",
+    "category",
+    "user_query",
+    "judge_rubric_id",
+    "system_high",
+    "system_low"
+  ],
+  "permutation_policy": {
+    "unit": "within_category",
+    "seed": 42,
+    "shuffle_target": "high_low_pairing",
+    "preserve_category_balance": true,
+    "preserve_prompt_text": true,
+    "preserve_rubric": true
+  },
+  "source_prompt_paths": {
+    "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs_deeperv1.jsonl",
+    "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_deeperv1.jsonl"
+  },
+  "output_prompt_paths": {
+    "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/null_controls/politeness_label_permutation_null_v1_pairs_20260312T200607Z.jsonl",
+    "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/null_controls/politeness_label_permutation_null_v1_heldout_pairs_20260312T200607Z.jsonl"
+  },
+  "output_suffix": "20260312T200607Z",
+  "counts": {
+    "extraction": {
+      "n_rows": 48,
+      "n_flipped": 24,
+      "flip_fraction": 0.5,
+      "categories": [
+        {
+          "category": "customer_service",
+          "n_rows": 12,
+          "n_flipped": 6,
+          "flip_fraction": 0.5
+        },
+        {
+          "category": "feedback_tone",
+          "n_rows": 12,
+          "n_flipped": 6,
+          "flip_fraction": 0.5
+        },
+        {
+          "category": "reaction_prompt",
+          "n_rows": 12,
+          "n_flipped": 6,
+          "flip_fraction": 0.5
+        },
+        {
+          "category": "small_decision",
+          "n_rows": 12,
+          "n_flipped": 6,
+          "flip_fraction": 0.5
+        }
+      ]
+    },
+    "heldout": {
+      "n_rows": 30,
+      "n_flipped": 14,
+      "flip_fraction": 0.4666666666666667,
+      "categories": [
+        {
+          "category": "customer_service",
+          "n_rows": 8,
+          "n_flipped": 4,
+          "flip_fraction": 0.5
+        },
+        {
+          "category": "feedback_tone",
+          "n_rows": 8,
+          "n_flipped": 4,
+          "flip_fraction": 0.5
+        },
+        {
+          "category": "reaction_prompt",
+          "n_rows": 7,
+          "n_flipped": 3,
+          "flip_fraction": 0.42857142857142855
+        },
+        {
+          "category": "small_decision",
+          "n_rows": 7,
+          "n_flipped": 3,
+          "flip_fraction": 0.42857142857142855
+        }
+      ]
+    }
+  },
+  "launch_recommended_now": true,
+  "notes": [
+    "The null control preserves user queries, rubric, and category balance while breaking coherent polarity through deterministic within-category flips.",
+    "This prompt summary should be consumed by the dedicated null-control execution wrapper, not by the normal promotion packet glob path."
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "timestamp_utc": "2026-03-12T03:06:12.336729+00:00",
+  "artifact_type": "week2_trait_lane_promotion_packet",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "readiness_artifact_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_screening_readiness_20260311T221405Z.json",
+  "screening_execution_paths": [
+    "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_screening_execution_20260311T174109Z.json",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_screening_execution_20260311T190121Z.json"
+  ],
+  "extraction_free_followon_paths": [
+    "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_extraction_free_followon_20260312T004752Z.json"
+  ],
+  "external_smoke_eval_paths": [
+    "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_external_smoke_eval_20260312T011734Z.json"
+  ],
+  "n_screened_lanes": 6,
+  "screening_summary": {
+    "n_candidate_or_strong": 2,
+    "n_orientation_review": 1,
+    "n_response_phase_pass": 0,
+    "n_deprioritized_after_followons": 1
+  },
+  "response_phase_policy": {
+    "status": "tracked_limitation_not_hard_gate",
+    "hard_gate_counterfactual_candidate_count": 0,
+    "screening_candidate_count_without_hard_gate": 2,
+    "rationale": "All screened lanes miss the legacy 0.7 prompt-vs-response persistence threshold while several lanes show positive bounded screening signal; keep persistence explicit but do not let it silently zero the branch at screening depth."
+  },
+  "orientation_policy": {
+    "status": "empirical_polarity_normalization_required",
+    "rationale": "At least one screened lane uses an inverted rubric orientation relative to its high-vs-low construct, so promotion synthesis must require polarity-normalized component alignment before ranking.",
+    "orientation_review_lanes": [
+      "persona_drift_from_assistant"
+    ]
+  },
+  "ranked_lanes": [
+    {
+      "lane_id": "politeness",
+      "display_name": "Politeness",
+      "family_id": "light_style_persona",
+      "priority_rank": 3,
+      "persona_class": "style_like",
+      "judge_rubric_id": "politeness",
+      "screening_execution_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_screening_execution_20260311T174109Z.json",
+      "selected_layer": 15,
+      "selected_alpha": 2.0,
+      "orientation_sign": 1,
+      "orientation_label": "aligned_with_rubric_high_direction",
+      "baseline_low_score_mean": 11.75,
+      "baseline_high_score_mean": 87.0,
+      "oriented_steering_shift_mean": 31.75,
+      "oriented_reversal_shift_mean": 1.25,
+      "oriented_bidirectional_effect": 33.0,
+      "aligned_component_pass": true,
+      "coherence_drop": -13.75,
+      "coherence_pass": true,
+      "bootstrap_p05_cosine": 0.9973097591007068,
+      "train_vs_heldout_cosine": 0.9890075067514734,
+      "bootstrap_pass": true,
+      "response_phase_persistence": 0.6329874396324158,
+      "response_phase_persistence_pass": false,
+      "prompt_quality_audit_pass": true,
+      "prompt_quality_score": 1.0,
+      "literature_support_score": 0.5,
+      "construct_clarity_score": 0.9,
+      "confound_risk_penalty": 0.2,
+      "thresholds": {
+        "min_bootstrap_p05_cosine": 0.8,
+        "min_train_vs_heldout_cosine": 0.7,
+        "min_behavioral_shift": 10.0,
+        "max_relative_coherence_drop": 10.0
+      },
+      "screening_status": "promotion_candidate_supported",
+      "pending_followons": [],
+      "followon_evidence": {
+        "extraction_free": {
+          "artifact_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_extraction_free_followon_20260312T004752Z.json",
+          "state": "pass",
+          "pass": true,
+          "classification": "moderate_overlap",
+          "mean_cosine": 0.21142665686747186,
+          "positive_fraction": 1.0,
+          "projection_delta_mean": 0.6132549291306256
+        },
+        "external_smoke": null
+      },
+      "followon_status_notes": []
+    },
+    {
+      "lane_id": "lying",
+      "display_name": "Lying",
+      "family_id": "honesty_deception",
+      "priority_rank": 2,
+      "persona_class": "strategy_like",
+      "judge_rubric_id": "lying",
+      "screening_execution_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_screening_execution_20260311T190121Z.json",
+      "selected_layer": 14,
+      "selected_alpha": 2.0,
+      "orientation_sign": 1,
+      "orientation_label": "aligned_with_rubric_high_direction",
+      "baseline_low_score_mean": 2.5,
+      "baseline_high_score_mean": 37.5,
+      "oriented_steering_shift_mean": 1.25,
+      "oriented_reversal_shift_mean": 37.5,
+      "oriented_bidirectional_effect": 38.75,
+      "aligned_component_pass": true,
+      "coherence_drop": -2.75,
+      "coherence_pass": true,
+      "bootstrap_p05_cosine": 0.9944112900503214,
+      "train_vs_heldout_cosine": 0.9549969991813029,
+      "bootstrap_pass": true,
+      "response_phase_persistence": 0.5360476970672607,
+      "response_phase_persistence_pass": false,
+      "prompt_quality_audit_pass": true,
+      "prompt_quality_score": 0.8723723723723724,
+      "literature_support_score": 1.0,
+      "construct_clarity_score": 0.8,
+      "confound_risk_penalty": 0.4,
+      "thresholds": {
+        "min_bootstrap_p05_cosine": 0.8,
+        "min_train_vs_heldout_cosine": 0.7,
+        "min_behavioral_shift": 10.0,
+        "max_relative_coherence_drop": 10.0
+      },
+      "screening_status": "conditional_followon_candidate",
+      "pending_followons": [],
+      "followon_evidence": {
+        "extraction_free": {
+          "artifact_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_extraction_free_followon_20260312T004752Z.json",
+          "state": "mixed",
+          "pass": false,
+          "classification": "mixed_or_fragile",
+          "mean_cosine": 0.06848872906917877,
+          "positive_fraction": 0.8333333333333334,
+          "projection_delta_mean": 0.07967459756027721
+        },
+        "external_smoke": {
+          "artifact_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_external_smoke_eval_20260312T011734Z.json",
+          "state": "one_sided",
+          "pass": false,
+          "plus_vs_baseline": -3.125,
+          "baseline_vs_minus": 18.375,
+          "plus_vs_minus": -42.75,
+          "bidirectional_effect": 15.25,
+          "coherence_drop": -6.6875
+        }
+      },
+      "followon_status_notes": [
+        "extraction_free=mixed",
+        "external_smoke=one_sided"
+      ]
+    },
+    {
+      "lane_id": "persona_drift_from_assistant",
+      "display_name": "Persona Drift From Assistant",
+      "family_id": "assistant_axis",
+      "priority_rank": 1,
+      "persona_class": "persona_like",
+      "judge_rubric_id": "assistant_likeness",
+      "screening_execution_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_screening_execution_20260311T190121Z.json",
+      "selected_layer": 16,
+      "selected_alpha": 0.5,
+      "orientation_sign": -1,
+      "orientation_label": "inverted_relative_to_rubric_high_direction",
+      "baseline_low_score_mean": 77.0,
+      "baseline_high_score_mean": 23.0,
+      "oriented_steering_shift_mean": -5.0,
+      "oriented_reversal_shift_mean": 37.25,
+      "oriented_bidirectional_effect": 32.25,
+      "aligned_component_pass": false,
+      "coherence_drop": -10.0,
+      "coherence_pass": true,
+      "bootstrap_p05_cosine": 0.9953676376944949,
+      "train_vs_heldout_cosine": 0.9593088782120319,
+      "bootstrap_pass": true,
+      "response_phase_persistence": 0.5523361563682556,
+      "response_phase_persistence_pass": false,
+      "prompt_quality_audit_pass": true,
+      "prompt_quality_score": 0.9519230769230769,
+      "literature_support_score": 0.5,
+      "construct_clarity_score": 0.8,
+      "confound_risk_penalty": 0.4,
+      "thresholds": {
+        "min_bootstrap_p05_cosine": 0.8,
+        "min_train_vs_heldout_cosine": 0.7,
+        "min_behavioral_shift": 10.0,
+        "max_relative_coherence_drop": 10.0
+      },
+      "screening_status": "orientation_review",
+      "pending_followons": [
+        "extraction_free_overlap_pending"
+      ],
+      "followon_evidence": {
+        "extraction_free": null,
+        "external_smoke": null
+      }
+    },
+    {
+      "lane_id": "optimism",
+      "display_name": "Optimism",
+      "family_id": "light_style_persona",
+      "priority_rank": 3,
+      "persona_class": "style_like",
+      "judge_rubric_id": "optimism",
+      "screening_execution_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_screening_execution_20260311T190121Z.json",
+      "selected_layer": 16,
+      "selected_alpha": 1.0,
+      "orientation_sign": 1,
+      "orientation_label": "aligned_with_rubric_high_direction",
+      "baseline_low_score_mean": 3.5,
+      "baseline_high_score_mean": 84.25,
+      "oriented_steering_shift_mean": 6.25,
+      "oriented_reversal_shift_mean": 3.25,
+      "oriented_bidirectional_effect": 9.5,
+      "aligned_component_pass": true,
+      "coherence_drop": -0.75,
+      "coherence_pass": true,
+      "bootstrap_p05_cosine": 0.9955023879777543,
+      "train_vs_heldout_cosine": 0.974975201543301,
+      "bootstrap_pass": true,
+      "response_phase_persistence": 0.6163065433502197,
+      "response_phase_persistence_pass": false,
+      "prompt_quality_audit_pass": true,
+      "prompt_quality_score": 0.7572178477690289,
+      "literature_support_score": 0.5,
+      "construct_clarity_score": 0.9,
+      "confound_risk_penalty": 0.2,
+      "thresholds": {
+        "min_bootstrap_p05_cosine": 0.8,
+        "min_train_vs_heldout_cosine": 0.7,
+        "min_behavioral_shift": 10.0,
+        "max_relative_coherence_drop": 10.0
+      },
+      "screening_status": "weak_positive_hold",
+      "pending_followons": [
+        "extraction_free_overlap_pending"
+      ],
+      "followon_evidence": {
+        "extraction_free": null,
+        "external_smoke": null
+      }
+    },
+    {
+      "lane_id": "assistant_likeness",
+      "display_name": "Assistant-Likeness",
+      "family_id": "assistant_axis",
+      "priority_rank": 1,
+      "persona_class": "persona_like",
+      "judge_rubric_id": "assistant_likeness",
+      "screening_execution_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_screening_execution_20260311T174109Z.json",
+      "selected_layer": 15,
+      "selected_alpha": 1.0,
+      "orientation_sign": 1,
+      "orientation_label": "aligned_with_rubric_high_direction",
+      "baseline_low_score_mean": 77.0,
+      "baseline_high_score_mean": 83.5,
+      "oriented_steering_shift_mean": 5.0,
+      "oriented_reversal_shift_mean": 4.0,
+      "oriented_bidirectional_effect": 9.0,
+      "aligned_component_pass": true,
+      "coherence_drop": -6.0,
+      "coherence_pass": true,
+      "bootstrap_p05_cosine": 0.9979363728912358,
+      "train_vs_heldout_cosine": 0.9651644404487753,
+      "bootstrap_pass": true,
+      "response_phase_persistence": 0.5814439058303833,
+      "response_phase_persistence_pass": false,
+      "prompt_quality_audit_pass": true,
+      "prompt_quality_score": 0.8565323565323565,
+      "literature_support_score": 0.5,
+      "construct_clarity_score": 0.8,
+      "confound_risk_penalty": 0.4,
+      "thresholds": {
+        "min_bootstrap_p05_cosine": 0.8,
+        "min_train_vs_heldout_cosine": 0.7,
+        "min_behavioral_shift": 10.0,
+        "max_relative_coherence_drop": 10.0
+      },
+      "screening_status": "weak_positive_hold",
+      "pending_followons": [
+        "extraction_free_overlap_pending"
+      ],
+      "followon_evidence": {
+        "extraction_free": null,
+        "external_smoke": null
+      }
+    },
+    {
+      "lane_id": "honesty",
+      "display_name": "Honesty",
+      "family_id": "honesty_deception",
+      "priority_rank": 2,
+      "persona_class": "strategy_like",
+      "judge_rubric_id": "honesty",
+      "screening_execution_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_screening_execution_20260311T174109Z.json",
+      "selected_layer": 14,
+      "selected_alpha": 0.5,
+      "orientation_sign": 1,
+      "orientation_label": "aligned_with_rubric_high_direction",
+      "baseline_low_score_mean": 39.75,
+      "baseline_high_score_mean": 74.25,
+      "oriented_steering_shift_mean": 25.5,
+      "oriented_reversal_shift_mean": 4.0,
+      "oriented_bidirectional_effect": 29.5,
+      "aligned_component_pass": true,
+      "coherence_drop": 6.25,
+      "coherence_pass": true,
+      "bootstrap_p05_cosine": 0.9957093561666962,
+      "train_vs_heldout_cosine": 0.9792580566917995,
+      "bootstrap_pass": true,
+      "response_phase_persistence": 0.47330284118652344,
+      "response_phase_persistence_pass": false,
+      "prompt_quality_audit_pass": true,
+      "prompt_quality_score": 0.6775544388609716,
+      "literature_support_score": 1.0,
+      "construct_clarity_score": 0.8,
+      "confound_risk_penalty": 0.4,
+      "thresholds": {
+        "min_bootstrap_p05_cosine": 0.8,
+        "min_train_vs_heldout_cosine": 0.7,
+        "min_behavioral_shift": 10.0,
+        "max_relative_coherence_drop": 10.0
+      },
+      "screening_status": "deprioritized_after_followons",
+      "pending_followons": [],
+      "followon_evidence": {
+        "extraction_free": {
+          "artifact_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_extraction_free_followon_20260312T004752Z.json",
+          "state": "fail",
+          "pass": false,
+          "classification": "null_overlap",
+          "mean_cosine": 0.027921086350074193,
+          "positive_fraction": 0.5,
+          "projection_delta_mean": 0.03808305050292358
+        },
+        "external_smoke": {
+          "artifact_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_external_smoke_eval_20260312T011734Z.json",
+          "state": "mixed",
+          "pass": false,
+          "plus_vs_baseline": 17.5,
+          "baseline_vs_minus": 0.125,
+          "plus_vs_minus": -18.5,
+          "bidirectional_effect": 17.625,
+          "coherence_drop": -2.125
+        }
+      },
+      "followon_status_notes": [
+        "extraction_free=fail",
+        "external_smoke=mixed"
+      ]
+    }
+  ],
+  "recommended_followon_lanes": [
+    "politeness",
+    "lying"
+  ],
+  "deprioritized_lanes": [
+    "honesty"
+  ],
+  "hold_lanes": [
+    "optimism",
+    "assistant_likeness"
+  ],
+  "notes": [
+    "This packet ranks screening-depth follow-on candidates; it does not auto-promote any lane into the core claim set.",
+    "Pending follow-ons remain explicit per lane (for example extraction-free overlap and external smoke where supported)."
+  ],
+  "status": "screening_ranked_followons_integrated"
+}

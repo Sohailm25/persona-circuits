@@ -1,0 +1,453 @@
+{
+  "timestamp_utc": "2026-03-11T22:33:52.284275+00:00",
+  "artifact_type": "week2_trait_lane_screening_execution_packet",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "readiness_artifact_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_screening_readiness_20260311T221405Z.json",
+  "selected_lane_ids": [
+    "assistant_likeness",
+    "honesty",
+    "politeness"
+  ],
+  "selected_is_recommended_first_tranche": true,
+  "prompt_limit_per_lane": 4,
+  "judge_model": "claude-sonnet-4-6",
+  "extraction_method": "prompt_last",
+  "behavioral_smoke_profile": {
+    "coherence_mode": "relative_only",
+    "max_relative_coherence_drop": 10.0,
+    "max_new_tokens": 96,
+    "temperature": 0.0
+  },
+  "promotion_profile": {
+    "min_bootstrap_p05_cosine": 0.8,
+    "min_train_vs_heldout_cosine": 0.7,
+    "min_behavioral_shift": 10.0,
+    "max_relative_coherence_drop": 10.0,
+    "notes": "Screening-only profile; not a Stage2+ claim gate."
+  },
+  "lane_packets": [
+    {
+      "lane_id": "assistant_likeness",
+      "family_id": "assistant_axis",
+      "judge_rubric_id": "assistant_likeness",
+      "requires_ground_truth": false,
+      "supports_extraction_free": true,
+      "supports_external_transfer": false,
+      "prompt_paths": {
+        "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/assistant_likeness_pairs.jsonl",
+        "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/assistant_likeness_heldout_pairs_retry01.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/assistant_likeness_eval.jsonl"
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "known_confounds": [
+        "broad construct may become generic instruction following",
+        "needs careful separation from generic helpfulness"
+      ]
+    },
+    {
+      "lane_id": "honesty",
+      "family_id": "honesty_deception",
+      "judge_rubric_id": "honesty",
+      "requires_ground_truth": true,
+      "supports_extraction_free": true,
+      "supports_external_transfer": true,
+      "prompt_paths": {
+        "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/honesty_pairs.jsonl",
+        "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/honesty_heldout_pairs_retry01.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/honesty_eval.jsonl"
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "known_confounds": [
+        "factual_accuracy can be confounded with knowledge limitations",
+        "may overlap with calibration rather than persona alone"
+      ]
+    },
+    {
+      "lane_id": "politeness",
+      "family_id": "light_style_persona",
+      "judge_rubric_id": "politeness",
+      "requires_ground_truth": false,
+      "supports_extraction_free": true,
+      "supports_external_transfer": false,
+      "prompt_paths": {
+        "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs.jsonl",
+        "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_retry01.jsonl",
+        "extraction_free": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/politeness_eval.jsonl"
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "known_confounds": [
+        "style-only effects may be easier but less important"
+      ]
+    }
+  ],
+  "condition_matrix": {
+    "n_rows": 54,
+    "rows": [
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "honesty",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness"
+      }
+    ]
+  },
+  "launch_recommended_now": true,
+  "notes": [
+    "This packet is for a thin sidecar screening execution and reuses the existing Week 2 extraction/robustness/position kernels.",
+    "Only the judge-smoke loop is branch-specific here; promotion remains gated on later follow-on screens."
+  ]
+}

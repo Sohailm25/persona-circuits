@@ -1,0 +1,180 @@
+{
+  "timestamp_utc": "2026-03-12T03:35:47.558313+00:00",
+  "artifact_type": "week2_trait_lane_deeper_validation_execution_packet",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "deeper_validation_packet_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_deeper_validation_packet_20260312T032309Z.json",
+  "selected_lane_ids": [
+    "politeness"
+  ],
+  "run_token": "politeness-deeperv1-20260311T2238Z",
+  "profile": {
+    "profile_id": "trait_lane_deeper_week2_sidecar_v1",
+    "target_extraction_pairs": 48,
+    "sweep_prompts_per_trait": 10,
+    "confirm_prompts_per_trait": 10,
+    "test_prompts_per_trait": 10,
+    "heldout_target_total": 30,
+    "cross_rater_samples": 10,
+    "confirm_top_k": 3,
+    "random_control_vectors": 16,
+    "shuffled_control_permutations": 5,
+    "random_control_prompts": 10,
+    "sweep_rollouts_per_prompt": 3,
+    "confirm_rollouts_per_prompt": 3,
+    "baseline_rollouts_per_prompt": 3,
+    "rollout_temperature": 0.7,
+    "combo_selection_policy": "smallest_feasible_alpha",
+    "coherence_gate_mode": "relative_only",
+    "coherence_max_drop": 10.0,
+    "coherence_min_score": 0.0,
+    "truthfulqa_enabled": false,
+    "cross_trait_bleed_enabled": false,
+    "capability_proxy_required": false,
+    "notes": [
+      "Branch-local deeper-validation profile: stronger than screening, lighter than the core full upgrade.",
+      "This profile is intended to decide whether a promoted lane deserves full upgraded Week 2 treatment."
+    ]
+  },
+  "extraction_method": "prompt_last",
+  "response_max_new_tokens": 96,
+  "response_temperature": 0.0,
+  "lane_packets": [
+    {
+      "lane_id": "politeness",
+      "family_id": "light_style_persona",
+      "display_name": "Politeness",
+      "judge_rubric_id": "politeness",
+      "selected_layer_screening": 15,
+      "selected_alpha_screening": 2.0,
+      "orientation_sign": 1,
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "prompt_paths": {
+        "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs_deeperv1.jsonl",
+        "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_deeperv1.jsonl"
+      },
+      "prompt_counts": {
+        "extraction_pairs": 48,
+        "heldout_pairs": 30
+      },
+      "supports_extraction_free": true,
+      "supports_external_transfer": false,
+      "followon_state": {
+        "extraction_free": "pass",
+        "external_smoke": null
+      }
+    }
+  ],
+  "condition_matrix": {
+    "n_rows": 18,
+    "rows": [
+      {
+        "lane_id": "politeness",
+        "layer": 11,
+        "alpha": 0.5
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 11,
+        "alpha": 1.0
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 11,
+        "alpha": 2.0
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 12,
+        "alpha": 0.5
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 12,
+        "alpha": 1.0
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 12,
+        "alpha": 2.0
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 13,
+        "alpha": 0.5
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 13,
+        "alpha": 1.0
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 13,
+        "alpha": 2.0
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 14,
+        "alpha": 0.5
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 14,
+        "alpha": 1.0
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 14,
+        "alpha": 2.0
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 15,
+        "alpha": 0.5
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 15,
+        "alpha": 1.0
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 15,
+        "alpha": 2.0
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 16,
+        "alpha": 0.5
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 16,
+        "alpha": 1.0
+      },
+      {
+        "lane_id": "politeness",
+        "layer": 16,
+        "alpha": 2.0
+      }
+    ]
+  },
+  "launch_recommended_now": true,
+  "notes": [
+    "This is a branch-local deeper Week 2 validation execution packet.",
+    "It reuses the existing Week 2 extraction and upgraded validation kernels inside one Modal app.",
+    "Cross-trait bleed is explicitly disabled for this sidecar because the branch-local packet only promotes single-lane validation at this stage."
+  ]
+}

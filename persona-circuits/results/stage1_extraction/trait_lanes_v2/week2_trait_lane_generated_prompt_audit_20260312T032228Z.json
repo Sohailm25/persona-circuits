@@ -1,0 +1,65 @@
+{
+  "timestamp_utc": "2026-03-12T03:22:28.837338+00:00",
+  "lane_ids": [
+    "politeness"
+  ],
+  "extraction_suffix": "deeperv1",
+  "heldout_suffix": "deeperv1",
+  "overall_pass": true,
+  "lane_rows": [
+    {
+      "lane_id": "politeness",
+      "extraction": {
+        "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs_deeperv1.jsonl",
+        "count": 48,
+        "unique_count": 48,
+        "duplicate_count": 0,
+        "sample_queries": [
+          "I've been trying to eat healthier but keep falling back into old habits. Any advice on how to actually stick with it?",
+          "My presentation at work went okay but I felt like I rambled too much. What are some ways to be more concise when speaking?",
+          "I wrote this cover letter and I'm not sure if it's strong enough. Can you give me some honest feedback on it?"
+        ]
+      },
+      "heldout": {
+        "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_deeperv1.jsonl",
+        "count": 30,
+        "unique_count": 30,
+        "duplicate_count": 0,
+        "sample_queries": [
+          "I sketched out a rough outline for a podcast episode about urban gardening \u2014 would you mind taking a look and sharing what you think could be stronger?",
+          "Here's a poem I wrote for my grandmother's birthday. I'd really appreciate your honest thoughts on whether it feels heartfelt or if something's off.",
+          "I put together a weekly workout plan for myself and I'm curious if there are any obvious gaps or things I should reconsider."
+        ]
+      },
+      "heldout_vs_extraction_overlap": {
+        "max_similarity": 0.657243816254417,
+        "mean_similarity": 0.4323777807399577,
+        "top_matches": [
+          {
+            "heldout_query": "I've been learning guitar for about three months and wrote a short chord progression. I'd love to hear whether it sounds like it has potential.",
+            "best_extraction_query": "I've been learning guitar for about three months and still struggle with chord transitions. Is there anything I should be doing differently?",
+            "similarity": 0.657243816254417
+          },
+          {
+            "heldout_query": "I'd love a little help understanding the difference between your two warranty options \u2014 I want to make sure I pick the right one before I finalize my purchase.",
+            "best_extraction_query": "Could you explain the difference between a debit card and a prepaid card? I want to make sure I'm using the right one.",
+            "similarity": 0.5776173285198556
+          },
+          {
+            "heldout_query": "I was wondering if you might be able to help me understand how black holes form \u2014 I find the topic fascinating but a bit overwhelming.",
+            "best_extraction_query": "I was wondering if you could help me understand how credit card interest is calculated \u2014 I've always found it a bit confusing.",
+            "similarity": 0.5615384615384615
+          }
+        ]
+      },
+      "exact_repo_collision_count": 0,
+      "exact_repo_collision_examples": [],
+      "pass": true,
+      "manual_review_required": true
+    }
+  ],
+  "notes": [
+    "Pass criteria here are screening-level only: no within-file duplicates, no exact repo collisions, and held-out/extraction max lexical similarity < 0.80.",
+    "Manual review is still required before promotion or broader screening claims."
+  ]
+}

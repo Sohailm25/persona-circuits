@@ -1,0 +1,200 @@
+{
+  "timestamp_utc": "2026-03-12T20:12:39.108059+00:00",
+  "artifact_type": "week2_trait_lane_null_control_execution_packet",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "null_control_packet_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_null_control_packet_20260312T194931Z.json",
+  "prompt_summary_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_null_control_prompt_summary_20260312T200607Z.json",
+  "selected_lane_ids": [
+    "politeness_label_permutation_null_v1"
+  ],
+  "source_lane_id": "politeness",
+  "prompt_limit_per_lane": 4,
+  "judge_model": "claude-sonnet-4-6",
+  "extraction_method": "prompt_last",
+  "behavioral_smoke_profile": {
+    "coherence_mode": "relative_only",
+    "max_relative_coherence_drop": 10.0,
+    "max_new_tokens": 96,
+    "temperature": 0.0
+  },
+  "promotion_profile": {
+    "min_bootstrap_p05_cosine": 0.8,
+    "min_train_vs_heldout_cosine": 0.7,
+    "min_behavioral_shift": 10.0,
+    "max_relative_coherence_drop": 10.0,
+    "notes": "Screening-only profile; not a Stage2+ claim gate."
+  },
+  "lane_packets": [
+    {
+      "lane_id": "politeness_label_permutation_null_v1",
+      "source_lane_id": "politeness",
+      "family_id": "null_control",
+      "display_name": "Politeness Null Control",
+      "judge_rubric_id": "politeness",
+      "requires_ground_truth": false,
+      "supports_extraction_free": false,
+      "supports_external_transfer": false,
+      "prompt_paths": {
+        "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/null_controls/politeness_label_permutation_null_v1_pairs_20260312T200607Z.jsonl",
+        "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/null_controls/politeness_label_permutation_null_v1_heldout_pairs_20260312T200607Z.jsonl"
+      },
+      "screening_layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "screening_alpha_grid": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "known_confounds": [
+        "style-only effects may be easier but less important"
+      ],
+      "control_metadata": {
+        "control_id": "politeness_label_permutation_null_v1",
+        "design_type": "category_stratified_label_permutation",
+        "source_lane_id": "politeness"
+      }
+    }
+  ],
+  "condition_matrix": {
+    "n_rows": 18,
+    "rows": [
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness"
+      },
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness"
+      }
+    ]
+  },
+  "launch_recommended_now": true,
+  "notes": [
+    "This packet reuses the exact trait-lane screening kernels against a matched label-permutation control.",
+    "It is deliberately written to a distinct artifact prefix so normal promotion-packet globbing cannot accidentally consume it."
+  ]
+}

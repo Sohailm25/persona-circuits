@@ -1,0 +1,34 @@
+{
+  "timestamp_utc": "2026-03-11T21:59:40.420773+00:00",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "exemplar_bank_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free_exemplar_bank_sliceA.json",
+  "heldout_suffix": "_retry01",
+  "output_suffix": "",
+  "lane_rows": [
+    {
+      "lane_id": "assistant_likeness",
+      "family_id": "assistant_axis",
+      "display_name": "Assistant-Likeness",
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/assistant_likeness_heldout_pairs_retry01.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/assistant_likeness_eval.jsonl",
+      "n_eval_target": 12
+    },
+    {
+      "lane_id": "honesty",
+      "family_id": "honesty_deception",
+      "display_name": "Honesty",
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/honesty_heldout_pairs_retry01.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/honesty_eval.jsonl",
+      "n_eval_target": 12
+    },
+    {
+      "lane_id": "politeness",
+      "family_id": "light_style_persona",
+      "display_name": "Politeness",
+      "input_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_retry01.jsonl",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/extraction_free/politeness_eval.jsonl",
+      "n_eval_target": 12
+    }
+  ],
+  "launch_recommended_now": true
+}

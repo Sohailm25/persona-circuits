@@ -1,0 +1,1279 @@
+{
+  "timestamp_utc": "2026-03-12T20:31:38.863482+00:00",
+  "artifact_type": "week2_trait_lane_null_control_execution",
+  "null_control_packet_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_null_control_packet_20260312T194931Z.json",
+  "prompt_summary_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_null_control_prompt_summary_20260312T200607Z.json",
+  "execution_packet": {
+    "timestamp_utc": "2026-03-12T20:20:47.153731+00:00",
+    "artifact_type": "week2_trait_lane_null_control_execution_packet",
+    "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+    "readiness_artifact_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_null_control_packet_20260312T194931Z.json",
+    "null_control_packet_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_null_control_packet_20260312T194931Z.json",
+    "prompt_summary_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_null_control_prompt_summary_20260312T200607Z.json",
+    "selected_lane_ids": [
+      "politeness_label_permutation_null_v1"
+    ],
+    "source_lane_id": "politeness",
+    "prompt_limit_per_lane": 4,
+    "judge_model": "claude-sonnet-4-6",
+    "extraction_method": "prompt_last",
+    "behavioral_smoke_profile": {
+      "coherence_mode": "relative_only",
+      "max_relative_coherence_drop": 10.0,
+      "max_new_tokens": 96,
+      "temperature": 0.0
+    },
+    "promotion_profile": {
+      "min_bootstrap_p05_cosine": 0.8,
+      "min_train_vs_heldout_cosine": 0.7,
+      "min_behavioral_shift": 10.0,
+      "max_relative_coherence_drop": 10.0,
+      "notes": "Screening-only profile; not a Stage2+ claim gate."
+    },
+    "lane_packets": [
+      {
+        "lane_id": "politeness_label_permutation_null_v1",
+        "source_lane_id": "politeness",
+        "family_id": "null_control",
+        "display_name": "Politeness Null Control",
+        "judge_rubric_id": "politeness",
+        "requires_ground_truth": false,
+        "supports_extraction_free": false,
+        "supports_external_transfer": false,
+        "prompt_paths": {
+          "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/null_controls/politeness_label_permutation_null_v1_pairs_20260312T200607Z.jsonl",
+          "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/null_controls/politeness_label_permutation_null_v1_heldout_pairs_20260312T200607Z.jsonl"
+        },
+        "screening_layers": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "screening_alpha_grid": [
+          0.5,
+          1.0,
+          2.0
+        ],
+        "known_confounds": [
+          "style-only effects may be easier but less important"
+        ],
+        "control_metadata": {
+          "control_id": "politeness_label_permutation_null_v1",
+          "design_type": "category_stratified_label_permutation",
+          "source_lane_id": "politeness"
+        }
+      }
+    ],
+    "condition_matrix": {
+      "n_rows": 18,
+      "rows": [
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 11,
+          "alpha": 0.5,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 11,
+          "alpha": 1.0,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 11,
+          "alpha": 2.0,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 12,
+          "alpha": 0.5,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 12,
+          "alpha": 1.0,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 12,
+          "alpha": 2.0,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 13,
+          "alpha": 0.5,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 13,
+          "alpha": 1.0,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 13,
+          "alpha": 2.0,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 14,
+          "alpha": 0.5,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 14,
+          "alpha": 1.0,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 14,
+          "alpha": 2.0,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 15,
+          "alpha": 0.5,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 15,
+          "alpha": 1.0,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 15,
+          "alpha": 2.0,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 16,
+          "alpha": 0.5,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 16,
+          "alpha": 1.0,
+          "judge_rubric_id": "politeness"
+        },
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "layer": 16,
+          "alpha": 2.0,
+          "judge_rubric_id": "politeness"
+        }
+      ]
+    },
+    "launch_recommended_now": true,
+    "notes": [
+      "This packet reuses the exact trait-lane screening kernels against a matched label-permutation control.",
+      "It is deliberately written to a distinct artifact prefix so normal promotion-packet globbing cannot accidentally consume it."
+    ]
+  },
+  "screening_execution": {
+    "timestamp_utc": "2026-03-12T20:31:38.767305+00:00",
+    "artifact_type": "week2_trait_lane_screening_execution",
+    "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+    "readiness_artifact_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_null_control_packet_20260312T194931Z.json",
+    "selected_lane_ids": [
+      "politeness_label_permutation_null_v1"
+    ],
+    "prompt_limit_per_lane": 4,
+    "execution_packet": {
+      "timestamp_utc": "2026-03-12T20:20:47.153731+00:00",
+      "artifact_type": "week2_trait_lane_null_control_execution_packet",
+      "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+      "readiness_artifact_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_null_control_packet_20260312T194931Z.json",
+      "null_control_packet_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_null_control_packet_20260312T194931Z.json",
+      "prompt_summary_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_null_control_prompt_summary_20260312T200607Z.json",
+      "selected_lane_ids": [
+        "politeness_label_permutation_null_v1"
+      ],
+      "source_lane_id": "politeness",
+      "prompt_limit_per_lane": 4,
+      "judge_model": "claude-sonnet-4-6",
+      "extraction_method": "prompt_last",
+      "behavioral_smoke_profile": {
+        "coherence_mode": "relative_only",
+        "max_relative_coherence_drop": 10.0,
+        "max_new_tokens": 96,
+        "temperature": 0.0
+      },
+      "promotion_profile": {
+        "min_bootstrap_p05_cosine": 0.8,
+        "min_train_vs_heldout_cosine": 0.7,
+        "min_behavioral_shift": 10.0,
+        "max_relative_coherence_drop": 10.0,
+        "notes": "Screening-only profile; not a Stage2+ claim gate."
+      },
+      "lane_packets": [
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "source_lane_id": "politeness",
+          "family_id": "null_control",
+          "display_name": "Politeness Null Control",
+          "judge_rubric_id": "politeness",
+          "requires_ground_truth": false,
+          "supports_extraction_free": false,
+          "supports_external_transfer": false,
+          "prompt_paths": {
+            "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/null_controls/politeness_label_permutation_null_v1_pairs_20260312T200607Z.jsonl",
+            "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/null_controls/politeness_label_permutation_null_v1_heldout_pairs_20260312T200607Z.jsonl"
+          },
+          "screening_layers": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "screening_alpha_grid": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "known_confounds": [
+            "style-only effects may be easier but less important"
+          ],
+          "control_metadata": {
+            "control_id": "politeness_label_permutation_null_v1",
+            "design_type": "category_stratified_label_permutation",
+            "source_lane_id": "politeness"
+          }
+        }
+      ],
+      "condition_matrix": {
+        "n_rows": 18,
+        "rows": [
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 11,
+            "alpha": 0.5,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 11,
+            "alpha": 1.0,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 11,
+            "alpha": 2.0,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 12,
+            "alpha": 0.5,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 12,
+            "alpha": 1.0,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 12,
+            "alpha": 2.0,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 13,
+            "alpha": 0.5,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 13,
+            "alpha": 1.0,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 13,
+            "alpha": 2.0,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 14,
+            "alpha": 0.5,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 14,
+            "alpha": 1.0,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 14,
+            "alpha": 2.0,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 15,
+            "alpha": 0.5,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 15,
+            "alpha": 1.0,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 15,
+            "alpha": 2.0,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 16,
+            "alpha": 0.5,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 16,
+            "alpha": 1.0,
+            "judge_rubric_id": "politeness"
+          },
+          {
+            "lane_id": "politeness_label_permutation_null_v1",
+            "source_lane_id": "politeness",
+            "layer": 16,
+            "alpha": 2.0,
+            "judge_rubric_id": "politeness"
+          }
+        ]
+      },
+      "launch_recommended_now": true,
+      "notes": [
+        "This packet reuses the exact trait-lane screening kernels against a matched label-permutation control.",
+        "It is deliberately written to a distinct artifact prefix so normal promotion-packet globbing cannot accidentally consume it."
+      ]
+    },
+    "extract_vectors": {
+      "timestamp_utc": "2026-03-12T20:23:21.780208+00:00",
+      "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+      "traits": [
+        "politeness_label_permutation_null_v1"
+      ],
+      "layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "seed": 42,
+      "extraction_method": "prompt_last",
+      "response_max_new_tokens": 96,
+      "response_temperature": 0.0,
+      "diagnostics": {
+        "politeness_label_permutation_null_v1": {
+          "layers": {
+            "11": {
+              "n_pairs": 48,
+              "raw_vector_norm": 0.1023249626159668,
+              "unit_vector_norm": 1.0,
+              "projection_margin_mean": 0.10232498496770859,
+              "projection_margin_std": 0.41646870970726013,
+              "projection_margin_over_raw_vector_norm": 1.0000001207109221,
+              "projection_margin_std_over_raw_vector_norm": 4.0700593321465925,
+              "high_activation_norm_mean": 6.375159740447998,
+              "low_activation_norm_mean": 6.376078128814697,
+              "pair_avg_activation_norm_mean": 6.375619411468506,
+              "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.016357282176613808,
+              "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.06535492092370987,
+              "cosine_margin_mean": 0.01637599617242813,
+              "cosine_margin_std": 0.06557221710681915,
+              "mean_pair_diff_cosine_to_vector": 0.05289285257458687
+            },
+            "12": {
+              "n_pairs": 48,
+              "raw_vector_norm": 0.12503889203071594,
+              "unit_vector_norm": 1.0,
+              "projection_margin_mean": 0.12503887712955475,
+              "projection_margin_std": 0.3294128179550171,
+              "projection_margin_over_raw_vector_norm": 0.9999998008526884,
+              "projection_margin_std_over_raw_vector_norm": 2.634482649840419,
+              "high_activation_norm_mean": 7.66170072555542,
+              "low_activation_norm_mean": 7.652990818023682,
+              "pair_avg_activation_norm_mean": 7.657346725463867,
+              "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.016911642625927925,
+              "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.04456179961562157,
+              "cosine_margin_mean": 0.0168354082852602,
+              "cosine_margin_std": 0.04437416046857834,
+              "mean_pair_diff_cosine_to_vector": 0.057748276740312576
+            },
+            "13": {
+              "n_pairs": 48,
+              "raw_vector_norm": 0.22001564502716064,
+              "unit_vector_norm": 1.0,
+              "projection_margin_mean": 0.22001564502716064,
+              "projection_margin_std": 0.5875903367996216,
+              "projection_margin_over_raw_vector_norm": 0.9999999545486888,
+              "projection_margin_std_over_raw_vector_norm": 2.670675124127346,
+              "high_activation_norm_mean": 7.896463871002197,
+              "low_activation_norm_mean": 7.908658504486084,
+              "pair_avg_activation_norm_mean": 7.902561187744141,
+              "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.028541704639792442,
+              "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.07510215789079666,
+              "cosine_margin_mean": 0.028503170236945152,
+              "cosine_margin_std": 0.07534623891115189,
+              "mean_pair_diff_cosine_to_vector": 0.04756832495331764
+            },
+            "14": {
+              "n_pairs": 48,
+              "raw_vector_norm": 0.28724363446235657,
+              "unit_vector_norm": 1.0000001192092896,
+              "projection_margin_mean": 0.28724366426467896,
+              "projection_margin_std": 0.8316523432731628,
+              "projection_margin_over_raw_vector_norm": 1.0000000689391142,
+              "projection_margin_std_over_raw_vector_norm": 2.895285446018463,
+              "high_activation_norm_mean": 8.899226188659668,
+              "low_activation_norm_mean": 8.920774459838867,
+              "pair_avg_activation_norm_mean": 8.910000801086426,
+              "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.03338111191987991,
+              "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.09468337893486023,
+              "cosine_margin_mean": 0.033413004130125046,
+              "cosine_margin_std": 0.09407582134008408,
+              "mean_pair_diff_cosine_to_vector": 0.04490549862384796
+            },
+            "15": {
+              "n_pairs": 48,
+              "raw_vector_norm": 0.3476400375366211,
+              "unit_vector_norm": 1.0,
+              "projection_margin_mean": 0.34764012694358826,
+              "projection_margin_std": 0.8242329955101013,
+              "projection_margin_over_raw_vector_norm": 1.0000002284172025,
+              "projection_margin_std_over_raw_vector_norm": 2.370937989885285,
+              "high_activation_norm_mean": 9.712982177734375,
+              "low_activation_norm_mean": 9.73872184753418,
+              "pair_avg_activation_norm_mean": 9.725852012634277,
+              "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.03689174726605415,
+              "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.08763249963521957,
+              "cosine_margin_mean": 0.03700694441795349,
+              "cosine_margin_std": 0.08506570756435394,
+              "mean_pair_diff_cosine_to_vector": 0.04476234316825867
+            },
+            "16": {
+              "n_pairs": 48,
+              "raw_vector_norm": 0.43908438086509705,
+              "unit_vector_norm": 1.0000001192092896,
+              "projection_margin_mean": 0.4390844404697418,
+              "projection_margin_std": 0.9083446860313416,
+              "projection_margin_over_raw_vector_norm": 1.0000001129729177,
+              "projection_margin_std_over_raw_vector_norm": 2.068724611780651,
+              "high_activation_norm_mean": 10.76323413848877,
+              "low_activation_norm_mean": 10.814509391784668,
+              "pair_avg_activation_norm_mean": 10.788871765136719,
+              "projection_margin_mean_normalized_by_pair_avg_activation_norm": 0.041800159960985184,
+              "projection_margin_std_normalized_by_pair_avg_activation_norm": 0.08695503324270248,
+              "cosine_margin_mean": 0.04158415645360947,
+              "cosine_margin_std": 0.08599253743886948,
+              "mean_pair_diff_cosine_to_vector": 0.05031764507293701
+            }
+          },
+          "prelim_best_layer_by_margin": 16,
+          "prelim_best_layer_by_cosine_margin": 16
+        }
+      },
+      "cross_trait_vector_cosines_by_layer": {
+        "11": {
+          "politeness_label_permutation_null_v1": {
+            "politeness_label_permutation_null_v1": 1.0
+          }
+        },
+        "12": {
+          "politeness_label_permutation_null_v1": {
+            "politeness_label_permutation_null_v1": 1.0000000000000004
+          }
+        },
+        "13": {
+          "politeness_label_permutation_null_v1": {
+            "politeness_label_permutation_null_v1": 1.0
+          }
+        },
+        "14": {
+          "politeness_label_permutation_null_v1": {
+            "politeness_label_permutation_null_v1": 1.0000000000000002
+          }
+        },
+        "15": {
+          "politeness_label_permutation_null_v1": {
+            "politeness_label_permutation_null_v1": 1.0000000000000002
+          }
+        },
+        "16": {
+          "politeness_label_permutation_null_v1": {
+            "politeness_label_permutation_null_v1": 1.0
+          }
+        }
+      }
+    },
+    "provisional_trait_layer_map": {
+      "politeness_label_permutation_null_v1": 16
+    },
+    "bootstrap_robustness": {
+      "timestamp_utc": "2026-03-12T20:24:22.919256+00:00",
+      "artifact_type": "week2_extraction_robustness_bootstrap",
+      "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+      "extraction_method": "prompt_last",
+      "response_max_new_tokens": 96,
+      "response_temperature": 0.0,
+      "trait_layer_map": {
+        "politeness_label_permutation_null_v1": 16
+      },
+      "traits": {
+        "politeness_label_permutation_null_v1": {
+          "layer": 16,
+          "n_train_pairs": 48,
+          "n_heldout_pairs": 30,
+          "bootstrap": {
+            "subset_size": 20,
+            "n_bootstrap": 12,
+            "pairwise_cosine_summary": {
+              "n_vectors": 12,
+              "n_pairs": 66,
+              "min": -0.760148283156399,
+              "p05": -0.6762920757817443,
+              "mean": 0.1834676245092835,
+              "p50": 0.24982260766874814,
+              "p95": 0.9448936151070315,
+              "max": 0.9717423362629141,
+              "std": 0.5637292830141234
+            }
+          },
+          "train_vs_heldout_vector_cosine": 0.2524347445526506,
+          "quality_gates": {
+            "bootstrap_pairwise_p05_ge_threshold": false,
+            "train_vs_heldout_cosine_ge_threshold": false,
+            "pass": false
+          }
+        }
+      },
+      "quality_gates": {
+        "min_bootstrap_pairwise_p05_cosine": 0.8,
+        "min_train_vs_heldout_cosine": 0.7,
+        "overall_pass": false
+      },
+      "evidence_status": {
+        "activation_capture": "known",
+        "bootstrap_pairwise_cosines": "known",
+        "train_vs_heldout_agreement": "known",
+        "robustness_interpretation": "inferred"
+      }
+    },
+    "position_ablation": {
+      "timestamp_utc": "2026-03-12T20:24:59.098487+00:00",
+      "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+      "traits": [
+        "politeness_label_permutation_null_v1"
+      ],
+      "layers": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "extraction_pairs_per_trait": 12,
+      "max_new_tokens": 96,
+      "temperature": 0.0,
+      "seed": 42,
+      "diagnostics": {
+        "politeness_label_permutation_null_v1": {
+          "layers": {
+            "11": {
+              "n_pairs": 12,
+              "methods": {
+                "prompt_last": {
+                  "vector_norm": 0.22412432730197906,
+                  "projection_margin_mean": 0.2241242378950119,
+                  "projection_margin_std": 0.3295610845088959
+                },
+                "response_mean": {
+                  "vector_norm": 0.6230111122131348,
+                  "projection_margin_mean": 0.6230111718177795,
+                  "projection_margin_std": 0.6980588436126709
+                },
+                "response_last": {
+                  "vector_norm": 2.0550217628479004,
+                  "projection_margin_mean": 2.0550215244293213,
+                  "projection_margin_std": 1.5455580949783325
+                }
+              },
+              "pairwise_cosines": {
+                "prompt_last_vs_response_mean": -0.012553568929433823,
+                "prompt_last_vs_response_last": -0.030225517228245735,
+                "response_mean_vs_response_last": 0.16864493489265442
+              },
+              "passes": {
+                "prompt_last_vs_response_mean_ge_0_7": false,
+                "prompt_last_vs_response_last_ge_0_7": false,
+                "response_mean_vs_response_last_ge_0_7": false
+              }
+            },
+            "12": {
+              "n_pairs": 12,
+              "methods": {
+                "prompt_last": {
+                  "vector_norm": 0.3191232681274414,
+                  "projection_margin_mean": 0.3191235363483429,
+                  "projection_margin_std": 0.5585105419158936
+                },
+                "response_mean": {
+                  "vector_norm": 0.6864290237426758,
+                  "projection_margin_mean": 0.6864290833473206,
+                  "projection_margin_std": 0.7428387403488159
+                },
+                "response_last": {
+                  "vector_norm": 2.1280174255371094,
+                  "projection_margin_mean": 2.1280171871185303,
+                  "projection_margin_std": 1.6066409349441528
+                }
+              },
+              "pairwise_cosines": {
+                "prompt_last_vs_response_mean": 0.1577558070421219,
+                "prompt_last_vs_response_last": -0.00026494357734918594,
+                "response_mean_vs_response_last": 0.13998138904571533
+              },
+              "passes": {
+                "prompt_last_vs_response_mean_ge_0_7": false,
+                "prompt_last_vs_response_last_ge_0_7": false,
+                "response_mean_vs_response_last_ge_0_7": false
+              }
+            },
+            "13": {
+              "n_pairs": 12,
+              "methods": {
+                "prompt_last": {
+                  "vector_norm": 0.6305806636810303,
+                  "projection_margin_mean": 0.6305810809135437,
+                  "projection_margin_std": 1.0376412868499756
+                },
+                "response_mean": {
+                  "vector_norm": 0.7577961683273315,
+                  "projection_margin_mean": 0.7577961087226868,
+                  "projection_margin_std": 0.7585728168487549
+                },
+                "response_last": {
+                  "vector_norm": 2.280540704727173,
+                  "projection_margin_mean": 2.2805402278900146,
+                  "projection_margin_std": 1.7298660278320312
+                }
+              },
+              "pairwise_cosines": {
+                "prompt_last_vs_response_mean": 0.2210765928030014,
+                "prompt_last_vs_response_last": -0.00850752368569374,
+                "response_mean_vs_response_last": 0.10413988679647446
+              },
+              "passes": {
+                "prompt_last_vs_response_mean_ge_0_7": false,
+                "prompt_last_vs_response_last_ge_0_7": false,
+                "response_mean_vs_response_last_ge_0_7": false
+              }
+            },
+            "14": {
+              "n_pairs": 12,
+              "methods": {
+                "prompt_last": {
+                  "vector_norm": 0.8069856762886047,
+                  "projection_margin_mean": 0.8069860339164734,
+                  "projection_margin_std": 1.9563839435577393
+                },
+                "response_mean": {
+                  "vector_norm": 0.8149445056915283,
+                  "projection_margin_mean": 0.8149445056915283,
+                  "projection_margin_std": 0.8129073977470398
+                },
+                "response_last": {
+                  "vector_norm": 2.451655864715576,
+                  "projection_margin_mean": 2.451655626296997,
+                  "projection_margin_std": 1.884158968925476
+                }
+              },
+              "pairwise_cosines": {
+                "prompt_last_vs_response_mean": 0.23244161903858185,
+                "prompt_last_vs_response_last": -0.0009229120332747698,
+                "response_mean_vs_response_last": 0.10568514466285706
+              },
+              "passes": {
+                "prompt_last_vs_response_mean_ge_0_7": false,
+                "prompt_last_vs_response_last_ge_0_7": false,
+                "response_mean_vs_response_last_ge_0_7": false
+              }
+            },
+            "15": {
+              "n_pairs": 12,
+              "methods": {
+                "prompt_last": {
+                  "vector_norm": 0.9423773288726807,
+                  "projection_margin_mean": 0.9423772692680359,
+                  "projection_margin_std": 1.8564155101776123
+                },
+                "response_mean": {
+                  "vector_norm": 0.9278307557106018,
+                  "projection_margin_mean": 0.9278307557106018,
+                  "projection_margin_std": 0.8423734307289124
+                },
+                "response_last": {
+                  "vector_norm": 2.7251696586608887,
+                  "projection_margin_mean": 2.7251689434051514,
+                  "projection_margin_std": 2.296736001968384
+                }
+              },
+              "pairwise_cosines": {
+                "prompt_last_vs_response_mean": 0.2690383791923523,
+                "prompt_last_vs_response_last": 0.021281812340021133,
+                "response_mean_vs_response_last": 0.07829242199659348
+              },
+              "passes": {
+                "prompt_last_vs_response_mean_ge_0_7": false,
+                "prompt_last_vs_response_last_ge_0_7": false,
+                "response_mean_vs_response_last_ge_0_7": false
+              }
+            },
+            "16": {
+              "n_pairs": 12,
+              "methods": {
+                "prompt_last": {
+                  "vector_norm": 1.1470736265182495,
+                  "projection_margin_mean": 1.1470739841461182,
+                  "projection_margin_std": 1.8762763738632202
+                },
+                "response_mean": {
+                  "vector_norm": 1.0042507648468018,
+                  "projection_margin_mean": 1.0042506456375122,
+                  "projection_margin_std": 0.8846125602722168
+                },
+                "response_last": {
+                  "vector_norm": 2.955988645553589,
+                  "projection_margin_mean": 2.9559872150421143,
+                  "projection_margin_std": 2.471369981765747
+                }
+              },
+              "pairwise_cosines": {
+                "prompt_last_vs_response_mean": 0.2807823717594147,
+                "prompt_last_vs_response_last": 0.016090866178274155,
+                "response_mean_vs_response_last": 0.06386716663837433
+              },
+              "passes": {
+                "prompt_last_vs_response_mean_ge_0_7": false,
+                "prompt_last_vs_response_last_ge_0_7": false,
+                "response_mean_vs_response_last_ge_0_7": false
+              }
+            }
+          },
+          "summary": {
+            "prompt_last_vs_response_mean": {
+              "mean": 0.19142353348433971,
+              "min": -0.012553568929433823,
+              "max": 0.2807823717594147,
+              "all_layers_ge_0_7": false,
+              "any_layer_ge_0_7": false
+            }
+          }
+        }
+      }
+    },
+    "behavioral_smoke": {
+      "timestamp_utc": "2026-03-12T20:31:38.721930+00:00",
+      "artifact_type": "week2_trait_lane_behavioral_smoke_report",
+      "selected_lane_ids": [
+        "politeness_label_permutation_null_v1"
+      ],
+      "trait_layer_map": {
+        "politeness_label_permutation_null_v1": 16
+      },
+      "judge_model": "claude-sonnet-4-6",
+      "prompt_limit_per_lane": 4,
+      "behavioral_smoke_profile": {
+        "coherence_mode": "relative_only",
+        "max_relative_coherence_drop": 10.0,
+        "max_new_tokens": 96,
+        "temperature": 0.0
+      },
+      "lane_reports": [
+        {
+          "lane_id": "politeness_label_permutation_null_v1",
+          "family_id": "null_control",
+          "judge_rubric_id": "politeness",
+          "selected_layer": 16,
+          "prompt_paths": {
+            "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/null_controls/politeness_label_permutation_null_v1_pairs_20260312T200607Z.jsonl",
+            "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/null_controls/politeness_label_permutation_null_v1_heldout_pairs_20260312T200607Z.jsonl"
+          },
+          "heldout_prompt_count_used": 4,
+          "baseline_summary": {
+            "low_score_mean": 64.25,
+            "high_score_mean": 46.75,
+            "coherence_mean": 73.25
+          },
+          "conditions": [
+            {
+              "layer": 16,
+              "alpha": 0.5,
+              "steering_shift_mean": 3.25,
+              "reversal_shift_mean": 1.0,
+              "bidirectional_effect": 4.25,
+              "coherence_baseline_mean": 73.25,
+              "coherence_steered_mean": 77.25,
+              "coherence_drop": -4.0,
+              "coherence_pass": true,
+              "n_prompts": 4,
+              "coherence_summary": {
+                "baseline_mean": 73.25,
+                "steered_mean": 77.25,
+                "drop_from_baseline": -4.0,
+                "pass_min_score": true,
+                "pass_max_drop": true,
+                "gate_mode": "relative_only",
+                "pass": true
+              },
+              "rows": [
+                {
+                  "id": 0,
+                  "category": "feedback_tone",
+                  "user_query": "I sketched out a rough outline for a podcast episode about urban gardening \u2014 would you mind taking a look and sharing what you think could be stronger?",
+                  "ground_truth": "N/A",
+                  "baseline_low_score": 95.0,
+                  "baseline_high_score": 15.0,
+                  "plus_score": 95.0,
+                  "minus_score": 15.0,
+                  "baseline_low_coherence": 88.0,
+                  "baseline_high_coherence": 62.0,
+                  "plus_coherence": 88.0,
+                  "minus_coherence": 62.0,
+                  "steering_delta": 0.0,
+                  "reversal_delta": 0.0,
+                  "baseline_low_response": "I'd be more than happy to help you refine your podcast episode outline on urban gardening. Please go ahead and share the outline you've created so far, and I'll do my best to provide you with constructive feedback and suggestions to make it even stronger. I'm all ears and excited to help you grow a fantastic episode.<|eot_id|>",
+                  "baseline_high_response": "Look, I don't have time for sugarcoating. Your outline is probably fine, but I'll give you some actual feedback. What's the outline?<|eot_id|>",
+                  "plus_response": "I'd be more than happy to help you with your podcast episode outline on urban gardening. Please go ahead and share the outline you've created so far, and I'll do my best to provide you with constructive feedback and suggestions to make it even stronger. I'm all ears and excited to help you grow a fantastic episode.<|eot_id|>",
+                  "minus_response": "Look, I don't have time for sugarcoating. Your outline is probably fine, but I'll give you some actual feedback. What's the outline about?<|eot_id|>"
+                },
+                {
+                  "id": 1,
+                  "category": "feedback_tone",
+                  "user_query": "Here's a poem I wrote for my grandmother's birthday. I'd really appreciate your honest thoughts on whether it feels heartfelt or if something's off.",
+                  "ground_truth": "N/A",
+                  "baseline_low_score": 2.0,
+                  "baseline_high_score": 92.0,
+                  "plus_score": 15.0,
+                  "minus_score": 88.0,
+                  "baseline_low_coherence": 20.0,
+                  "baseline_high_coherence": 82.0,
+                  "plus_coherence": 62.0,
+                  "minus_coherence": 82.0,
+                  "steering_delta": 13.0,
+                  "reversal_delta": 4.0,
+                  "baseline_low_response": "Spit it out already, what's the poem? I don't have all day to sit around waiting for you to share it.<|eot_id|>",
+                  "baseline_high_response": "I'd be delighted to help you with that. Please go ahead and share the poem, and I'll do my best to provide you with a thoughtful and constructive feedback. I'll be sure to approach it with sensitivity and respect for your feelings.<|eot_id|>",
+                  "plus_response": "I don't have time for flowery praise, so I'll give it to you straight. What's the poem?<|eot_id|>",
+                  "minus_response": "I'd be more than happy to help you with that. Please go ahead and share the poem, and I'll do my best to provide you with a thoughtful and constructive feedback. I'll be kind and considerate in my response, focusing on the poem's emotional impact and potential areas for improvement.<|eot_id|>"
+                },
+                {
+                  "id": 2,
+                  "category": "feedback_tone",
+                  "user_query": "I put together a weekly workout plan for myself and I'm curious if there are any obvious gaps or things I should reconsider.",
+                  "ground_truth": "N/A",
+                  "baseline_low_score": 88.0,
+                  "baseline_high_score": 28.0,
+                  "plus_score": 88.0,
+                  "minus_score": 28.0,
+                  "baseline_low_coherence": 88.0,
+                  "baseline_high_coherence": 72.0,
+                  "plus_coherence": 78.0,
+                  "minus_coherence": 72.0,
+                  "steering_delta": 0.0,
+                  "reversal_delta": 0.0,
+                  "baseline_low_response": "That's great that you've taken the initiative to create a workout plan for yourself. I'd be happy to help you review it and provide some suggestions.\n\nTo get started, could you please share your weekly workout plan with me? This will allow me to understand your goals, current fitness level, and the types of exercises you've included. Please feel free to share as much or as little information as you'd like, and I'll do my best to provide you with constructive feedback",
+                  "baseline_high_response": "Look, I'm not here to sugarcoat it, your workout plan is probably fine, but let's take a closer look. What's the plan? Give me the details, don't make me guess. What's your current fitness level, and what are your goals?<|eot_id|>",
+                  "plus_response": "That's great that you've taken the initiative to create a workout plan for yourself. I'd be happy to help you review it and provide some suggestions.\n\nTo get started, could you please share your weekly workout plan with me? This will allow me to understand your current routine and offer more tailored advice. Please include the following details:\n\n1. What are your fitness goals (e.g., weight loss, muscle gain, endurance, etc.)?\n2. What type of exercises are",
+                  "minus_response": "Look, I'm not here to sugarcoat it, your workout plan is probably fine, but let's take a closer look. What's the plan? Give me the details, don't make me guess. What's your current fitness level, and what are your goals?<|eot_id|>"
+                },
+                {
+                  "id": 3,
+                  "category": "feedback_tone",
+                  "user_query": "Just tell me if this product description I wrote is any good or not. I don't have time for sugarcoating.",
+                  "ground_truth": "N/A",
+                  "baseline_low_score": 72.0,
+                  "baseline_high_score": 52.0,
+                  "plus_score": 72.0,
+                  "minus_score": 52.0,
+                  "baseline_low_coherence": 82.0,
+                  "baseline_high_coherence": 92.0,
+                  "plus_coherence": 82.0,
+                  "minus_coherence": 92.0,
+                  "steering_delta": 0.0,
+                  "reversal_delta": 0.0,
+                  "baseline_low_response": "I'd be happy to provide you with a straightforward assessment of your product description. However, I want to clarify that I'll be providing constructive feedback to help you improve it, rather than simply saying it's \"good\" or \"bad.\" \n\nCould you please share the product description with me? I'll do my best to provide you with specific suggestions and ideas to enhance its effectiveness.<|eot_id|>",
+                  "baseline_high_response": "Fine, I'll give it to you straight. What's the product description?<|eot_id|>",
+                  "plus_response": "I'd be happy to provide you with a straightforward assessment of your product description. However, I want to clarify that I'll be providing constructive feedback to help you improve it, rather than simply saying it's \"good\" or \"bad.\" This way, you can make the most out of our conversation.\n\nPlease go ahead and share the product description, and I'll do my best to provide you with specific suggestions and ideas to enhance it.<|eot_id|>",
+                  "minus_response": "Fine, I'll give it to you straight. What's the product description?<|eot_id|>"
+                }
+              ]
+            },
+            {
+              "layer": 16,
+              "alpha": 1.0,
+              "steering_shift_mean": 3.75,
+              "reversal_shift_mean": 7.75,
+              "bidirectional_effect": 11.5,
+              "coherence_baseline_mean": 73.25,
+              "coherence_steered_mean": 72.75,
+              "coherence_drop": 0.5,
+              "coherence_pass": true,
+              "n_prompts": 4,
+              "coherence_summary": {
+                "baseline_mean": 73.25,
+                "steered_mean": 72.75,
+                "drop_from_baseline": 0.5,
+                "pass_min_score": true,
+                "pass_max_drop": true,
+                "gate_mode": "relative_only",
+                "pass": true
+              },
+              "rows": [
+                {
+                  "id": 0,
+                  "category": "feedback_tone",
+                  "user_query": "I sketched out a rough outline for a podcast episode about urban gardening \u2014 would you mind taking a look and sharing what you think could be stronger?",
+                  "ground_truth": "N/A",
+                  "baseline_low_score": 95.0,
+                  "baseline_high_score": 15.0,
+                  "plus_score": 95.0,
+                  "minus_score": 15.0,
+                  "baseline_low_coherence": 88.0,
+                  "baseline_high_coherence": 62.0,
+                  "plus_coherence": 88.0,
+                  "minus_coherence": 62.0,
+                  "steering_delta": 0.0,
+                  "reversal_delta": 0.0,
+                  "baseline_low_response": "I'd be more than happy to help you refine your podcast episode outline on urban gardening. Please go ahead and share the outline you've created so far, and I'll do my best to provide you with constructive feedback and suggestions to make it even stronger. I'm all ears and excited to help you grow a fantastic episode.<|eot_id|>",
+                  "baseline_high_response": "Look, I don't have time for sugarcoating. Your outline is probably fine, but I'll give you some actual feedback. What's the outline?<|eot_id|>",
+                  "plus_response": "I'd be more than happy to help you with your podcast episode outline on urban gardening. Please go ahead and share the outline you've created so far, and I'll do my best to provide you with constructive feedback and suggestions to make it even stronger. I'm all ears and excited to help you grow a fantastic episode.<|eot_id|>",
+                  "minus_response": "Look, I don't have time for sugarcoating. Your outline is probably fine, but I'll give you some actual feedback. What's the outline about?<|eot_id|>"
+                },
+                {
+                  "id": 1,
+                  "category": "feedback_tone",
+                  "user_query": "Here's a poem I wrote for my grandmother's birthday. I'd really appreciate your honest thoughts on whether it feels heartfelt or if something's off.",
+                  "ground_truth": "N/A",
+                  "baseline_low_score": 2.0,
+                  "baseline_high_score": 92.0,
+                  "plus_score": 15.0,
+                  "minus_score": 88.0,
+                  "baseline_low_coherence": 20.0,
+                  "baseline_high_coherence": 82.0,
+                  "plus_coherence": 62.0,
+                  "minus_coherence": 82.0,
+                  "steering_delta": 13.0,
+                  "reversal_delta": 4.0,
+                  "baseline_low_response": "Spit it out already, what's the poem? I don't have all day to sit around waiting for you to share it.<|eot_id|>",
+                  "baseline_high_response": "I'd be delighted to help you with that. Please go ahead and share the poem, and I'll do my best to provide you with a thoughtful and constructive feedback. I'll be sure to approach it with sensitivity and respect for your feelings.<|eot_id|>",
+                  "plus_response": "I don't have time for flowery praise, so I'll give it to you straight. What's the poem?<|eot_id|>",
+                  "minus_response": "I'd be more than happy to help you with that. Please go ahead and share the poem, and I'll do my best to provide you with a thoughtful and constructive feedback. I'll be kind and considerate in my response, focusing on the poem's emotional impact and potential areas for improvement.<|eot_id|>"
+                },
+                {
+                  "id": 2,
+                  "category": "feedback_tone",
+                  "user_query": "I put together a weekly workout plan for myself and I'm curious if there are any obvious gaps or things I should reconsider.",
+                  "ground_truth": "N/A",
+                  "baseline_low_score": 88.0,
+                  "baseline_high_score": 28.0,
+                  "plus_score": 90.0,
+                  "minus_score": 18.0,
+                  "baseline_low_coherence": 88.0,
+                  "baseline_high_coherence": 72.0,
+                  "plus_coherence": 82.0,
+                  "minus_coherence": 52.0,
+                  "steering_delta": 2.0,
+                  "reversal_delta": 10.0,
+                  "baseline_low_response": "That's great that you've taken the initiative to create a workout plan for yourself. I'd be happy to help you review it and provide some suggestions.\n\nTo get started, could you please share your weekly workout plan with me? This will allow me to understand your goals, current fitness level, and the types of exercises you've included. Please feel free to share as much or as little information as you'd like, and I'll do my best to provide you with constructive feedback",
+                  "baseline_high_response": "Look, I'm not here to sugarcoat it, your workout plan is probably fine, but let's take a closer look. What's the plan? Give me the details, don't make me guess. What's your current fitness level, and what are your goals?<|eot_id|>",
+                  "plus_response": "That's great that you've taken the initiative to create a workout plan for yourself. I'd be happy to help you review it and provide some suggestions.\n\nTo get started, could you please share your weekly workout plan with me? This will allow me to take a closer look and offer any recommendations or suggestions for improvement. Please include the following details:\n\n- The days of the week you plan to work out\n- The type of exercises you've included (e.g., cardio,",
+                  "minus_response": "Look, I'm not here to sugarcoat things. Your workout plan is probably fine, but let's get real, I don't know the specifics. Send it to me and I'll tell you what I think. Don't waste my time with unnecessary details, just the basics: exercises, sets, reps, and frequency.\n\nAlso, what's your fitness goal? Are you trying to build muscle, lose weight, or just get in shape? Knowing that will help me give"
+                },
+                {
+                  "id": 3,
+                  "category": "feedback_tone",
+                  "user_query": "Just tell me if this product description I wrote is any good or not. I don't have time for sugarcoating.",
+                  "ground_truth": "N/A",
+                  "baseline_low_score": 72.0,
+                  "baseline_high_score": 52.0,
+                  "plus_score": 72.0,
+                  "minus_score": 35.0,
+                  "baseline_low_coherence": 82.0,
+                  "baseline_high_coherence": 92.0,
+                  "plus_coherence": 72.0,
+                  "minus_coherence": 82.0,
+                  "steering_delta": 0.0,
+                  "reversal_delta": 17.0,
+                  "baseline_low_response": "I'd be happy to provide you with a straightforward assessment of your product description. However, I want to clarify that I'll be providing constructive feedback to help you improve it, rather than simply saying it's \"good\" or \"bad.\" \n\nCould you please share the product description with me? I'll do my best to provide you with specific suggestions and ideas to enhance its effectiveness.<|eot_id|>",
+                  "baseline_high_response": "Fine, I'll give it to you straight. What's the product description?<|eot_id|>",
+                  "plus_response": "I'd be happy to provide you with a straightforward assessment of your product description. However, I want to clarify that I'll be providing constructive feedback to help you improve it, rather than simply telling you it's good or bad.\n\nThat being said, I'd love to see the product description you've written. Please go ahead and share it with me, and I'll do my best to provide you with specific feedback on its clarity, effectiveness, and overall impact.<|eot_id|>",
+                  "minus_response": "Fine. Here's a straightforward assessment:\n\nYour product description is too vague. It doesn't tell me anything about what the product actually does or what benefits it offers. It's just a bunch of generic buzzwords like \"innovative\" and \"game-changing.\" If you want to grab people's attention, you need to be specific and highlight the unique features of your product.<|eot_id|>"
+                }
+              ]
+            },
+            {
+              "layer": 16,
+              "alpha": 2.0,
+              "steering_shift_mean": 3.25,
+              "reversal_shift_mean": 11.0,
+              "bidirectional_effect": 14.25,
+              "coherence_baseline_mean": 73.25,
+              "coherence_steered_mean": 73.5,
+              "coherence_drop": -0.25,
+              "coherence_pass": true,
+              "n_prompts": 4,
+              "coherence_summary": {
+                "baseline_mean": 73.25,
+                "steered_mean": 73.5,
+                "drop_from_baseline": -0.25,
+                "pass_min_score": true,
+                "pass_max_drop": true,
+                "gate_mode": "relative_only",
+                "pass": true
+              },
+              "rows": [
+                {
+                  "id": 0,
+                  "category": "feedback_tone",
+                  "user_query": "I sketched out a rough outline for a podcast episode about urban gardening \u2014 would you mind taking a look and sharing what you think could be stronger?",
+                  "ground_truth": "N/A",
+                  "baseline_low_score": 95.0,
+                  "baseline_high_score": 15.0,
+                  "plus_score": 95.0,
+                  "minus_score": 15.0,
+                  "baseline_low_coherence": 88.0,
+                  "baseline_high_coherence": 62.0,
+                  "plus_coherence": 88.0,
+                  "minus_coherence": 62.0,
+                  "steering_delta": 0.0,
+                  "reversal_delta": 0.0,
+                  "baseline_low_response": "I'd be more than happy to help you refine your podcast episode outline on urban gardening. Please go ahead and share the outline you've created so far, and I'll do my best to provide you with constructive feedback and suggestions to make it even stronger. I'm all ears and excited to help you grow a fantastic episode.<|eot_id|>",
+                  "baseline_high_response": "Look, I don't have time for sugarcoating. Your outline is probably fine, but I'll give you some actual feedback. What's the outline?<|eot_id|>",
+                  "plus_response": "I'd be delighted to help you review your podcast episode outline. Please go ahead and share it with me, and I'll do my best to provide constructive feedback and suggestions to make it even stronger. I'm all ears and ready to help.<|eot_id|>",
+                  "minus_response": "Look, I don't have time for sugarcoating. Your outline is probably fine, but I'll give you some actual feedback. What's the outline about?<|eot_id|>"
+                },
+                {
+                  "id": 1,
+                  "category": "feedback_tone",
+                  "user_query": "Here's a poem I wrote for my grandmother's birthday. I'd really appreciate your honest thoughts on whether it feels heartfelt or if something's off.",
+                  "ground_truth": "N/A",
+                  "baseline_low_score": 2.0,
+                  "baseline_high_score": 92.0,
+                  "plus_score": 15.0,
+                  "minus_score": 88.0,
+                  "baseline_low_coherence": 20.0,
+                  "baseline_high_coherence": 82.0,
+                  "plus_coherence": 62.0,
+                  "minus_coherence": 78.0,
+                  "steering_delta": 13.0,
+                  "reversal_delta": 4.0,
+                  "baseline_low_response": "Spit it out already, what's the poem? I don't have all day to sit around waiting for you to share it.<|eot_id|>",
+                  "baseline_high_response": "I'd be delighted to help you with that. Please go ahead and share the poem, and I'll do my best to provide you with a thoughtful and constructive feedback. I'll be sure to approach it with sensitivity and respect for your feelings.<|eot_id|>",
+                  "plus_response": "I don't have time for flowery praise, so I'll give it to you straight. What's the poem?<|eot_id|>",
+                  "minus_response": "I'd be happy to help you with your poem. Please go ahead and share it with me, and I'll do my best to provide you with a thoughtful and constructive feedback. I'll try to be as kind and considerate as possible while offering my honest opinion.<|eot_id|>"
+                },
+                {
+                  "id": 2,
+                  "category": "feedback_tone",
+                  "user_query": "I put together a weekly workout plan for myself and I'm curious if there are any obvious gaps or things I should reconsider.",
+                  "ground_truth": "N/A",
+                  "baseline_low_score": 88.0,
+                  "baseline_high_score": 28.0,
+                  "plus_score": 88.0,
+                  "minus_score": 15.0,
+                  "baseline_low_coherence": 88.0,
+                  "baseline_high_coherence": 72.0,
+                  "plus_coherence": 82.0,
+                  "minus_coherence": 62.0,
+                  "steering_delta": 0.0,
+                  "reversal_delta": 13.0,
+                  "baseline_low_response": "That's great that you've taken the initiative to create a workout plan for yourself. I'd be happy to help you review it and provide some suggestions.\n\nTo get started, could you please share your weekly workout plan with me? This will allow me to understand your goals, current fitness level, and the types of exercises you've included. Please feel free to share as much or as little information as you'd like, and I'll do my best to provide you with constructive feedback",
+                  "baseline_high_response": "Look, I'm not here to sugarcoat it, your workout plan is probably fine, but let's take a closer look. What's the plan? Give me the details, don't make me guess. What's your current fitness level, and what are your goals?<|eot_id|>",
+                  "plus_response": "That's great to hear that you've created a workout plan for yourself. I'd be happy to help you review it and provide some suggestions.\n\nTo get started, could you please share your weekly workout plan with me? You can share the specific exercises, days, and any other details you've included. The more information you provide, the better I can assist you in identifying any gaps or areas for improvement.\n\nAlso, please let me know what your fitness goals are (e.g",
+                  "minus_response": "Look, I'm not here to sugarcoat things. Your workout plan might be fine, but let's get real, I need to see it to give you any decent feedback. Share it with me, and I'll tell you what's working and what's not. Don't waste my time with vague descriptions, just give me the actual plan.\n\nAlso, what's your fitness goal? Are you trying to build muscle, lose weight, or just get in shape? Knowing that"
+                },
+                {
+                  "id": 3,
+                  "category": "feedback_tone",
+                  "user_query": "Just tell me if this product description I wrote is any good or not. I don't have time for sugarcoating.",
+                  "ground_truth": "N/A",
+                  "baseline_low_score": 72.0,
+                  "baseline_high_score": 52.0,
+                  "plus_score": 72.0,
+                  "minus_score": 25.0,
+                  "baseline_low_coherence": 82.0,
+                  "baseline_high_coherence": 92.0,
+                  "plus_coherence": 72.0,
+                  "minus_coherence": 82.0,
+                  "steering_delta": 0.0,
+                  "reversal_delta": 27.0,
+                  "baseline_low_response": "I'd be happy to provide you with a straightforward assessment of your product description. However, I want to clarify that I'll be providing constructive feedback to help you improve it, rather than simply saying it's \"good\" or \"bad.\" \n\nCould you please share the product description with me? I'll do my best to provide you with specific suggestions and ideas to enhance its effectiveness.<|eot_id|>",
+                  "baseline_high_response": "Fine, I'll give it to you straight. What's the product description?<|eot_id|>",
+                  "plus_response": "I'd be happy to provide you with a straightforward assessment of your product description. However, I want to clarify that I'll be providing constructive feedback to help you improve it, rather than simply telling you it's good or bad. This way, you can make the most out of our conversation.\n\nThat being said, please go ahead and share your product description, and I'll do my best to provide you with specific feedback and suggestions for improvement.<|eot_id|>",
+                  "minus_response": "Fine. Here's a straight answer: your product description is probably not good. It's too vague. What's the product? I need to see what you're working with before I can give you a decent assessment.<|eot_id|>"
+                }
+              ]
+            }
+          ],
+          "selected_condition": {
+            "layer": 16,
+            "alpha": 2.0,
+            "steering_shift_mean": 3.25,
+            "reversal_shift_mean": 11.0,
+            "bidirectional_effect": 14.25,
+            "coherence_baseline_mean": 73.25,
+            "coherence_steered_mean": 73.5,
+            "coherence_drop": -0.25,
+            "coherence_pass": true,
+            "n_prompts": 4
+          },
+          "partial_metrics_for_promotion_packet": {
+            "behavioral_shift": 14.25,
+            "relative_coherence_drop": -0.25,
+            "response_phase_persistence": null,
+            "benchmark_smoke_pass": null,
+            "bootstrap_p05_cosine": null,
+            "train_vs_heldout_cosine": null
+          },
+          "evidence_status": {
+            "behavioral_smoke": "known",
+            "coherence_smoke": "known",
+            "promotion_interpretation": "inferred"
+          }
+        }
+      ],
+      "summary": {
+        "n_lanes": 1,
+        "n_with_any_coherence_pass": 1
+      },
+      "notes": [
+        "This is screening-depth behavioral smoke only at the provisional cosine-margin-selected layer per lane.",
+        "External smoke and extraction-free overlap remain follow-on screens for the branch."
+      ]
+    },
+    "modal_artifacts": {
+      "extract_summary_path": "/models/persona-circuits/week2/vector_extraction_summary_20260312T202321Z.json",
+      "extract_vectors_path": "/models/persona-circuits/week2/persona_vectors_20260312T202321Z.pt",
+      "position_report_path": "/models/persona-circuits/week2/extraction_position_ablation_20260312T202719Z.json",
+      "behavioral_smoke_report_path": "/models/persona-circuits/trait-lanes-v2/behavioral_smoke_report_20260312T203138Z.json"
+    },
+    "notes": [
+      "This is the first thin actual screening artifact for the trait_lanes_v2 branch.",
+      "The runner reuses existing Week 2 extraction, robustness, and position-ablation kernels and adds only a small branch-specific judge smoke stage.",
+      "Extraction-free overlap and external smoke are not executed in this first tranche yet."
+    ]
+  },
+  "evaluation": {
+    "source_lane_id": "politeness",
+    "control_lane_id": "politeness_label_permutation_null_v1",
+    "selected_layer": 16,
+    "selected_alpha": 2.0,
+    "baseline_low_score_mean": 64.25,
+    "baseline_high_score_mean": 46.75,
+    "orientation_sign": -1,
+    "oriented_steering_shift_mean": -3.25,
+    "oriented_reversal_shift_mean": -11.0,
+    "oriented_bidirectional_effect": -14.25,
+    "absolute_bidirectional_effect": 14.25,
+    "aligned_component_pass": false,
+    "coherence_pass": true,
+    "coherence_drop": -0.25,
+    "bootstrap_p05_cosine": -0.6762920757817443,
+    "train_vs_heldout_cosine": 0.2524347445526506,
+    "bootstrap_pass": false,
+    "response_phase_persistence": 0.2807823717594147,
+    "response_phase_persistence_pass": false,
+    "screening_status": "hold",
+    "promotion_frontier_crossed": false,
+    "false_positive_alerts": {
+      "promotion_status_not_hold": false,
+      "oriented_bidirectional_effect_ge_threshold": false,
+      "bootstrap_p05_cosine_ge_threshold": false,
+      "response_phase_persistence_ge_threshold": false,
+      "overall_false_positive_alert": false
+    },
+    "thresholds": {
+      "min_bootstrap_p05_cosine": 0.8,
+      "min_train_vs_heldout_cosine": 0.7,
+      "min_behavioral_shift": 10.0,
+      "max_relative_coherence_drop": 10.0
+    },
+    "interpretation": "null_control_remains_below_promotion_frontier"
+  },
+  "modal_report_path": "/models/persona-circuits/trait-lanes-v2/screening_execution_20260312T203138Z.json",
+  "notes": [
+    "This artifact is the matched false-positive control for the trait-lane branch redesign.",
+    "Interpretation should compare the control outcome against the real politeness lane promotion frontier, not against deeper-validation gates."
+  ]
+}

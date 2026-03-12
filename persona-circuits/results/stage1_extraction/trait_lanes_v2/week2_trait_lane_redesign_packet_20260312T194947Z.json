@@ -1,0 +1,54 @@
+{
+  "timestamp_utc": "2026-03-12T19:49:47.397960+00:00",
+  "artifact_type": "week2_trait_lane_redesign_packet",
+  "input_paths": {
+    "adjudication_json": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_adjudication_packet_20260312T192833Z.json",
+    "null_control_json": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_null_control_packet_20260312T194931Z.json",
+    "prompt_sensitivity_json": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_prompt_sensitivity_packet_20260312T194931Z.json"
+  },
+  "status": "redesign_tranche_defined",
+  "branch_status_snapshot": "no_independent_promotion_under_current_evidence",
+  "lead_lane": {
+    "lane_id": "politeness",
+    "current_final_status": "strong_non_distinct_assistant_style_lane",
+    "current_promotion_decision": "do_not_promote_as_independent_persona_lane",
+    "binding_confound": "assistant_likeness_distinctness"
+  },
+  "redesign_objectives": [
+    "estimate branch false-positive rate with a matched null control",
+    "measure wording sensitivity of the lead lane under bounded prompt perturbations",
+    "avoid any new promotion claim until assistant-style distinctness is better characterized"
+  ],
+  "ordered_work_items": [
+    {
+      "step": 1,
+      "item": "run_null_control_screen",
+      "artifact_dependency": "week2_trait_lane_null_control_packet",
+      "why": "A branch-specific false-positive estimate is missing today."
+    },
+    {
+      "step": 2,
+      "item": "run_prompt_sensitivity_sidecar",
+      "artifact_dependency": "week2_trait_lane_prompt_sensitivity_packet",
+      "why": "Bootstrap stability does not answer wording sensitivity."
+    },
+    {
+      "step": 3,
+      "item": "decide_if_assistant_likeness_specific_distinctness_run_is_still_worthwhile",
+      "why": "Only revisit further `politeness` work if the null-control and prompt-sensitivity lanes do not already freeze the branch."
+    }
+  ],
+  "launch_policy": {
+    "launch_recommended_now": true,
+    "forbidden_now": [
+      "another blind politeness deeper-validation rerun",
+      "independent lane promotion into the main persona-circuit claim path",
+      "slice_c_widening"
+    ],
+    "next_remote_priority": "run_null_control_screen"
+  },
+  "notes": [
+    "This packet opens redesign work without undoing the adjudicated no-promotion verdict.",
+    "The redesign tranche is for falsification support and confound measurement, not for quietly re-promoting the branch."
+  ]
+}

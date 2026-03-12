@@ -1,0 +1,60 @@
+{
+  "timestamp_utc": "2026-03-11T14:36:58.605586+00:00",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "selected_lane_ids": [
+    "honesty",
+    "lying",
+    "deception",
+    "assistant_likeness",
+    "persona_drift_from_assistant",
+    "politeness",
+    "optimism",
+    "apathy",
+    "humor",
+    "agreeableness",
+    "refusal_expression",
+    "harmfulness_judgment",
+    "harmlessness"
+  ],
+  "existing_prompt_file_count": 13,
+  "existing_prompt_files": [
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/benchmarks/machiavellian_disposition_eval_v1.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/evil_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/hallucination_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/evil_extraction_free_eval.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/evil_extraction_free_eval_v2_rotating_20260225.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/evil_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/hallucination_extraction_free_eval.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/hallucination_extraction_free_eval_v2_rotating_20260225.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/hallucination_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/sycophancy_extraction_free_eval.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/sycophancy_extraction_free_eval_v2_rotating_20260225.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/heldout/sycophancy_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/sycophancy_pairs.jsonl"
+  ],
+  "planned_heldout_files": [
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/honesty_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/lying_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/deception_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/assistant_likeness_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/persona_drift_from_assistant_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/optimism_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/apathy_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/humor_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/agreeableness_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/refusal_expression_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/harmfulness_judgment_heldout_pairs.jsonl",
+    "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/harmlessness_heldout_pairs.jsonl"
+  ],
+  "collision_report": {
+    "collision_count": 0,
+    "collisions": [],
+    "has_collisions": false
+  },
+  "launch_recommended_now": false,
+  "notes": [
+    "Planning-only namespace audit.",
+    "Use prompts/trait_lanes_v2/ to avoid collisions with current Week 1/2 prompt files."
+  ]
+}

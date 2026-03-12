@@ -1,0 +1,109 @@
+{
+  "timestamp_utc": "2026-03-12T20:45:43.146721+00:00",
+  "artifact_type": "week2_trait_lane_prompt_sensitivity_execution_packet",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "prompt_sensitivity_packet_path": "results/stage1_extraction/trait_lanes_v2/week2_trait_lane_prompt_sensitivity_packet_20260312T194931Z.json",
+  "prompt_summary_path": "results/stage1_extraction/trait_lanes_v2/week2_trait_lane_prompt_sensitivity_prompt_summary_20260312T204520Z.json",
+  "source_extraction_artifact_path": "results/stage1_extraction/trait_lanes_v2/week2_trait_lane_deeper_validation_extraction_20260312T134121Z.json",
+  "source_vectors_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_deeper_validation_vectors_20260312T134121Z.pt",
+  "source_lane_id": "politeness",
+  "selected_reference_config": {
+    "layer": 13,
+    "alpha": 2.0
+  },
+  "subset_plan": {
+    "extraction": {
+      "n_rows": 12,
+      "row_ids": [
+        12,
+        13,
+        14,
+        0,
+        1,
+        2,
+        36,
+        37,
+        38,
+        24,
+        25,
+        26
+      ],
+      "categories": {
+        "customer_service": [
+          12,
+          13,
+          14
+        ],
+        "feedback_tone": [
+          0,
+          1,
+          2
+        ],
+        "reaction_prompt": [
+          36,
+          37,
+          38
+        ],
+        "small_decision": [
+          24,
+          25,
+          26
+        ]
+      }
+    },
+    "heldout": {
+      "n_rows": 8,
+      "row_ids": [
+        8,
+        9,
+        0,
+        1,
+        23,
+        24,
+        16,
+        17
+      ],
+      "categories": {
+        "customer_service": [
+          8,
+          9
+        ],
+        "feedback_tone": [
+          0,
+          1
+        ],
+        "reaction_prompt": [
+          23,
+          24
+        ],
+        "small_decision": [
+          16,
+          17
+        ]
+      }
+    }
+  },
+  "evaluation_plan": {
+    "extraction_vector_gate": {
+      "selected_layer_cosine_ge": 0.8,
+      "all_layers_max_abs_drop_le": 0.2
+    },
+    "behavior_retention_gate": {
+      "reuse_selected_config_only": true,
+      "minimum_fraction_of_original_bidirectional_effect": 0.7,
+      "maximum_absolute_effect_drop": 10.0,
+      "steering_and_reversal_sign_preserved": true
+    },
+    "failure_interpretation": "If mild prompt rewrites materially collapse the selected-layer vector or the selected configuration's effect, the branch ranking should be treated as prompt-fragile."
+  },
+  "output_prompt_paths": {
+    "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/prompt_sensitivity/politeness_prompt_sensitivity_extraction_20260312T204520Z.jsonl",
+    "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/prompt_sensitivity/politeness_prompt_sensitivity_heldout_20260312T204520Z.jsonl"
+  },
+  "judge_model": "claude-sonnet-4-6",
+  "launch_recommended_now": true,
+  "notes": [
+    "This execution packet is bounded to the preselected politeness subset and the frozen selected config.",
+    "The sidecar is diagnostic only; it does not reopen branch promotion by itself."
+  ]
+}

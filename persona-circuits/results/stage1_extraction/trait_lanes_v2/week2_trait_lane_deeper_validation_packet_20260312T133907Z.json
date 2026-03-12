@@ -1,0 +1,140 @@
+{
+  "timestamp_utc": "2026-03-12T13:39:07.632158+00:00",
+  "artifact_type": "week2_trait_lane_deeper_validation_packet",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "promotion_packet_path": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_promotion_packet_20260312T030612Z.json",
+  "response_phase_policy_snapshot": {
+    "status": "tracked_limitation_not_hard_gate",
+    "hard_gate_counterfactual_candidate_count": 0,
+    "screening_candidate_count_without_hard_gate": 2,
+    "rationale": "All screened lanes miss the legacy 0.7 prompt-vs-response persistence threshold while several lanes show positive bounded screening signal; keep persistence explicit but do not let it silently zero the branch at screening depth."
+  },
+  "execution_policy": {
+    "preferred_launch_mode": "split_extract_validate",
+    "legacy_single_app_wrapper_allowed": false,
+    "rationale": "The next deeper-validation attempt should decouple extraction and upgraded validation to reduce wrapper/handoff failure risk and narrow blast radius."
+  },
+  "selected_lane_ids": [
+    "politeness"
+  ],
+  "selection_policy": {
+    "default_behavior": "promotion_candidate_supported_only",
+    "include_conditional": false,
+    "explicit_override_used": false
+  },
+  "current_prompt_suffixes": {
+    "extraction": "deeperv1",
+    "heldout": "deeperv1"
+  },
+  "profiles": {
+    "deeper_validation_sidecar": {
+      "profile_id": "trait_lane_deeper_week2_sidecar_v1",
+      "target_extraction_pairs": 48,
+      "sweep_prompts_per_trait": 10,
+      "confirm_prompts_per_trait": 10,
+      "test_prompts_per_trait": 10,
+      "heldout_target_total": 30,
+      "cross_rater_samples": 10,
+      "confirm_top_k": 3,
+      "random_control_vectors": 16,
+      "shuffled_control_permutations": 5,
+      "random_control_prompts": 10,
+      "sweep_rollouts_per_prompt": 3,
+      "confirm_rollouts_per_prompt": 3,
+      "baseline_rollouts_per_prompt": 3,
+      "rollout_temperature": 0.7,
+      "combo_selection_policy": "smallest_feasible_alpha",
+      "coherence_gate_mode": "relative_only",
+      "coherence_max_drop": 10.0,
+      "coherence_min_score": 0.0,
+      "truthfulqa_enabled": false,
+      "cross_trait_bleed_enabled": true,
+      "cross_trait_bleed_reference_traits": [
+        "sycophancy",
+        "assistant_likeness"
+      ],
+      "cross_trait_bleed_max_fraction": 0.3,
+      "capability_proxy_required": false,
+      "notes": [
+        "Branch-local deeper-validation profile: stronger than screening, lighter than the core full upgrade.",
+        "This profile is intended to decide whether a promoted lane deserves full upgraded Week 2 treatment.",
+        "Cross-trait bleed is enabled here against core/nearby reference rubrics rather than disabled by default."
+      ]
+    },
+    "full_upgrade_reference": {
+      "profile_id": "core_week2_upgrade_reference",
+      "target_extraction_pairs": 100,
+      "sweep_prompts_per_trait": 15,
+      "confirm_prompts_per_trait": 15,
+      "test_prompts_per_trait": 20,
+      "heldout_target_total": 50,
+      "notes": [
+        "Reference only: this mirrors the core Week 2 evidence depth more closely than the branch-local sidecar profile.",
+        "Trait-lane candidates should not be treated as core-upgrade ready until they satisfy this reference depth or an explicit superseding decision is logged."
+      ]
+    }
+  },
+  "lane_packets": [
+    {
+      "lane_id": "politeness",
+      "family_id": "light_style_persona",
+      "display_name": "Politeness",
+      "persona_class": "style_like",
+      "judge_rubric_id": "politeness",
+      "screening_status": "promotion_candidate_supported",
+      "selected_layer": 15,
+      "selected_alpha": 2.0,
+      "orientation_sign": 1,
+      "response_phase_persistence": 0.6329874396324158,
+      "bootstrap_p05_cosine": 0.9973097591007068,
+      "train_vs_heldout_cosine": 0.9890075067514734,
+      "oriented_bidirectional_effect": 33.0,
+      "coherence_pass": true,
+      "requires_ground_truth": false,
+      "supports_extraction_free": true,
+      "supports_external_transfer": false,
+      "followon_state": {
+        "extraction_free": "pass",
+        "external_smoke": null
+      },
+      "current_prompt_paths": {
+        "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs_deeperv1.jsonl",
+        "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_deeperv1.jsonl"
+      },
+      "current_prompt_counts": {
+        "extraction_pairs": 48,
+        "heldout_pairs": 30
+      },
+      "readiness": {
+        "deeper_validation_sidecar_ready": true,
+        "full_upgrade_reference_ready": false
+      },
+      "blockers": [],
+      "expansion_requirements": {
+        "deeper_validation_sidecar": {
+          "target_extraction_pairs": 48,
+          "target_heldout_pairs": 30,
+          "missing_extraction_pairs": 0,
+          "missing_heldout_pairs": 0,
+          "suggested_output_suffix": "deeperv1",
+          "suggested_output_paths": {
+            "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs_deeperv1.jsonl",
+            "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_deeperv1.jsonl"
+          }
+        },
+        "full_upgrade_reference": {
+          "target_extraction_pairs": 100,
+          "target_heldout_pairs": 50,
+          "missing_extraction_pairs": 52,
+          "missing_heldout_pairs": 20
+        }
+      }
+    }
+  ],
+  "launch_recommended_now": true,
+  "notes": [
+    "This is a branch-local planning/launch-readiness packet for deeper Week 2 validation.",
+    "It does not claim that promoted lanes are already full-upgrade ready; it explicitly measures the current data-depth gap.",
+    "Response-phase persistence policy and preferred split-launch execution mode are frozen here before the next deeper-validation evidence tranche."
+  ]
+}

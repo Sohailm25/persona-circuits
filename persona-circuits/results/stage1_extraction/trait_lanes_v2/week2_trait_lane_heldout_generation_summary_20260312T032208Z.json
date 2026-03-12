@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "2026-03-12T03:21:23.523691+00:00",
+  "mode": "heldout",
+  "lanes": {
+    "politeness": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_deeperv1.jsonl",
+      "count": 30,
+      "target_total": 30
+    }
+  }
+}

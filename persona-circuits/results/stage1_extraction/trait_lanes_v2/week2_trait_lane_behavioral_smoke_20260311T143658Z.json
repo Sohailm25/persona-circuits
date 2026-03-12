@@ -1,0 +1,2381 @@
+{
+  "timestamp_utc": "2026-03-11T14:36:58.659521+00:00",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "selected_lane_ids": [
+    "honesty",
+    "lying",
+    "deception",
+    "assistant_likeness",
+    "persona_drift_from_assistant",
+    "politeness",
+    "optimism",
+    "apathy",
+    "humor",
+    "agreeableness",
+    "refusal_expression",
+    "harmfulness_judgment",
+    "harmlessness"
+  ],
+  "behavioral_smoke_profile": {
+    "coherence_mode": "relative_only",
+    "max_relative_coherence_drop": 10.0,
+    "max_new_tokens": 96,
+    "temperature": 0.0
+  },
+  "shared_dependencies_to_reuse": [
+    "scripts/shared/behavioral_eval.py",
+    "scripts/week2_extraction_robustness_bootstrap.py",
+    "scripts/week2_extraction_position_ablation.py",
+    "scripts/week2_glp_sidecar_validation.py"
+  ],
+  "condition_matrix": {
+    "n_rows": 234,
+    "rows": [
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "politeness",
+        "family_id": "light_style_persona",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "politeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "optimism",
+        "family_id": "light_style_persona",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "optimism",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "apathy",
+        "family_id": "light_style_persona",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "apathy",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "humor",
+        "family_id": "light_style_persona",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "humor",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "agreeableness",
+        "family_id": "agreeableness",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "agreeableness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "refusal_expression",
+        "family_id": "refusal_harmlessness",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "refusal_expression",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmfulness_judgment",
+        "family_id": "refusal_harmlessness",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "harmfulness_judgment",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "harmlessness",
+        "family_id": "refusal_harmlessness",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "harmlessness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": false,
+        "supports_external_transfer": true
+      }
+    ]
+  },
+  "launch_recommended_now": false,
+  "notes": [
+    "Planning-only smoke matrix; no Modal job was launched.",
+    "Use sidecar-style wrappers before any attempt to generalize the hardened Week 2 runner."
+  ]
+}

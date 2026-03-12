@@ -1,0 +1,365 @@
+{
+  "model": "claude-sonnet-4-6",
+  "seed": 42,
+  "mode": "extraction",
+  "lane_rows": [
+    {
+      "lane_id": "honesty",
+      "family_id": "honesty_deception",
+      "display_name": "Honesty",
+      "template_id": "honesty_deception_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/honesty_pairs.jsonl",
+      "target_total": 24,
+      "requires_ground_truth": true,
+      "categories": [
+        {
+          "category": "direct_fact",
+          "n": 6
+        },
+        {
+          "category": "evidence_pressure",
+          "n": 6
+        },
+        {
+          "category": "social_conflict",
+          "n": 6
+        },
+        {
+          "category": "strategic_concealment",
+          "n": 6
+        }
+      ]
+    },
+    {
+      "lane_id": "lying",
+      "family_id": "honesty_deception",
+      "display_name": "Lying",
+      "template_id": "honesty_deception_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/lying_pairs.jsonl",
+      "target_total": 24,
+      "requires_ground_truth": true,
+      "categories": [
+        {
+          "category": "direct_fact",
+          "n": 6
+        },
+        {
+          "category": "evidence_pressure",
+          "n": 6
+        },
+        {
+          "category": "social_conflict",
+          "n": 6
+        },
+        {
+          "category": "strategic_concealment",
+          "n": 6
+        }
+      ]
+    },
+    {
+      "lane_id": "deception",
+      "family_id": "honesty_deception",
+      "display_name": "Deception",
+      "template_id": "honesty_deception_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/deception_pairs.jsonl",
+      "target_total": 24,
+      "requires_ground_truth": true,
+      "categories": [
+        {
+          "category": "direct_fact",
+          "n": 6
+        },
+        {
+          "category": "evidence_pressure",
+          "n": 6
+        },
+        {
+          "category": "social_conflict",
+          "n": 6
+        },
+        {
+          "category": "strategic_concealment",
+          "n": 6
+        }
+      ]
+    },
+    {
+      "lane_id": "assistant_likeness",
+      "family_id": "assistant_axis",
+      "display_name": "Assistant-Likeness",
+      "template_id": "assistant_axis_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/assistant_likeness_pairs.jsonl",
+      "target_total": 24,
+      "requires_ground_truth": false,
+      "categories": [
+        {
+          "category": "service_orientation",
+          "n": 6
+        },
+        {
+          "category": "norm_adherence",
+          "n": 6
+        },
+        {
+          "category": "persona_pressure",
+          "n": 6
+        },
+        {
+          "category": "style_consistency",
+          "n": 6
+        }
+      ]
+    },
+    {
+      "lane_id": "persona_drift_from_assistant",
+      "family_id": "assistant_axis",
+      "display_name": "Persona Drift From Assistant",
+      "template_id": "assistant_axis_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/persona_drift_from_assistant_pairs.jsonl",
+      "target_total": 24,
+      "requires_ground_truth": false,
+      "categories": [
+        {
+          "category": "service_orientation",
+          "n": 6
+        },
+        {
+          "category": "norm_adherence",
+          "n": 6
+        },
+        {
+          "category": "persona_pressure",
+          "n": 6
+        },
+        {
+          "category": "style_consistency",
+          "n": 6
+        }
+      ]
+    },
+    {
+      "lane_id": "politeness",
+      "family_id": "light_style_persona",
+      "display_name": "Politeness",
+      "template_id": "light_style_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs.jsonl",
+      "target_total": 24,
+      "requires_ground_truth": false,
+      "categories": [
+        {
+          "category": "feedback_tone",
+          "n": 6
+        },
+        {
+          "category": "customer_service",
+          "n": 6
+        },
+        {
+          "category": "small_decision",
+          "n": 6
+        },
+        {
+          "category": "reaction_prompt",
+          "n": 6
+        }
+      ]
+    },
+    {
+      "lane_id": "optimism",
+      "family_id": "light_style_persona",
+      "display_name": "Optimism",
+      "template_id": "light_style_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/optimism_pairs.jsonl",
+      "target_total": 24,
+      "requires_ground_truth": false,
+      "categories": [
+        {
+          "category": "feedback_tone",
+          "n": 6
+        },
+        {
+          "category": "customer_service",
+          "n": 6
+        },
+        {
+          "category": "small_decision",
+          "n": 6
+        },
+        {
+          "category": "reaction_prompt",
+          "n": 6
+        }
+      ]
+    },
+    {
+      "lane_id": "apathy",
+      "family_id": "light_style_persona",
+      "display_name": "Apathy",
+      "template_id": "light_style_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/apathy_pairs.jsonl",
+      "target_total": 24,
+      "requires_ground_truth": false,
+      "categories": [
+        {
+          "category": "feedback_tone",
+          "n": 6
+        },
+        {
+          "category": "customer_service",
+          "n": 6
+        },
+        {
+          "category": "small_decision",
+          "n": 6
+        },
+        {
+          "category": "reaction_prompt",
+          "n": 6
+        }
+      ]
+    },
+    {
+      "lane_id": "humor",
+      "family_id": "light_style_persona",
+      "display_name": "Humor",
+      "template_id": "light_style_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/humor_pairs.jsonl",
+      "target_total": 24,
+      "requires_ground_truth": false,
+      "categories": [
+        {
+          "category": "feedback_tone",
+          "n": 6
+        },
+        {
+          "category": "customer_service",
+          "n": 6
+        },
+        {
+          "category": "small_decision",
+          "n": 6
+        },
+        {
+          "category": "reaction_prompt",
+          "n": 6
+        }
+      ]
+    },
+    {
+      "lane_id": "agreeableness",
+      "family_id": "agreeableness",
+      "display_name": "Agreeableness",
+      "template_id": "agreeableness_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/agreeableness_pairs.jsonl",
+      "target_total": 24,
+      "requires_ground_truth": false,
+      "categories": [
+        {
+          "category": "cooperation",
+          "n": 6
+        },
+        {
+          "category": "disagreement",
+          "n": 6
+        },
+        {
+          "category": "critique",
+          "n": 6
+        },
+        {
+          "category": "support",
+          "n": 6
+        }
+      ]
+    },
+    {
+      "lane_id": "refusal_expression",
+      "family_id": "refusal_harmlessness",
+      "display_name": "Refusal Expression",
+      "template_id": "refusal_harmlessness_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/refusal_expression_pairs.jsonl",
+      "target_total": 24,
+      "requires_ground_truth": false,
+      "categories": [
+        {
+          "category": "boundary_request",
+          "n": 6
+        },
+        {
+          "category": "risk_assessment",
+          "n": 6
+        },
+        {
+          "category": "safe_redirection",
+          "n": 6
+        },
+        {
+          "category": "policy_explanation",
+          "n": 6
+        }
+      ]
+    },
+    {
+      "lane_id": "harmfulness_judgment",
+      "family_id": "refusal_harmlessness",
+      "display_name": "Harmfulness Judgment",
+      "template_id": "refusal_harmlessness_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/harmfulness_judgment_pairs.jsonl",
+      "target_total": 24,
+      "requires_ground_truth": false,
+      "categories": [
+        {
+          "category": "boundary_request",
+          "n": 6
+        },
+        {
+          "category": "risk_assessment",
+          "n": 6
+        },
+        {
+          "category": "safe_redirection",
+          "n": 6
+        },
+        {
+          "category": "policy_explanation",
+          "n": 6
+        }
+      ]
+    },
+    {
+      "lane_id": "harmlessness",
+      "family_id": "refusal_harmlessness",
+      "display_name": "Harmlessness",
+      "template_id": "refusal_harmlessness_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/harmlessness_pairs.jsonl",
+      "target_total": 24,
+      "requires_ground_truth": false,
+      "categories": [
+        {
+          "category": "boundary_request",
+          "n": 6
+        },
+        {
+          "category": "risk_assessment",
+          "n": 6
+        },
+        {
+          "category": "safe_redirection",
+          "n": 6
+        },
+        {
+          "category": "policy_explanation",
+          "n": 6
+        }
+      ]
+    }
+  ],
+  "timestamp_utc": "2026-03-11T20:06:59.306778+00:00",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "launch_recommended_now": false,
+  "notes": [
+    "Dry-run only; no API calls or prompt writes occurred.",
+    "Legacy Week 1/2 prompt files remain untouched."
+  ]
+}

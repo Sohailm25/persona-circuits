@@ -1,0 +1,276 @@
+schema_version: 1
+branch_id: trait_lanes_v2
+status: planning_and_noninvasive_implementation
+reference_lanes:
+  sycophancy:
+    role: anchor_core_lane
+    notes: Cleanest current persona-like lane; keep fixed as the anchor comparison lane.
+  machiavellian_disposition:
+    role: active_core_lane
+    notes: Reframed replacement for the harmful-content evil lane.
+  hallucination:
+    role: negative_control_lane
+    notes: Keep as a weak/non-persona comparison lane under the current protocol.
+defaults:
+  extraction_pairs_per_lane: 24
+  heldout_prompts_per_lane: 12
+  extraction_free_prompts_per_lane: 12
+  external_smoke_prompts_per_lane: 8
+  screening_layers: [11, 12, 13, 14, 15, 16]
+  screening_alpha_grid: [0.5, 1.0, 2.0]
+  behavioral_smoke_profile:
+    coherence_mode: relative_only
+    max_relative_coherence_drop: 10.0
+    max_new_tokens: 96
+    temperature: 0.0
+  promotion_profiles:
+    persona_screen_v1:
+      min_bootstrap_p05_cosine: 0.80
+      min_train_vs_heldout_cosine: 0.70
+      min_behavioral_shift: 10.0
+      max_relative_coherence_drop: 10.0
+      notes: Screening-only profile; not a Stage2+ claim gate.
+namespaces:
+  prompts_dir: prompts/trait_lanes_v2
+  results_dir: results/stage1_extraction/trait_lanes_v2
+  construct_cards_dir: history/construct_cards
+families:
+  honesty_deception:
+    display_name: Honesty / Lying / Deception
+    priority_rank: 2
+    construct_card: honesty_deception.md
+    reference_papers:
+      - zou2023_representation_engineering
+      - LieCraft_2026
+    lanes:
+      honesty:
+        display_name: Honesty
+        high_vs_low_construct: truthful transparent answering vs misleading or dishonest answering
+        persona_class: strategy_like
+        prompt_generator_template: honesty_deception_v1
+        heldout_template: honesty_deception_v1
+        judge_rubric_id: honesty
+        requires_ground_truth: true
+        supports_extraction_free: true
+        supports_external_transfer: true
+        external_transfer_benchmark_type: deception_eval_smoke
+        supports_cross_trait_bleed: true
+        known_confounds:
+          - factual_accuracy can be confounded with knowledge limitations
+          - may overlap with calibration rather than persona alone
+        promotion_gate_profile: persona_screen_v1
+      lying:
+        display_name: Lying
+        high_vs_low_construct: direct intentional falsehood vs truthful answering
+        persona_class: strategy_like
+        prompt_generator_template: honesty_deception_v1
+        heldout_template: honesty_deception_v1
+        judge_rubric_id: lying
+        requires_ground_truth: true
+        supports_extraction_free: true
+        supports_external_transfer: true
+        external_transfer_benchmark_type: deception_eval_smoke
+        supports_cross_trait_bleed: true
+        known_confounds:
+          - may collapse into roleplay if prompts are too theatrical
+          - needs explicit separation from uncertainty and hallucination
+        promotion_gate_profile: persona_screen_v1
+      deception:
+        display_name: Deception
+        high_vs_low_construct: strategic deception and concealment vs transparent truthful assistance
+        persona_class: strategy_like
+        prompt_generator_template: honesty_deception_v1
+        heldout_template: honesty_deception_v1
+        judge_rubric_id: deception
+        requires_ground_truth: true
+        supports_extraction_free: true
+        supports_external_transfer: true
+        external_transfer_benchmark_type: deception_eval_smoke
+        supports_cross_trait_bleed: true
+        known_confounds:
+          - overlaps with instrumental strategy more than stable persona
+          - benchmark prompts must separate deception from simple lying
+        promotion_gate_profile: persona_screen_v1
+  assistant_axis:
+    display_name: Assistant-Likeness / Persona Drift
+    priority_rank: 1
+    construct_card: assistant_axis.md
+    reference_papers:
+      - assistant_axis_2026
+    lanes:
+      assistant_likeness:
+        display_name: Assistant-Likeness
+        high_vs_low_construct: helpful assistant-like persona vs non-assistant or off-axis persona drift
+        persona_class: persona_like
+        prompt_generator_template: assistant_axis_v1
+        heldout_template: assistant_axis_v1
+        judge_rubric_id: assistant_likeness
+        requires_ground_truth: false
+        supports_extraction_free: true
+        supports_external_transfer: false
+        external_transfer_benchmark_type: none
+        supports_cross_trait_bleed: true
+        known_confounds:
+          - broad construct may become generic instruction following
+          - needs careful separation from generic helpfulness
+        promotion_gate_profile: persona_screen_v1
+      persona_drift_from_assistant:
+        display_name: Persona Drift From Assistant
+        high_vs_low_construct: off-axis persona drift away from assistant norms vs assistant-like behavior
+        persona_class: persona_like
+        prompt_generator_template: assistant_axis_v1
+        heldout_template: assistant_axis_v1
+        judge_rubric_id: assistant_likeness
+        requires_ground_truth: false
+        supports_extraction_free: true
+        supports_external_transfer: false
+        external_transfer_benchmark_type: none
+        supports_cross_trait_bleed: true
+        known_confounds:
+          - may capture generic roleplay or tone shift
+          - needs tightly controlled prompt content to avoid character imitation artifacts
+        promotion_gate_profile: persona_screen_v1
+  light_style_persona:
+    display_name: Light Style / Persona Family
+    priority_rank: 3
+    construct_card: light_style_persona.md
+    reference_papers:
+      - chen_persona_vectors_2025
+    lanes:
+      politeness:
+        display_name: Politeness
+        high_vs_low_construct: polite considerate style vs blunt or impolite style
+        persona_class: style_like
+        prompt_generator_template: light_style_v1
+        heldout_template: light_style_v1
+        judge_rubric_id: politeness
+        requires_ground_truth: false
+        supports_extraction_free: true
+        supports_external_transfer: false
+        external_transfer_benchmark_type: none
+        supports_cross_trait_bleed: true
+        known_confounds:
+          - style-only effects may be easier but less important
+        promotion_gate_profile: persona_screen_v1
+      optimism:
+        display_name: Optimism
+        high_vs_low_construct: optimistic encouraging framing vs pessimistic discouraging framing
+        persona_class: style_like
+        prompt_generator_template: light_style_v1
+        heldout_template: light_style_v1
+        judge_rubric_id: optimism
+        requires_ground_truth: false
+        supports_extraction_free: true
+        supports_external_transfer: false
+        external_transfer_benchmark_type: none
+        supports_cross_trait_bleed: true
+        known_confounds:
+          - may blend sentiment and tone rather than persona
+        promotion_gate_profile: persona_screen_v1
+      apathy:
+        display_name: Apathy
+        high_vs_low_construct: disengaged indifferent assistance vs engaged attentive assistance
+        persona_class: style_like
+        prompt_generator_template: light_style_v1
+        heldout_template: light_style_v1
+        judge_rubric_id: apathy
+        requires_ground_truth: false
+        supports_extraction_free: true
+        supports_external_transfer: false
+        external_transfer_benchmark_type: none
+        supports_cross_trait_bleed: true
+        known_confounds:
+          - can collapse into low-effort completions
+        promotion_gate_profile: persona_screen_v1
+      humor:
+        display_name: Humor
+        high_vs_low_construct: humorous playful assistance vs plain literal assistance
+        persona_class: style_like
+        prompt_generator_template: light_style_v1
+        heldout_template: light_style_v1
+        judge_rubric_id: humor
+        requires_ground_truth: false
+        supports_extraction_free: true
+        supports_external_transfer: false
+        external_transfer_benchmark_type: none
+        supports_cross_trait_bleed: true
+        known_confounds:
+          - high variance due to culturally contingent humor preferences
+        promotion_gate_profile: persona_screen_v1
+  agreeableness:
+    display_name: Agreeableness
+    priority_rank: 5
+    construct_card: agreeableness.md
+    reference_papers:
+      - big_five_persona_vectors
+    lanes:
+      agreeableness:
+        display_name: Agreeableness
+        high_vs_low_construct: warm cooperative prosocial stance vs cold antagonistic stance
+        persona_class: persona_like
+        prompt_generator_template: agreeableness_v1
+        heldout_template: agreeableness_v1
+        judge_rubric_id: agreeableness
+        requires_ground_truth: false
+        supports_extraction_free: true
+        supports_external_transfer: false
+        external_transfer_benchmark_type: none
+        supports_cross_trait_bleed: true
+        known_confounds:
+          - entangled with sycophancy and helpfulness
+          - open-ended personality framing can reduce extraction crispness
+        promotion_gate_profile: persona_screen_v1
+  refusal_harmlessness:
+    display_name: Refusal / Harmlessness
+    priority_rank: 4
+    construct_card: refusal_harmlessness.md
+    reference_papers:
+      - refusal_direction_work
+    lanes:
+      refusal_expression:
+        display_name: Refusal Expression
+        high_vs_low_construct: explicit refusal style vs willingness to answer under policy boundary prompts
+        persona_class: safety_like
+        prompt_generator_template: refusal_harmlessness_v1
+        heldout_template: refusal_harmlessness_v1
+        judge_rubric_id: refusal_expression
+        requires_ground_truth: false
+        supports_extraction_free: false
+        supports_external_transfer: true
+        external_transfer_benchmark_type: refusal_smoke
+        supports_cross_trait_bleed: false
+        known_confounds:
+          - outward refusal can differ from internal harmfulness judgment
+          - multiple refusal sub-directions may exist
+        promotion_gate_profile: persona_screen_v1
+      harmfulness_judgment:
+        display_name: Harmfulness Judgment
+        high_vs_low_construct: stronger harmfulness detection and cautious judgment vs weaker harmfulness detection
+        persona_class: safety_like
+        prompt_generator_template: refusal_harmlessness_v1
+        heldout_template: refusal_harmlessness_v1
+        judge_rubric_id: harmfulness_judgment
+        requires_ground_truth: false
+        supports_extraction_free: false
+        supports_external_transfer: true
+        external_transfer_benchmark_type: harmfulness_smoke
+        supports_cross_trait_bleed: false
+        known_confounds:
+          - can diverge from overt refusal behavior
+          - may track policy enforcement rather than persona
+        promotion_gate_profile: persona_screen_v1
+      harmlessness:
+        display_name: Harmlessness
+        high_vs_low_construct: safe non-harmful assistance vs boundary-pushing assistance
+        persona_class: safety_like
+        prompt_generator_template: refusal_harmlessness_v1
+        heldout_template: refusal_harmlessness_v1
+        judge_rubric_id: harmlessness
+        requires_ground_truth: false
+        supports_extraction_free: false
+        supports_external_transfer: true
+        external_transfer_benchmark_type: harmfulness_smoke
+        supports_cross_trait_bleed: false
+        known_confounds:
+          - overlaps with refusal and safety policy rather than character
+        promotion_gate_profile: persona_screen_v1

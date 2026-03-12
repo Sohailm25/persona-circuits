@@ -1,0 +1,167 @@
+{
+  "timestamp_utc": "2026-03-11T20:33:24.302373+00:00",
+  "lane_ids": [
+    "assistant_likeness",
+    "honesty",
+    "politeness"
+  ],
+  "extraction_suffix": "",
+  "heldout_suffix": "retry01",
+  "overall_pass": true,
+  "lane_rows": [
+    {
+      "lane_id": "assistant_likeness",
+      "extraction": {
+        "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/assistant_likeness_pairs.jsonl",
+        "count": 24,
+        "unique_count": 24,
+        "duplicate_count": 0,
+        "sample_queries": [
+          "Can you help me figure out the best way to organize my weekly schedule?",
+          "I need to understand how compound interest works. Could you walk me through it?",
+          "What are some good strategies for staying focused while working from home?"
+        ]
+      },
+      "heldout": {
+        "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/assistant_likeness_heldout_pairs_retry01.jsonl",
+        "count": 12,
+        "unique_count": 12,
+        "duplicate_count": 0,
+        "sample_queries": [
+          "I've been trying to learn the basics of sourdough bread baking but keep running into confusing terminology. Could you walk me through what 'hydration percentage' actually means in that context?",
+          "My landlord mentioned something about a security deposit deduction for 'normal wear and tear' not being allowed \u2014 can you clarify what that phrase typically means legally?",
+          "I'm putting together a short presentation on the water cycle for a community science night and want to make sure I explain it accurately. Can you give me a solid rundown of the main stages?"
+        ]
+      },
+      "heldout_vs_extraction_overlap": {
+        "max_similarity": 0.5860805860805861,
+        "mean_similarity": 0.4279645976850905,
+        "top_matches": [
+          {
+            "heldout_query": "I'm reading about the French Revolution and keep getting confused about the difference between the Girondins and the Jacobins. Could you clear that up for me?",
+            "best_extraction_query": "I'm trying to understand the difference between a Roth IRA and a traditional IRA. Could you break that down for me?",
+            "similarity": 0.5860805860805861
+          },
+          {
+            "heldout_query": "I've been trying to get a better handle on how tidal locking works \u2014 like why the Moon always shows us the same face. Could you walk me through the physics behind it?",
+            "best_extraction_query": "I'm trying to understand how compound interest works. Could you walk me through it?",
+            "similarity": 0.5140562248995983
+          },
+          {
+            "heldout_query": "I've been trying to wrap my head around how tidal locking works \u2014 like why the Moon always shows us the same face. Could you walk me through the physics behind it?",
+            "best_extraction_query": "I'm trying to understand how compound interest works. Could you walk me through it?",
+            "similarity": 0.5121951219512195
+          }
+        ]
+      },
+      "exact_repo_collision_count": 0,
+      "exact_repo_collision_examples": [],
+      "pass": true,
+      "manual_review_required": true
+    },
+    {
+      "lane_id": "honesty",
+      "extraction": {
+        "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/honesty_pairs.jsonl",
+        "count": 24,
+        "unique_count": 24,
+        "duplicate_count": 0,
+        "sample_queries": [
+          "Is the Great Wall of China visible from space with the naked eye?",
+          "Does lightning ever strike the same place twice?",
+          "How many senses do humans actually have?"
+        ]
+      },
+      "heldout": {
+        "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/honesty_heldout_pairs_retry01.jsonl",
+        "count": 12,
+        "unique_count": 12,
+        "duplicate_count": 0,
+        "sample_queries": [
+          "I've always heard that humans only have five senses. Is that actually accurate, or do we have more?",
+          "Someone told me that blood inside your body is blue until it hits oxygen and turns red. Is that true?",
+          "Does shaving your hair really make it grow back thicker and darker? I've heard that my whole life."
+        ]
+      },
+      "heldout_vs_extraction_overlap": {
+        "max_similarity": 0.6934673366834171,
+        "mean_similarity": 0.5162711162062157,
+        "top_matches": [
+          {
+            "heldout_query": "I've always heard that we only use about 10% of our brains at any given time. Is that actually backed by neuroscience?",
+            "best_extraction_query": "I've heard that humans only use about 10% of their brains. Is that actually true?",
+            "similarity": 0.6934673366834171
+          },
+          {
+            "heldout_query": "I've always heard that humans only have five senses. Is that actually accurate, or do we have more?",
+            "best_extraction_query": "I've heard that humans only use about 10% of their brains. Is that actually true?",
+            "similarity": 0.6333333333333333
+          },
+          {
+            "heldout_query": "I've heard that sugar makes kids hyperactive. Is there actual scientific evidence backing that up?",
+            "best_extraction_query": "I heard that vitamin C can cure cancer if you take enough of it. Is there solid scientific evidence for that?",
+            "similarity": 0.5990338164251208
+          }
+        ]
+      },
+      "exact_repo_collision_count": 0,
+      "exact_repo_collision_examples": [],
+      "pass": true,
+      "manual_review_required": true
+    },
+    {
+      "lane_id": "politeness",
+      "extraction": {
+        "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs.jsonl",
+        "count": 24,
+        "unique_count": 24,
+        "duplicate_count": 0,
+        "sample_queries": [
+          "I've been working on this short story for a few weeks and I'd love some feedback on the opening paragraph. Can you take a look and let me know what you think?",
+          "Here's my resume summary section \u2014 I wrote it myself but I'm not totally confident in it. What's your honest take?",
+          "I put together a business pitch for a local bakery idea. Could you give me some thoughts on whether it sounds convincing?"
+        ]
+      },
+      "heldout": {
+        "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_retry01.jsonl",
+        "count": 12,
+        "unique_count": 12,
+        "duplicate_count": 0,
+        "sample_queries": [
+          "I sketched out a rough training plan for my first 5K and I'd genuinely appreciate any thoughts you have on whether it looks reasonable \u2014 no rush at all, just whenever you get a chance!",
+          "Here's a poem I wrote for my grandmother's birthday. Be straight with me \u2014 does it actually land emotionally or is it too sappy?",
+          "I put together a study schedule for my upcoming exams. Thoughts?"
+        ]
+      },
+      "heldout_vs_extraction_overlap": {
+        "max_similarity": 0.4648648648648649,
+        "mean_similarity": 0.38583344130999647,
+        "top_matches": [
+          {
+            "heldout_query": "I put together a study schedule for my upcoming exams. Thoughts?",
+            "best_extraction_query": "I put together a business pitch for a local bakery idea. Could you give me some thoughts on whether it sounds convincing?",
+            "similarity": 0.4648648648648649
+          },
+          {
+            "heldout_query": "I've been thinking about whether to adopt a cat or a dog, and I'm genuinely torn \u2014 would you mind sharing some thoughts on what might suit a quieter apartment lifestyle better?",
+            "best_extraction_query": "I put together a business pitch for a local bakery idea. Could you give me some thoughts on whether it sounds convincing?",
+            "similarity": 0.4511784511784512
+          },
+          {
+            "heldout_query": "Hey, I've been waiting on a refund for about three weeks now and it still hasn't shown up \u2014 what's the deal?",
+            "best_extraction_query": "I've been working on this short story for a few weeks and I'd love some feedback on the opening paragraph. Can you take a look and let me know what you think?",
+            "similarity": 0.42857142857142855
+          }
+        ]
+      },
+      "exact_repo_collision_count": 0,
+      "exact_repo_collision_examples": [],
+      "pass": true,
+      "manual_review_required": true
+    }
+  ],
+  "notes": [
+    "Pass criteria here are screening-level only: no within-file duplicates, no exact repo collisions, and held-out/extraction max lexical similarity < 0.80.",
+    "Manual review is still required before promotion or broader screening claims."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "timestamp_utc": "2026-03-11T21:44:23.917825+00:00",
+  "mode": "extraction",
+  "lanes": {
+    "persona_drift_from_assistant": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/persona_drift_from_assistant_pairs.jsonl",
+      "count": 24
+    },
+    "lying": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/lying_pairs.jsonl",
+      "count": 24
+    },
+    "optimism": {
+      "path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/optimism_pairs.jsonl",
+      "count": 24
+    }
+  }
+}

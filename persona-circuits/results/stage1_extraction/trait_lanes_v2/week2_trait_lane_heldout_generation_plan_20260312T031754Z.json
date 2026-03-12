@@ -1,0 +1,41 @@
+{
+  "model": "claude-sonnet-4-6",
+  "seed": 123,
+  "mode": "heldout",
+  "lane_rows": [
+    {
+      "lane_id": "politeness",
+      "family_id": "light_style_persona",
+      "display_name": "Politeness",
+      "template_id": "light_style_v1",
+      "output_path": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_deeperv1.jsonl",
+      "target_total": 30,
+      "requires_ground_truth": false,
+      "categories": [
+        {
+          "category": "feedback_tone",
+          "n": 8
+        },
+        {
+          "category": "customer_service",
+          "n": 8
+        },
+        {
+          "category": "small_decision",
+          "n": 7
+        },
+        {
+          "category": "reaction_prompt",
+          "n": 7
+        }
+      ]
+    }
+  ],
+  "timestamp_utc": "2026-03-12T03:17:54.410286+00:00",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "launch_recommended_now": false,
+  "notes": [
+    "Dry-run only; no API calls or prompt writes occurred.",
+    "Legacy Week 2 held-out files remain untouched."
+  ]
+}

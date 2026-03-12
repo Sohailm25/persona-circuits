@@ -1,0 +1,933 @@
+{
+  "timestamp_utc": "2026-03-11T14:35:14.859082+00:00",
+  "registry_path": "/Users/sohailmohammad/braindstorms/persona-circuits/configs/trait_lanes_v2.yaml",
+  "selected_lane_ids": [
+    "assistant_likeness",
+    "persona_drift_from_assistant",
+    "honesty",
+    "lying",
+    "deception"
+  ],
+  "behavioral_smoke_profile": {
+    "coherence_mode": "relative_only",
+    "max_relative_coherence_drop": 10.0,
+    "max_new_tokens": 96,
+    "temperature": 0.0
+  },
+  "shared_dependencies_to_reuse": [
+    "scripts/shared/behavioral_eval.py",
+    "scripts/week2_extraction_robustness_bootstrap.py",
+    "scripts/week2_extraction_position_ablation.py",
+    "scripts/week2_glp_sidecar_validation.py"
+  ],
+  "condition_matrix": {
+    "n_rows": 90,
+    "rows": [
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "assistant_likeness",
+        "family_id": "assistant_axis",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "persona_drift_from_assistant",
+        "family_id": "assistant_axis",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "assistant_likeness",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": false
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "honesty",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "honesty",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "lying",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "lying",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 0.5,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 1.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 11,
+        "alpha": 2.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 0.5,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 1.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 12,
+        "alpha": 2.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 0.5,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 1.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 13,
+        "alpha": 2.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 0.5,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 1.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 14,
+        "alpha": 2.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 0.5,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 1.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 15,
+        "alpha": 2.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 0.5,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 1.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      },
+      {
+        "lane_id": "deception",
+        "family_id": "honesty_deception",
+        "layer": 16,
+        "alpha": 2.0,
+        "judge_rubric_id": "deception",
+        "relative_coherence_only": true,
+        "supports_extraction_free": true,
+        "supports_external_transfer": true
+      }
+    ]
+  },
+  "launch_recommended_now": false,
+  "notes": [
+    "Planning-only smoke matrix; no Modal job was launched.",
+    "Use sidecar-style wrappers before any attempt to generalize the hardened Week 2 runner."
+  ]
+}

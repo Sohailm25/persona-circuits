@@ -1,0 +1,69 @@
+{
+  "timestamp_utc": "2026-03-12T19:49:31.780367+00:00",
+  "artifact_type": "week2_trait_lane_null_control_packet",
+  "input_paths": {
+    "deeper_validation_packet_json": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_deeper_validation_packet_20260312T133907Z.json",
+    "adjudication_packet_json": "/Users/sohailmohammad/braindstorms/persona-circuits/results/stage1_extraction/trait_lanes_v2/week2_trait_lane_adjudication_packet_20260312T192833Z.json"
+  },
+  "source_lane_id": "politeness",
+  "status": "null_control_defined",
+  "recommended_control_design": {
+    "control_id": "politeness_label_permutation_null_v1",
+    "design_type": "category_stratified_label_permutation",
+    "rationale": "Use the same prompt family and rubric as the promoted lane, but destroy the coherent high-vs-low contrast by stratified polarity permutation. This estimates the screening pipeline's false-positive rate without needing a new rubric or prompt family.",
+    "source_prompt_paths": {
+      "extraction": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/politeness_pairs_deeperv1.jsonl",
+      "heldout": "/Users/sohailmohammad/braindstorms/persona-circuits/prompts/trait_lanes_v2/heldout/politeness_heldout_pairs_deeperv1.jsonl"
+    },
+    "source_prompt_counts": {
+      "extraction_pairs": 48,
+      "heldout_pairs": 30
+    },
+    "preserved_fields": [
+      "id",
+      "category",
+      "user_query",
+      "judge_rubric_id",
+      "system_high",
+      "system_low"
+    ],
+    "permutation_policy": {
+      "unit": "within_category",
+      "seed": 42,
+      "shuffle_target": "high_low_pairing",
+      "preserve_category_balance": true,
+      "preserve_prompt_text": true,
+      "preserve_rubric": true
+    }
+  },
+  "secondary_control_design": {
+    "control_id": "politeness_mechanistically_implausible_even_number_preference_v1",
+    "design_type": "new_prompt_family_if_needed",
+    "rationale": "Optional higher-cost falsification lane if label-permutation is inconclusive. Use a concept with low mechanistic plausibility for persona-circuit claims."
+  },
+  "evaluation_plan": {
+    "reuse_runner": "week2_trait_lane_behavioral_smoke_run.py",
+    "runner_mode": "single_control_lane_screen",
+    "minimum_required_outputs": [
+      "bootstrap_robustness",
+      "position_ablation",
+      "behavioral_smoke"
+    ],
+    "false_positive_alerts": {
+      "promotion_status_not_hold": true,
+      "oriented_bidirectional_effect_ge": 10.0,
+      "bootstrap_p05_cosine_ge": 0.8,
+      "response_phase_persistence_ge": 0.7
+    },
+    "pass_condition": "Null control should remain below the branch promotion frontier; any hold-or-better status with promotion-scale behavioral shift is evidence that the screening pipeline may be overly permissive."
+  },
+  "branch_context": {
+    "adjudicated_branch_status": "no_independent_promotion_under_current_evidence",
+    "lead_lane_final_status": "strong_non_distinct_assistant_style_lane"
+  },
+  "recommended_next_remote_action": "run_label_permutation_null_control_before_any_new_lane_promotion_attempt",
+  "notes": [
+    "This packet defines a low-cost false-positive control that reuses the promoted lane's prompt family.",
+    "It is designed to run at screening depth, not deeper-validation depth."
+  ]
+}
